@@ -83,7 +83,8 @@ if (result) {
 
 ---
 
-```export function resolveInject (inject: any, vm: Component): ?Object {
+```
+export function resolveInject (inject: any, vm: Component): ?Object {
   if (inject) {
   // inject 是 :any 类型因为流没有智能到能够指出缓存
     const result = Object.create(null)
