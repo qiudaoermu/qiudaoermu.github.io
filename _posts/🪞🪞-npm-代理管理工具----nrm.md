@@ -1,0 +1,28 @@
+#### 安装:
+`
+npm install -g nrm
+`
+#### 使用
+ - 列出可选择的源:nrm ls
+`
+nrm ls
+`
+```
+~ nrm ls
+
+  npm ---- https://registry.npmjs.org/
+  cnpm --- http://r.cnpmjs.org/
+* taobao - https://registry.npm.taobao.org/
+  nj ----- https://registry.nodejitsu.com/
+  rednpm - http://registry.mirror.cqupt.edu.cn/
+  npmMirror  https://skimdb.npmjs.com/registry/
+  edunpm - http://registry.enpmjs.org/
+```
+- 切换使用的源:nrm use npm
+
+`
+nrm use npm
+ `          
+```            
+   Registry has been set to: https://registry.npmjs.org/
+```
