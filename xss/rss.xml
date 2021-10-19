@@ -4,6 +4,7 @@ layout: null
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    {%- for post in site.posts %}
     <item>
       <title>{{post.title | escape}}</title>
       <link>{{site.domainUrl | append: site.baseurl | append: post.url}}</link>
