@@ -1,0 +1,6 @@
+vendor/*
+vendor/**/**
+_site/*
+.bundle/*
+.jekyll-cache/*
+.DS_Store
