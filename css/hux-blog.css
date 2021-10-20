@@ -643,6 +643,7 @@ pre.highlight {
   color: #311e3e;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+  color: #fff;
 }
 .search-icon a:hover,
 .search-icon-close:hover {
