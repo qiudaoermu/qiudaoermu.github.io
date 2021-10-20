@@ -308,7 +308,7 @@
         var $searchClose = $('.search-icon-close');
         var $searchInput = $('#search-input');
         var $body = $('body');
-
+       
         $searchOpen.on('click', function (e) {
             e.preventDefault();
             $searchPage.toggleClass('search-active');
@@ -323,6 +323,11 @@
                     $searchPage.removeClass('search-active');
                     $body.attr('class', prevClasses);  // from closure 
                 });
+                $searchInput.on('keyup',function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses); 
+                })
                 $searchInput.focus();
             }
         });
