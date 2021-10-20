@@ -40,11 +40,6 @@
                         <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
                     </div>
-                    <li class="search-icon">
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </li>
                     {% comment %} always create a h2 for keeping the margin {% endcomment %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
@@ -103,11 +98,7 @@
         {% else %}
         <div class="site-heading">
         {% endif %}
-        <li class="search-icon">
-            <a href="javascript:void(0)">
-                <i class="fa fa-search"></i>
-            </a>
-        </li>         
+       <h1 class="search-icon"> There Is Something Of Mysterious</h1>
         </div>
       </div>
     </div>
