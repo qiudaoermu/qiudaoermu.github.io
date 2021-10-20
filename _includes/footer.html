@@ -324,9 +324,11 @@
                     $body.attr('class', prevClasses);  // from closure 
                 });
                 $searchInput.on('keyup',function (e) {
-                    e.preventDefault();
-                    $searchPage.removeClass('search-active');
-                    $body.attr('class', prevClasses); 
+                    if(e.keyCode === 13){
+                        e.preventDefault();
+                        $searchPage.removeClass('search-active');
+                        $body.attr('class', prevClasses); 
+                    }
                 })
                 $searchInput.focus();
             }
