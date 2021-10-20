@@ -640,7 +640,6 @@ pre.highlight {
 .search-icon-close {
   cursor: pointer;
   font-size: 30px;
-  color: #311e3e;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   color: #fff;
