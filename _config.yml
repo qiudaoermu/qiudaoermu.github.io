@@ -24,6 +24,7 @@ twitter_username: huxpro
 highlighter: rouge
 permalink: pretty
 gems: [jekyll-paginate]
+
 paginate: 10
 exclude:
   [
