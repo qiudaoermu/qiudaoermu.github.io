@@ -1,27 +1,11 @@
----
-layout: post
-title: "⛓-vue中使provide中的数据变为响应式"
-subtitle: ' "Hello World, Hello Blog"'
-date: 2015-01-29 12:00:00
-author: "Hux"
-header-img: "img/post-bg-2015.jpg"
-catalog: true
-tags:
-  - 生活
-  - Meta
----
-
-### 正常使用 provide 的方式：
-
+### 正常使用provide的方式：
 ```
 // 父组件中：
 provide:{
 　　for: 'demo'
 }
 ```
-
 这样子组件中无论多深的子组件都可以使用：
-
 ```
 // 子组件
 inject:['for'],
@@ -33,10 +17,11 @@ data(){
 ```
 
 但是上面的写法有一定的问题，
-比如父组件中 for 变量的值如果我们是在 mounted 方法中请求后台数据再更改 provide 中 for 的值，
-那么在子组件中获取不到更改后的 for 的值。
+比如父组件中for变量的值如果我们是在mounted方法中请求后台数据再更改provide中for的值，
+那么在子组件中获取不到更改后的for的值。
 
 ### 这时候就需要换一种写法：
+
 
 ```
 // 父组件中：
@@ -66,12 +51,9 @@ data(){
 　　}
 }
 ```
-
 ---
-
-[provide 源码](@previous)
-使用 defineReactive, 让 provide 变为响应式的, 所以根元素属性 `this.for` 无效，必须监听下一级属性 ` this.for.fp`
-
+ [provide源码](@previous)
+使用defineReactive, 让provide变为响应式的, 所以根元素属性 `this.for` 无效，必须监听下一级属性 ` this.for.fp`
 ```
 export function initInjections (vm: Component) {
 const result = resolveInject(vm.$options.inject, vm)
@@ -85,48 +67,46 @@ if (result) {
 }
 
 ```
+ [inject源码](@previous)
 
-[inject 源码](@previous)
-
----
+----
 
 ```js
-export function resolveInject(inject: any, vm: Component): ?Object {
+export function resolveInject (inject: any, vm: Component): ?Object {
   if (inject) {
-    // inject 是 :any 类型因为流没有智能到能够指出缓存
-    const result = Object.create(null);
+  // inject 是 :any 类型因为流没有智能到能够指出缓存
+    const result = Object.create(null)
     // 获取 inject 选项的 key 数组
     const keys = hasSymbol
-      ? Reflect.ownKeys(inject).filter((key) => {
-          /* istanbul ignore next */
-          return Object.getOwnPropertyDescriptor(inject, key).enumerable;
-        })
-      : Object.keys(inject);
+      ? Reflect.ownKeys(inject).filter(key => {
+        /* istanbul ignore next */
+        return Object.getOwnPropertyDescriptor(inject, key).enumerable
+      })
+      : Object.keys(inject)
 
     for (let i = 0; i < keys.length; i++) {
-      const key = keys[i];
-      const provideKey = inject[key].from;
-      let source = vm;
+      const key = keys[i]
+      const provideKey = inject[key].from
+      let source = vm
       while (source) {
         if (source._provided && provideKey in source._provided) {
-          result[key] = source._provided[provideKey];
-          break;
+          result[key] = source._provided[provideKey]
+          break
         }
-        source = source.$parent;
+        source = source.$parent
       }
       if (!source) {
-        if ("default" in inject[key]) {
-          const provideDefault = inject[key].default;
-          result[key] =
-            typeof provideDefault === "function"
-              ? provideDefault.call(vm)
-              : provideDefault;
-        } else if (process.env.NODE_ENV !== "production") {
-          warn(`Injection "${key}" not found`, vm);
+        if ('default' in inject[key]) {
+          const provideDefault = inject[key].default
+          result[key] = typeof provideDefault === 'function'
+            ? provideDefault.call(vm)
+            : provideDefault
+        } else if (process.env.NODE_ENV !== 'production') {
+          warn(`Injection "${key}" not found`, vm)
         }
       }
     }
-    return result;
+    return result
   }
 }
 ```
