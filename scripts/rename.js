@@ -7,10 +7,9 @@ const rename = (fileList) => {
   console.log(fileList, "fileList");
   fileList.forEach((item, index) => {
     let newName = item.replace(/\d{4}-\d{2}-\d{2}-/, dayPrex);
-    item = item.replace("../_posts", "");
-    newName = newName.replace("../_posts", "");
-    fs.rename(url + item, url + newName, (err) => {
-      throw err;
+    fs.rename(item, newName, (err) => {
+      if (err) throw err;
+      console.log("Rename complete!");
     });
   });
 };

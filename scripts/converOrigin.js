@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const url = path.join("../../../Desktop/user/日记本/");
+const url = path.join("../../../Downloads/user-15312191-1635151308/日记本/");
 // 文件的绝对路径
 
 fs.readdir(url, "utf8", (err, fileList) => {
@@ -17,7 +17,9 @@ fs.readdir(url, "utf8", (err, fileList) => {
     if (!reg.test(oldName)) {
       let newName = "2021-10-21-" + oldName;
       fs.rename(url + oldName, url + newName, (err) => {
-        throw err;
+        if (err) {
+          throw err;
+        }
       });
     }
   });
