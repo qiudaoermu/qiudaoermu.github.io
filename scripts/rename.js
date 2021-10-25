@@ -1,24 +1,18 @@
 const fs = require("fs");
 const path = require("path");
-const url = path.join("../_posts/");
+const url = path.join("../_posts");
+const dayPrex = require("./dayPrex");
 // 文件的绝对路径
-
-fs.readdir(url, "utf8", (err, fileList) => {
-  console.log(fileList);
-  if (err) throw err;
+const rename = (fileList) => {
+  console.log(fileList, "fileList");
   fileList.forEach((item, index) => {
-    let length = item.split(".").length;
-    // 获取文件后缀名
-    let type = "." + item.split(".")[length - 1];
-    let oldName = item;
-    // 新名称,根据需求修改名称，可以使用正则等等
-    // 后缀可用之前的type 也可统一自定义
-    let reg = /2021-10-21-/;
-    if (!reg.test(oldName)) {
-      let newName = "2021-10-21-" + oldName;
-      fs.rename(url + oldName, url + newName, (err) => {
-        throw err;
-      });
-    }
+    let newName = item.replace(/\d{4}-\d{2}-\d{2}-/, dayPrex);
+    item = item.replace("../_posts", "");
+    newName = newName.replace("../_posts", "");
+    fs.rename(url + item, url + newName, (err) => {
+      throw err;
+    });
   });
-});
+};
+
+module.exports = rename;
