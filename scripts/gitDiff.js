@@ -1,9 +1,6 @@
-const gitDiffArchive = require("git-diff-archive");
-const rename = require("./rename");
+const rename = require("./renameBeforeAdd");
+const gitChangedFiles = require("@ebsolutions/git-my-files");
 
-gitDiffArchive().then((res) => {
-  
-  res.exclude = res.exclude.map((item) => item.replace(/_posts/, ""));
-  rename(res.exclude);
-  
-});
+let list = gitChangedFiles("../_posts");
+list = list.filter((item) => item.status === "A").map((item) => item.filename);
+rename(list);
