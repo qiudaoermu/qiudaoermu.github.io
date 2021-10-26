@@ -1,7 +1,5 @@
 const fs = require("fs");
-const path = require("path");
-const url = path.join("../_posts");
-const dayPrex = require("./dayPrex");
+const dayPrex = require("../utils");
 // 文件的绝对路径
 const rename = (fileList) => {
   fileList.forEach((item, index) => {

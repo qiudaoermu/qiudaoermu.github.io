@@ -1,14 +1,15 @@
+
 /*
 * @chenzhenfei
 * download blog from jianshu.com and copy it into github page
 * unar it , replace it in the _post.
 * automatic prepend the lastest date before git add .
-* 
-*
 */
+
+
 const fs = require("fs");
 const path = require("path");
-const addDateToFile = require("./addDateToFile");
+const addDateToFile = require("./lib/addDatePrex");
 const { exec } = require("child_process");
 
 class File {
