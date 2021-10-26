@@ -1,34 +1,66 @@
+/*
+* @chenzhenfei
+* download blog from jianshu.com and copy it into github page
+* unar it , replace it in the _post.
+* automatic prepend the lastest date before git add .
+* 
+*
+*/
 const fs = require("fs");
 const path = require("path");
-
-let dowloadPath = "../../../Downloads";
-let outPutPath = "../output";
-let exportFolderSubfile = "/日记本/";
-
-let readDir = fs.readdirSync(dowloadPath);
-
 const addDateToFile = require("./addDateToFile");
-readDir = readDir.filter(
-  (item) => item.indexOf(".rar") !== -1 && item.indexOf("user") !== -1
-);
-readDir.sort();
-
-let lastUpdateRar = readDir[readDir.length - 1];
-const lastRarPath = path.join(dowloadPath, lastUpdateRar);
-
-let outputPath =
-  outPutPath + "/" + lastUpdateRar.replace(".rar", "") + exportFolderSubfile;
 const { exec } = require("child_process");
 
-// delete exit output folder
-exec(`rm -rf ../output`);
-
-// unCompress newest rar
-exec(`unar  ${lastRarPath} -o ${outPutPath}`, (err, stdout, stderr) => {
-  if (err) {
-    console.log(err);
-    return;
+class File {
+  constructor({ input, output }) {
+    this.dowloadPath = input;
+    this.outPutPath = output;
+    this.exportFolderSubfile = "/日记本/";
+    this.readDirs = "";
+    this.suffix = ".rar";
+    this.prefix = "user";
   }
-  addDateToFile(outputPath);
-  console.log(`stderr: ${stderr}`);
+  deleteFolder() {
+    // delete exit output folder
+    exec(`rm -rf ${this.outPutPath}`);
+  }
+  readDir() {
+    this.readDirs = fs.readdirSync(this.dowloadPath);
+  }
+  unCompress() {
+    const relativePath = this.getNewestRar();
+    const absolutePath = path.join(this.dowloadPath, relativePath);
+
+    let outputPath =
+      this.outPutPath +
+      "/" +
+      relativePath.replace(this.suffix, "") +
+      this.exportFolderSubfile;
+    exec(
+      `unar  ${absolutePath} -o ${this.outPutPath}`,
+      (err, stdout, stderr) => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        addDateToFile(outputPath);
+        console.log(`stderr: ${stderr}`);
+      }
+    );
+  }
+  getNewestRar() {
+    const readDir = this.readDirs.filter(
+      (item) =>
+        item.indexOf(this.suffix) !== -1 && item.indexOf(this.prefix) !== -1
+    );
+    readDir.sort();
+    return readDir[readDir.length - 1];
+  }
+}
+const file = new File({
+  input: "../../../Downloads",
+  output: "../output",
 });
+file.deleteFolder();
+file.readDir();
+file.unCompress();
