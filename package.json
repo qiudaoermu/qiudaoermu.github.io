@@ -23,6 +23,7 @@
     "push": "git push origin master --tag"
   },
   "dependencies": {
+    "@ebsolutions/git-my-files": "^1.1.6",
     "@zhangfuxing/unrar": "^0.6.3",
     "compressing": "^1.5.1",
     "decompress-zip": "^0.3.3",
