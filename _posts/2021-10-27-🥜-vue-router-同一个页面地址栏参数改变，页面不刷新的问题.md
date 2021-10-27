@@ -4,7 +4,7 @@ vue-router  同一个页面地址栏参数改变（比如文章的发布和编�
 
 1：监听地址栏变化（watch）,这是vue-router官方给出的解决办法。
 监听路由变化，把初始化的方法重新写到监听的方法里面执行
-```
+```js
 watch: {
     '$route' (to, from) {
         this.getData(this.$route.query.id)
@@ -23,6 +23,7 @@ methods: {
 ```
 2、给router-view加个唯一的key，来保证路由切换时都会重新渲染触发钩子了
 ```
+
 <template>
     <div id="main" class="app-main">
         <transition :name="transitionName">
@@ -39,4 +40,6 @@ methods: {
         }
     };
 </script>
+
 ```
+> 第二种方法，页面每次切换都会跑到顶部，需要配合 scroll处理

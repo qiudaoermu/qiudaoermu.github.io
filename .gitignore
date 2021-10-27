@@ -7,3 +7,5 @@ _site/*
 *.zip
 node_modules/
 output/*
+vendor
+_site

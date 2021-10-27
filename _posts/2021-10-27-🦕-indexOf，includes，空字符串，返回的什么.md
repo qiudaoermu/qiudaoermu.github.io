@@ -1,9 +1,11 @@
 最近刷letcode碰到的小问题
 
 - ## indexOf
-```
+```js
+
 let str = "string"
 str.indexOf("") // 0
+
 ```
 mdn解释
 The index of the first occurrence of `searchValue`, or **`-1`** if not found.
@@ -18,12 +20,15 @@ An empty string `searchValue` produces strange results. With no `fromIndex` 
 
 - ## includes
 传入空字符串，返回true
-```
+```js
+
 let str = "string"
 str.includes("") // true
+
 ```
 includes，polyfill，目测includes也是通过indexOf实现的
-```
+```js
+
 if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
      'use strict';
@@ -34,4 +39,5 @@ if (!String.prototype.includes) {
     return this.indexOf(search, start) !== -1;
   };
 }
+
 ```
