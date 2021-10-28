@@ -13,5 +13,4 @@ let status = ["M", "A"];
 list = list
   .filter((item) => status.includes(item.status))
   .map((item) => item.filename);
-console.log(list);
 rename(list);

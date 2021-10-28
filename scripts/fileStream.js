@@ -7,52 +7,60 @@
 
 const fs = require("fs");
 const path = require("path");
-const addDateToFile = require("./lib/addDatePrex");
+const addDatePrex = require("./lib/addDatePrex");
 const { exec } = require("child_process");
 
 class File {
   constructor({ input, output }) {
-    this.dowloadPath = input;
+    this.inputPath = input;
     this.outPutPath = path.join(__dirname, output);
     this.exportFolderSubfile = "/日记本/";
     this.readDirs = "";
     this.suffix = ".rar";
     this.prefix = "user";
+    this.newName = "userRar";
   }
   deleteFolder() {
     // delete exit output folder
     exec(`rm -rf ${this.outPutPath}`);
   }
   readDir() {
-    this.readDirs = fs.readdirSync(this.dowloadPath);
+    this.readDirs = fs.readdirSync(this.inputPath);
+  }
+  renameRar(file, newName) {
+    fs.rename(file, newName + ".rar", (err) => {
+      if (err) throw err;
+      console.log("Rename Rar complete!");
+    });
   }
   unCompress() {
-    const relativePath = this.getNewestRar();
-    console.log(relativePath, "********************************");
-    const absolutePath = path.join(this.dowloadPath, relativePath);
-
+    const relativeInputPath = this.newestRarName();
+    const oldAbsoluteInputPath = path.join(this.inputPath, relativeInputPath);
+    const newAbsoluteInputPath = path.join(this.inputPath, this.newName);
+    // this.renameRar(oldAbsoluteInputPath, newAbsoluteInputPath);
     let outputPath =
       this.outPutPath +
       "/" +
-      relativePath.replace(this.suffix, "") +
+      relativeInputPath.replace(".rar", "") +
       this.exportFolderSubfile;
-    console.log(absolutePath, "absolutePath********************************");
-    console.log(this.outPutPath, "outPutPath********************************");
+    // console.log(outputPath, "outPutPath*****");
+    // console.log(newAbsoluteInputPath, "newAbsoluteInputPath******");
+    // console.log(this.outPutPath, "******");
     exec(
-      `unar  ${absolutePath} -o ${this.outPutPath}`,
+      `unar  ${oldAbsoluteInputPath}  -o ${this.outPutPath}`,
       (err, stdout, stderr) => {
         if (err) {
           console.log(err);
           return;
         }
-        console.log(outputPath, "********************************");
-        addDateToFile(outputPath);
+        addDatePrex(outputPath);
         console.log(`stdout: ${stdout}`);
-        console.log(`stderr: ${stderr}`);
+        if (stderr) console.error(`stderr: ${stderr}`);
+        console.log("********unar completed!**********");
       }
     );
   }
-  getNewestRar() {
+  newestRarName() {
     const readDir = this.readDirs.filter(
       (item) =>
         item.indexOf(this.suffix) !== -1 && item.indexOf(this.prefix) !== -1
@@ -66,6 +74,7 @@ const file = new File({
   input: "../../../Downloads",
   output: "../output",
 });
+
 file.deleteFolder();
 file.readDir();
 file.unCompress();
