@@ -1,4 +1,11 @@
-有这样的需求如下图：
+---
+  layout: post
+  tilte: "ivew-动态新增-input--v-model绑定.md"
+  date: 2021-10-21-
+  tags: 
+    - 开发日常
+---
+  有这样的需求如下图：
 1.下拉选择select 选择，
 2.新增一组 input提交选项
 

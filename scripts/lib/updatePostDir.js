@@ -35,6 +35,28 @@ const renameFileByAddDatePrexInUnarPath = (
   console.log("🎉🎉, completed 100% ");
 };
 
+const writeTags = (file, content) => {
+  fs.writeFileSync(file, content, (err) => {
+    if (err) throw err;
+    console.log("写入成功");
+  });
+};
+const readFile = (file, excludeDatePrexFile, prex) => {
+  // console.log("-------", file);
+  let postContent = fs.readFileSync(file, "utf-8");
+  let s = file.split("/");
+  let tags = s[s.length - 2];
+  let note = `---
+  layout: post
+  tilte: "${excludeDatePrexFile}"
+  date: ${prex}
+  tags: 
+    - ${tags}
+---
+  `;
+  console.log(note, "node------------------------------");
+  writeTags(file, note + postContent);
+};
 const updatePostDir = (unarPath) => {
   // unarPath ...output
   deletePostDir(postDir);
@@ -44,6 +66,7 @@ const updatePostDir = (unarPath) => {
     if (err) throw err;
     fileList.forEach((excludeDatePrexFile) => {
       // 获取文件后缀名
+      readFile(unarPath + excludeDatePrexFile, excludeDatePrexFile, prex);
       const reg = new RegExp(`${prex}`);
       if (reg.test(excludeDatePrexFile)) return;
       renameFileByAddDatePrexInUnarPath(unarPath, prex, excludeDatePrexFile);

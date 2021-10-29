@@ -38,7 +38,11 @@ class Decompress {
           return;
         }
         this.outPutPath = this.updateOutputPath();
-        updatePostDir(this.outPutPath);
+        let childDir = fs.readdirSync(this.outPutPath);
+        childDir.forEach((item) => {
+          // console.log(this.outPutPath + "/" + item + "/", "item");
+          updatePostDir(this.outPutPath + "/" + item + "/");
+        });
         console.log(`stdout: ${stdout}`);
         if (stderr) console.error(`stderr: ${stderr}`);
         console.log("unar completed！50%");
@@ -52,9 +56,11 @@ class Decompress {
     const unarFieName = fs
       .readdirSync(this.outPutPath)
       .filter((item) => item.indexOf(this.prefix) !== -1);
-    const unarFiePath =
-      this.outPutPath + "/" + unarFieName + this.exportFolderSubfile;
+    const unarFiePath = this.outPutPath + "/" + unarFieName;
     return unarFiePath;
+  }
+  readChildDir() {
+    return fs.readdirSync(this.inputPath);
   }
   newestRarName() {
     const readDir = this.readDirs.filter(

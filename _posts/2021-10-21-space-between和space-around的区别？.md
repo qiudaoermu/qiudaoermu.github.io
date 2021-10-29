@@ -1,2 +1,9 @@
-![image.png](https://upload-images.jianshu.io/upload_images/15312191-5bec8d6dbbba5744.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![image.png](https://upload-images.jianshu.io/upload_images/15312191-5fc3f26913c82050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+---
+  layout: post
+  tilte: "space-between和space-around的区别？.md"
+  date: 2021-10-21-
+  tags: 
+    - css
+---
+  ![](https://upload-images.jianshu.io/upload_images/15312191-5bec8d6dbbba5744.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-5fc3f26913c82050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

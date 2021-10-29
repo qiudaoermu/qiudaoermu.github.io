@@ -1,4 +1,11 @@
-### 正常使用provide的方式：
+---
+  layout: post
+  tilte: "⛓-vue中使provide中的数据变为响应式.md"
+  date: 2021-10-21-
+  tags: 
+    - 开发日常
+---
+  ### 正常使用provide的方式：
 ```
 // 父组件中：
 provide:{
