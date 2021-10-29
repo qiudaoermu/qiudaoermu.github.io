@@ -1,4 +1,5 @@
-bundle install
+### 问题
+ $ `bundle install`
 
 ```
 An error occurred while installing http_parser.rb (0.6.0), and Bundler cannot continue.
@@ -9,11 +10,17 @@ In Gemfile:
       http_parser.rb
 
 ```
+打开错误日志
+```
+"pkg-config --exists openssl" 
+ package configuration for openssl is not found
+```
+ 
 原因：没有正确设置PATH导致的问题
+### solution:
+$ `brew install ruby`
 
-$ brew install ruby
-
-$ brew link --overwrite ruby
+$ `brew link --overwrite ruby`
 
 ```
 If you need to have ruby first in your PATH run:

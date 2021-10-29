@@ -1,5 +1,5 @@
 ![](https://upload-images.jianshu.io/upload_images/15312191-4f619d39eb0b8eff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-> 翻译自 https://dev.to/0shuvo0/python-javascript--1nd6
+
 
 当涉及到 web开发时，javascript是无人能及的存在，但是有的时候我们需高要求的工作，比如解析一大堆数据，这样pyhton就是个更好的选择，但这仅仅是我们网站的一个功能而已，仅因为这个我们就需要转到python吗，也许不用。
 ##### 如果我们可以大部分使用 Node JS, 在必要情况下使用python呢？
@@ -83,3 +83,4 @@ print(json.dumps(data))
 
 sys.stdout.flush()
 ```
+> 翻译自 https://dev.to/0shuvo0/python-javascript--1nd6
