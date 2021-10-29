@@ -1,5 +1,5 @@
 /*
- * @chenzhenfei
+ * Copyright (C) 2021-2039 star <qiudaoermu@gmail.com>
  * download blog from jianshu.com and copy it into github page
  * unar it , replace it in the _post.
  * automatic prepend the lastest date before git add .
@@ -7,10 +7,10 @@
 
 const fs = require("fs");
 const path = require("path");
-const addDatePrex = require("./lib/addDatePrex");
+const generatePost = require("./lib/generatePost");
 const { exec } = require("child_process");
 
-class File {
+class Decompress {
   constructor({ input, output }) {
     this.inputPath = input;
     this.outPutPath = path.join(__dirname, output);
@@ -37,15 +37,6 @@ class File {
     const relativeInputPath = this.newestRarName();
     const oldAbsoluteInputPath = path.join(this.inputPath, relativeInputPath);
     const newAbsoluteInputPath = path.join(this.inputPath, this.newName);
-    // this.renameRar(oldAbsoluteInputPath, newAbsoluteInputPath);
-    let outputPath =
-      this.outPutPath +
-      "/" +
-      relativeInputPath.replace(".rar", "") +
-      this.exportFolderSubfile;
-    // console.log(outputPath, "outPutPath*****");
-    // console.log(newAbsoluteInputPath, "newAbsoluteInputPath******");
-    // console.log(this.outPutPath, "******");
     exec(
       `unar  ${oldAbsoluteInputPath}  -o ${this.outPutPath}`,
       (err, stdout, stderr) => {
@@ -53,12 +44,22 @@ class File {
           console.log(err);
           return;
         }
-        addDatePrex(outputPath);
+        this.outPutPath = this.updateOutputPath();
+        console.log(this.outPutPath, "--------------------------------");
+        generatePost(this.outPutPath);
         console.log(`stdout: ${stdout}`);
         if (stderr) console.error(`stderr: ${stderr}`);
-        console.log("********unar completed!**********");
+        console.log("  🎉🎉, unar completed！");
       }
     );
+  }
+  updateOutputPath() {
+    let unarFieName = fs
+      .readdirSync(this.outPutPath)
+      .filter((item) => item.indexOf("user") !== -1);
+    let unarFiePath =
+      this.outPutPath + "/" + unarFieName + this.exportFolderSubfile;
+    return unarFiePath;
   }
   newestRarName() {
     const readDir = this.readDirs.filter(
@@ -70,11 +71,11 @@ class File {
   }
 }
 
-const file = new File({
+const decompress = new Decompress({
   input: "../../../Downloads",
   output: "../output",
 });
 
-file.deleteFolder();
-file.readDir();
-file.unCompress();
+decompress.deleteFolder();
+decompress.readDir();
+decompress.unCompress();
