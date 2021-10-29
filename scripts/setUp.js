@@ -7,7 +7,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const generatePost = require("./lib/generatePost");
+const updatePostDir = require("./lib/updatePostDir");
 const { exec } = require("child_process");
 
 class Decompress {
@@ -18,7 +18,6 @@ class Decompress {
     this.readDirs = "";
     this.suffix = ".rar";
     this.prefix = "user";
-    this.newName = "userRar";
   }
   deleteFolder() {
     // delete exit output folder
@@ -27,16 +26,10 @@ class Decompress {
   readDir() {
     this.readDirs = fs.readdirSync(this.inputPath);
   }
-  renameRar(file, newName) {
-    fs.rename(file, newName + ".rar", (err) => {
-      if (err) throw err;
-      console.log("Rename Rar complete!");
-    });
-  }
+
   unCompress() {
     const relativeInputPath = this.newestRarName();
     const oldAbsoluteInputPath = path.join(this.inputPath, relativeInputPath);
-    const newAbsoluteInputPath = path.join(this.inputPath, this.newName);
     exec(
       `unar  ${oldAbsoluteInputPath}  -o ${this.outPutPath}`,
       (err, stdout, stderr) => {
@@ -45,19 +38,21 @@ class Decompress {
           return;
         }
         this.outPutPath = this.updateOutputPath();
-        console.log(this.outPutPath, "--------------------------------");
-        generatePost(this.outPutPath);
+        updatePostDir(this.outPutPath);
         console.log(`stdout: ${stdout}`);
         if (stderr) console.error(`stderr: ${stderr}`);
-        console.log("  🎉🎉, unar completed！");
+        console.log("unar completed！50%");
       }
     );
   }
   updateOutputPath() {
-    let unarFieName = fs
+    // 更新解压后的路径，获取解压后的文件名字，偶尔情况下
+    // 解压前和解压后，文件名称不一样
+
+    const unarFieName = fs
       .readdirSync(this.outPutPath)
-      .filter((item) => item.indexOf("user") !== -1);
-    let unarFiePath =
+      .filter((item) => item.indexOf(this.prefix) !== -1);
+    const unarFiePath =
       this.outPutPath + "/" + unarFieName + this.exportFolderSubfile;
     return unarFiePath;
   }

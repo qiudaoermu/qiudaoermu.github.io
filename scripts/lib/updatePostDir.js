@@ -2,6 +2,7 @@ const { exec } = require("child_process");
 const fs = require("fs");
 const prex = "2021-10-21-";
 const postDir = "../_posts";
+
 const deletePostDir = (path) => {
   exec(`rm -rf ${path}`);
 };
@@ -9,6 +10,7 @@ const deletePostDir = (path) => {
 const makePostdir = (postDir) => {
   exec(`mkdir ${postDir}`);
 };
+
 const copyFileToPost = (file, target) => {
   fs.copyFile(file, target, (err) => {
     if (err) {
@@ -30,9 +32,10 @@ const renameFileByAddDatePrexInUnarPath = (
     }
     copyFileToPost(unarPath + datePrexFile, `${postDir}/${datePrexFile}`);
   });
+  console.log("🎉🎉, completed 100% ");
 };
 
-const makeFile = (unarPath) => {
+const updatePostDir = (unarPath) => {
   // unarPath ...output
   deletePostDir(postDir);
   makePostdir(postDir);
@@ -48,4 +51,4 @@ const makeFile = (unarPath) => {
   });
 };
 
-module.exports = makeFile;
+module.exports = updatePostDir;
