@@ -4,8 +4,10 @@
   date: 2021-10-21-
   tags: 
     - 开发日常
+
 ---
-  ### 现象：
+
+### 现象：
 后端配置了cores跨域，前端直接请求，没有通过代理，这样如果设置cookie，只能设置到， localhost里，request header 无法带过去
 
 手动设置header Access-Token 

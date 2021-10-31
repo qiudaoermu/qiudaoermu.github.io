@@ -4,8 +4,10 @@
   date: 2021-10-21-
   tags: 
     - 开发日常
+
 ---
-  > Array(length).fill(element) 
+
+> Array(length).fill(element) 
 
 ### 参数
 length 填充长度

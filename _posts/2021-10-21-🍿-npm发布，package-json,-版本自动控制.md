@@ -4,8 +4,10 @@
   date: 2021-10-21-
   tags: 
     - 开发日常
+
 ---
-  npm 发包每次都手动改 version，好烦。。🤣
+
+npm 发包每次都手动改 version，好烦。。🤣
 我们可以构建自己的workflow。
 
 在我们的package.json里面有一个version字段。

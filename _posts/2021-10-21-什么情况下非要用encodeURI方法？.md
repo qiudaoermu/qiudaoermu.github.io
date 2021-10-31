@@ -4,16 +4,21 @@
   date: 2021-10-21-
   tags: 
     - 开发日常
+
 ---
-  ## [语法]()
+
+## [语法]()
 
 > encodeURI(URI)
-decodeURI(URI)
+>
+>decodeURI(URI)
 
 example:
-```
+
+```js
 encodeURI("陈振飞")  //'%E9%99%88%E6%8C%AF%E9%A3%9E'
 decodeURI('%E9%99%88%E6%8C%AF%E9%A3%9E') // 陈振飞
+
 ```
 
 

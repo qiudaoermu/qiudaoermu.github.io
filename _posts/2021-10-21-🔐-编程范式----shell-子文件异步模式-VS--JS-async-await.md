@@ -4,8 +4,10 @@
   date: 2021-10-21-
   tags: 
     - 编程范式
+
 ---
-  ![](https://upload-images.jianshu.io/upload_images/15312191-4eed4d9a728d558a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](https://upload-images.jianshu.io/upload_images/15312191-4eed4d9a728d558a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 问题：在 shell 下有 A、B、C、D 四个命令,
 需要先执行 A

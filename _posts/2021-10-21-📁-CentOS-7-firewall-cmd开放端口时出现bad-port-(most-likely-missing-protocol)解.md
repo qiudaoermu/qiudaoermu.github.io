@@ -4,8 +4,10 @@
   date: 2021-10-21-
   tags: 
     - 开发日常
+
 ---
-  使用firewall-cmd命令打开端口时遇到了"bad port (most likely missing protocol), correct syntax is portid[-portid]/protocol"这个问题。
+
+使用firewall-cmd命令打开端口时遇到了"bad port (most likely missing protocol), correct syntax is portid[-portid]/protocol"这个问题。
 
 百度了下没解决方案，又看了一遍错误提示和输入的命令后被自己蠢哭了
 
