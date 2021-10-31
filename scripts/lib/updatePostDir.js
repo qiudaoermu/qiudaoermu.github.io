@@ -20,29 +20,28 @@ const copyFileToPost = (file, target) => {
   });
 };
 
-const renameFileByAddDatePrexInUnarPath = (
-  unarPath,
+const renameFileByAddDatePrexInUnarTagPath = (
+  unarTagPath,
   prex,
   excludeDatePrexFile
 ) => {
   const datePrexFile = prex + excludeDatePrexFile;
-  fs.rename(unarPath + excludeDatePrexFile, unarPath + datePrexFile, (err) => {
+  fs.rename(unarTagPath + excludeDatePrexFile, unarTagPath + datePrexFile, (err) => {
     if (err) {
       throw err;
     }
-    copyFileToPost(unarPath + datePrexFile, `${postDir}/${datePrexFile}`);
+    copyFileToPost(unarTagPath + datePrexFile, `${postDir}/${datePrexFile}`);
   });
   console.log("🎉🎉, completed 100% ");
 };
 
-const writeTags = (file, content) => {
+const addTagsOnHeader = (file, content) => {
   fs.writeFileSync(file, content, (err) => {
     if (err) throw err;
     console.log("写入成功");
   });
 };
 const readFile = (file, excludeDatePrexFile, prex) => {
-  // console.log("-------", file);
   let postContent = fs.readFileSync(file, "utf-8");
   let s = file.split("/");
   let tags = s[s.length - 2];
@@ -51,25 +50,31 @@ const readFile = (file, excludeDatePrexFile, prex) => {
   tilte: "${excludeDatePrexFile}"
   date: ${prex}
   tags: 
-    - ${tags}
----
-  `;
-  console.log(note, "node------------------------------");
-  writeTags(file, note + postContent);
+    - ${tags}\n
+---\n\n`;
+  const content = note + postContent
+  return content;
 };
-const updatePostDir = (unarPath) => {
-  // unarPath ...output
+
+/*
+* @param {unarTagPath}  标签目录 output/user-15312191-1635523978/编程范式/
+*/
+
+const updatePostDir = (unarTagPath) => {
+  // unarTagPath ...output
   deletePostDir(postDir);
   makePostdir(postDir);
 
-  fs.readdir(unarPath, "utf8", (err, fileList) => {
+  fs.readdir(unarTagPath, "utf8", (err, fileList) => {
     if (err) throw err;
     fileList.forEach((excludeDatePrexFile) => {
       // 获取文件后缀名
-      readFile(unarPath + excludeDatePrexFile, excludeDatePrexFile, prex);
+      const filePath = unarTagPath + excludeDatePrexFile
+      const postContent = readFile(filePath, excludeDatePrexFile, prex);
+      addTagsOnHeader(filePath, postContent);
       const reg = new RegExp(`${prex}`);
       if (reg.test(excludeDatePrexFile)) return;
-      renameFileByAddDatePrexInUnarPath(unarPath, prex, excludeDatePrexFile);
+      renameFileByAddDatePrexInUnarTagPath(unarTagPath, prex, excludeDatePrexFile);
     });
   });
 };
