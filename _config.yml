@@ -2,9 +2,9 @@
 title: home
 SEOTitle: 陈振飞的博客 | home
 header-img: img/about-bg-walle.jpg
-email: huxpro@gmail.com
+email: qiudaoermu@gmail.com
 description: "关于程序与设计、黑客与画家 | 陈振飞，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux陈振飞 的个人博客，与你一起发现更大的世界。"
-keyword: "陈振飞, Hux陈振飞, Hux, 鬼栈, huxpro, @huxpro, 陈振飞的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+keyword: "陈振飞, Hux陈振飞, Hux, 鬼栈, qiudaoermu, @huxpro, 陈振飞的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 url: "https://qiudaoermu.github.io/" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -12,11 +12,11 @@ baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 future: true
 
 # SNS settings
-weibo_username: huxpro
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
-#facebook_username:  huxpro
+weibo_username: qiudaoermu
+zhihu_username: qiudaoermu
+github_username: qiudaoermu
+twitter_username: qiudaoermu
+#facebook_username:  qiudaoermu
 #linkedin_username:  firstname-lastname-idxxxx
 
 # Build settings
