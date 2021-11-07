@@ -25,8 +25,10 @@ In Gemfile:
  package configuration for openssl is not found
 ```
  
-原因：没有正确设置PATH导致的问题
-### solution:
+### 原因：没有正确设置PATH导致的问题
+
+**mac 使用默认的ruby 版本，要更新最新版本 ruby 并且覆盖**
+### 解决方法:
 $ `brew install ruby`
 
 $ `brew link --overwrite ruby`
@@ -42,3 +44,7 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 For pkg-config to find ruby you may need to set:
   export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 ```
+
+在 .zshrc 加入 'export PATH="/usr/local/opt/ruby/bin:$PATH"'
+
+$ `source ~/.zshrc`

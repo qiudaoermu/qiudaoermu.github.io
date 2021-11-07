@@ -1151,10 +1151,6 @@ samp {
   background-color: rgba(0, 0, 0, 0.05);
 }
 @media only screen and (min-width: 768px) {
-  .intro-header {
-    margin-bottom: 20px;
-    /* response on desktop */
-  }
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
