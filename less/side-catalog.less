@@ -27,7 +27,9 @@
   overflow: auto;
   height: 100%;
   padding-bottom: 40px;
-  width: 195px;
+  width: 240px;
+  margin-left: 10px;
+  
   .catalog-body {
     position: relative;
     list-style: none;
@@ -36,53 +38,47 @@
     padding-left: 0px;
     padding-right: 5px;
     text-indent: 0;
+    font-size: 18px;
     li {
       position: relative;
       list-style: none;
       a {
         padding-left: 10px;
-        max-width: 180px;
         display: inline-block;
         vertical-align: middle;
         height: 30px;
+        width:100%;
         line-height: 30px;
         overflow: hidden;
         text-decoration: none;
         white-space: nowrap;
         text-overflow: ellipsis;
+        font-weight: 600
       }
     }
     .h1_nav,
     .h2_nav {
       margin-left: 0;
-      font-size: 13px;
       font-weight: bold;
     }
     .h3_nav {
       margin-left: 6px;
-      font-size: 13px;
       font-weight: bold;
     }
     .h4_nav {
       margin-left: 12px;
-      font-size: 12px;
-      a {
-        max-width: 170px;
-      }
+      font-size: 16px;
     }
-    .h5_nav .h6_nav {
+    .h5_nav {
       margin-left: 18px;
-      font-size: 12px;
-      a {
-        max-width: 170px;
-      }
+      font-size: 14px;
+    }
+    .h6_nav {
+      margin-left: 24px;
     }
     .active {
-      a {
-        color: #0085a1 !important;
-      }
       border-radius: 4px;
-      background-color: #f5f5f5;
+      background-color: #d9d9d9;
     }
   }
 }
