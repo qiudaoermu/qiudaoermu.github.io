@@ -10,9 +10,9 @@ const gitChangedFiles = require("@ebsolutions/git-my-files");
 
 let list = gitChangedFiles("../_posts");
 let status = ["M", "A"];
-
+// console.log(list);
 list = list
   .filter((item) => status.includes(item.status))
   .map((item) => item.filename);
-
+console.log(list);
 rename(list);

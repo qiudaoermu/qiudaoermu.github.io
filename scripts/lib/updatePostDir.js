@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 const fs = require("fs");
-const prex = "2021-10-21-";
+const prex = "2022-3-16-";
 const postDir = "../_posts";
 
 const deletePostDir = (path) => {
@@ -26,12 +26,16 @@ const renameFileByAddDatePrexInUnarTagPath = (
   excludeDatePrexFile
 ) => {
   const datePrexFile = prex + excludeDatePrexFile;
-  fs.rename(unarTagPath + excludeDatePrexFile, unarTagPath + datePrexFile, (err) => {
-    if (err) {
-      throw err;
+  fs.rename(
+    unarTagPath + excludeDatePrexFile,
+    unarTagPath + datePrexFile,
+    (err) => {
+      if (err) {
+        throw err;
+      }
+      copyFileToPost(unarTagPath + datePrexFile, `${postDir}/${datePrexFile}`);
     }
-    copyFileToPost(unarTagPath + datePrexFile, `${postDir}/${datePrexFile}`);
-  });
+  );
   console.log("🎉🎉, completed 100% ");
 };
 
@@ -52,13 +56,17 @@ const readFile = (file, excludeDatePrexFile, prex) => {
   tags: 
     - ${tags}\n
 ---\n\n`;
-  const content = note + postContent
+  let contentTag = `
+* content
+{:toc}\n\n
+  `;
+  const content = note + contentTag + postContent;
   return content;
 };
 
 /*
-* @param {unarTagPath}  标签目录 output/user-15312191-1635523978/编程范式/
-*/
+ * @param {unarTagPath}  标签目录 output/user-15312191-1635523978/编程范式/
+ */
 
 const updatePostDir = (unarTagPath) => {
   // unarTagPath ...output
@@ -69,12 +77,16 @@ const updatePostDir = (unarTagPath) => {
     if (err) throw err;
     fileList.forEach((excludeDatePrexFile) => {
       // 获取文件后缀名
-      const filePath = unarTagPath + excludeDatePrexFile
+      const filePath = unarTagPath + excludeDatePrexFile;
       const postContent = readFile(filePath, excludeDatePrexFile, prex);
       addTagsOnHeader(filePath, postContent);
       const reg = new RegExp(`${prex}`);
       if (reg.test(excludeDatePrexFile)) return;
-      renameFileByAddDatePrexInUnarTagPath(unarTagPath, prex, excludeDatePrexFile);
+      renameFileByAddDatePrexInUnarTagPath(
+        unarTagPath,
+        prex,
+        excludeDatePrexFile
+      );
     });
   });
 };
