@@ -1,8 +1,8 @@
 const { exec } = require("child_process");
 const fs = require("fs");
-const prex = "2022-3-16-";
+const prex = "2022-03-16-";
 const postDir = "../_posts";
-
+const datePre = /\d{4}-\d{2}-\d{2}-/;
 const deletePostDir = (path) => {
   exec(`rm -rf ${path}`);
 };
@@ -25,7 +25,13 @@ const renameFileByAddDatePrexInUnarTagPath = (
   prex,
   excludeDatePrexFile
 ) => {
-  const datePrexFile = prex + excludeDatePrexFile;
+  let datePrexFile
+  if (!datePre.test(excludeDatePrexFile))  {
+    datePrexFile = prex + excludeDatePrexFile;
+  } else {
+    datePrexFile = excludeDatePrexFile;
+
+  }
   fs.rename(
     unarTagPath + excludeDatePrexFile,
     unarTagPath + datePrexFile,
