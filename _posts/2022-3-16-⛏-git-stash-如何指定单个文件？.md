@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ![](https://upload-images.jianshu.io/upload_images/15312191-f01c769cc05d07ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-f01c769cc05d07ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 `$ git stash push -m "message" file_path`
 

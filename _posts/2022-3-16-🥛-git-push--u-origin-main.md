@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ## -u
+## -u
 ```
 [-u | --set-upstream]
 git push -u origin main 

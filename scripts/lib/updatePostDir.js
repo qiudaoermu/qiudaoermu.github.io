@@ -59,7 +59,7 @@ const readFile = (file, excludeDatePrexFile, prex) => {
   let contentTag = `
 * content
 {:toc}\n\n
-  `;
+`;
   const content = note + contentTag + postContent;
   return content;
 };

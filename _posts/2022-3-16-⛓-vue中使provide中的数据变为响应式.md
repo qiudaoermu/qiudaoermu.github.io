@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ### 正常使用provide的方式：
+### 正常使用provide的方式：
 ```
 // 父组件中：
 provide:{

@@ -12,7 +12,7 @@
 {:toc}
 
 
-  > Array(length).fill(element) 
+> Array(length).fill(element) 
 
 ### 参数
 length 填充长度

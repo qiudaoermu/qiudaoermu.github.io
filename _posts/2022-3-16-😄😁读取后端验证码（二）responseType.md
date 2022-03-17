@@ -12,7 +12,7 @@
 {:toc}
 
 
-  
+
 ![](https://upload-images.jianshu.io/upload_images/15312191-93378d34692cfaa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 有些时候我们希望xhr.response返回的就是我们想要的数据类型。比如：响应返回的数据是纯JSON字符串，但我们期望最终通过xhr.response拿到的直接就是一个 js 对象，我们该怎么实现呢？

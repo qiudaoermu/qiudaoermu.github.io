@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ### 问题
+### 问题
  $ `bundle install`
 
 ```

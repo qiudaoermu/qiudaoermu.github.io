@@ -12,7 +12,7 @@
 {:toc}
 
 
-  最近刷letcode碰到的小问题
+最近刷letcode碰到的小问题
 
 ## indexOf
 

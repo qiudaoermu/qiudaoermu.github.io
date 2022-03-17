@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ## (e.g., 'git pull ...') before pushing again
+## (e.g., 'git pull ...') before pushing again
 Use git pull to pull the latest changes from the remote repository to your local repository. In this case, pulling changes will require a merge because you have made changes to your local repository.
 
 I'll provide an example and a picture to explain. Let's assume your last pull from origin/branch was at Commit B. You have completed and committed some work (Commit C). At the same time, someone else has completed their work and pushed it to origin/branch (Commit D). There will need to be a merge between these two branches.

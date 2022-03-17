@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ## 问题：chrome怎么跨平台
+## 问题：chrome怎么跨平台
 chrome 在安卓，iOS，Mac,windows,linux都有安装包，chrome作为浏览器怎么做到兼容问题的呢。
 
 ## chrome渲染图像过程

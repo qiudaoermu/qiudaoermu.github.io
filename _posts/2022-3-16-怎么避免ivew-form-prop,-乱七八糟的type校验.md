@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ivew 在参考(其实就是抄袭，api都一样)element的过程中，设置了一些独有的api
+ivew 在参考(其实就是抄袭，api都一样)element的过程中，设置了一些独有的api
 比如，在form input校验中，设置了type,比如
 ```
  <Form

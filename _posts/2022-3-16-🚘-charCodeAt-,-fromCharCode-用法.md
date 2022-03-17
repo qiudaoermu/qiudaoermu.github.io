@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ```
+```
 let  d = "a"
 console.log(d.charCodeAt()) // 97
 ```

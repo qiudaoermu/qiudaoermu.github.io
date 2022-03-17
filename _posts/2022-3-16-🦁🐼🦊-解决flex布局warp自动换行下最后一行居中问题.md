@@ -12,7 +12,7 @@
 {:toc}
 
 
-  ![](https://upload-images.jianshu.io/upload_images/15312191-60837754b15b426c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-60837754b15b426c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ## 现象：
 这是一段很简单的flex弹性布局代码：
 ```

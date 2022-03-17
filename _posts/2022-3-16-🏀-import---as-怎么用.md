@@ -12,7 +12,7 @@
 {:toc}
 
 
-  `lib.js`
+`lib.js`
 ```js
 export var config = _config;
 export var db = _db;
