@@ -1,5 +1,5 @@
 # Site settings
-title: home
+title: Star Blog
 SEOTitle: 陈振飞的博客 | home
 header-img: img/about-bg-walle.jpg
 email: qiudaoermu@gmail.com
@@ -49,7 +49,7 @@ plugins: [jekyll-paginate]
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM   # use Github Flavored Markdown !important
+  input: GFM # use Github Flavored Markdown !important
   syntax_highlighter_opts:
     span:
       line_numbers: false
