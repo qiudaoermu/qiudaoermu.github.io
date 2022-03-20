@@ -107,13 +107,19 @@
     style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')"
   >
     <div class="container">
-      <div class="row" <div class="col-lg-8 col-md-10" style="margin: 0 auto">
+      <div
+        class="row"
+        style="cursor: pointer"
+        <div
+        class="col-lg-8 col-md-10"
+        style="margin: 0 auto"
+      >
         > {% if include.short %}
         <div class="site-heading" id="tag-heading">
           {% else %}
           <div class="site-heading">
             {% endif %}
-            <h1  style="color: #fff">Control The Pace</h1>
+            <h1 style="color: #fff">Control The Pace</h1>
             「离开世界之前 一切都是过程」
           </div>
         </div>
