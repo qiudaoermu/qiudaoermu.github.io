@@ -52,6 +52,10 @@ const addTagsOnHeader = (file, content) => {
 };
 const readFile = (file, excludeDatePrexFile, prex) => {
   let postContent = fs.readFileSync(file, "utf-8");
+
+  if (datePre.test(excludeDatePrexFile)) {
+    prex = excludeDatePrexFile.match(datePre)[0];
+  }
   let s = file.split("/");
   let tags = s[s.length - 2];
   let note = `---
@@ -86,6 +90,7 @@ const updatePostDir = (unarTagPath) => {
       const postContent = readFile(filePath, excludeDatePrexFile, prex);
       addTagsOnHeader(filePath, postContent);
       const reg = new RegExp(`${prex}`);
+
       if (reg.test(excludeDatePrexFile)) return;
       renameFileByAddDatePrexInUnarTagPath(
         unarTagPath,
