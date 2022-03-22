@@ -76,7 +76,7 @@
   padding-left: 0px;
   padding-right: 5px;
   text-indent: 0;
-  font-size: 18px;
+  font-size: 14px;
 }
 .side-catalog .catalog-body li {
   position: relative;
@@ -687,7 +687,7 @@ h4 {
   font-size: 21px;
 }
 a {
-  color: #404040;
+  color: #cbcbcb
 }
 a:hover,
 a:focus {
