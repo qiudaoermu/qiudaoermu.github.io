@@ -509,6 +509,7 @@ pre.highlight {
   background: transparent;
   border: 0;
   margin: 0;
+  background: #f0f0f4;
   padding: 0;
   word-wrap: normal;
 }
