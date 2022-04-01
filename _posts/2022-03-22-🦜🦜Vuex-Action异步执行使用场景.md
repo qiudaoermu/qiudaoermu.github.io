@@ -14,7 +14,7 @@
 
 vuex action 是全局事件触发的执行函数，
 定义
-```
+```js
 const actions  = {
   login(state) {
     axios('login').then(res ={
