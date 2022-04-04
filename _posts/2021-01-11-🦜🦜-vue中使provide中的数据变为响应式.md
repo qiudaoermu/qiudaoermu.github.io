@@ -13,14 +13,14 @@
 
 
 ### 正常使用provide的方式：
-```
+```js
 // 父组件中：
 provide:{
 　　for: 'demo'
 }
 ```
 这样子组件中无论多深的子组件都可以使用：
-```
+```js
 // 子组件
 inject:['for'],
 data(){
@@ -37,7 +37,7 @@ data(){
 ### 这时候就需要换一种写法：
 
 
-```
+```js
 // 父组件中：
 data () {
   return {
@@ -56,7 +56,7 @@ provide() {
 }
 ```
 
-```
+```js
 // 子组件中：
 inject:['provObj'],
 data(){
@@ -68,7 +68,7 @@ data(){
 ---
  [provide源码](@previous)
 使用defineReactive, 让provide变为响应式的, 所以根元素属性 `this.for` 无效，必须监听下一级属性 ` this.for.fp`
-```
+```js
 export function initInjections (vm: Component) {
 const result = resolveInject(vm.$options.inject, vm)
 if (result) {

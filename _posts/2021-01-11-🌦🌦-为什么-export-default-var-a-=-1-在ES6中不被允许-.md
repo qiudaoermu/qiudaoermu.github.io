@@ -14,7 +14,7 @@
 
 babel输入以下代码，异常显示
 
-![image.png](https://upload-images.jianshu.io/upload_images/15312191-eacf86a1250bac4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-eacf86a1250bac4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Only expressions, functions or classes are allowed as the `default` export.
 **export default 只能导处函数 表达式 和 class**
