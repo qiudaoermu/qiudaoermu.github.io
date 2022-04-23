@@ -311,7 +311,7 @@ pre.highlight {
 }
 .highlight .err {
   color: #960050;
-  background-color: #1e0010;
+  background-color: #ffffff;
 }
 .language-coq .highlight .err {
   background-color: transparent;
