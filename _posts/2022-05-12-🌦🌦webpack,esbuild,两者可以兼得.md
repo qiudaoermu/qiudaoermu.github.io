@@ -1,6 +1,6 @@
 ---
   layout: post
-  tilte: "2022-05-12-webpack,esbuild,两者可以兼得.md"
+  tilte: "2022-05-12-🌦🌦webpack,esbuild,两者可以兼得.md"
   date: 2022-05-12-
   tags: 
     - 开发日常
@@ -52,3 +52,5 @@ Before:
 ![](https://upload-images.jianshu.io/upload_images/15312191-4de927aca2f3f44d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 After:
 ![](https://upload-images.jianshu.io/upload_images/15312191-bbc28ee5237260a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+结论：速度快了1/3左右，esbuilder-loader只能取代babal-loader的左右，像png,css等资源无法提供支持。
