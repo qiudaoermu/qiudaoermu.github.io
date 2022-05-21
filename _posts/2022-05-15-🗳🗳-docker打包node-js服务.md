@@ -19,7 +19,7 @@
 有当前node 项目，向前端展示某个文件下的文件
 ![](https://upload-images.jianshu.io/upload_images/15312191-956c3d0469a168fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 app.js
-```
+```js
 const express = require('express');
 const app = express();
 const fs = require('fs');
@@ -77,8 +77,12 @@ ps: 镜像名/前是docker hub你的用户名
 `docker push chenxiaobei/node-alpine`
 在https://hub.docker.com/上查看
 ![](https://upload-images.jianshu.io/upload_images/15312191-4279ab9c9914f4cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+#### linux安装docker
+`curl -sSL https://get.daocloud.io/docker | sh`
+#### linux启动docker
+`systemctl start docker`
 #### 服务器拉取镜像
 `docker pull chenxiaobei/node-alpine`
 #### 服务器运行镜像
-` docker run -p 3000:3000 -d chenxiaobei/node-alpine`
+
+`docker run -dit   -p 3000:3000  chenxiaobei/node-alpine`
