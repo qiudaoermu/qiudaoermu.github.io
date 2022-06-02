@@ -1,6 +1,6 @@
 ---
   layout: post
-  tilte: "2022-05-12-🌦🌦webpack,esbuild,两者可以兼得.md"
+  tilte: "2022-05-12-🌦🌦webpack&esbuild,两者可以兼得.md"
   date: 2022-05-12-
   tags: 
     - 开发日常

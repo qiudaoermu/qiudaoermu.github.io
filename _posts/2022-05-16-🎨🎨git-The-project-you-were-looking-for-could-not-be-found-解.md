@@ -1,6 +1,6 @@
 ---
   layout: post
-  tilte: "2022-05-16-🎨🎨git使用采坑-The-project-you-were-looking-for-could-not-be-fou.md"
+  tilte: "2022-05-16-🎨🎨git-The-project-you-were-looking-for-could-not-be-found-解.md"
   date: 2022-05-16-
   tags: 
     - 开发日常

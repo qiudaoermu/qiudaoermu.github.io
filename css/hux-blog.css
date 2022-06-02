@@ -116,9 +116,17 @@
 .side-catalog .catalog-body .h6_nav {
   margin-left: 24px;
 }
-.side-catalog .catalog-body .active {
+.side-catalog .catalog-body .active{
   border-radius: 4px;
   background-color: #d9d9d9;
+}
+.side-catalog .catalog-body .active::before {
+  content: "";
+  display: block;
+  border-radius: 4px;
+  width:30px;
+  
+  background-color: #872d2d;
 }
 @media (max-width: 1200px) {
   .side-catalog {

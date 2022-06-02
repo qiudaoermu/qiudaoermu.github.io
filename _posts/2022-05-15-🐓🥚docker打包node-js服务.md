@@ -1,6 +1,6 @@
 ---
   layout: post
-  tilte: "2022-05-15-🥚🥚-docker打包node-js服务.md"
+  tilte: "2022-05-15-🐓🥚docker打包node-js服务.md"
   date: 2022-05-15-
   tags: 
     - 实践堂
@@ -18,7 +18,7 @@
 使用docker打包
 有当前node 项目，向前端展示某个文件下的文件
 ![](https://upload-images.jianshu.io/upload_images/15312191-956c3d0469a168fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-app.js
+app.js 展示文件列表的小软件
 ```js
 const express = require('express');
 const app = express();
