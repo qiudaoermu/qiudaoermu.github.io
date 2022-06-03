@@ -10,3 +10,4 @@ output/*
 vendor
 _site
 .vscode
+scripts/dist

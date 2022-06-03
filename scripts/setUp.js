@@ -57,7 +57,7 @@ class Decompress {
     const unarFiePath = this.unRarPath + "/" + unarFieName;
     return unarFiePath;
   }
- 
+
   lastModifiedRar() {
     const readDir = this.readDirs.filter(
       (item) =>
@@ -69,7 +69,7 @@ class Decompress {
 }
 
 const decompress = new Decompress({
-  input: "../../../Downloads",
+  input: "./dist",
   output: "../output",
 });
 
