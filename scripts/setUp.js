@@ -7,9 +7,10 @@
 
 const fs = require("fs");
 const path = require("path");
-const updatePostDir = require("./lib/updatePostDir");
+const WriteFile = require("./lib/writeFile");
+const download = require("./downloadIO");
 const { exec } = require("child_process");
-
+const file = new WriteFile();
 class Decompress {
   constructor({ input, output }) {
     this.inputPath = input;
@@ -39,7 +40,7 @@ class Decompress {
         this.unRarPath = this.updateUnrarPath();
         let childDir = fs.readdirSync(this.unRarPath);
         childDir.forEach((item) => {
-          updatePostDir(this.unRarPath + "/" + item + "/");
+          file.updatePostDir(this.unRarPath + "/" + item + "/");
         });
         console.log(`stdout: ${stdout}`);
         if (stderr) console.error(`stderr: ${stderr}`);
@@ -66,6 +67,9 @@ class Decompress {
     readDir.sort();
     return readDir[readDir.length - 1];
   }
+  download() {
+    download();
+  }
 }
 
 const decompress = new Decompress({
@@ -73,6 +77,9 @@ const decompress = new Decompress({
   output: "../output",
 });
 
-decompress.deleteUnrarDir();
-decompress.readDir();
-decompress.unCompress();
+(async () => {
+  await download();
+  decompress.deleteUnrarDir();
+  decompress.readDir();
+  decompress.unCompress();
+})();
