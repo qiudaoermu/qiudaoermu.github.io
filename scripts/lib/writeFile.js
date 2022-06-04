@@ -2,6 +2,7 @@ const { exec } = require("child_process");
 const fs = require("fs");
 
 class WriteFile {
+  
   constructor() {
     this.prex = "2021-01-11-";
     this.datePre = /\d{4}-\d{2}-\d{2}-/;
@@ -80,7 +81,7 @@ class WriteFile {
    * @param {unarTagPath}  标签目录 output/user-15312191-1635523978/编程范式/
    */
 
-  updatePostDir(unarTagPath) {
+  addTags(unarTagPath) {
     // unarTagPath ...output
     this.deletePostDir(this.postDir);
     this.makePostdir(this.postDir);
@@ -90,11 +91,13 @@ class WriteFile {
       fileList.forEach((excludeDatePrexFile) => {
         // 获取文件后缀名
         const filePath = unarTagPath + excludeDatePrexFile;
-        const postContent = this.readFile(filePath, excludeDatePrexFile, this.prex);
+        const postContent = this.readFile(
+          filePath,
+          excludeDatePrexFile,
+          this.prex
+        );
         this.addTagsOnHeader(filePath, postContent);
-        const reg = new RegExp(`${this.prex}`);
 
-        if (reg.test(excludeDatePrexFile)) return;
         this.renameFileByAddDatePrexInUnarTagPath(
           unarTagPath,
           this.prex,
