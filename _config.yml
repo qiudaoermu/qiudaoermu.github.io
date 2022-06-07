@@ -104,9 +104,8 @@ theme: volantis
 
 deploy:
   type: git
-  repo: <repository url> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: [branch]
-  message: [message]
+  repo: git@github.com:qiudaoermu/qiudaoermu.github.io.git # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: master
 # search:
 #   path: search.xml
 #   field: post
