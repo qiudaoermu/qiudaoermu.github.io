@@ -68,6 +68,21 @@ compressing.zip
 
 ```
 
+```diff
+
++import type { BytemdPlugin } from 'bytemd'
++ import remarkMath from 'remark-math'
+export default function mathPlugin(): BytemdPlugin {
+  return {
+-    // to be implement
++    remark: (processor) => processor.use(remarkMath),
+  }
+}
+
+```
+
+
+
 ##### 上传到服务器
 
 ##### 上传静态资源h5.zip

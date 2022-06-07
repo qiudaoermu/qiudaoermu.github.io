@@ -1,6 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (7.0.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
@@ -11,9 +16,11 @@ GEM
     eventmachine (1.2.7)
     ffi (1.15.4)
     forwardable-extended (2.6.0)
+    github-markup (4.0.1)
     http_parser.rb (0.6.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    iniparser (1.0.1)
     jekyll (4.2.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -38,13 +45,28 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
+    linkify-it-rb (2.0.3)
+      uc.micro-rb (~> 1.0)
     liquid (4.0.3)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logutils (0.6.1)
+    markdown (1.2.0)
+      kramdown (>= 1.5.0)
+      props (>= 1.1.2)
+      textutils (>= 0.10.0)
+    mdurl-rb (1.0.5)
     mercenary (0.4.0)
+    minitest (5.15.0)
+    motion-markdown-it (8.4.1.2)
+      linkify-it-rb (~> 2.0)
+      mdurl-rb (~> 1.0)
+      uc.micro-rb (~> 1.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    props (1.2.0)
+      iniparser (>= 0.1.0)
     public_suffix (4.0.6)
     rake (13.0.6)
     rb-fsevent (0.11.0)
@@ -52,11 +74,20 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.1)
+    rubyzip (2.3.2)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
+    textutils (1.4.0)
+      activesupport
+      logutils (>= 0.6.1)
+      props (>= 1.1.2)
+      rubyzip (>= 1.0.0)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    uc.micro-rb (1.0.5)
     unicode-display_width (1.8.0)
     webrick (1.7.0)
 
@@ -64,8 +95,11 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  github-markup
   jekyll (~> 4.0)
   jekyll-paginate
+  markdown
+  motion-markdown-it
   rake
   webrick (~> 1.7)
 
