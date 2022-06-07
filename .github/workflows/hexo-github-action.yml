@@ -1,19 +1,22 @@
-name: Hexo Build and Deploy
-
-on: [push]
-
+on: push
+name: Deploy
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
-      - uses: yrpang/github-actions-hexo@v1.3
-        with:
-          deploykey: ${{secrets.DEPLOY_KEY}}
-          username: PUBLISHER_USER_NAME
-          email: PUBLISHER_EMAIL_ADDRESS
+    - name: Clean
+      uses: heowc/action-hexo@main
+      with:
+        args: clean
+    - name: Generate
+      uses: heowc/action-hexo@main
+      with:
+        args: generate
+    - name: Deploy
+      uses: heowc/action-hexo@main
+      env:
+        EMAIL: 793385821@qq.comments
+        NAME: qiudaoermu
+      with:
+        args: deploy
