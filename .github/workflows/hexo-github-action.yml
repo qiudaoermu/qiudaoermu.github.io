@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       with:
-        submodules: false # Checkout private submodules(themes or something else).
+        submodules: true # Checkout private submodules(themes or something else).
     
     # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
     - name: Cache node modules
@@ -33,8 +33,7 @@ jobs:
       id: deploy
       uses: sma11black/hexo-action@v1.0.3
       with:
-        deploy_key: 's2322'
-        commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
     # Use the output from the `deploy` step(use for test action)
     - name: Get the output
       run: |
