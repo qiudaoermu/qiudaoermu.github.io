@@ -1934,7 +1934,7 @@ img.lazyload:not(.placeholder).loaded {
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: initial;
   font-family: 'UbuntuMono';
-  background: linear-gradient(to bottom, transparent 60%, #fcc 0) no-repeat;
+  background: linear-gradient(to bottom, transparent 60%, #ccfffd 0) no-repeat;
   pointer-events: none;
   margin-top: 0;
   font-weight: 500;
