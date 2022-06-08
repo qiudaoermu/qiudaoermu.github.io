@@ -118,7 +118,7 @@ cover:
   logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: 'Volantis'
   subtitle: ''
-  search: A Wonderful Theme for Hexo # search bar placeholder
+  search: Keep To Gold # search bar placeholder
   features:
     - name: 文档
       icon: #

@@ -1,12 +1,9 @@
 ---
-title: 🐓🥚docker打包node-js服务
+title: "🐓🥚docker打包node-js服务"
 date: 2022-05-15
-tags:  
+tags: 
 - 实践堂
 ---
-
-
-
 ### 背景：
 把node.js服务放在linux上，每次都要搞一堆配置。
 ### 解决方法： 
@@ -14,11 +11,6 @@ tags:
 有当前node 项目，向前端展示某个文件下的文件
 ![](https://upload-images.jianshu.io/upload_images/15312191-956c3d0469a168fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 app.js 展示文件列表的小软件
-
-```diff
-+ppso
---pp
-```
 ```js
 const express = require('express');
 const app = express();
@@ -86,27 +78,3 @@ ps: 镜像名/前是docker hub你的用户名
 #### 服务器运行镜像
 
 `docker run -dit   -p 3000:3000  chenxiaobei/node-alpine`
-
-`
-copy /path/filename /targetPath/filename
-`
-##### 创建文件夹 group
-`
-mkdir group
-`
-
-###### 删除文件夹
-删除文件夹 group
-`
-rm -rf group
-`
-###### 删除文件夹所有文件和文件夹
-`
-rm -rf *
-`
-
-##### 上传本地文件到服务器
-`
-scp /path/filename username@servername:/path   
-`
-
