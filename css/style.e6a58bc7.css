@@ -1488,6 +1488,7 @@ svg.loading {
 #l_main .post h1.title {
   font-size: 1.5rem;
   margin: 0;
+  background: transparent;
   font-family: 'UbuntuMono';
   border-bottom: none;
   padding-bottom: 4px;
@@ -1929,6 +1930,11 @@ img.lazyload:not(.placeholder).loaded {
 .md h5,
 .md h6 {
   position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: initial;
+  font-family: 'UbuntuMono';
+  background: linear-gradient(to bottom, transparent 60%, #fcc 0) no-repeat;
   pointer-events: none;
   margin-top: 0;
   font-weight: 500;
