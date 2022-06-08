@@ -63,7 +63,7 @@ volantis_static_cdn: https://unpkg.com/volantis-static@0.0.1649552113628/
 ########################################################################
 # 全局页面字符串替换  A => B (可用于临时修改错字等)
 replace:
-  - https://cdn.jsdelivr.net/npm/ => https://unpkg.com/
+  # - https://cdn.jsdelivr.net/npm/ => https://unpkg.com/
   - https://cdn.jsdelivr.net/gh/ => https://fastly.jsdelivr.net/gh/
 #  - https://unpkg.com/ => https://npm.elemecdn.com/
 
@@ -1216,6 +1216,12 @@ custom_css:
     code: .8125rem
     footnote: .78125rem
   fontfamily:
+    titlefont:
+      fontfamily: 'UbuntuMono'
+      name: 'UbuntuMono'
+      url: https://fastly.jsdelivr.net/gh/Langwenchong/cdn/font/SentyGoldenBell.woff2 # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      weight: normal
+      style: normal
     logofont:
       fontfamily: '"Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'Varela Round'
@@ -1225,15 +1231,15 @@ custom_css:
     bodyfont:
       fontfamily: '"hytmr", "Roboto", "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif'
       name: 'UbuntuMono'
-      url: volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      url: https://fastly.jsdelivr.net/gh/Langwenchong/cdn/font/SentyGoldenBell.woff2 # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal
       style: normal
     codefont:
       fontfamily: 'Menlo, UbuntuMono, Monaco'
-      # name: 'Monaco'
-      # url: volantis-static/media/fonts/Monaco/Monaco.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
-      # weight: normal
-      # style: normal
+      name: 'Monaco'
+      url: https://fastly.jsdelivr.net/gh/Langwenchong/cdn/font/hytmr55.woff # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
+      weight: normal
+      style: normal
 ############################### Custom css ############################### > end
 
 
