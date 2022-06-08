@@ -1,0 +1,22 @@
+<% if (theme.comments.service == 'waline'){ %>
+<div class="new-meta-item comments-count">
+  <%
+    var path = post.path || page.path;
+    if (path.length > 9 && (path.substring(path.length - 10) == 'index.html')) {
+      path = path.substring(0, path.length - 10);
+    }
+    if(!!theme.comments.waline.path) path = theme.comments.waline.path
+  %>
+  <a href="<%- url_for(path) %>#comments">
+    <i class="<%- theme.article.body.meta_library.walinecount.icon %> fa-fw"></i>
+    <p>
+      <span data-path="<%- url_for(path) %>" class="waline-comment-count">
+        <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span> 
+      <% if(theme.article.body.meta_library.walinecount.desc) { %> 
+        <span class="leancloud-comments-count">&nbsp;<%- theme.article.body.meta_library.walinecount.desc %></span> 
+      <% } %> 
+    </p>
+  </a>
+</div>
+<% } %>
