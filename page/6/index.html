@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.d53ad72b.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654702451187),
+    lastupdate: new Date(1654768422451),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2526,7 +2526,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/React-%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%EF%BC%9F/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/13/%F0%9F%A6%9C%F0%9F%A6%9C-vue%E4%B8%AD%E4%BD%BFprovide%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8F%98%E4%B8%BA%E5%93%8D%E5%BA%94%E5%BC%8F/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2544,16 +2544,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/React-%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%EF%BC%9F/"  itemprop="url">
-        React-如何阻止事件冒泡？
+      <a href="/2021/undefined/13/%F0%9F%A6%9C%F0%9F%A6%9C-vue%E4%B8%AD%E4%BD%BFprovide%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8F%98%E4%B8%BA%E5%93%8D%E5%BA%94%E5%BC%8F/"  itemprop="url">
+        🦜🦜-vue中使provide中的数据变为响应式
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        React 为提高性能，有自己的一套事件处理机制，相当于将事件代理到全局进行处理，也就是说监听函数并未绑定到DOM元素上。因此，如果你禁止react事件冒泡e.stopPropagation()，你就无法阻止原生事件冒泡；你禁用原生事件冒泡e.nativeEvent.stopPropagation()，React的监听函数就调用不到了。
-正确的姿势，应该是判断event.target对象，是...
+        正常使用provide的方式：1234// 父组件中：provide:&#123;　　for: &#x27;demo&#x27;&#125;
+这样子组件中无论多深的子组件都可以使用：
+1234567// 子组件inject:[&#x27;for&#x27;],data()&#123;　　return&#123;　　　　demo: this.for　　&#125;&#125;
+
+但是上面的写法...
       
     
   </div>
@@ -2561,12 +2564,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-10-13T00:00:00+00:00">2021-10-13</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/React-%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%EF%BC%9F/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/13/%F0%9F%A6%9C%F0%9F%A6%9C-vue%E4%B8%AD%E4%BD%BFprovide%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8F%98%E4%B8%BA%E5%93%8D%E5%BA%94%E5%BC%8F/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2582,7 +2585,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input-prop%E6%A0%A1%E9%AA%8C/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6-indexOf%EF%BC%8Cincludes%EF%BC%8C%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E8%BF%94%E5%9B%9E%E7%9A%84%E4%BB%80%E4%B9%88/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2600,17 +2603,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input-prop%E6%A0%A1%E9%AA%8C/"  itemprop="url">
-        ivew-动态新增-input-prop校验
+      <a href="/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6-indexOf%EF%BC%8Cincludes%EF%BC%8C%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E8%BF%94%E5%9B%9E%E7%9A%84%E4%BB%80%E4%B9%88/"  itemprop="url">
+        🌦🌦-indexOf，includes，空字符串，返回的什么
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        有这样的需求如下图：1.下拉选择select 选择，2.新增一组 input提交选项
-新增input代码如下(只罗列了前两项)：
-12345678910111213 &lt;!-- 新增园区 --&gt;&lt;div v-for=&quot;(item, index) in formData.areaList&quot; v-if=&#x27;formData.areaList.lengt...
+        最近刷letcode碰到的小问题
+indexOf12let str = &quot;string&quot;str.indexOf(&quot;&quot;) // 0
+mdn解释The index of the first occurrence of searchValue, or -1 if not found.
+An empty string searchValue produces ...
       
     
   </div>
@@ -2618,12 +2622,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-10-10T00:00:00+00:00">2021-10-10</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input-prop%E6%A0%A1%E9%AA%8C/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6-indexOf%EF%BC%8Cincludes%EF%BC%8C%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E8%BF%94%E5%9B%9E%E7%9A%84%E4%BB%80%E4%B9%88/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2639,7 +2643,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input--v-model%E7%BB%91%E5%AE%9A/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/08/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2657,17 +2661,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input--v-model%E7%BB%91%E5%AE%9A/"  itemprop="url">
-        ivew-动态新增-input--v-model绑定
+      <a href="/2021/undefined/08/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8/"  itemprop="url">
+        🦜🦜vue-$emit-同步调用
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        有这样的需求如下图：1.下拉选择select 选择，2.新增一组 input提交选项
-新增input代码如下(只罗列了前两项)：
-12345678910111213 &lt;!-- 新增园区 --&gt;&lt;div v-for=&quot;(item, index) in formData.areaList&quot; v-if=&#x27;formData.areaList.lengt...
+        标题换一种说法：vue $emit 调用父组件异步方法，执行完毕后再执行子组件的某方法使用回调的形式
+123456789101112// 组件的html中添加事件 @getData=&quot;getData&quot;methods : &#123;	getData(params, callback) &#123;		console.log(&quot;子组件的传递到父组件的参数&quot...
       
     
   </div>
@@ -2675,12 +2678,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-10-08T00:00:00+00:00">2021-10-08</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input--v-model%E7%BB%91%E5%AE%9A/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/08/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2696,7 +2699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/30/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2714,19 +2717,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/"  itemprop="url">
-        微信小程序-为什么地图本地体验可以用，线上环境不能用
+      <a href="/2021/undefined/30/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/"  itemprop="url">
+        🌦🌦-js-修改对象key
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        需要加安全域名
-
-在你已经加的域名上增加https://apis.map.qq.com;
-
-
+        原始数据:
+123456let Obj=&#123;  parentid:&quot;43323wsd2e2d2e33r3redad&quot;,  head_img:&quot;i am a url&quot;,&#125;
+想要的数据：
+123456let newObj=&#123;  ParentID:&quot;43323wsd2e2d2e33r3redad&quot;,  avat...
       
     
   </div>
@@ -2734,12 +2736,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-30T00:00:00+00:00">2021-09-30</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/30/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2755,7 +2757,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2773,26 +2775,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/"  itemprop="url">
-        清明节,今天想跟自己谈谈.html
+      <a href="/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/"  itemprop="url">
+        🌦🌦-cookie-为什么作为token-放在header里
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        
+        现象：后端配置了cores跨域，前端直接请求，没有通过代理，这样如果设置cookie，只能设置到， localhost里，request header 无法带过去
+手动设置header Access-Token 
+123header: &#123;  Access-Token: Cookies.get(&quot;Access-Token&quot;)&#125;
 
-  
-    
-    
-    清明节,今天想跟自己谈谈
-    
-      body {
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
-        font-size: 14px;
-        line-h...
+通过代理，携带在在req...
       
     
   </div>
@@ -2800,12 +2795,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+00:00">2021-09-22</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2821,7 +2816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/lodash%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/19/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2839,8 +2834,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/lodash%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"  itemprop="url">
-        lodash常用方法
+      <a href="/2021/undefined/19/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/"  itemprop="url">
+        🎨🎨-git-一些常用参数设置
       </a>
     </h2>
   
@@ -2848,10 +2843,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-找数组中的相同key项的对象()
-
-intersectionBy
-12_.intersectionBy([&#123; &#x27;x&#x27;: 1 &#125;], [&#123; &#x27;x&#x27;: 2 &#125;, &#123; &#x27;x&#x27;: 1 &#125;], &#x27;x&#x27;);// =&gt; [&#123; &#x27;x&#x27...
+-u123[-u | --set-upstream]git push -u origin main git push ---set-upstream origin main
+设置默认推送分支
+origin1git remote add origin http:xxxxx
+origin 是提交远程的命名 也可以自己命名比如 ppp o
+–help比如git push
+1git push --...
       
     
   </div>
@@ -2859,12 +2856,12 @@ intersectionBy
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-19T00:00:00+00:00">2021-09-19</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/lodash%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/19/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2880,7 +2877,7 @@ intersectionBy
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88%E6%9C%80%E8%BF%91%E5%81%9A%E9%A1%B9%E7%9B%AE%E7%A2%B0%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AAcss%E5%B0%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/15/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2898,18 +2895,21 @@ intersectionBy
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8C%88%E6%9C%80%E8%BF%91%E5%81%9A%E9%A1%B9%E7%9B%AE%E7%A2%B0%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AAcss%E5%B0%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"  itemprop="url">
-        🌈最近做项目碰到的几个css小问题总结
+      <a href="/2021/undefined/15/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/"  itemprop="url">
+        🗳🗳-nginx-启动停止命令
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        #1.display img变形
+        启动$ ./nginx
+重启nginx $ ./nginx -s reload
+查找nginx 位置$ whereis nginx
+检测 nginx.config正确性1nginx -t
 
-123456789&lt;div&gt;    &lt;img class=&#x27;icon&#x27;/&gt;    &lt;p&gt;发票&lt;/p&gt;&lt;/div&gt;&lt;style&gt;div &#123;  display:flex;&#125;&lt;/style&gt;
-######原因：父元素，没设置 item-al...
+
+
       
     
   </div>
@@ -2917,12 +2917,12 @@ intersectionBy
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-15T00:00:00+00:00">2021-09-15</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88%E6%9C%80%E8%BF%91%E5%81%9A%E9%A1%B9%E7%9B%AE%E7%A2%B0%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AAcss%E5%B0%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/15/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2938,7 +2938,7 @@ intersectionBy
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-node-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/13/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2956,20 +2956,18 @@ intersectionBy
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-node-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85/"  itemprop="url">
-        ☁️☁️-node-常用工具包
+      <a href="/2021/undefined/13/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/"  itemprop="url">
+        ☀️☀️-编程范式----shell-子文件异步模式-VS--JS-async-await
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        node 版本管理工具 –n安装:npm install -g n
-使用列出可选择的 版本:$ n
-安装某个 版本:$ n &lt;version&gt;
-npm 代理管理工具 – nrm安装:npm install -g nrm
-使用列出可选择的源:$ nrm ls
-12345678910  npm ---- https://registry.npmjs.org/  cnpm --- ht...
+        
+问题：在 shell 下有 A、B、C、D 四个命令,需要先执行 A再执行 B、C最后执行 D
+其中, B、C 耗时较多， 但是，互不干扰，可以同步执针对以上情形，bash提供了一个内置的命令来帮助管理异步执行。wait命令可以让父脚本暂停，直到指定的进程（比如子脚本）结束。
+shell子进程 和 wait123456./A./B &amp;  # 设为子进程./C &amp;pid=$1...
       
     
   </div>
@@ -2977,12 +2975,12 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-13T00:00:00+00:00">2021-09-13</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-node-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/13/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2998,7 +2996,7 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/11/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-npm-bin-%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4%E5%8E%9F%E7%90%86/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -3016,16 +3014,16 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/"  itemprop="url">
-        怎么避免ivew-form-prop,-乱七八糟的type校验
+      <a href="/2021/undefined/11/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-npm-bin-%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4%E5%8E%9F%E7%90%86/"  itemprop="url">
+        ☁️☁️-npm-bin-全局命令原理
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        ivew 在参考(其实就是抄袭，api都一样)element的过程中，设置了一些独有的api比如，在form input校验中，设置了type,比如
-1234567 &lt;Form  :model=&quot;formValidate&quot;   :rules=&quot;ruleValidate&quot; &gt;  &lt;DatePicker type=&quot;date&q...
+        前言用过构建工具的亲们知道，通常通过全局安装一个 xxx-cli 的 npm 包，就能在命令行用命令进行构建。那么这个 npm 包如何变成一个可执行的命令呢？
+npm cli 开发步骤1. 使用 npm init 初始化一个项目目录 my-cli。2. 在 package.json 中添加或者编辑 bin 字段：12345678&#123;  &quot;name&quot;: &quot;...
       
     
   </div>
@@ -3033,12 +3031,12 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-11T00:00:00+00:00">2021-09-11</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/11/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-npm-bin-%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4%E5%8E%9F%E7%90%86/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3054,7 +3052,7 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6-ES6%E5%88%A0%E9%99%A4%E5%92%8C%E8%BF%87%E6%BB%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E9%83%A8%E5%88%86%E5%B1%9E%E6%80%A7/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/08/%F0%9F%93%A3%F0%9F%93%A3%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E5%92%8C%E7%BC%96%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -3072,18 +3070,19 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6-ES6%E5%88%A0%E9%99%A4%E5%92%8C%E8%BF%87%E6%BB%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E9%83%A8%E5%88%86%E5%B1%9E%E6%80%A7/"  itemprop="url">
-        🌦🌦-ES6删除和过滤对象中部分属性
+      <a href="/2021/undefined/08/%F0%9F%93%A3%F0%9F%93%A3%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E5%92%8C%E7%BC%96%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8/"  itemprop="url">
+        📣📣编程艺术和编程的本质
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        原始数据
-1234567let student=&#123;    age: 20,    name: &#x27;maomao&#x27;,    sex: &quot;男&quot;&#125;
-排除”age”属性
-1234let &#123; age, ...params &#125; = studentconsole.log(params)  // &#123;name: &quot...
+        
+编程艺术最近看老外写的代码，感觉他们写代码就跟搞艺术一样，就像珍珠一样晶莹剔透，甚至注释比代码都多。
+国外在产品中注入艺术气息的不再少数
+法国大餐，秀色可餐。日本料理，精致温婉。苹果产品，兼顾艺术品味，简约大气又耐用。美国隐身战斗机，外观霸气，操作简约。欧洲、日本的汽车流线、颜色都很美，功能人性化。古罗马帝国作为横跨欧洲、非洲与亚洲的强大帝国，格外强调其建筑的威严，以给人不可侵犯的感觉。
+...
       
     
   </div>
@@ -3091,12 +3090,12 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-08T00:00:00+00:00">2021-09-08</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6-ES6%E5%88%A0%E9%99%A4%E5%92%8C%E8%BF%87%E6%BB%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E9%83%A8%E5%88%86%E5%B1%9E%E6%80%A7/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/08/%F0%9F%93%A3%F0%9F%93%A3%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E5%92%8C%E7%BC%96%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3123,7 +3122,7 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
           </a>
         
         <p class="current">
-          6 / 13
+          6 / 12
         </p>
         
           <a class="next" rel="next" href="/page/7/">
@@ -3230,7 +3229,7 @@ npm 代理管理工具 – nrm安装:npm install -g nrm
 
 
     <div class='content'>
-      <a href="/tags/css/" style="font-size: 19px; color: #777">css</a> <a href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" style="font-size: 16.5px; color: #888">mac小天地</a> <a href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" style="font-size: 16.5px; color: #888">实践堂</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">开发日常</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 16.5px; color: #888">正则</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" style="font-size: 19px; color: #777">编程范式</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" style="font-size: 14px; color: #999">美食记录</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">计算机基础</a>
+      <a href="/tags/css/" style="font-size: 20px; color: #707070">css</a> <a href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" style="font-size: 16px; color: #8b8b8b">mac小天地</a> <a href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" style="font-size: 18px; color: #7e7e7e">实践堂</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">开发日常</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 16px; color: #8b8b8b">正则</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" style="font-size: 20px; color: #707070">编程范式</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" style="font-size: 14px; color: #999">美食记录</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 22px; color: #636363">计算机基础</a>
     </div>
   </section>
 
