@@ -14,7 +14,7 @@ const file = new WriteFile();
 class Decompress {
   constructor({ input, output }) {
     this.inputPath = input;
-    this.unRarPath = path.join(__dirname, output);
+    this.unRarPath =  output
     this.suffix = ".rar";
     this.prefix = "user";
   }
@@ -64,17 +64,18 @@ class Decompress {
     return path.join(this.inputPath, readDir[readDir.length - 1]);
   }
 }
+let cwd = process.cwd();
 
 const decompress = new Decompress({
-  input: config.downloadPath,
-  output: "../output",
+  input: __dirname + config.downloadPath,
+  output: cwd +  "/output",
 });
 
 (async () => {
-  // await download(config.downloadUrl, config.downloadPath, {
-  //   headers: {
-  //     Cookie: config.cookie,
-  //   },
-  // });
+  await download(__dirname + config.downloadPath, config.downloadPath, {
+    headers: {
+      Cookie: config.cookie,
+    },
+  }).catch((error) => {console.log(error,'********************************');});
   decompress.unCompress();
 })();

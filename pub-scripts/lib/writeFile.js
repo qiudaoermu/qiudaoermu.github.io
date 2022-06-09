@@ -1,14 +1,15 @@
 const { exec } = require("child_process");
 const fs = require("fs");
-
+let cwd = process.cwd();
 class WriteFile {
   
   constructor() {
+
     this.dataTag = "2021-01-11";
     this.prex = "2021-01-11-";
     this.datePre = /\d{4}-\d{2}-\d{2}-/;
     this.dataTagReg = /\d{4}-\d{2}-\d{2}/;
-    this.postDir = "../source/_posts";
+    this.postDir = cwd + "/source/_posts";
   }
 
   deletePostDir(path) {

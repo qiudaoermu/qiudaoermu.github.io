@@ -1,6 +1,6 @@
 ---
 title: "🦜🦜vuejs-第二次点击按钮-事件时出现TypeError--n-apply-is-not-a-function"
-date: 2021-01-11
+date: 2020-12-24
 tags: 
 - 开发日常
 ---
