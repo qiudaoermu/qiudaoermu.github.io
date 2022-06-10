@@ -91,6 +91,7 @@ tags:
       if (err) throw err;
       fileList.forEach((excludeDatePrexFile) => {
         // 获取文件后缀名
+        // excludeDatePrexFile = excludeDatePrexFile.replace("-",'');
         const filePath = unarTagPath + excludeDatePrexFile;
         const postContent = this.readFile(
           filePath,

@@ -71,11 +71,13 @@ const decompress = new Decompress({
   output: cwd +  "/output",
 });
 
-(async () => {
-  await download(__dirname + config.downloadPath, config.downloadPath, {
+// (async () => {
+   download(__dirname + config.downloadPath, config.downloadPath, {
     headers: {
       Cookie: config.cookie,
     },
+  }).then(res => {
+    console.log(res)
   }).catch((error) => {console.log(error,'********************************');});
-  decompress.unCompress();
-})();
+  // decompress.unCompress();
+// })();
