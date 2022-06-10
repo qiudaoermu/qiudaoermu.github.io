@@ -3426,7 +3426,7 @@ img.lazyload:not(.placeholder).loaded {
   -moz-transition: max-height 0.6s ease-in;
   -o-transition: max-height 0.6s ease-in;
   -ms-transition: max-height 0.6s ease-in;
-  max-height: 0;
+  max-height: !important;
 }
 #l_side .toc-wrapper .toc-item.active>.toc-link {
   color: var(--color-list-hl);
