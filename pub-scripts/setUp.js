@@ -71,13 +71,24 @@ const decompress = new Decompress({
   output: cwd +  "/output",
 });
 
-// (async () => {
-   download(__dirname + config.downloadPath, config.downloadPath, {
-    headers: {
-      Cookie: config.cookie,
-    },
-  }).then(res => {
-    console.log(res)
-  }).catch((error) => {console.log(error,'********************************');});
+  // download(
+  //   "https://upload-images.jianshu.io/upload_images/15312191-cd7b966ad6e65360.png?imageMogr2/auto-orient/strip|imageView2/2/w/762/format/webp",
+  //   "./dist"
+  // ).catch((err) => {
+  //   console.error(err);
+  // });
+(async () => {
+   await download(config.downloadUrl, __dirname + config.downloadPath, {
+     headers: {
+       Cookie: config.cookie,
+     },
+   })
+     .then((res) => {
+       console.log(res);
+     })
+     .catch((error) => {
+       console.log(error, "********************************");
+     });
+
   // decompress.unCompress();
-// })();
+})();
