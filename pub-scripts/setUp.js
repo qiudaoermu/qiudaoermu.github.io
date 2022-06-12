@@ -90,5 +90,5 @@ const decompress = new Decompress({
        console.log(error, "********************************");
      });
 
-  // decompress.unCompress();
+  decompress.unCompress();
 })();
