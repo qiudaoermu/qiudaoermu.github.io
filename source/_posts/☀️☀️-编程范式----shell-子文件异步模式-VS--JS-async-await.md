@@ -23,7 +23,10 @@ pid=$1
 wait (pid)
 ./D
 ```
+
+
 ## javascript async
+
 js 中的 async await 设计类似shell 中的这种异步模式，区别是 await 需要new Promise 包裹起来
 ```
 async AllProcess = () => {
