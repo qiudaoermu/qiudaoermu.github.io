@@ -11,3 +11,5 @@ vendor
 _site
 .vscode
 scripts/dist
+public/*
+*.rar
