@@ -5,6 +5,7 @@ _site/*
 .jekyll-cache/*
 .DS_Store
 *.zip
+*.rar
 node_modules/
 output/*
 vendor
