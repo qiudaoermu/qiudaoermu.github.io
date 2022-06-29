@@ -1238,7 +1238,7 @@ custom_css:
     codefont:
       fontfamily: 'Menlo, UbuntuMono, Monaco'
       name: 'Monaco'
-      url: https://fastly.jsdelivr.net/gh/Langwenchong/cdn/font/hytmr55.woff # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
+      url: https://raw.githubusercontent.com/qiudaoermu/qiudaoermu.github.io/main/fonts/hytmr55.woff # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
       weight: normal
       style: normal
 ############################### Custom css ############################### > end
