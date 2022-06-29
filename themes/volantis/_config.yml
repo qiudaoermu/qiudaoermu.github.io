@@ -1232,7 +1232,7 @@ custom_css:
     bodyfont:
       fontfamily: '"hytmr", "Roboto", "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif'
       name: 'UbuntuMono'
-      url: https://fastly.jsdelivr.net/gh/Langwenchong/cdn/font/SentyGoldenBell.woff2 # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      url: https://raw.githubusercontent.com/qiudaoermu/qiudaoermu.github.io/main/fonts/SentyGoldenBell.woff2 # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal
       style: normal
     codefont:
