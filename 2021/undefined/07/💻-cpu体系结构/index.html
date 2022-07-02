@@ -19,24 +19,25 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.6742baaf.css" as="style">
+  <link rel="preload" href="/css/style.95a177eb.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>💻-计算机显示与二进制的关系 - Hexo</title>
+  <title>💻-cpu体系结构 - Hexo</title>
   <meta name="keywords" content="计算机基础小窥,null">
   <meta desc name="description" content="test description - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="💻-计算机显示与二进制的关系">
-<meta property="og:url" content="http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/index.html">
+<meta property="og:title" content="💻-cpu体系结构">
+<meta property="og:url" content="http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.计算机显示计算机屏幕是由像素构成的，颜色是由计算机内部的颜色系统控制，然后通过显示器三色枪打出的颜色混合而成，三色枪，分为红、绿、蓝(RGB) ,涉及到屏幕硬件知识。 2.计算机色彩体系颜色空间：RGB，CMY，HSV，HSL，Lab，按照通用的RBG标准，如下图所示rbg有6位16进制表示，16 &#x3D; 2^4, 4 * 6 &#x3D; 24,所以，rgb有 2 ^ 24 &amp;#x3D">
+<meta property="og:description" content="1.按照架构区分，现在主流的CPU 分为ARM，X86两种。   架构 指令集 功耗 主要应用领域    ARM 精简 高 服务器，台式电脑，笔记本   X86 复杂 低 手机，新版mac 电脑，各种嵌入式设备   2.cpu物理组成1.寄存器2.控制器3.运算器4.计数器5.总线 3.芯片是怎么制造出来的一.沙子提纯二.光刻机光刻 3.1.芯片分类按照功能分类这种分类方式是也是大家最常见的，比如">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2021-01-06T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-01T13:43:36.392Z">
+<meta property="article:published_time" content="2021-08-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-01T13:42:49.651Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="计算机基础小窥">
 <meta name="twitter:card" content="summary">
@@ -106,7 +107,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: "hytmr", "Roboto", "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -833,7 +834,7 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("");
+  src: url("https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -974,7 +975,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: "hytmr", "Roboto", "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -1669,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.6742baaf.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.6742baaf.css"></noscript>
+  <link rel="stylesheet" href="/css/style.95a177eb.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.95a177eb.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1743,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.6742baaf.css"}},
+    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656683025120),
+    lastupdate: new Date(1656747862690),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2098,7 +2099,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // 默认配置
     opt = {
       top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
-      behavior: "smooth"
+      behavior: "instant"
     }
     // 定义配置
     if ("top" in option) {
@@ -2519,7 +2520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2540,7 +2541,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        💻-计算机显示与二进制的关系
+        💻-cpu体系结构
       </h1>
       <div class='new-meta-box'>
         
@@ -2561,10 +2562,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-01-06T00:00:00+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-08-07T16:00:00+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jan 6, 2021</p>
+    <p>发布于：Aug 7, 2021</p>
   </a>
 </div>
 
@@ -2597,20 +2598,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h6 id="1-计算机显示"><a href="#1-计算机显示" class="headerlink" title="1.计算机显示"></a>1.计算机显示</h6><p>计算机屏幕是由像素构成的，颜色是由计算机内部的颜色系统控制，然后通过显示器三色枪打出的颜色混合而成，三色枪，分为红、绿、蓝(RGB) ,涉及到屏幕硬件知识。</p>
-<h6 id="2-计算机色彩体系"><a href="#2-计算机色彩体系" class="headerlink" title="2.计算机色彩体系"></a>2.计算机色彩体系</h6><p>颜色空间：RGB，CMY，HSV，HSL，Lab，<br>按照通用的RBG标准，如下图所示<br><img src="https://upload-images.jianshu.io/upload_images/15312191-5aa037b449031b10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>rbg有6位16进制表示，16 &#x3D; 2^4, 4 * 6 &#x3D; 24,所以，rgb有 2 ^ 24 &#x3D; 16777216种可能，总共显示16777216种颜色<br>取值范围：0~16777215, 就是3个byte</p>
-<h6 id="3-计算机上有多少像素"><a href="#3-计算机上有多少像素" class="headerlink" title="3.计算机上有多少像素"></a>3.计算机上有多少像素</h6><p>以mac 电脑为例 分辨率为2560 * 1600  &#x3D; 4096000像素。<br><img src="https://upload-images.jianshu.io/upload_images/15312191-84a8019e5578793d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>24位，就是每个像素3个byte, 4096000像素 * 3 &#x3D; 12288000byte &#x3D; 11.7M;</p>
-<h6 id="4-大型游戏与显卡"><a href="#4-大型游戏与显卡" class="headerlink" title="4.大型游戏与显卡"></a>4.大型游戏与显卡</h6><p>大型游戏，需要更多的灯光，材质渲染，尤其是3D游戏，需要更多显存和高频GPU参与渲染计算，计算机不只有CPU还有GPU</p>
-<h6 id="5-二极管简史"><a href="#5-二极管简史" class="headerlink" title="5.二极管简史"></a>5.二极管简史</h6><p>发光二极管(Lighted Electronic Diode)作为显示器材早期仅应用于仪器仪表等低亮度领域，随着半导体材料技术的不断发展，亮度逐渐提高，稳定性及寿命逐渐延长，色彩逐渐丰富，迅速进入大屏幕工程显示领域。尤其在体育场馆等场合的应用，因其超高亮度，色彩鲜艳，长寿稳定，已成一统天下之势。而近几年LED显示材料的产量迅猛增长，成本迅速下降，使其进入户内高密度大屏幕市场成为可能。户内LED大屏幕的发展呈现如下几个发展阶段：</p>
-<p>1． 第一代 单色LED显示屏</p>
-<p>以单红色为基色，显示文字及简单图案为主，主要用于通知通告及客流引导系统。</p>
-<p>2． 第二代 双基色多灰度显示屏</p>
-<p>以红色及黄绿色为基色，因没有蓝色，只能称其为伪彩色，可以显示多灰度图象及视频，目前在国内广泛应用于电信，银行，税务，医院，政府机构等场合，主要显示标语，公益广告及形象宣传信息。</p>
-<p>3． 第三代 全彩色(full color)多灰度显示屏</p>
-<p>以红色，蓝色及黄绿色为基色，可以显示较为真实的图象，目前正在逐渐替代上一代产品。</p>
-<p>4． 第四代 真彩色(true color)多灰度显示屏</p>
-<p>以红色，蓝色及纯绿色为基色，可以真实再现自然界的一切色彩(在色坐标上甚至超过了自然色彩范围)。可以显示各种视频图象及彩色广告，其艳丽的色彩，鲜亮的高亮度，细腻的对比度，在宣传广告领域应用具有极好的视觉震撼力</p>
-<h6 id="6-不同图片使用的二进制位数"><a href="#6-不同图片使用的二进制位数" class="headerlink" title="6.不同图片使用的二进制位数"></a>6.不同图片使用的二进制位数</h6><p><img src="https://upload-images.jianshu.io/upload_images/15312191-631bee1e687c43ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+    <h6 id="1-按照架构区分，现在主流的CPU-分为ARM，X86两种。"><a href="#1-按照架构区分，现在主流的CPU-分为ARM，X86两种。" class="headerlink" title="1.按照架构区分，现在主流的CPU 分为ARM，X86两种。"></a>1.按照架构区分，现在主流的CPU 分为ARM，X86两种。</h6><table>
+<thead>
+<tr>
+<th>架构</th>
+<th>指令集</th>
+<th>功耗</th>
+<th>主要应用领域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ARM</td>
+<td>精简</td>
+<td>高</td>
+<td>服务器，台式电脑，笔记本</td>
+</tr>
+<tr>
+<td>X86</td>
+<td>复杂</td>
+<td>低</td>
+<td>手机，新版mac 电脑，各种嵌入式设备</td>
+</tr>
+</tbody></table>
+<h6 id="2-cpu物理组成"><a href="#2-cpu物理组成" class="headerlink" title="2.cpu物理组成"></a>2.cpu物理组成</h6><p>1.寄存器<br>2.控制器<br>3.运算器<br>4.计数器<br>5.总线</p>
+<h5 id="3-芯片是怎么制造出来的"><a href="#3-芯片是怎么制造出来的" class="headerlink" title="3.芯片是怎么制造出来的"></a>3.芯片是怎么制造出来的</h5><p>一.沙子提纯<br>二.光刻机光刻</p>
+<h6 id="3-1-芯片分类"><a href="#3-1-芯片分类" class="headerlink" title="3.1.芯片分类"></a>3.1.芯片分类</h6><p>按照功能分类<br>这种分类方式是也是大家最常见的，比如GPU，CPU，FPGA，DSP，ASIC，SOC等等，都是按照这个分类方式分类的</p>
+<h6 id="4-单核和多核有什么具体区别"><a href="#4-单核和多核有什么具体区别" class="headerlink" title="4.单核和多核有什么具体区别"></a>4.单核和多核有什么具体区别</h6><h6 id="5-cpu运行与计算机数据结构"><a href="#5-cpu运行与计算机数据结构" class="headerlink" title="5.cpu运行与计算机数据结构"></a>5.cpu运行与计算机数据结构</h6><p>指针，数组，栈结构，链表，数组，队列，二叉树都是以内存为基础的</p>
+<h6 id="6-不同CPU为什么在需要不同操作系统"><a href="#6-不同CPU为什么在需要不同操作系统" class="headerlink" title="6.不同CPU为什么在需要不同操作系统"></a>6.不同CPU为什么在需要不同操作系统</h6><p>不同CPU架构指令集不同，在不同的机器上。<br>操作系统会把把高级语言，或者汇编语言编译成对应的机器码</p>
 
 
   </div>
@@ -2632,7 +2646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-01T13:43:36+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-01T13:42:49+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jul 1, 2022</p>
@@ -2658,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/&title=💻-计算机显示与二进制的关系 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/&title=💻-cpu体系结构 - Hexo&summary="
           
           >
           
@@ -2670,7 +2684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/&title=💻-计算机显示与二进制的关系 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/&title=💻-cpu体系结构 - Hexo&summary="
           
           >
           
@@ -2682,7 +2696,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/&title=💻-计算机显示与二进制的关系 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/&title=💻-cpu体系结构 - Hexo&summary="
           
           >
           
@@ -2715,17 +2729,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/undefined/10/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>🌈--css-flex-多列等高</p>
-          <p class='content'>1.父元素设置display:flex2.子元素设置 flex:1
-12345678910111213141516171819202122#container&#123;	width:400px...</p>
+        <a class='prev' href='/2021/undefined/07/%F0%9F%92%BB-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-api%E5%BA%94%E7%94%A8/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>💻-操作系统-api应用</p>
+          <p class='content'>1.录屏  直播原理调用录屏api2.调用时间 API3.地理定位4.网络抓包
+
+</p>
         </a>
       
       
-        <a class='next' href='/2021/undefined/05/%F0%9F%92%BB-%E4%B8%80%E4%B8%AA%E6%B1%89%E5%AD%97%E5%A4%9A%E4%B8%AA%E5%AD%97%E8%8A%82%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/'>
-          <p class='title'>💻-一个汉字多个字节是什么意思<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>在计算机系统中，一个汉字为什么用多个字节表示
-1.什么是字节？字节(byte)是计算机存储基本单位1byte &#x3D; 8 bit, 二进制数系统中，每个0或1就是一个位（bit）。字符是最...</p>
+        <a class='next' href='/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/'>
+          <p class='title'>🌦🌦前端位运算<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>一、定义
+
+
+位运算符
+符号
+定义
+
+
+
+或
+|
+两个位有一个为1，结果就是1，否则结果为0
+
+
+非
+~
+如果位为0，结果是1，如果位为1，结果是0
+
+
+异或
+^
+两个位相同结果为0，不同结果为...</p>
         </a>
       
     </div>
@@ -2741,7 +2776,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2774,7 +2809,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E8%8A%AF%E7%89%87%E6%98%AF%E6%80%8E%E4%B9%88%E5%88%B6%E9%80%A0%E5%87%BA%E6%9D%A5%E7%9A%84"><span class="toc-text">3.芯片是怎么制造出来的</span></a></li></ol>
     </div>
   </section>
 
@@ -3346,34 +3381,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-
-   <script type="text/javascript">
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal("#l_main .reveal", {
-      distance: "32px",
-      duration: "800",
-      interval: "20",
-      scale: "1",
-      easing: "ease-out",
-    });
-  }
-  function init_scrollrebeal() {
-    if (typeof ScrollReveal == "undefined") {
-      volantis.requestAnimationFrame(init_scrollrebeal);
-    } else {
-      pjax_scrollrebeal();
-    }
-  }
-  volantis.js("https://unpkg.com/volantis-static@0.0.1649552113628/libs/scrollreveal/dist/scrollreveal.min.js");
-  document.addEventListener("DOMContentLoaded", init_scrollrebeal);
-  volantis.pjax.push(
-    pjax_scrollrebeal,
-    "pjax_scrollrebeal",
-    (setRequestAnimationFrame = false)
-  );
-</script>
-
-
+<!--  -->
 
 
 
@@ -3764,7 +3772,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/06/💻-计算机显示与二进制的关系/","name":"💻-计算机显示与二进制的关系"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"💻-计算机显示与二进制的关系","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/06/%F0%9F%92%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%BE%E7%A4%BA%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%B3%E7%B3%BB/","wordCount":0,"datePublished":"2021-01-06T00:00:00.000Z","dateModified":"2022-07-01T13:43:36.392Z","keywords":"计算机基础小窥","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/07/💻-cpu体系结构/","name":"💻-cpu体系结构"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"💻-cpu体系结构","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/","wordCount":0,"datePublished":"2021-08-07T16:00:00.000Z","dateModified":"2022-07-01T13:42:49.651Z","keywords":"计算机基础小窥","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

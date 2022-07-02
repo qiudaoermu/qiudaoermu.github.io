@@ -253,13 +253,6 @@ td,
 th {
   padding: 0;
 }
-@font-face {
-  font-family: 'Monaco';
-  src: url("");
-  font-weight: 'normal';
-  font-style: 'normal';
-  font-display: swap;
-}
 article#arc,
 article#cat,
 article#tag {
@@ -1489,7 +1482,7 @@ svg.loading {
   font-size: 1.5rem;
   margin: 0;
   background: transparent;
-  font-family: 'UbuntuMono';
+  font-family: '';
   border-bottom: none;
   padding-bottom: 4px;
   border-bottom: none;
@@ -1897,12 +1890,6 @@ img.lazyload:not(.placeholder) {
   -moz-transition: opacity 0.5s ease-out 0s;
   -o-transition: opacity 0.5s ease-out 0s;
   -ms-transition: opacity 0.5s ease-out 0s;
-  transition: filter 0.25s ease-out 0s;
-  -webkit-transition: filter 0.25s ease-out 0s;
-  -khtml-transition: filter 0.25s ease-out 0s;
-  -moz-transition: filter 0.25s ease-out 0s;
-  -o-transition: filter 0.25s ease-out 0s;
-  -ms-transition: filter 0.25s ease-out 0s;
 }
 img.lazyload:not(.placeholder):not(.loaded) {
   opacity: 0;
@@ -1913,12 +1900,6 @@ img.lazyload:not(.placeholder).loaded {
   opacity: 1;
   -webkit-opacity: 1;
   -moz-opacity: 1;
-}
-img.lazyload:not(.placeholder):not(.loaded) {
-  filter: blur(8px);
-}
-img.lazyload:not(.placeholder).loaded {
-  filter: none;
 }
 .md >p {
   padding-top: 4px;
@@ -1933,7 +1914,7 @@ img.lazyload:not(.placeholder).loaded {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: initial;
-  font-family: 'UbuntuMono';
+  font-family: '';
   background: linear-gradient(to bottom, transparent 60%, #ccfffd 0) no-repeat;
   pointer-events: none;
   margin-top: 0;
@@ -2176,7 +2157,7 @@ img.lazyload:not(.placeholder).loaded {
 .article-title {
   font-weight: 500;
   margin-bottom: 12px;
-  font-family: 'UbuntuMono';
+  font-family: '';
   line-height: 1.4;
 }
 .article-title a {
