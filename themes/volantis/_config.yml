@@ -73,7 +73,7 @@ dns_prefetch:
   # - https://npm.elemecdn.com
 
 # 平滑滚动效果
-scroll_smooth: true
+scroll_smooth: false
 ############################### Navigation Bar ############################### > start
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
@@ -669,7 +669,7 @@ plugins:
     js: volantis-static/libs/vanilla-lazyload/dist/lazyload.min.js # https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js
     onlypost: false
     loadingImg: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg # 不建议使用占位图, 建议loadingImg为空, 当前占位图会产生布局偏移, loadingImg 为空占位图是一个 1X1 像素的图片
-    blurIn: true # 模糊加载效果 （loadingImg为空时有效）
+    blurIn: false # 模糊加载效果 （loadingImg为空时有效）
 
   ######## Plugins to optimize the experience:
   # 代码高亮
@@ -699,8 +699,8 @@ plugins:
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
-    enable: true
-    js: volantis-static/libs/scrollreveal/dist/scrollreveal.min.js # https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    enable: false
+    # js: volantis-static/libs/scrollreveal/dist/scrollreveal.min.js # https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js
     distance: 32px
     duration: 800 # ms
     interval: 20 # ms
@@ -731,7 +731,7 @@ plugins:
 
   # 视差滚动效果 Slide Background
   parallax:
-    enable: #true
+    enable: false
     position: cover       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     shuffle: true         # shuffle playlist
     duration: 10000       # Duration (ms)
@@ -1217,12 +1217,6 @@ custom_css:
     code: .8125rem
     footnote: .78125rem
   fontfamily:
-    titlefont:
-      fontfamily: 'UbuntuMono'
-      name: 'UbuntuMono'
-      # url: https://raw.githubusercontent.com/qiudaoermu/qiudaoermu.github.io/main/fonts/SentyGoldenBell.woff2 # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
-      weight: normal
-      style: normal
     logofont:
       fontfamily: '"Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'Varela Round'
@@ -1230,17 +1224,17 @@ custom_css:
       weight: normal
       style: normal
     bodyfont:
-      fontfamily: '"hytmr", "Roboto", "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif'
+      fontfamily: 'UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'UbuntuMono'
-      # url: https://raw.githubusercontent.com/qiudaoermu/qiudaoermu.github.io/main/fonts/SentyGoldenBell.woff2 # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      url: volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal
       style: normal
     codefont:
       fontfamily: 'Menlo, UbuntuMono, Monaco'
-      name: 'Monaco'
-      # url: https://raw.githubusercontent.com/qiudaoermu/qiudaoermu.github.io/main/fonts/hytmr55.woff # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
-      weight: normal
-      style: normal
+      # name: 'Monaco'
+      # url: volantis-static/media/fonts/Monaco/Monaco.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
+      # weight: normal
+      # style: normal
 ############################### Custom css ############################### > end
 
 
