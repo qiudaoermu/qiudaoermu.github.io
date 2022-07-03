@@ -1714,25 +1714,6 @@
     
     
     <entry>
-      <title>ivew-动态新增-input--v-model绑定</title>
-      <link href="/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input--v-model%E7%BB%91%E5%AE%9A/"/>
-      <url>/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input--v-model%E7%BB%91%E5%AE%9A/</url>
-      
-        <content type="html"><![CDATA[<p>有这样的需求如下图：<br>1.下拉选择select 选择，<br>2.新增一组 input提交选项</p><p><img src="https://upload-images.jianshu.io/upload_images/15312191-adb95ea2dca9fa6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>新增input代码如下(只罗列了前两项)：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-- 新增园区 --&gt;</span><br><span class="line">&lt;div v-for=&quot;(item, index) in formData.areaList&quot; v-if=&#x27;formData.areaList.length &gt;=1&#x27;&gt;</span><br><span class="line">          &lt;div class=&quot;form-line&quot;&gt;</span><br><span class="line">            &lt;FormItem label=&quot;联系人&quot; &gt;</span><br><span class="line">              &lt;Input v-model=&quot;item.contactor&quot; placeholder=&quot;请输入联系人&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">              &lt;/Input&gt;</span><br><span class="line">            &lt;/FormItem&gt;</span><br><span class="line">            &lt;FormItem label=&quot;联系电话&quot; &gt;</span><br><span class="line">              &lt;Input v-model=&quot;item.contactTel&quot; placeholder=&quot;请输入联系电话&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">              &lt;/Input&gt;</span><br><span class="line">            &lt;/FormItem&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>v-model</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-model =&quot;item.contactor&quot;</span><br></pre></td></tr></table></figure><p>#####总结 ：item. + key</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 开发日常 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ivew-动态新增-input-prop校验</title>
       <link href="/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input-prop%E6%A0%A1%E9%AA%8C/"/>
       <url>/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input-prop%E6%A0%A1%E9%AA%8C/</url>
