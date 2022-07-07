@@ -49,10 +49,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1742,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2133,14 +2129,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2525,6 +2521,182 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/21/%F0%9F%A6%9C%F0%9F%A6%9C-vue-router-%E5%90%8C%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/21/%F0%9F%A6%9C%F0%9F%A6%9C-vue-router-%E5%90%8C%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/"  itemprop="url">
+        🦜🦜-vue-router-同一个页面地址栏参数改变，页面不刷新的问题
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        vue-router  同一个页面地址栏参数改变（比如文章的发布和编辑是同一个页面），不会触发vue的created或者mounted钩子，所以数据不会重新渲染。
+解决办法有两种：
+1：监听地址栏变化（watch）,这是vue-router官方给出的解决办法。监听路由变化，把初始化的方法重新写到监听的方法里面执行
+123456789101112131415watch: &#123;    &...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-10-21T16:00:00+00:00">2021-10-21</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/21/%F0%9F%A6%9C%F0%9F%A6%9C-vue-router-%E5%90%8C%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%BA%E4%BB%80%E4%B9%88-export-default-var-a-=-1-%E5%9C%A8ES6%E4%B8%AD%E4%B8%8D%E8%A2%AB%E5%85%81%E8%AE%B8-/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%BA%E4%BB%80%E4%B9%88-export-default-var-a-=-1-%E5%9C%A8ES6%E4%B8%AD%E4%B8%8D%E8%A2%AB%E5%85%81%E8%AE%B8-/"  itemprop="url">
+        🌦🌦-为什么-export-default-var-a-=-1-在ES6中不被允许-
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        babel输入以下代码，异常显示
+
+Only expressions, functions or classes are allowed as the default export.export default 只能导处函数 表达式 和 class
+ export default function() &#123;&#125;export defaut &#123;&#125;let foo...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-10-18T16:00:00+00:00">2021-10-18</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%BA%E4%BB%80%E4%B9%88-export-default-var-a-=-1-%E5%9C%A8ES6%E4%B8%AD%E4%B8%8D%E8%A2%AB%E5%85%81%E8%AE%B8-/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8Fnode-js%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/18/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8Fnode-js%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85/"  itemprop="url">
+        ☁️☁️node-js常用工具包
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        node 版本管理工具 –n安装:npm install -g n
+使用列出可选择的 版本:$ n
+安装某个 版本:$ n &lt;version&gt;
+npm 代理管理工具 – nrm安装:npm install -g nrm
+使用列出可选择的源:$ nrm ls
+12345678910  npm ---- https://registry.npmjs.org/  cnpm --- ht...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-10-18T00:00:00+00:00">2021-10-18</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/18/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8Fnode-js%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/15/%F0%9F%93%81%F0%9F%93%81linux%E6%96%87%E4%BB%B6%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2877,7 +3049,7 @@ An empty string searchValue produces ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/19/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2895,21 +3067,22 @@ An empty string searchValue produces ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/18/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/"  itemprop="url">
-        🎨🎨-git-一些常用参数设置
+      <a href="/2021/undefined/19/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"  itemprop="url">
+        🍎🍎-Mac-OS-配置环境变量
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        
--u123[-u | --set-upstream]git push -u origin main git push ---set-upstream origin main
-设置默认推送分支
-origin1git remote add origin http:xxxxx
-origin 是提交远程的命名 也可以自己命名比如 ppp o
-–help比如git push
-1git push --...
+        Mac端环境变量配置Mac使用bash做为默认的shell
+MAC OS X环境配置的加载顺序
+123456# 系统级别/etc/profile/etc/paths # 用户级别~/.zshrc
+前两个是系统级别的环境变量，针对所有用户，后面四个带有~&#x2F;用户级别的环境变量。-前两个环境配置在系统启动时候就会加载。
+
+~&#x2F;.zshrc 是zsh shell打开时候加载
+
+之...
       
     
   </div>
@@ -2917,188 +3090,12 @@ origin 是提交远程的命名 也可以自己命名比如 ppp o
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-09-18T16:00:00+00:00">2021-09-18</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-19T00:00:00+00:00">2021-09-19</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/18/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/"  itemprop="url">
-        🗳🗳-nginx-启动停止命令
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        启动1$ ./nginx
-重启nginx 1$ ./nginx -s reload
-查找nginx 位置1$ whereis nginx
-
-检测 nginx.config正确性1nginx -t
-
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-09-14T16:00:00+00:00">2021-09-14</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/12/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/12/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/"  itemprop="url">
-        ☀️☀️-编程范式----shell-子文件异步模式-VS--JS-async-await
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-问题：在 shell 下有 A、B、C、D 四个命令,需要先执行 A再执行 B、C最后执行 D
-其中, B、C 耗时较多， 但是，互不干扰，可以同步执针对以上情形，bash提供了一个内置的命令来帮助管理异步执行。wait命令可以让父脚本暂停，直到指定的进程（比如子脚本）结束。
-shell子进程 和 wait123456./A./B &amp;  # 设为子进程./C &amp;pid=$1...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-09-12T16:00:00+00:00">2021-09-12</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/12/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-npm-bin-%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4%E5%8E%9F%E7%90%86/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-npm-bin-%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4%E5%8E%9F%E7%90%86/"  itemprop="url">
-        ☁️☁️-npm-bin-全局命令原理
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        前言用过构建工具的亲们知道，通常通过全局安装一个 xxx-cli 的 npm 包，就能在命令行用命令进行构建。那么这个 npm 包如何变成一个可执行的命令呢？
-npm cli 开发步骤1. 使用 npm init 初始化一个项目目录 my-cli。2. 在 package.json 中添加或者编辑 bin 字段：12345678&#123;  &quot;name&quot;: &quot;...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-09-10T16:00:00+00:00">2021-09-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%E2%98%81%EF%B8%8F%E2%98%81%EF%B8%8F-npm-bin-%E5%85%A8%E5%B1%80%E5%91%BD%E4%BB%A4%E5%8E%9F%E7%90%86/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/19/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/' itemprop="url">
             Read More
           </a>
         </div>
@@ -4099,94 +4096,6 @@ npm cli 开发步骤1. 使用 npm init 初始化一个项目目录 my-cli。2. �
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 

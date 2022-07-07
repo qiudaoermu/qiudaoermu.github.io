@@ -49,10 +49,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1742,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2133,14 +2129,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2525,6 +2521,312 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/08/%F0%9F%92%BB-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-api%E5%BA%94%E7%94%A8/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/08/%F0%9F%92%BB-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-api%E5%BA%94%E7%94%A8/"  itemprop="url">
+        💻-操作系统-api应用
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1.录屏  直播原理调用录屏api
+2.调用时间 API
+3.地理定位
+4.网络抓包
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-08-08T00:00:00+00:00">2021-08-08</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/08/%F0%9F%92%BB-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-api%E5%BA%94%E7%94%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"  itemprop="url">
+        💻-cpu体系结构
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1.按照架构区分，现在主流的CPU 分为ARM，X86两种。
+
+
+架构
+指令集
+功耗
+主要应用领域
+
+
+
+ARM
+精简
+高
+服务器，台式电脑，笔记本
+
+
+X86
+复杂
+低
+手机，新版mac 电脑，各种嵌入式设备
+
+
+2.cpu物理组成1.寄存器2.控制器3.运算器4.计数器5.总线
+3.芯片是怎么制造出来的一.沙子提纯二.光刻机光刻
+3.1.芯片分类按照功能分类这种分类方式是也是大家最常见的...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-08-07T16:00:00+00:00">2021-08-07</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/07/%F0%9F%92%BB-cpu%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/"  itemprop="url">
+        🌦🌦前端位运算
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        一、定义
+
+
+位运算符
+符号
+定义
+
+
+
+或
+|
+两个位有一个为1，结果就是1，否则结果为0
+
+
+非
+~
+如果位为0，结果是1，如果位为1，结果是0
+
+
+异或
+^
+两个位相同结果为0，不同结果为1
+
+
+二、实例
+
+
+位运算符
+实例
+解析
+
+
+
+与
+128 &amp; 129 &#x3D;128
+
+
+
+或
+129 &#x3D; 129
+
+
+
+
+
+
+
+
+非
+~128 &#x3D; -129
+
+
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-08-04T16:00:00+00:00">2021-08-04</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/04/%F0%9F%A6%95%F0%9F%A6%95-react-%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6hotc%E5%92%8C@%E8%A3%85%E9%A5%B0%E5%99%A8/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/04/%F0%9F%A6%95%F0%9F%A6%95-react-%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6hotc%E5%92%8C@%E8%A3%85%E9%A5%B0%E5%99%A8/"  itemprop="url">
+        🦕🦕-react-高阶组件hotc和@装饰器
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        简介高阶组件可以直接调用子组件属性方法；子组件通过 this.props.xxx调用高阶组件方法属性
+高阶组件无法修改子组件状态属性子组件无法修改高阶组件属性
+高阶组件通俗讲是 代理模式的变种
+高阶组件和装饰器1.高阶组件是react 组件，拥有react 组件各种属性（生命周期，state, render)装饰器没有
+2.装饰器可以，修饰函数 和 react 组件 ，面向切面编程
+3.都是...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-08-04T16:00:00+00:00">2021-08-04</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/04/%F0%9F%A6%95%F0%9F%A6%95-react-%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6hotc%E5%92%8C@%E8%A3%85%E9%A5%B0%E5%99%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/03/%F0%9F%9F%A8-%F0%9F%9F%A8-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD^%E7%9A%84%E7%94%A8%E6%B3%95/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2704,7 +3006,7 @@ ex:
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/25/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2722,8 +3024,8 @@ ex:
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/"  itemprop="url">
-        🌦🌦-++a-,-a++-区别
+      <a href="/2021/undefined/25/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/"  itemprop="url">
+        🌦🌦-++A-,-A++-区别
       </a>
     </h2>
   
@@ -2742,12 +3044,12 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-24T16:00:00+00:00">2021-07-24</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-07-25T00:00:00+00:00">2021-07-25</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/25/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2763,7 +3065,7 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/23/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2781,7 +3083,7 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/23/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/"  itemprop="url">
+      <a href="/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/"  itemprop="url">
         🌦🌦-charCodeAt-,-fromCharCode-用法
       </a>
     </h2>
@@ -2789,8 +3091,10 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
   <div class='md article-desc' itemprop="articleBody">
     
       
-        12let  d = &quot;a&quot;console.log(d.charCodeAt()) // 97
-12let num = String.fromCharCode(97)console.log(num) 97
+        charCodeAt 获取 ascII编码
+12let  d = &quot;a&quot;console.log(d.charCodeAt()) // 97
+
+12let num = String.fromCharCode(97)console.log(num) // a
 
 
       
@@ -2800,12 +3104,12 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-23T16:00:00+00:00">2021-07-23</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-07-24T00:00:00+00:00">2021-07-24</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/23/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2821,7 +3125,7 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-js%E4%B8%AD-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6(--),%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/19/%F0%9F%8C%A6%F0%9F%8C%A6-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6--%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2839,8 +3143,8 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-js%E4%B8%AD-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6(--),%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/"  itemprop="url">
-        🌦🌦-js中-空值合并操作符(--),有哪些坑
+      <a href="/2021/undefined/19/%F0%9F%8C%A6%F0%9F%8C%A6-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6--%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/"  itemprop="url">
+        🌦🌦-空值合并操作符--有哪些坑
       </a>
     </h2>
   
@@ -2859,245 +3163,12 @@ Example：12345var a = 2；  var b = a++；    运行后： b = 2，a =3 ；
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-18T16:00:00+00:00">2021-07-18</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+00:00">2021-07-19</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-js%E4%B8%AD-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6(--),%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/15/%F0%9F%8C%A6%F0%9F%8C%A6%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E4%B8%8B%E6%A0%87%E5%AF%B9%E8%B1%A1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/15/%F0%9F%8C%A6%F0%9F%8C%A6%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E4%B8%8B%E6%A0%87%E5%AF%B9%E8%B1%A1/"  itemprop="url">
-        🌦🌦数组删除某个下标对象
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1.splice
-splice(index, num)index: 下标num: 删除的数量@return 删除的元素
-
-原来的数组会被修改
-删掉第三个元素1234let dataSource = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]let newDataSource = dataSource.splice(2, 1);console.l...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-07-15T16:00:00+00:00">2021-07-15</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/15/%F0%9F%8C%A6%F0%9F%8C%A6%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E4%B8%8B%E6%A0%87%E5%AF%B9%E8%B1%A1/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/11/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-%E6%95%B0%E7%BB%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/11/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-%E6%95%B0%E7%BB%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/"  itemprop="url">
-        🌦🌦-优雅的获取-数组第一个元素
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        项目开发中经常会用到这样的操作
-12345// 获取数组的第一个元素 const list = [&#x27;Luke&#x27;, &#x27;Eva&#x27;, &#x27;Phil&#x27;,&#x27;Tela&#x27;];   let data = list[0] let target = list[1]
-缺点：在代码中出现数字，感觉这样写不够美观
-第一种 shift()12...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-07-11T16:00:00+00:00">2021-07-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/11/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-%E6%95%B0%E7%BB%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/28/%F0%9F%9F%A8%F0%9F%9F%A8--%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/28/%F0%9F%9F%A8%F0%9F%9F%A8--%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"  itemprop="url">
-        🟨🟨--常用正则表达式
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        常用正则表达式1.数字，保留两位小数1^(([1-9]&#123;1&#125;\d*)|(0&#123;1&#125;))(\.\d&#123;0,2&#125;)?$
-
-12342.22, true2.0 true2 true2.222 false
-1.1.有效数字，不以0结尾1let reg = /^(([1-9]&#123;1&#125;\d*)|(0&#123;1&#125;))(...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-06-28T16:00:00+00:00">2021-06-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/28/%F0%9F%9F%A8%F0%9F%9F%A8--%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/27/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/27/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"  itemprop="url">
-        🌦🌦-js-二进制转字符串
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        十进制转二进制12let num = 5;num = num.toString(2) // &quot;101&quot;
-
-二进制转十进制
-parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 pa...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-04-27T16:00:00+00:00">2021-04-27</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/27/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/19/%F0%9F%8C%A6%F0%9F%8C%A6-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6--%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/' itemprop="url">
             Read More
           </a>
         </div>
@@ -4098,94 +4169,6 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 

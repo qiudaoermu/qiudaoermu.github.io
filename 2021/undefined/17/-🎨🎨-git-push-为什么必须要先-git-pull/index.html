@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-11-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-01T13:42:49.647Z">
+<meta property="article:modified_time" content="2022-07-03T13:41:12.318Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -52,10 +52,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1745,7 +1741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2136,14 +2132,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2598,7 +2594,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="e-g-‘git-pull-…’-before-pushing-again"><a href="#e-g-‘git-pull-…’-before-pushing-again" class="headerlink" title="(e.g., ‘git pull …’) before pushing again"></a>(e.g., ‘git pull …’) before pushing again</h2><p>Use git pull to pull the latest changes from the remote repository to your local repository. In this case, pulling changes will require a merge because you have made changes to your local repository.</p>
+    <div class=""><h2 id="e-g-‘git-pull-…’-before-pushing-again"><a href="#e-g-‘git-pull-…’-before-pushing-again" class="headerlink" title="(e.g., ‘git pull …’) before pushing again"></a>(e.g., ‘git pull …’) before pushing again</h2><p>Use git pull to pull the latest changes from the remote repository to your local repository. In this case, pulling changes will require a merge because you have made changes to your local repository.</p>
 <p>I’ll provide an example and a picture to explain. Let’s assume your last pull from origin&#x2F;branch was at Commit B. You have completed and committed some work (Commit C). At the same time, someone else has completed their work and pushed it to origin&#x2F;branch (Commit D). There will need to be a merge between these two branches.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local branch:                         --- Commit C </span><br><span class="line">                                    /</span><br><span class="line">                                   /</span><br><span class="line">                                  /</span><br><span class="line">origin/branch: Commit A ------ Commit B ---- Commit D</span><br></pre></td></tr></table></figure>
 <p>Because you are the one that wants to push, <strong><code>Git forces</code></strong> you to perform the merge. To do so, you must first pull the changes from origin&#x2F;branch.</p>
@@ -2626,10 +2622,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-01T13:42:49+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-03T13:41:12+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 1, 2022</p>
+    <p>更新于：Jul 3, 2022</p>
   </a>
 </div>
 
@@ -2709,13 +2705,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>⛵︎验证码---(9)--CPU多任务原理</p>
-          <p class='content'>CPU三项基本工作就是这样去执行读出数据、处理数据和往内存写数据
-并发和并行
-
-进程和线程进程
-进程是程序的一次执行过程，是一个动态概念，是程序在执行过程中分配和管理资源的基本单位，一个进程就是...</p>
+        <a class='prev' href='/2021/undefined/18/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>🌈-让div填充剩余的屏幕空间的高度</p>
+          <p class='content'>flex父元素设置 flex-flow: column; 垂直排列再使用 flex 自适应布局
+calc height: calc(100% - 50px);剩余高度 &#x3D; 父元素高度 ...</p>
         </a>
       
       
@@ -3644,98 +3637,10 @@ VGAVGA接头：针数为15的视频接口，主要用于老式的电脑输出。
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/17/-🎨🎨-git-push-为什么必须要先-git-pull/","name":"-🎨🎨-git-push-为什么必须要先-git-pull"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"-🎨🎨-git-push-为什么必须要先-git-pull","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/","wordCount":0,"datePublished":"2021-11-17T16:00:00.000Z","dateModified":"2022-07-01T13:42:49.647Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/17/-🎨🎨-git-push-为什么必须要先-git-pull/","name":"-🎨🎨-git-push-为什么必须要先-git-pull"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"-🎨🎨-git-push-为什么必须要先-git-pull","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/","wordCount":0,"datePublished":"2021-11-17T16:00:00.000Z","dateModified":"2022-07-03T13:41:12.318Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

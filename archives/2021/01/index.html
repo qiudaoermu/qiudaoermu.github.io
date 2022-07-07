@@ -49,10 +49,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1742,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2133,14 +2129,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2894,6 +2890,62 @@ git文件大小写敏感导致的问题，在有些mac上，文件大小写是�
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/"  itemprop="url">
+        怎么避免ivew-form-prop,-乱七八糟的type校验
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        ivew 在参考(其实就是抄袭，api都一样)element的过程中，设置了一些独有的api比如，在form input校验中，设置了type,比如
+1234567 &lt;Form  :model=&quot;formValidate&quot;   :rules=&quot;ruleValidate&quot; &gt;  &lt;DatePicker type=&quot;date&q...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2960,121 +3012,6 @@ git文件大小写敏感导致的问题，在有些mac上，文件大小写是�
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/"  itemprop="url">
-        怎么避免ivew-form-prop,-乱七八糟的type校验
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        ivew 在参考(其实就是抄袭，api都一样)element的过程中，设置了一些独有的api比如，在form input校验中，设置了type,比如
-1234567 &lt;Form  :model=&quot;formValidate&quot;   :rules=&quot;ruleValidate&quot; &gt;  &lt;DatePicker type=&quot;date&q...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/"  itemprop="url">
-        微信小程序-为什么地图本地体验可以用，线上环境不能用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        需要加安全域名
-
-在你已经加的域名上增加https://apis.map.qq.com;
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -3116,6 +3053,63 @@ git文件大小写敏感导致的问题，在有些mac上，文件大小写是�
       
         <div>
           <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88-flex%E5%B8%83%E5%B1%80--%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA%E5%9B%BA%E5%AE%9A%E4%B8%AA%E6%95%B0,%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%94%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/10/%F0%9F%8C%88-flex%E5%B8%83%E5%B1%80--%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA%E5%9B%BA%E5%AE%9A%E4%B8%AA%E6%95%B0,%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%94%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/"  itemprop="url">
+        🌈-flex布局--一行显示固定个数,强制换行且均匀分布
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        
+12345/* flex-direction 决定主轴的方向 row(默认)|row-reverse|column|column-reverse*//* flex-direction: row; *//* flex-wrap决定当排列不下时是否换行以及换行的方式,nowrap(默认)|wrap|wrap-reverse *//* flex-wrap:wrap; */
+12345678910...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88-flex%E5%B8%83%E5%B1%80--%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA%E5%9B%BA%E5%AE%9A%E4%B8%AA%E6%95%B0,%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%94%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/' itemprop="url">
             Read More
           </a>
         </div>
@@ -4110,94 +4104,6 @@ git文件大小写敏感导致的问题，在有些mac上，文件大小写是�
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 

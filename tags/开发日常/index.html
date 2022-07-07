@@ -49,10 +49,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1742,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2133,14 +2129,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2579,7 +2575,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         ph.d 翻译为哲学家，指在某个领域可以建立新的世界体系的人。 一般意义上说应该是发明家，cs ph.d 不同于一般的面向CV开发工程师，其面相的领域需要开辟，探索，发现。
 主要研究方向计算机方向总体上分三类：
-Fundamental Theory Of Computer Science：以我的了解和数学关系比较大 ，建立新的世界架构，比如图灵机。Computer Engineering：在...
+Fundamental Theory Of Computer Science，以我的了解和数学关系比较大 ，建立新的世界架构，比如图灵机。  Computer Engineering...
       
     
   </div>
@@ -2849,7 +2845,7 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/undefined/31/%F0%9F%8C%A6%F0%9F%8C%A6js%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E5%AD%97%E8%BF%94%E5%9B%9E%E4%B8%8D%E4%B8%80%E8%87%B4/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/undefined/01/%F0%9F%8C%A6%F0%9F%8C%A6js%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E5%AD%97%E8%BF%94%E5%9B%9E%E4%B8%8D%E4%B8%80%E8%87%B4/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2867,7 +2863,7 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/undefined/31/%F0%9F%8C%A6%F0%9F%8C%A6js%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E5%AD%97%E8%BF%94%E5%9B%9E%E4%B8%8D%E4%B8%80%E8%87%B4/"  itemprop="url">
+      <a href="/2022/undefined/01/%F0%9F%8C%A6%F0%9F%8C%A6js%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E5%AD%97%E8%BF%94%E5%9B%9E%E4%B8%8D%E4%B8%80%E8%87%B4/"  itemprop="url">
         🌦🌦js前后端数字返回不一致
       </a>
     </h2>
@@ -2875,9 +2871,8 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        
-场景：后端向前端通过一个接口返回一系列商品ID，前端通过商品ID去获取商品信息。问题：前端请求，但是没有这个商品的信息原因：后端返回的商品ID ，和前端获取的不一致，js数字采用64位双浮点数。范围 -(2^53 ) &lt;&#x3D; number &lt;&#x3D; 2^53所以当后端返回数字不在这一区间时，前端会丢失。比如：解决方法：后端转成字符串。
-总结：js 简单弱类语言，这...
+        场景：后端向前端通过一个接口返回一系列商品ID，前端通过商品ID去获取商品信息。问题：前端请求，但是没有这个商品的信息原因：后端返回的商品ID ，和前端获取的不一致，js数字采用64位双浮点数。范围 -(2^53 ) &lt;&#x3D; number &lt;&#x3D; 2^53所以当后端返回数字不在这一区间时，前端会丢失。比如：解决方法：后端转成字符串。
+总结：js 简单弱类语言，这是...
       
     
   </div>
@@ -2885,12 +2880,12 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-03-31T16:00:00+00:00">2022-03-31</time>
+        <time itemprop="dateCreated datePublished" datetime="2022-04-01T00:00:00+00:00">2022-04-01</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/undefined/31/%F0%9F%8C%A6%F0%9F%8C%A6js%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E5%AD%97%E8%BF%94%E5%9B%9E%E4%B8%8D%E4%B8%80%E8%87%B4/' itemprop="url">
+          <a class='readmore' href='/2022/undefined/01/%F0%9F%8C%A6%F0%9F%8C%A6js%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E5%AD%97%E8%BF%94%E5%9B%9E%E4%B8%8D%E4%B8%80%E8%87%B4/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3018,7 +3013,7 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/undefined/16/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8C%87%E4%B8%9C/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/undefined/17/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E6%8C%87%E4%B8%9C/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -3036,8 +3031,8 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/undefined/16/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8C%87%E4%B8%9C/"  itemprop="url">
-        📣🐘🐘🐘🐘程序员指东
+      <a href="/2022/undefined/17/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E6%8C%87%E4%B8%9C/"  itemprop="url">
+        📣🐘🐘🐘🐘程序员面试指东
       </a>
     </h2>
   
@@ -3045,8 +3040,10 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
     
       
         
-如何成为一个专业一点程序员软实力
-1.文档写作能力“文档是第一生产力”，这一点在程序员的世界是毫无异议的。看看Spring，hibernate，Struts等最流行的开源软件的文档就知道，他们tutorial，他们的getstarted，他们的reference文档写的多么的易懂。如果要获得更高的报酬，文档是绝对关键的因素。有文档就有沟通，就有交易。搞技术的容易忽视文档的力量，也因为写文档...
+程序员面试如果面试一个程序员，我会从以下几个方面入手
+
+1、系统设计：工程能力-优雅和美观的抽象能力，追求代码世界的简约普通程序员和顶尖程序员之间的区别在于优雅和美观的抽象能力。好的系统通常是要做到两个方面才合格，其一是好用，其二是好看。但是令人遗憾的是，普通程序员仅仅从实现的角度进行堆砌。顶尖程序员往往能够更进一步，经常会去思考用户在操作这个功能的时候，到底还会做什么事情。
+代码的注释是...
       
     
   </div>
@@ -3054,12 +3051,12 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-03-16T16:00:00+00:00">2022-03-16</time>
+        <time itemprop="dateCreated datePublished" datetime="2022-03-17T00:00:00+00:00">2022-03-17</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/undefined/16/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8C%87%E4%B8%9C/' itemprop="url">
+          <a class='readmore' href='/2022/undefined/17/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E6%8C%87%E4%B8%9C/' itemprop="url">
             Read More
           </a>
         </div>
@@ -4112,94 +4109,6 @@ Quick Setup 1234567891011121314151617181920  module.exports = &#123;  ...
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 

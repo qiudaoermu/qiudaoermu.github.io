@@ -49,10 +49,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1742,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2133,14 +2129,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2524,6 +2520,409 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6forEach%E4%B8%8D%E6%94%B9%E5%8F%98%E5%8E%9F%E6%95%B0%E7%BB%84,-%E4%BD%86%E6%98%AF%E6%94%B9%E5%8F%98%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E7%9A%84%E9%97%AE%E9%A2%98/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6forEach%E4%B8%8D%E6%94%B9%E5%8F%98%E5%8E%9F%E6%95%B0%E7%BB%84,-%E4%BD%86%E6%98%AF%E6%94%B9%E5%8F%98%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E7%9A%84%E9%97%AE%E9%A2%98/"  itemprop="url">
+        🌦🌦forEach不改变原数组,-但是改变对象属性的问题
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1.forEach(item, index, arr)，三个参数，如果直接用item&#x3D;xxx是无法改变原数组的，但是如果用arr[index]就可以改变原数组。1234567891011121314 var s = [1, 2, 3, 4];// 未改变原数组s.forEach(item=&gt;&#123;    item = &#x27;a&#x27;&#125;);conso...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-03-10T16:00:00+00:00">2021-03-10</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6forEach%E4%B8%8D%E6%94%B9%E5%8F%98%E5%8E%9F%E6%95%B0%E7%BB%84,-%E4%BD%86%E6%98%AF%E6%94%B9%E5%8F%98%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E7%9A%84%E9%97%AE%E9%A2%98/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/02/%F0%9F%93%81%F0%9F%93%81-CentOS-7-firewall-cmd%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3%E6%97%B6%E5%87%BA%E7%8E%B0bad-port-(most-likely-missin/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/02/%F0%9F%93%81%F0%9F%93%81-CentOS-7-firewall-cmd%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3%E6%97%B6%E5%87%BA%E7%8E%B0bad-port-(most-likely-missin/"  itemprop="url">
+        📁📁-CentOS-7-firewall-cmd开放端口时出现bad-port-(most-likely-missin
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        使用firewall-cmd命令打开端口时遇到了”bad port (most likely missing protocol), correct syntax is portid[-portid]&#x2F;protocol”这个问题。
+百度了下没解决方案，又看了一遍错误提示和输入的命令后被自己蠢哭了
+废话不多说，问题的原因是命令中add-port参数值的正确格式为[端口号&#x2F;协议...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-02-02T16:00:00+00:00">2021-02-02</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/02/%F0%9F%93%81%F0%9F%93%81-CentOS-7-firewall-cmd%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3%E6%97%B6%E5%87%BA%E7%8E%B0bad-port-(most-likely-missin/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/01/%F0%9F%8E%A8%F0%9F%8E%A8-git-Tips/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/01/%F0%9F%8E%A8%F0%9F%8E%A8-git-Tips/"  itemprop="url">
+        🎨🎨-git-Tips
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        忽略文件对于未入库的文件touch .gitignore
+在文件中写入需要忽略的文件（如：*.diff  ……具体见链接），或者不遵循忽略原则的特例（文件前加“！”）
+（注：只对untracked files有效）
+对于已入库的文件git update-index --assume-unchanged    $path + $file
+若以后不想忽略该文件的修改，则输入命令：git upda...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-02-01T16:00:00+00:00">2021-02-01</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/01/%F0%9F%8E%A8%F0%9F%8E%A8-git-Tips/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/16/%F0%9F%A6%9C%F0%9F%A6%9Cvue-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AF%E6%95%B0%E7%BB%84-watch%E7%9B%91%E5%90%AC%E4%B8%8D%E4%BA%86/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/16/%F0%9F%A6%9C%F0%9F%A6%9Cvue-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AF%E6%95%B0%E7%BB%84-watch%E7%9B%91%E5%90%AC%E4%B8%8D%E4%BA%86/"  itemprop="url">
+        🦜🦜vue-对象的属性是数组-watch监听不了
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849data() &#123; formData: &#123;        areaId: 14,        isNew: true,        isDraft: false,        cName: &...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-01-16T16:00:00+00:00">2021-01-16</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/16/%F0%9F%A6%9C%F0%9F%A6%9Cvue-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AF%E6%95%B0%E7%BB%84-watch%E7%9B%91%E5%90%AC%E4%B8%8D%E4%BA%86/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/14/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/14/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/"  itemprop="url">
+        🎨🎨-git-设置文件大小写敏感
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        方法一命令设置Git大小写敏感：
+1git config core.ignorecase false
+方法二找到项目的 .git 文件夹（window默认是隐藏的，设置显示隐藏的项目即可出现） 下的 config 文件打开，将
+ignorecase &#x3D; true 设置成 ignorecase &#x3D; false
+git文件大小写敏感导致的问题，在有些mac上，文件大小写是不敏...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-01-14T16:00:00+00:00">2021-01-14</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/14/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/ivew-modal-%E9%AA%8C%E8%AF%81%EF%BC%8C%E5%85%B3%E9%97%AD%E5%86%8D%E6%89%93%E5%BC%80%EF%BC%8C%E9%AA%8C%E8%AF%81%E9%94%99%E8%AF%AF/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/10/ivew-modal-%E9%AA%8C%E8%AF%81%EF%BC%8C%E5%85%B3%E9%97%AD%E5%86%8D%E6%89%93%E5%BC%80%EF%BC%8C%E9%AA%8C%E8%AF%81%E9%94%99%E8%AF%AF/"  itemprop="url">
+        ivew-modal-验证，关闭再打开，验证错误
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        ivew 里弹框存在表单验证时，再次打开出现校验问题；
+
+
+1用 v-if 把modal内容包起来
+2.把 visable放在 12345678this.formData = &#123;key: value,.....&#125;this.$nextTick(() =&gt; &#123;    this.visable = true;&#125;)
+
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/10/ivew-modal-%E9%AA%8C%E8%AF%81%EF%BC%8C%E5%85%B3%E9%97%AD%E5%86%8D%E6%89%93%E5%BC%80%EF%BC%8C%E9%AA%8C%E8%AF%81%E9%94%99%E8%AF%AF/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/ivew-radio-%E5%8D%95%E9%80%89-1,0-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E6%80%8E%E4%B9%88%E4%BC%A0/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/10/ivew-radio-%E5%8D%95%E9%80%89-1,0-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E6%80%8E%E4%B9%88%E4%BC%A0/"  itemprop="url">
+        ivew-radio-单选-1,0-字符串和数字怎么传
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        字符串,label不用加:
+123456789101112131415161718192021&lt;template&gt;      &lt;RadioGroup v-model=&quot;hasDelay&quot;&gt;              &lt;Radio label=1&gt;是&lt;/Radio&gt;              &lt;Radio label=0...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/10/ivew-radio-%E5%8D%95%E9%80%89-1,0-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E6%80%8E%E4%B9%88%E4%BC%A0/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/ivew-%E5%8A%A8%E6%80%81%E6%96%B0%E5%A2%9E-input-prop%E6%A0%A1%E9%AA%8C/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2637,72 +3036,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/"  itemprop="url">
-        清明节,今天想跟自己谈谈.html
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-
-  
-    
-    
-    清明节,今天想跟自己谈谈
-    
-      body {
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
-        font-size: 14px;
-        line-h...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%E6%B8%85%E6%98%8E%E8%8A%82,%E4%BB%8A%E5%A4%A9%E6%83%B3%E8%B7%9F%E8%87%AA%E5%B7%B1%E8%B0%88%E8%B0%88/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2744,358 +3077,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2021/undefined/10/%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8Divew-form-prop,-%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84type%E6%A0%A1%E9%AA%8C/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/"  itemprop="url">
-        微信小程序-为什么地图本地体验可以用，线上环境不能用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        需要加安全域名
-
-在你已经加的域名上增加https://apis.map.qq.com;
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%B0%E5%9B%BE%E6%9C%AC%E5%9C%B0%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%8C%E7%BA%BF%E4%B8%8A%E7%8E%AF%E5%A2%83%E4%B8%8D%E8%83%BD%E7%94%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/"  itemprop="url">
-        🌈--css-flex-多列等高
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1.父元素设置display:flex2.子元素设置 flex:1
-12345678910111213141516171819202122#container&#123;	width:400px;	margin:0 auto;	background-color: #ddd;	display:flex;&#125;// 不要设置 align-items 属性.left,.right&#123;...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/"  itemprop="url">
-        🌈-让div填充剩余的屏幕空间的高度
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        flex父元素设置 flex-flow: column; 垂直排列再使用 flex 自适应布局
-calc height: calc(100% - 50px);剩余高度 &#x3D; 父元素高度 - 已有高度
-demo
-https://codepen.io/qiudaoermu/pen/mdwPWVx
-
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88-flex%E5%B8%83%E5%B1%80--%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA%E5%9B%BA%E5%AE%9A%E4%B8%AA%E6%95%B0,%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%94%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8C%88-flex%E5%B8%83%E5%B1%80--%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA%E5%9B%BA%E5%AE%9A%E4%B8%AA%E6%95%B0,%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%94%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/"  itemprop="url">
-        🌈-flex布局--一行显示固定个数,强制换行且均匀分布
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-12345/* flex-direction 决定主轴的方向 row(默认)|row-reverse|column|column-reverse*//* flex-direction: row; *//* flex-wrap决定当排列不下时是否换行以及换行的方式,nowrap(默认)|wrap|wrap-reverse *//* flex-wrap:wrap; */
-12345678910...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88-flex%E5%B8%83%E5%B1%80--%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA%E5%9B%BA%E5%AE%9A%E4%B8%AA%E6%95%B0,%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%94%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8C%88-space-between%E5%92%8Cspace-around%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8C%88-space-between%E5%92%8Cspace-around%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/"  itemprop="url">
-        🌈-space-between和space-around的区别？
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8C%88-space-between%E5%92%8Cspace-around%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/10/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"  itemprop="url">
-        🍎🍎-Mac-OS-配置环境变量
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Mac端环境变量配置Mac使用bash做为默认的shell
-MAC OS X环境配置的加载顺序
-123456# 系统级别/etc/profile/etc/paths # 用户级别~/.zshrc
-前两个是系统级别的环境变量，针对所有用户，后面四个带有~&#x2F;用户级别的环境变量。-前两个环境配置在系统启动时候就会加载。
-
-~&#x2F;.zshrc 是zsh shell打开时候加载
-
-之...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-01-10T16:00:00+00:00">2021-01-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/10/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/' itemprop="url">
             Read More
           </a>
         </div>
@@ -4096,94 +4077,6 @@ MAC OS X环境配置的加载顺序
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 

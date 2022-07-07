@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-11-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-01T13:42:49.647Z">
+<meta property="article:modified_time" content="2022-07-03T13:41:12.319Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -52,10 +52,6 @@
   * Chunk rendering for all but the first article.
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -1745,7 +1741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656855723400),
+    lastupdate: new Date(1657199852494),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2136,14 +2132,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
   // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
   // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  volantis.cleanContentVisibility = ()=>{
-    if (document.querySelector(".post-story")) {
-      console.log("cleanContentVisibility");
-      document.querySelectorAll(".post-story").forEach(e=>{
-        e.classList.remove("post-story")
-      })
-    }
-  }
+  // volantis.cleanContentVisibility = ()=>{
+  //   if (document.querySelector(".post-story")) {
+  //     console.log("cleanContentVisibility");
+  //     document.querySelectorAll(".post-story").forEach(e=>{
+  //       e.classList.remove("post-story")
+  //     })
+  //   }
+  // }
   /******************************************************************************/
   /******************************************************************************/
   /******************************************************************************/
@@ -2599,7 +2595,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p><img src="https://upload-images.jianshu.io/upload_images/15312191-0b2e1954e506137d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="显示器基本构成"></p>
-<div class="story post-story"><h2 id="显示器接口"><a href="#显示器接口" class="headerlink" title="显示器接口"></a>显示器接口</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-abb49b2a33c73d0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<div class=""><h2 id="显示器接口"><a href="#显示器接口" class="headerlink" title="显示器接口"></a>显示器接口</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-abb49b2a33c73d0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <h4 id="VGA"><a href="#VGA" class="headerlink" title="VGA"></a>VGA</h4><p>VGA接头：针数为15的视频接口，主要用于老式的电脑输出。VGA输出和传递的是模拟信号。大家都知道计算机显卡产生的是数字信号，显示器使用的也是数字信号。所以使用VGA的视频接口相当于是经历了一个数模转换和一次模数转换。信号损失，显示较为模糊。</p>
 <h4 id="HDMI"><a href="#HDMI" class="headerlink" title="HDMI"></a>HDMI</h4><p>HDMI是一种高清视频接口，在目前主流笔记本、液晶电视、显卡、主板中都比较常见。HDMI是一种数字化视频&#x2F;音频接口技术，是适合影像传输的专用型数字化接口，其可同时传送音频和影音信号，最高数据传输速度为5Gbps，可支持1080P，720P的全高清格式视频输出，是目前最为流行的高清接口，这是普通的VGA显示接口所无法比拟的，犹如宽带中电话线宽带与光纤一样，传输数据能力区别很大。</p>
 <h4 id="DVI"><a href="#DVI" class="headerlink" title="DVI"></a>DVI</h4><p>DVI接口：DVI接口有两个标准，25针和29针，如下图所示。直观来说，这两种接口没有区别。DVI接口传输的是数字信号，可以传输大分辨率的视频信号。DVI连接计算机显卡和显示器时不用发生转换，所以信号没有损失。</p>
@@ -2608,7 +2604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="USB-Type-C"><a href="#USB-Type-C" class="headerlink" title="USB Type-C"></a>USB Type-C</h4><p>USB Type-C接口USB接口早已被大家所熟知，以往USB接口被设计用来传输数据，所以它在移动硬盘等存储设备的使用上非常常见。现在USB 3.1 Gen2的速度已经达到10Gbps，设计标准也可以满足视频、数据兼顾传输，所以在一些显示器上，也能够发现USB 3.1接口。现在的USB3.1接口，已经能够满足4K 30P的分辨率显示，大致与HDMI1.4在同一水平。但它以后再进行升级，必将能成为最通用的显示传输方式。需要注意的是，USB 3.1 Gen1就是USB 3.0，而USB 3.1 Gen2才是真正的USB3.1。</p>
 <h4 id="雷电接口"><a href="#雷电接口" class="headerlink" title="雷电接口"></a>雷电接口</h4><p>雷电接口雷电（thunderbolt）接口在苹果电脑上用的非常多，苹果的中文官网将其译为雷雳。它以速度快，传输稳定而著称。雷电接口的技术融合了PCI Express和DisplayPort（就是上面说的DP口）两种通信协议。其中PCI Express用于数据传输，可以非常方便地进行任何类型设备扩展；DisplayPort用于显示，能同步传输1080p乃至4K视频和最多八声道音频。并且两条通道在传输时都有自己单独的通道，不会产生任何干扰。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/15312191-471bdd4d10217d14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-</div><div class="story post-story"><h2 id="驱动版"><a href="#驱动版" class="headerlink" title="驱动版"></a>驱动版</h2><p>接受数字信号和模拟信号，经过解码器，解码加载到 scaler芯片中<br>####（1）A／D转换电路</p>
+</div><div class=""><h2 id="驱动版"><a href="#驱动版" class="headerlink" title="驱动版"></a>驱动版</h2><p>接受数字信号和模拟信号，经过解码器，解码加载到 scaler芯片中<br>####（1）A／D转换电路</p>
 <p>A／D转换电路即模／数转换器，用以将VGA接口输出的模拟R、G、B信号转换为数字信号，然后送到Sealer电路进行处理。</p>
 <p>早期的液晶显示器，一般单独设立一块A／D转换芯片（如AD9883、AD9884等），现在生产的液晶显示器，大多已将A／D转换电路集成在Scaler芯片中。<br>####（2） Sealer电路<br>Sealer电路的名称较多，如图像缩放电路、主控电路、图像控制器等。Sealer电路的核心是一块大规模集成电路，称为Sealer芯片，其作用是对A&#x2F;D转换得到的数字信号或TMDS接收器输出的数据和时钟信号，进行缩放、画质增强等处理，再经输出接口电路送至液晶面板，最后，由液面板时控制1C（TCON）将信号传输至面板上的行列驱动IC. Sealer芯片的性能基本上决定了信号处理的极限能力。另外，在Sealer电路中，一般还集成有屏显电路（OSD电路）。</p>
 <p>液晶显示器为什么要对信号进行缩放处理呢？这是由于一个面板的画素位置与分辨率在制造完成后就已经固定，但是影音装置输出的分辨率却是多元的，当液晶面板必须接收不同分辨率的影音信号时，就要经过缩放处理才能适合一个屏幕的大小，所以信号需要经过Sealer芯片进行缩放处理。</p>
@@ -2636,10 +2632,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-01T13:42:49+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-03T13:41:12+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 1, 2022</p>
+    <p>更新于：Jul 3, 2022</p>
   </a>
 </div>
 
@@ -3651,98 +3647,10 @@ CPU vs GPUgpu 线程多，计算能力强cpu 线程少，但逻辑处理能力�
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/17/⛵︎验证码--（8）液晶显示器原理/","name":"⛵︎验证码--（8）液晶显示器原理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"⛵︎验证码--（8）液晶显示器原理","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81--%EF%BC%888%EF%BC%89%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81--%EF%BC%888%EF%BC%89%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/","wordCount":0,"datePublished":"2021-11-17T16:00:00.000Z","dateModified":"2022-07-01T13:42:49.647Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/17/⛵︎验证码--（8）液晶显示器原理/","name":"⛵︎验证码--（8）液晶显示器原理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"⛵︎验证码--（8）液晶显示器原理","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81--%EF%BC%888%EF%BC%89%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81--%EF%BC%888%EF%BC%89%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/","wordCount":0,"datePublished":"2021-11-17T16:00:00.000Z","dateModified":"2022-07-03T13:41:12.319Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
