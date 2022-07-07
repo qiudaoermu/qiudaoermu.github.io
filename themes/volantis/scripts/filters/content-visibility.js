@@ -9,9 +9,9 @@ hexo.extend.filter.register('after_post_render', function (data) {
     let yy = e.replace(/<h2.*?>.*?<\/h2>/, function (str) {
       if (flag) {
         flag = 0
-        return `<div class="story post-story">` + str
+        return `<div class="">` + str
       } else {
-        return `</div><div class="story post-story">` + str
+        return `</div><div class="">` + str
       }
     })
     mydata += yy

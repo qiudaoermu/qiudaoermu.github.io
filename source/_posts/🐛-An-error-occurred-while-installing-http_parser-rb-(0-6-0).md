@@ -1,6 +1,6 @@
 ---
-title: "🐛-An-error-occurred-while-installing-http_parser-rb-(0-6-0),-and-Bundl"
-date: 2021-01-11
+title: "🐛-An-error-occurred-while-installing-http_parser-rb-(0-6-0)"
+date: 2021-10-26
 tags: 
 - 开发日常
 ---

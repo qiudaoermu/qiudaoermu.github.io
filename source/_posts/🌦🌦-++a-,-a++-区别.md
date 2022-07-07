@@ -1,5 +1,5 @@
 ---
-title: "🌦🌦-++a-,-a++-区别"
+title: "🌦🌦-++A-,-A++-区别"
 date: 2021-07-25
 tags: 
 - 开发日常
@@ -45,4 +45,28 @@ var goos = function(){
 } 
 console.log(goos()); // 4
 
+```
+
+
+#### for 循环是怎么执行的
+
+```
+for( var i = 0; i < 10; i++) {
+  // do something
+  console.log(i)
+  // 所有东西执行完了再+1
+  // 如果希望从0 开始，i= 
+}
+console.log(i) // 10
+```
+等同于
+
+```
+let i = 0;
+while(i < 10) {
+ // do something
+  console.log(i)
+  i++
+}
+console.log(i) // 10
 ```

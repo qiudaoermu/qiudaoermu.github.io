@@ -4,8 +4,6 @@ date: 2022-04-01
 tags: 
 - 开发日常
 ---
-![](https://upload-images.jianshu.io/upload_images/15312191-78a28a88ba4f13b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 场景：后端向前端通过一个接口返回一系列商品ID，前端通过商品ID去获取商品信息。
 问题：前端请求，但是没有这个商品的信息
 原因：后端返回的商品ID ，和前端获取的不一致，js数字采用64位双浮点数。
