@@ -31,13 +31,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="🌦🌦前端位运算">
-<meta property="og:url" content="http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/index.html">
+<meta property="og:url" content="http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、定义   位运算符 符号 定义    或 | 两个位有一个为1，结果就是1，否则结果为0   非 ~ 如果位为0，结果是1，如果位为1，结果是0   异或 ^ 两个位相同结果为0，不同结果为1   二、实例   位运算符 实例 解析    与 128 &amp; 129 &#x3D;128    或 129 &#x3D; 129         非 ~128 &#x3D; -129">
+<meta property="og:description" content="一、定义   位运算符 符号 定义    与 &amp; 相同位的两个数字都为1，则为1；若有一个不为1，则为0   或 | 两个位有一个为1，结果就是1，否则结果为0   非 ~ 如果位为0，结果是1，如果位为1，结果是0   异或 ^ 两个位相同结果为0，不同结果为1   二、实例   位运算符 实例 解析    与 128 &amp; 129 &#x3D;128    或 129 &amp;#x3D">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2021-08-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-03T13:41:12.310Z">
+<meta property="article:published_time" content="2021-08-05T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-13T14:42:55.059Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -1741,7 +1741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1657199852494),
+    lastupdate: new Date(1657723384268),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2516,7 +2516,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2558,10 +2558,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-08-04T16:00:00+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-08-05T00:00:00+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Aug 4, 2021</p>
+    <p>发布于：Aug 5, 2021</p>
   </a>
 </div>
 
@@ -2594,7 +2594,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h5 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h5><table>
+    <h4 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h4><table>
 <thead>
 <tr>
 <th>位运算符</th>
@@ -2603,6 +2603,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </thead>
 <tbody><tr>
+<td>与</td>
+<td>&amp;</td>
+<td>相同位的两个数字都为1，则为1；若有一个不为1，则为0</td>
+</tr>
+<tr>
 <td>或</td>
 <td>|</td>
 <td>两个位有一个为1，结果就是1，否则结果为0</td>
@@ -2618,7 +2623,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>两个位相同结果为0，不同结果为1</td>
 </tr>
 </tbody></table>
-<h6 id="二、实例"><a href="#二、实例" class="headerlink" title="二、实例"></a>二、实例</h6><table>
+<h4 id="二、实例"><a href="#二、实例" class="headerlink" title="二、实例"></a>二、实例</h4><table>
 <thead>
 <tr>
 <th>位运算符</th>
@@ -2662,6 +2667,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td></td>
 </tr>
 </tbody></table>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BD%8D%E8%BF%90%E7%AE%97/6888804?fr=aladdin">百度百科：位运算</a></p>
+</blockquote>
 
 
   </div>
@@ -2683,10 +2691,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-03T13:41:12+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-13T14:42:55+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 3, 2022</p>
+    <p>更新于：Jul 13, 2022</p>
   </a>
 </div>
 
@@ -2709,7 +2717,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/&title=🌦🌦前端位运算 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/&title=🌦🌦前端位运算 - Hexo&summary="
           
           >
           
@@ -2721,7 +2729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/&title=🌦🌦前端位运算 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/&title=🌦🌦前端位运算 - Hexo&summary="
           
           >
           
@@ -2733,7 +2741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/&title=🌦🌦前端位运算 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/&title=🌦🌦前端位运算 - Hexo&summary="
           
           >
           
@@ -2812,7 +2820,7 @@ X86
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2845,7 +2853,7 @@ X86
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9A%E4%B9%89"><span class="toc-text">一、定义</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9A%E4%B9%89"><span class="toc-text">一、定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E4%BE%8B"><span class="toc-text">二、实例</span></a></li></ol>
     </div>
   </section>
 
@@ -3720,7 +3728,7 @@ X86
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/04/🌦🌦前端位运算/","name":"🌦🌦前端位运算"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🌦🌦前端位运算","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/04/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/","wordCount":0,"datePublished":"2021-08-04T16:00:00.000Z","dateModified":"2022-07-03T13:41:12.310Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/05/🌦🌦前端位运算/","name":"🌦🌦前端位运算"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🌦🌦前端位运算","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/05/%F0%9F%8C%A6%F0%9F%8C%A6%E5%89%8D%E7%AB%AF%E4%BD%8D%E8%BF%90%E7%AE%97/","wordCount":0,"datePublished":"2021-08-05T00:00:00.000Z","dateModified":"2022-07-13T14:42:55.059Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
