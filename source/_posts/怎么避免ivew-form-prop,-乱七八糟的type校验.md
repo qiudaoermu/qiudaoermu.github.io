@@ -1,6 +1,6 @@
 ---
 title: "怎么避免ivew-form-prop,-乱七八糟的type校验"
-date: 2021-01-11
+date: 2021-01-29
 tags: 
 - 开发日常
 ---

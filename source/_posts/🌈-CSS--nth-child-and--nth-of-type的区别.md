@@ -5,7 +5,7 @@ tags:
 - css
 ---
 #### nth-child and :nth-of-type 区别
-
+如下demo
 ```
 <section>
     <div>我是一个普通的div标签</div>
@@ -15,7 +15,7 @@ tags:
 </section>
 
 ```
-那么p:nth-child(2)将不会选择任何元素。
+p:nth-child(2)将不会选择任何元素。
 
 而p:nth-of-type(2)表示父标签下的第二个p元素，显然，无论在div标签后面再插入个span标签，还是h1标签，都是第二个p标签中的文字变红。
 
