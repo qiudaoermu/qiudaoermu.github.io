@@ -25,19 +25,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>⛵︎验证码-（4）计算机-图像渲染，图片解码 - Hexo</title>
+  <title>⛵︎数据到图像-（2）浏览器渲染 - Hexo</title>
   <meta name="keywords" content="开发日常,null">
   <meta desc name="description" content="test description - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="⛵︎验证码-（4）计算机-图像渲染，图片解码">
-<meta property="og:url" content="http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/index.html">
+<meta property="og:title" content="⛵︎数据到图像-（2）浏览器渲染">
+<meta property="og:url" content="http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="从理论上，我可以用上图的这种键盘按照一定的编码敲出一长串0、1数字序列，再加一个jpg&#x2F;png的后缀名保存。 打开文件时，是将这些数据送入内存，图片查看程序控制CPU，根据后缀名对数据进行解码、解压后得到图像本身的数据——每个像素的RGB等。 再历经前面所述的一大串过程，CPU的数据再经过显卡和显示器，最终我就能看到一张滑稽的照片 计算机怎么绘制系统UI的 桌面开发UI原理window">
+<meta property="og:description" content="chrome渲染图像过程过程：  普通HTML  ➡ dom ➡ skia-webGl ➡ OpenGL  问题：chrome怎么跨平台chrome 在安卓，iOS，Mac,windows,linux都有安装包，chrome作为浏览器怎么做到兼容问题的呢。 解决方案：skia Skia Graphics Library（SGL）是一个由C++编写的开放源代码图形库Skia主要的类别是SkCanva">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2021-11-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-03T13:41:12.318Z">
+<meta property="article:published_time" content="2021-11-09T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-21T15:14:57.178Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -1741,7 +1741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1657723384268),
+    lastupdate: new Date(1658416516304),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2516,7 +2516,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2537,7 +2537,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        ⛵︎验证码-（4）计算机-图像渲染，图片解码
+        ⛵︎数据到图像-（2）浏览器渲染
       </h1>
       <div class='new-meta-box'>
         
@@ -2558,10 +2558,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-11-08T16:00:00+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-11-09T00:00:00+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Nov 8, 2021</p>
+    <p>发布于：Nov 9, 2021</p>
   </a>
 </div>
 
@@ -2594,19 +2594,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p><img src="https://upload-images.jianshu.io/upload_images/15312191-a5635d677ddbcf13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>从理论上，我可以用上图的这种键盘按照一定的编码敲出一长串0、1数字序列，再加一个jpg&#x2F;png的后缀名保存。</p>
+    <h3 id="chrome渲染图像过程"><a href="#chrome渲染图像过程" class="headerlink" title="chrome渲染图像过程"></a>chrome渲染图像过程</h3><p><img src="https://upload-images.jianshu.io/upload_images/15312191-7e4f1719e8dc88b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>过程：</p>
+<ul>
+<li><strong>普通HTML</strong>  ➡ <strong>dom</strong> ➡ <strong>skia</strong><br>-<strong>webGl</strong> ➡ <strong>OpenGL</strong></li>
+</ul>
+<h3 id="问题：chrome怎么跨平台"><a href="#问题：chrome怎么跨平台" class="headerlink" title="问题：chrome怎么跨平台"></a>问题：chrome怎么跨平台</h3><p>chrome 在安卓，iOS，Mac,windows,linux都有安装包，chrome作为浏览器怎么做到兼容问题的呢。</p>
+<h3 id="解决方案：skia"><a href="#解决方案：skia" class="headerlink" title="解决方案：skia"></a>解决方案：skia</h3><p> <strong>Skia Graphics Library</strong>（SGL）是一个由C++编写的开放源代码图形库<br>Skia主要的类别是SkCanvas，所有的绘图功能都是实现于此类别。以下是SGL简单的代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SkCanvas* can = GraphicsJNI::getNativeCanvas(...);      </span><br><span class="line">SkPaint paint;    </span><br><span class="line">paint.setARGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>);</span><br><span class="line">can-&gt;drawText(<span class="string">&quot;Hello, world&quot;</span>, <span class="number">12</span>, <span class="number">10</span>, <span class="number">10</span>, paint);</span><br></pre></td></tr></table></figure>
+
+
+<div class=""><h2 id="计算机如何处理浏览器数据"><a href="#计算机如何处理浏览器数据" class="headerlink" title="计算机如何处理浏览器数据"></a>计算机如何处理浏览器数据</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-a5635d677ddbcf13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>从理论上，我可以用上图的这种键盘按照一定的编码敲出一长串0、1数字序列，再加一个jpg&#x2F;png的后缀名保存。</p>
 <p>打开文件时，是将这些数据送入内存，图片查看程序控制CPU，根据后缀名对数据进行解码、解压后得到图像本身的数据——每个像素的RGB等。</p>
 <p>再历经前面所述的一大串过程，CPU的数据再经过显卡和显示器，最终我就能看到一张滑稽的照片<br><img src="https://upload-images.jianshu.io/upload_images/15312191-06f06c6fd953fd7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h4 id="计算机怎么绘制系统UI的"><a href="#计算机怎么绘制系统UI的" class="headerlink" title="计算机怎么绘制系统UI的"></a>计算机怎么绘制系统UI的</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-c847a4ffd6cc9dc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片显示"><br><img src="https://upload-images.jianshu.io/upload_images/15312191-d0fdb501edca0716.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="应用显示"></p>
-<h3 id="桌面开发UI原理"><a href="#桌面开发UI原理" class="headerlink" title="桌面开发UI原理"></a>桌面开发UI原理</h3><h5 id="windows图像绘制"><a href="#windows图像绘制" class="headerlink" title="windows图像绘制"></a>windows图像绘制</h5><p>操作系统有一套 GUI API ,提供给开发者调用<br>电脑不同应用，使用不同绘制模型，比如windows10 系统，同时运行 画布，有道云笔记，魔兽世界3D游戏<br><img src="https://upload-images.jianshu.io/upload_images/15312191-a9ba87d41f00f53a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<h5 id="安卓图像绘制"><a href="#安卓图像绘制" class="headerlink" title="安卓图像绘制"></a>安卓图像绘制</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-4d83c4a6aa27e6e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p>下一篇以chrome为例，梳理操作系统和应用之间的调用关系。</p>
+<h4 id="计算机怎么绘制系统UI的"><a href="#计算机怎么绘制系统UI的" class="headerlink" title="计算机怎么绘制系统UI的"></a>计算机怎么绘制系统UI的</h4><h5 id="windows图像绘制"><a href="#windows图像绘制" class="headerlink" title="windows图像绘制"></a>windows图像绘制</h5><p>操作系统有一套 GUI API ,提供给开发者调用<br>电脑不同应用，使用不同绘制模型，比如windows10 系统，同时运行 画布，有道云笔记，魔兽世界3D游戏<br><img src="https://upload-images.jianshu.io/upload_images/15312191-a9ba87d41f00f53a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>渲染过程：<br>application ➡ OpenGl(Direct) ➡ display driver ➡ screen</p>
+<h5 id="安卓系统图像绘制"><a href="#安卓系统图像绘制" class="headerlink" title="安卓系统图像绘制"></a>安卓系统图像绘制</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-4d83c4a6aa27e6e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://vivaxyblog.github.io/2019/12/07/decode-a-png-image-with-javascript-cn.html">一步一步解码 PNG 图片</a><br>《编码，隐藏在计算机软硬件背后的语言》<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137780634">猴子也能看懂的渲染管线（Render Pipeline)</a><br><a target="_blank" rel="noopener" href="https://www.gpuinsight.com/">GPU 观察</a></p>
+<p><a target="_blank" rel="noopener" href="https://vivaxyblog.github.io/2019/12/07/decode-a-png-image-with-javascript-cn.html">一步一步解码 PNG 图片</a><br>《编码，隐藏在计算机软硬件背后的语言》<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137780634">猴子也能看懂的渲染管线（Render Pipeline)</a><br><a target="_blank" rel="noopener" href="https://www.gpuinsight.com/">GPU 观察</a><br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/QoFrdmxdRJG5ETQp5Ua3-A">一颗像素的诞生</a><br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=m-J-tbAlFic">Life of a pixe</a><br><a target="_blank" rel="noopener" href="https://www.daimajiaoliu.com/daima/47da647f6900408">skia简介</a><br><a target="_blank" rel="noopener" href="https://mp.processon.com/view/link/5ec33e0ff346fb690701ff6c">https://mp.processon.com/view/link/5ec33e0ff346fb690701ff6c</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1265245746099941376">GPU渲染管线之旅</a></p>
 </blockquote>
 
-
+</div>
   </div>
   
   
@@ -2626,10 +2633,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-03T13:41:12+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-21T15:14:57+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 3, 2022</p>
+    <p>更新于：Jul 21, 2022</p>
   </a>
 </div>
 
@@ -2652,7 +2659,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/&title=⛵︎验证码-（4）计算机-图像渲染，图片解码 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/&title=⛵︎数据到图像-（2）浏览器渲染 - Hexo&summary="
           
           >
           
@@ -2664,7 +2671,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/&title=⛵︎验证码-（4）计算机-图像渲染，图片解码 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/&title=⛵︎数据到图像-（2）浏览器渲染 - Hexo&summary="
           
           >
           
@@ -2676,7 +2683,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/&title=⛵︎验证码-（4）计算机-图像渲染，图片解码 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/&title=⛵︎数据到图像-（2）浏览器渲染 - Hexo&summary="
           
           >
           
@@ -2709,15 +2716,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/undefined/14/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%885%EF%BC%89chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%9B%BE%E7%89%87%E8%B7%A8%E5%B9%B3%E5%8F%B0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>⛵︎验证码-（5）chrome浏览器渲染图片跨平台</p>
-          <p class='content'>问题：chrome怎么跨平台chrome 在安卓，iOS，Mac,windows,linux都有安装包，chrome作为浏览器怎么做到兼容问题的呢。
-chrome渲染图像过程html =&gt;...</p>
+        <a class='prev' href='/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>⛵︎数图番外篇-显卡构成</p>
+          <p class='content'>显卡构成1.GPU(核心部件)
+CPU vs GPUgpu 线程多，计算能力强cpu 线程少，但逻辑处理能力强
+一般说来，衡量GPU工作能力的参数有三项：流处理器数量和核心、显存工作频率。
+核心...</p>
         </a>
       
       
-        <a class='next' href='/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E5%B0%8F%E5%B0%8F%E9%AA%8C%E8%AF%81%E7%A0%81%EF%BC%883%EF%BC%89%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/'>
-          <p class='title'>⛵︎小小验证码（3）文本和二进制互转<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/'>
+          <p class='title'>⛵︎数图番外篇-文本和二进制互转<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>JS字符串与二进制的相互转化的方法，具体代码如下所示：
 &#x2F;&#x2F; 字符串转ascii码，用charCodeAt();&#x2F;&#x2F; ascii码转字符串，用fromCh...</p>
         </a>
@@ -2735,7 +2744,7 @@ chrome渲染图像过程html =&gt;...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2768,7 +2777,7 @@ chrome渲染图像过程html =&gt;...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E7%BB%98%E5%88%B6%E7%B3%BB%E7%BB%9FUI%E7%9A%84"><span class="toc-text">计算机怎么绘制系统UI的</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%8C%E9%9D%A2%E5%BC%80%E5%8F%91UI%E5%8E%9F%E7%90%86"><span class="toc-text">桌面开发UI原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#windows%E5%9B%BE%E5%83%8F%E7%BB%98%E5%88%B6"><span class="toc-text">windows图像绘制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E5%8D%93%E5%9B%BE%E5%83%8F%E7%BB%98%E5%88%B6"><span class="toc-text">安卓图像绘制</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#chrome%E6%B8%B2%E6%9F%93%E5%9B%BE%E5%83%8F%E8%BF%87%E7%A8%8B"><span class="toc-text">chrome渲染图像过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9Achrome%E6%80%8E%E4%B9%88%E8%B7%A8%E5%B9%B3%E5%8F%B0"><span class="toc-text">问题：chrome怎么跨平台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9Askia"><span class="toc-text">解决方案：skia</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E6%B5%8F%E8%A7%88%E5%99%A8%E6%95%B0%E6%8D%AE"><span class="toc-text">计算机如何处理浏览器数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E7%BB%98%E5%88%B6%E7%B3%BB%E7%BB%9FUI%E7%9A%84"><span class="toc-text">计算机怎么绘制系统UI的</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#windows%E5%9B%BE%E5%83%8F%E7%BB%98%E5%88%B6"><span class="toc-text">windows图像绘制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E5%8D%93%E7%B3%BB%E7%BB%9F%E5%9B%BE%E5%83%8F%E7%BB%98%E5%88%B6"><span class="toc-text">安卓系统图像绘制</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3643,7 +3652,7 @@ chrome渲染图像过程html =&gt;...</p>
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/08/⛵︎验证码-（4）计算机-图像渲染，图片解码/","name":"⛵︎验证码-（4）计算机-图像渲染，图片解码"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"⛵︎验证码-（4）计算机-图像渲染，图片解码","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-%EF%BC%884%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA-%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%9B%BE%E7%89%87%E8%A7%A3%E7%A0%81/","wordCount":0,"datePublished":"2021-11-08T16:00:00.000Z","dateModified":"2022-07-03T13:41:12.318Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2021/undefined/09/⛵︎数据到图像-（2）浏览器渲染/","name":"⛵︎数据到图像-（2）浏览器渲染"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"⛵︎数据到图像-（2）浏览器渲染","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2021/undefined/09/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/","wordCount":0,"datePublished":"2021-11-09T00:00:00.000Z","dateModified":"2022-07-21T15:14:57.178Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

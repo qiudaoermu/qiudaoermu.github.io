@@ -1738,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1657723384268),
+    lastupdate: new Date(1658416516304),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2555,11 +2555,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        背景：前端文件上传是非常普遍的功能，当需要上传大文件时会有以下问题。
-1.前后端上传时间限制，一次性传输大小限制。2.上传时间长，无进度条，体验差。3.网络抖动等，失败后需要重新上传。
-主要步骤：
-加载文件 ➡️ 分片 ➡️ 上传
-1.浏览器加载文件123--- html vue----&lt;el-button type=&quot;plain&quot; size=&quot;small...
+        
+背景：前端文件上传是非常普遍的功能，当需要上传大文件时会有以下问题。
+1.前后端上传时间限制，一次性传输大小限制。2.网络抖动等，失败后需要重新上传。
+主要步骤：前端：加载文件 ➡️  分片 ➡️  上传
+node.js：解析文件  ➡️   存放文件碎片  ➡️   合并文件
+1.浏览器加载文件12&lt;input id=&quot;file&quot; type=&quot;file...
       
     
   </div>
@@ -2588,7 +2589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9AWebSocket%E5%B0%81%E8%A3%85/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9A-webSocket-socket-js/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2606,8 +2607,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9AWebSocket%E5%B0%81%E8%A3%85/"  itemprop="url">
-        🐓🥚WebSocket封装
+      <a href="/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9A-webSocket-socket-js/"  itemprop="url">
+        🐓🥚-webSocket-socket-js
       </a>
     </h2>
   
@@ -2615,7 +2616,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         websocket 解决了服务端主动向客户端，传递消息的问题。为方便使用，下面封装了主要方法
-封装：1234567891011121314151617181920212223242526272829303132333435363738class Wsocket &#123;  constructor(url) &#123;    this.ws = new WebSocket(`ws:/$&...
+封装：123456789101112131415161718192021222324252627282930313233343536class Wsocket &#123;  constructor(url) &#123;    this.ws = new WebSocket(`ws:/$&#123...
       
     
   </div>
@@ -2628,7 +2629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9AWebSocket%E5%B0%81%E8%A3%85/' itemprop="url">
+          <a class='readmore' href='/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9A-webSocket-socket-js/' itemprop="url">
             Read More
           </a>
         </div>

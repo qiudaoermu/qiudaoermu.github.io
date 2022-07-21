@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-20T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-13T14:42:55.059Z">
+<meta property="article:modified_time" content="2022-07-21T15:14:57.182Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -1741,7 +1741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1657723384268),
+    lastupdate: new Date(1658416516304),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2610,7 +2610,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>3.存储器是线性编址，按顺序排列的地址访问，这是有利于存储和执行机器语言，适用于数值计算。但高级语言的存储采用的是一组有名字的变量，是按名字调用变量而非按地址访问，且高级语言中的每个操作对于任何数据类型都是通用的，不管采用何种数据结构，多维数组、二叉树还是图，最终在存储器上都必须转换成一维的线性存储模型进行存储。这些因素都导致了机器语言和高级语言之间存在很大的语义差距，这些语义差距之间的映射大部分都要由编译程序来完成，在很大程度上增加了编译程序的工作量。</p>
 <p>4.冯·诺依曼体系结构计算机是为<strong>逻辑和数值</strong>运算而诞生的，它以 CPU 为中心，I&#x2F;O 设备与存储器间的数据传送都要经过运算器，在<strong>数值处理</strong>方面已经达到很高的速度和精度，但对<strong>非数值</strong>数据的处理效率比较低，需要在体系结构方面有革命性突破。</p>
 <p>在非冯领域，包括近年来的出现的量子计算机，光子计算机，神经计算机（Neural computer）等，其中量子芯片已经面世，中国科大潘建伟团队构建起76个光量子的量子计算原型机“九章”，处理高斯玻色取样的速度比目前最快的超级计算机快一百万亿倍。如果量子计算机可以普及，计算机系统、计算机语言、软件体系，从业人员培养体系都会被推翻重来。</p>
-<h5 id="特定场景芯片"><a href="#特定场景芯片" class="headerlink" title="特定场景芯片"></a>特定场景芯片</h5><p>比如在人工智能芯片方面，谷歌开发了用于AI计算高性能硬件<strong>TPU</strong>，Intel推出了针对深度学习市场的众核CPU<strong>Knights Mill</strong>，英伟达推出了<strong>GPGPU</strong>，而且还有了<strong>DGX-1</strong>这样的产品；在互联网大规模核心推荐算法场景，百度推出的<strong>“百度昆仑1”</strong>已在百度搜索引擎、小度等业务中部署超过2万片；自动驾驶领域，特斯拉发布了用于自动驾驶深度学习和解决带宽瓶颈的<strong>D1</strong>芯片。  <img src="https://upload-images.jianshu.io/upload_images/15312191-623d3cda0454ca0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"> </p>
+<h5 id="特定场景芯片"><a href="#特定场景芯片" class="headerlink" title="特定场景芯片"></a>特定场景芯片</h5><p>比如在人工智能芯片方面，谷歌开发了用于AI计算高性能硬件<strong>TPU</strong>，Intel推出了针对深度学习市场的众核CPU<strong>Knights Mill</strong>，英伟达推出了<strong>GPGPU</strong>，而且还有了<strong>DGX-1</strong>这样的产品；在互联网大规模核心推荐算法场景，百度推出的<strong>“百度昆仑1”</strong>已在百度搜索引擎、小度等业务中部署超过2万片；自动驾驶领域，特斯拉发布了用于自动驾驶深度学习和解决带宽瓶颈的<strong>D1</strong>芯片。  <img src="https://upload-images.jianshu.io/upload_images/15312191-623d3cda0454ca0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
 <p>针对高并发、高性能和高效需求，阿里平头哥发布了为云而生<strong>倚天710</strong>，<strong>CIPU</strong>，阿里云飞天+CIPU体系的推出，针对性地解决了云资源的多个痛点。首先，该体系通过全硬件虚拟化和转发加速，将存储时延降至最低30us（PLX），IOPS高达300万，存储带宽可达200 Gbps，全面超越市面上所有云产品；同时，该体系还将数据中心内的基础带宽从100G升级至200G，VPC的PPS转发性能从2000万提升至4000万，网络时延从22us降低至16us，RDMA协议下更可低至5.5us。在计算能力方面，新体系实现了单容器虚拟化消耗减少50%，虚拟化容器启动速度快350%。主流通用计算场景下，<strong>Nginx</strong>性能提升了89%，<strong>Redis</strong>性能提升了68%、<strong>MySQL</strong>提升了60%。</p>
 <p>该领域的四大国际顶级会议: <strong>ISCA(偏芯片领域), HPCA, MICRO, ASPLOS</strong>。</p>
 <p>ps: 对于体系结构领域的应届毕业生来说，市场上有大致上三种工作可以选，一种是去做金融，高频交易之类，薪水很高；另一种是去做机器学习，利用体系结构领域的知识和技能去做机器学习应用的调优，也是薪水很高；比较符合体系结构传统的工作，例如去传统的芯片设计公司做芯片。</p>
@@ -2624,9 +2624,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>理论计算机科学领域有两大顶会，一个是ACM（美国计算机学会）的STOC，另外一个是IEEE（国际电气和电子工程师协会）的FOCS。</p>
 <h5 id="1-6-1-Algorithms-amp-complexity"><a href="#1-6-1-Algorithms-amp-complexity" class="headerlink" title="1.6.1 Algorithms &amp; complexity"></a>1.6.1 Algorithms &amp; complexity</h5><p>计算机领域的算法的创新改进，比如华为的俄罗斯小伙，对数学问题的突破，使得华为基站大幅度领先。  最近看了一篇文章，某个团队在最大流问题利用这个问题，算法获突破性进展。</p>
 <h5 id="1-6-2-Cryptography"><a href="#1-6-2-Cryptography" class="headerlink" title="1.6.2 Cryptography"></a>1.6.2 Cryptography</h5><p>密码学是研究编制密码和破译密码的技术科学。研究密码变化的客观规律，应用于编制密码以保守通信秘密的，称为编码学；应用于破译密码以获取通信情报的，称为破译学，总称密码学。</p>
-<h3 id="2-Computer-Engineering"><a href="#2-Computer-Engineering" class="headerlink" title="2. Computer Engineering"></a>2. Computer Engineering</h3><p>软件工程&#x2F;系统软件&#x2F;程序设计语言。  研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及程序 设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、操作系统、编译器、数据库、 游戏等。这个专业比较灵活，基本每个公司都需要编程的程序员。</p>
-<p>举个：md5加密相信大家都听过，用过。发明者是<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Ronald_Rivest" title="Ronald Rivest">Ronald Rivest</a>教授(<code>耶鲁大学数学专业，斯坦福大学计算机科学ph.d</code>)，他有多项发明，比如md6，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/RSA_(algorithm)">RSA</a> ，此外还著有书籍《Introduction to Algorithms》</p>
-<h3 id="3-Applications"><a href="#3-Applications" class="headerlink" title="3.Applications"></a>3.Applications</h3><h4 id="3-1-AI"><a href="#3-1-AI" class="headerlink" title="3.1 AI"></a>3.1 AI</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-924211e3319856b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"> </p>
+<p>举个🌰：md5加密相信大家都听过，用过。发明者是<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Ronald_Rivest" title="Ronald Rivest">Ronald Rivest</a>教授(耶鲁大学数学专业，斯坦福大学计算机科学ph.d)，他有多项发明，比如md6，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/RSA_(algorithm)">RSA</a> ，此外还著有书籍《Introduction to Algorithms》，2002年因RSA加密方案，获得年度图灵奖。</p>
+<h3 id="2-Computer-Engineering"><a href="#2-Computer-Engineering" class="headerlink" title="2. Computer Engineering"></a>2. Computer Engineering</h3><p>软件工程&#x2F;系统软件&#x2F;程序设计语言。  研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及程序 设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。<br>典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、<strong>操作系统</strong>、<strong>编译器</strong>、<strong>数据库</strong>等。这个专业比较灵活，可以说是为程序员服务的程序员。</p>
+<h3 id="3-Applications"><a href="#3-Applications" class="headerlink" title="3.Applications"></a>3.Applications</h3><h4 id="3-1-AI"><a href="#3-1-AI" class="headerlink" title="3.1 AI"></a>3.1 AI</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-924211e3319856b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
 <h5 id="AI解放生产力"><a href="#AI解放生产力" class="headerlink" title="AI解放生产力"></a>AI解放生产力</h5><p>随着计算机硬件性能的巨大提升，曾经沉寂一时的AI卷土重来。Ai大幅度提高生产力，取代人类工作，如果你的工作符合以下特征，你的工作被机器人取代的概率非常大：大量的重复性劳动，每天上班无需过脑，经由训练即可掌握的技能，工作空间狭小，坐在格子间里，不闻天下事。拜人工智能所赐，未来肯定会有人类从事的工作会被消灭。</p>
 <p>AI细分为机器学习和数据挖掘，人工智能，计算机视觉(感知)，自然语言处理，网络信息收集。</p>
 <p>Ai涉及到的具体场景包括，智能机器人，战争AI，智慧医疗，自动驾驶，语音识别。在物流行业中，无人货仓，智能分拣系统，客服系统也都已经充满了AI的身影。</p>
@@ -2640,7 +2640,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="3-2-生物医疗"><a href="#3-2-生物医疗" class="headerlink" title="3.2 生物医疗"></a>3.2 生物医疗</h4><p>比如计算机在医疗中的应用，Ai诊病，通过提取病人特征，快速诊断，缩短医生诊疗时间。提前预测病人病情，指定医疗方案，AI筛选药物，制药，医疗报告生成。使用人机接口，通过脑电波控制机械驱体等。</p>
 <p>目前AI在医疗领域得到广泛的应用：例如Abundy的癌症诊疗系统，在2分钟可以检测完130张癌症片子，而一个经验丰富的医生2分钟只能看一个。</p>
 <p>广州祈福医院有一个“沃森诊室”，机器人沃森可以只用10秒就能阅读3469本医学专著和10余万份临床报告。医生只需在机器上录入患者相关信息，短短几十秒内一份70页至100页的治疗报告就会生成。虽然目前AI只能充当医生的助手，两者相结合，给患者提供最大的保障，然而人工智能机器人将会逐步取代那些普通医生。</p>
-<h4 id="3-3-robot"><a href="#3-3-robot" class="headerlink" title="3.3 robot"></a>3.3 robot</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-f4b808c16db78ee7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h4 id="3-3-robot"><a href="#3-3-robot" class="headerlink" title="3.3 robot"></a>3.3 robot</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-f4b808c16db78ee7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <p>  机器人研究方面比较广，目前美国是该领域的领跑者，比如战斗机器人，包括无人机，比较常见的任务包括侦察，排雷等，如美国波士顿公司的BigDog和阿特拉斯，部分型号的机器人装备了机枪等攻击性武器。Big Dog还可以帮助美军承担大重量物品的长途搬运工作，能够克服各种路面的异常情况，可以说是现代版的”木牛流马”，可能是诸葛亮提供的思路🤣。</p>
 <p>工业机器人，比如汽车生产组装流水线，无需人工干预，各种机器人在指令下，协同完成汽车各个部位的组装。甚至无人工厂，比如小米手机工厂，其在世界智能大会中展示的宣传片显示，未来该工厂将24小时熄灯生产，无人干预，甚至一秒钟就能生产一部手机。</p>
 <p>家庭护理机器人，就像保姆一样，完成餐桌碗碟的摆放，自动挑选放入洗碗机，感觉这个可以入手一台啊。</p>
@@ -2650,13 +2650,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一旦看好一家公司，优秀的金融分析师会提前分析迈入，帮助机构调整投资并赚取巨额的收益。随着大数据时代的来临，近年来，一种观点十分流行：量化分析师即将完全取代主观分析师，机器即将完全取代人。这是因为人类金融分析师无法跟AI抗衡了，人工智能可以深度学习，读取历史数据，预测未来市场的走向。曾有论文指出，未来20年，美国47%的工作岗位将由于自动化技术而处于“高度危险”之中，其中54%的工作岗位来自金融行业。这并不奇怪，毕竟银行和金融行业的基础就是信息处理。拥有超强速算速度的人工智能，可以更加高效帮助企业进行投资，比起传统的金融分析师更有效率。</p>
 <h4 id="3-5-Human-computer-interaction"><a href="#3-5-Human-computer-interaction" class="headerlink" title="3.5 Human-computer interaction"></a>3.5 Human-computer interaction</h4><p>这是一门交叉学科，涵盖艺术，设计，计算机，心理学，社会学等等学科。主要是通过过计算机输入、输出设备，以有效的方式实现人与计算机交流。</p>
 <p>人机交互这个专业作为产品和用户之间的桥梁，已成为行业发展不可或缺的重要一环。无论是手机UI，汽车操作界面设计，用户体验，游戏设计又或是VR产业都需要这个专业的人才。</p>
-<h4 id="3-6-Computer-graphics"><a href="#3-6-Computer-graphics" class="headerlink" title="3.6 Computer graphics"></a>3.6 Computer graphics</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-6369718bc5ccfbfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"> </p>
+<h4 id="3-6-Computer-graphics"><a href="#3-6-Computer-graphics" class="headerlink" title="3.6 Computer graphics"></a>3.6 Computer graphics</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-6369718bc5ccfbfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
 <p>计算机图形学(Computer Graphics，简称CG)是一种使用数学算法将二维或三维图形转化为计算机显示器的栅格形式的科学。</p>
 <p>简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计算、处理和显示的相关原理与算法。</p>
 <p>比如元宇宙概念，AR眼镜已经可以逼真的在你眼前投射大屏，声临其境的感受3d环境，这种在科幻电影中才能出现的场景已经成为现实。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/15312191-507b7603dd2b9c7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-507b7603dd2b9c7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <p>  ps: 以上只是几个大类分类，计算机的蓬勃发展，对人类社会产生巨大冲击，计算机未来一百年会发展成什么样，应该是一件很有趣的事。</p>
-</div><div class=""><h2 id="Engineer-VS-cs-phd"><a href="#Engineer-VS-cs-phd" class="headerlink" title="Engineer VS cs phd"></a>Engineer VS cs phd</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-65d3942dd445f8c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"> </p>
+</div><div class=""><h2 id="Engineer-VS-cs-phd"><a href="#Engineer-VS-cs-phd" class="headerlink" title="Engineer VS cs phd"></a>Engineer VS cs phd</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-65d3942dd445f8c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"> </p>
 <h3 id="学术界VS工业界"><a href="#学术界VS工业界" class="headerlink" title="学术界VS工业界"></a>学术界VS工业界</h3><p>phd基本上工作流程是做研究，找方向，做实验，发paper，不需要你每天没月都有产出，因为科研是一个long term的工作，自由度很高。</p>
 <p>一般程序员日常操作是需要写各种report，周报、月报、日报。基本工作是发现问题，百度一下，复制，整合，模仿，技术解决方案基本是面向API开发❓。</p>
 <p>是不是有时候突然会感觉自己做的事很无聊（没错说的就是我!!🥲 )，复制粘贴本身就很无聊；应用层的这种工作对一些人来说无法产生有效刺激，而且更可怕的是，长期在这种模式下工作，生产力会一直停留在某个层次，无法提高，准确来说，应该是 3-6 个年后，他们的生产力集体达到了一个“平台期”，再也无法增长。</p>
@@ -2705,10 +2705,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-13T14:42:55+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-21T15:14:57+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 13, 2022</p>
+    <p>更新于：Jul 21, 2022</p>
   </a>
 </div>
 
@@ -2788,8 +2788,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9AWebSocket%E5%B0%81%E8%A3%85/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>🐓🥚WebSocket封装</p>
+        <a class='prev' href='/2022/undefined/04/%F0%9F%90%93%F0%9F%A5%9A-webSocket-socket-js/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>🐓🥚-webSocket-socket-js</p>
           <p class='content'>websocket 解决了服务端主动向客户端，传递消息的问题。为方便使用，下面封装了主要方法
 封装：12345678910111213141516171819202122232425262728...</p>
         </a>
@@ -3722,7 +3722,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/undefined/20/📣📣ph-d-vs-Engineer/","name":"📣📣ph-d-vs-Engineer"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"📣📣ph-d-vs-Engineer","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/undefined/20/%F0%9F%93%A3%F0%9F%93%A3ph-d-vs-Engineer/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/undefined/20/%F0%9F%93%A3%F0%9F%93%A3ph-d-vs-Engineer/","wordCount":0,"datePublished":"2022-06-20T00:00:00.000Z","dateModified":"2022-07-13T14:42:55.059Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/undefined/20/📣📣ph-d-vs-Engineer/","name":"📣📣ph-d-vs-Engineer"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"📣📣ph-d-vs-Engineer","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/undefined/20/%F0%9F%93%A3%F0%9F%93%A3ph-d-vs-Engineer/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/undefined/20/%F0%9F%93%A3%F0%9F%93%A3ph-d-vs-Engineer/","wordCount":0,"datePublished":"2022-06-20T00:00:00.000Z","dateModified":"2022-07-21T15:14:57.182Z","keywords":"开发日常","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
