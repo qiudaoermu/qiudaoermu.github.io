@@ -1,5 +1,5 @@
 ---
-title: "🐓🥚WebSocket封装"
+title: "🐓🥚-webSocket-socket-js"
 date: 2022-07-04
 tags: 
 - 实践堂
@@ -16,7 +16,6 @@ class Wsocket {
   }
 // 发送消息
   onSendMessage(params = '') {
-    this.ws.sendMessage = (params) => {
       if (this.ws.readyState === 1) {
         this.ws.send(params);
       } else {
@@ -25,7 +24,6 @@ class Wsocket {
           this.ws.send(params);
         });
       }
-    };
   }
 // 错误捕获
   _onCatchErr() {
@@ -52,6 +50,8 @@ export default Wsocket;
 
 ```js
 this.client = new Wsocket('socket/pushMessage')
+// 发送信息
+this.client.senMessage('message')
 // 接受消息
 this.client.ws.addEventListener('message', (event) => {
   // console.log(event.data)

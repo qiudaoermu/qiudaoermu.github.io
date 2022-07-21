@@ -48,7 +48,7 @@ Systems的内容十分广泛，包括OS, Architecture, Network等等，比如特
 
 ##### 特定场景芯片
 
-比如在人工智能芯片方面，谷歌开发了用于AI计算高性能硬件**TPU**，Intel推出了针对深度学习市场的众核CPU**Knights Mill**，英伟达推出了**GPGPU**，而且还有了**DGX-1**这样的产品；在互联网大规模核心推荐算法场景，百度推出的**“百度昆仑1”**已在百度搜索引擎、小度等业务中部署超过2万片；自动驾驶领域，特斯拉发布了用于自动驾驶深度学习和解决带宽瓶颈的**D1**芯片。  ![image](https://upload-images.jianshu.io/upload_images/15312191-623d3cda0454ca0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
+比如在人工智能芯片方面，谷歌开发了用于AI计算高性能硬件**TPU**，Intel推出了针对深度学习市场的众核CPU**Knights Mill**，英伟达推出了**GPGPU**，而且还有了**DGX-1**这样的产品；在互联网大规模核心推荐算法场景，百度推出的**“百度昆仑1”**已在百度搜索引擎、小度等业务中部署超过2万片；自动驾驶领域，特斯拉发布了用于自动驾驶深度学习和解决带宽瓶颈的**D1**芯片。  ![](https://upload-images.jianshu.io/upload_images/15312191-623d3cda0454ca0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
 
 针对高并发、高性能和高效需求，阿里平头哥发布了为云而生**倚天710**，**CIPU**，阿里云飞天+CIPU体系的推出，针对性地解决了云资源的多个痛点。首先，该体系通过全硬件虚拟化和转发加速，将存储时延降至最低30us（PLX），IOPS高达300万，存储带宽可达200 Gbps，全面超越市面上所有云产品；同时，该体系还将数据中心内的基础带宽从100G升级至200G，VPC的PPS转发性能从2000万提升至4000万，网络时延从22us降低至16us，RDMA协议下更可低至5.5us。在计算能力方面，新体系实现了单容器虚拟化消耗减少50%，虚拟化容器启动速度快350%。主流通用计算场景下，**Nginx**性能提升了89%，**Redis**性能提升了68%、**MySQL**提升了60%。
 
@@ -88,17 +88,19 @@ Networking甚至包括Telecommunication。这个范围可以说是非常的大�
 
 密码学是研究编制密码和破译密码的技术科学。研究密码变化的客观规律，应用于编制密码以保守通信秘密的，称为编码学；应用于破译密码以获取通信情报的，称为破译学，总称密码学。
 
+举个🌰：md5加密相信大家都听过，用过。发明者是[Ronald Rivest](https://en.wikipedia.org/wiki/Ronald_Rivest "Ronald Rivest")教授(耶鲁大学数学专业，斯坦福大学计算机科学ph.d)，他有多项发明，比如md6，[RSA](https://en.wikipedia.org/wiki/RSA_(algorithm)) ，此外还著有书籍《Introduction to Algorithms》，2002年因RSA加密方案，获得年度图灵奖。
 ### 2\. Computer Engineering
 
-软件工程/系统软件/程序设计语言。  研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及程序 设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、操作系统、编译器、数据库、 游戏等。这个专业比较灵活，基本每个公司都需要编程的程序员。
+软件工程/系统软件/程序设计语言。  研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及程序 设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。
+典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、**操作系统**、**编译器**、**数据库**等。这个专业比较灵活，可以说是为程序员服务的程序员。
 
-举个：md5加密相信大家都听过，用过。发明者是[Ronald Rivest](https://en.wikipedia.org/wiki/Ronald_Rivest "Ronald Rivest")教授(`耶鲁大学数学专业，斯坦福大学计算机科学ph.d`)，他有多项发明，比如md6，[RSA](https://en.wikipedia.org/wiki/RSA_(algorithm)) ，此外还著有书籍《Introduction to Algorithms》
+
 
 ### 3.Applications
 
 #### 3.1 AI
 
-![image](https://upload-images.jianshu.io/upload_images/15312191-924211e3319856b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
+![](https://upload-images.jianshu.io/upload_images/15312191-924211e3319856b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
 
 ##### AI解放生产力
 
@@ -134,7 +136,7 @@ Ai涉及到的具体场景包括，智能机器人，战争AI，智慧医疗，�
 
 #### 3.3 robot
 
-![image](https://upload-images.jianshu.io/upload_images/15312191-f4b808c16db78ee7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-f4b808c16db78ee7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   机器人研究方面比较广，目前美国是该领域的领跑者，比如战斗机器人，包括无人机，比较常见的任务包括侦察，排雷等，如美国波士顿公司的BigDog和阿特拉斯，部分型号的机器人装备了机枪等攻击性武器。Big Dog还可以帮助美军承担大重量物品的长途搬运工作，能够克服各种路面的异常情况，可以说是现代版的"木牛流马"，可能是诸葛亮提供的思路🤣。
 
@@ -160,7 +162,7 @@ Ai涉及到的具体场景包括，智能机器人，战争AI，智慧医疗，�
 
 #### 3.6 Computer graphics
 
-![image](https://upload-images.jianshu.io/upload_images/15312191-6369718bc5ccfbfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
+![](https://upload-images.jianshu.io/upload_images/15312191-6369718bc5ccfbfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
 
 计算机图形学(Computer Graphics，简称CG)是一种使用数学算法将二维或三维图形转化为计算机显示器的栅格形式的科学。
 
@@ -168,13 +170,13 @@ Ai涉及到的具体场景包括，智能机器人，战争AI，智慧医疗，�
 
 比如元宇宙概念，AR眼镜已经可以逼真的在你眼前投射大屏，声临其境的感受3d环境，这种在科幻电影中才能出现的场景已经成为现实。
 
-![image](https://upload-images.jianshu.io/upload_images/15312191-507b7603dd2b9c7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-507b7603dd2b9c7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   ps: 以上只是几个大类分类，计算机的蓬勃发展，对人类社会产生巨大冲击，计算机未来一百年会发展成什么样，应该是一件很有趣的事。
 
 ## Engineer VS cs phd
 
-![image](https://upload-images.jianshu.io/upload_images/15312191-65d3942dd445f8c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
+![](https://upload-images.jianshu.io/upload_images/15312191-65d3942dd445f8c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
 
 ### 学术界VS工业界
 
