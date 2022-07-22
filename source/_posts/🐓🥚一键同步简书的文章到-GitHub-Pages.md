@@ -4,6 +4,8 @@ date: 2022-06-04
 tags: 
 - 实践堂
 ---
+![](https://upload-images.jianshu.io/upload_images/15312191-780274cb6f0ef886.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 简书的文章写完后，想同步到github的博客，这样你的博客有可能送到北极也说不定呢🥳🥳。
 
 首先你要有一个github Page，现在有ruby和node.js版的，我用的这个[模版](https://github.com/Huxpro/huxpro.github.io)，jekyll，免费快速搭建博客模版，你也可以选择其它的。

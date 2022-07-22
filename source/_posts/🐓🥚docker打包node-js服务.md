@@ -4,6 +4,8 @@ date: 2022-05-15
 tags: 
 - 实践堂
 ---
+![](https://upload-images.jianshu.io/upload_images/15312191-03e1c7414cd9ad88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ### 背景：
 把node.js服务放在linux上，每次都要搞一堆配置。
 ### 解决方法： 

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start": "npm run server",
     "build": "hexo generate",
     "pull-file": "node ./pub-scripts/setUp.js",
     "clean": "hexo clean",

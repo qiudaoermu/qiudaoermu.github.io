@@ -4,7 +4,7 @@ date: 2022-05-25
 tags: 
 - 实践堂
 ---
-![](https://upload-images.jianshu.io/upload_images/15312191-b2e062b309c1d9c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-70ff76495d238fa7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 背景：
 uni-app h5端，需要打包成文件上传到服务器，由于系统隔离原因，代码平台无法使用自身的构建工具，只能自己写一个了。

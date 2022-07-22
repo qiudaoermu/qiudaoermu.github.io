@@ -4,6 +4,8 @@ date: 2022-06-20
 tags: 
 - 开发日常
 ---
+![](https://upload-images.jianshu.io/upload_images/15312191-7eccbef47e203095.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 **ph.d 翻译为哲学家，指在某个领域可以建立新的世界体系的人。 一般意义上说应该是发明家，cs ph.d 不同于一般的面向CV开发工程师，其面相的领域需要开辟，探索，发现。**
 
 ## 主要研究方向
