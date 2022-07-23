@@ -1,9 +1,11 @@
 ---
-title: "🌦🌦-post-四种提交方式"
+title: "🌦🌦-ajax-post-四种提交方式"
 date: 2021-10-23
 tags: 
 - 开发日常
 ---
+![](https://upload-images.jianshu.io/upload_images/15312191-bce9ecec2e1a8078.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ### post提交数据的四种编码方式
 
 #### 1.application/x-www-form-urlencoded

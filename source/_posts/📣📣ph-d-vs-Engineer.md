@@ -214,7 +214,9 @@ phd基本上工作流程是做研究，找方向，做实验，发paper，不需
 
 在博士群体，做出顶级科研的并不都是同辈中超级聪明的人，也不一定是平均成绩点数(Grade Point Average, GPA)最高的人，更不一定是参加ACM编程竞赛的高手们，而恰恰是那些有耐心有毅力坚持去钻研的人。
 
-很多博士生只要选好导师，选好研究方向，肯花费时间，都能做出顶尖的研究。有很多在海外学术圈颇有建树的学者当年的学习成绩并不好。  **2.“科研穷三代，读博毁一生。”**
+很多博士生只要选好导师，选好研究方向，肯花费时间，都能做出顶尖的研究。有很多在海外学术圈颇有建树的学者当年的学习成绩并不好。 
+
+ **2.“科研穷三代，读博毁一生。”**
 
 这句话在其他领域或许是对的，但在计算机领域就是错的。在计算机领域，通过读博挣钱的大有人在！计算机学科的特性就是科研与产业结合得非常紧密。尤其是最前沿的科研，对产业有很大的推动作用，并产生经济利益。
 
@@ -224,7 +226,8 @@ phd基本上工作流程是做研究，找方向，做实验，发paper，不需
 
 在网络技术领域，目前业界关注的核心“软件定义网络”也是教授和博士们在大学里开发出来的。谷歌、威睿(VMware)、 Databricks (Spark)、Nicira (OpenFlow)以及无数顶尖技术公司雇佣了数以千计的计算机专业毕业的博士，因为博士通常比其他雇员更接近核心技术。
 
-如果你想实现自己的技术梦想并挣大钱，读博士是一个很好的选择。“读博就得走清贫的人生道路”是没有任何道理的。  **3.“科研做的东西大部分都是废纸，对实际一点帮助都没有。”**
+如果你想实现自己的技术梦想并挣大钱，读博士是一个很好的选择。“读博就得走清贫的人生道路”是没有任何道理的。 
+ **3.“科研做的东西大部分都是废纸，对实际一点帮助都没有。”**
 
 这种观点在计算机领域也是不正确的。计算机科学并不是屠龙之技。今天几十亿人都离不开的计算机网络的原型就是从加州大学洛杉矶分校发展起来的，莱昂纳多·克莱洛克(LeonardKleinrock)教授在阿帕网(ARPANET)项目中开发了互联网的雏形，并在1969年发送了互联网的第一个数据包。
 
@@ -236,4 +239,11 @@ phd基本上工作流程是做研究，找方向，做实验，发paper，不需
 
 另一方面，虽然很多论文在现实世界不一定能体现直接价值，但是在写文章的过程中，你能学到很多东西，比如提出问题、解决问题、语言表达的能力，这些都让人受益无穷。
 
-> [我为什么鼓励你读计算机专业博士](https://zhuanlan.zhihu.com/p/60308234)  [4年计算机博士读下来的一些感触](https://blog.csdn.net/ytomc/article/details/76387456)  [计算机基础问题，最大流问题获突破性进展：新算法「快得离谱」](https://www.jiqizhixin.com/articles/2022-06-14-9)  [US sanctions helped China supercharge its chipmaking industry](https://www.businesstimes.com.sg/global-enterprise/us-sanctions-helped-china-supercharge-its-chipmaking-industry)  [The Map of Computer Science](https://www.youtube.com/watch?v=SzJ46YA_RaA)  [中国计算机学会推荐国际学术会议和期刊目录](https://ccf.atom.im/)  [冯•诺依曼计算机将渐行渐远?](https://www.infoq.cn/article/2015/06/alan-turing-neumann)
+当然读博士不是一件轻松的事，需要超越常人的耐力，韧性和心理素质，需要你真心的热爱你的专业，需要踏实的学习方式，不投机，不取巧，能扛住压力，不被周围环境影响，坚守自己的节奏孤独前行，板凳一坐十年冷，暗香始自苦寒来。
+
+> [我为什么鼓励你读计算机专业博士](https://zhuanlan.zhihu.com/p/60308234) 
+ [4年计算机博士读下来的一些感触](https://blog.csdn.net/ytomc/article/details/76387456) 
+ [计算机基础问题，最大流问题获突破性进展：新算法「快得离谱」](https://www.jiqizhixin.com/articles/2022-06-14-9)
+[US sanctions helped China supercharge its chipmaking industry](https://www.businesstimes.com.sg/global-enterprise/us-sanctions-helped-china-supercharge-its-chipmaking-industry) 
+[The Map of Computer Science](https://www.youtube.com/watch?v=SzJ46YA_RaA)  [中国计算机学会推荐国际学术会议和期刊目录](https://ccf.atom.im/)  
+[冯•诺依曼计算机将渐行渐远?](https://www.infoq.cn/article/2015/06/alan-turing-neumann)
