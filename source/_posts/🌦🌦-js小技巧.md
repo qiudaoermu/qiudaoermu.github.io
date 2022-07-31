@@ -22,11 +22,12 @@ console.log(codes) // [0,1,2,3,4,5,6......25]
 let arr = [1, 2, 3]
 `
 `
-let sum = arr.reduce((pre, cur) => pre + cur, 0)  // 6
+let sum = arr.reduce((pre, cur) => pre + cur)  // 6
 `
 >PS 注意 空数组, 如果空元素 reduce 会报错
+
 ### 3.向数组指定位置插入元素
-##### splice() 方法
+#### splice() 方法
 > splice(startIndex,deleteNum,item)
 startIndex: 插入位置
 deleteNum: 删除数量
@@ -47,6 +48,7 @@ fruits.splice(2, 0, "Lemon", "Kiwi");
 //在 2 的位置删除0个，新增 "Lemon", "Kiwi"
 
 ```
+
 ### 4. 删除最后一个字符串的方法
 
 `stringObject.substr(start, length)`
@@ -64,6 +66,7 @@ console.log(basic) //  "abc,def,ghi,";
 字符串方法 **slice()、substring()、substr()**
 
 都不能改变原来的元素
+
 ### 5. ES6删除和过滤对象中部分属性
 原始数据
 ```js

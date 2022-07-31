@@ -8,6 +8,21 @@ tags:
 ```
 $ ./nginx
 ```
+
+#### 查看nginx 的状态 
+ps -ef | grep nginx  出现master 则启动成功
+![](https://upload-images.jianshu.io/upload_images/15312191-8458f03006e93406.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 关闭nginx
+
+```
+kill -9 9658(进程号 上面的) 
+```
+
+#### 停止 nginx 命令
+```
+./nginx -s stop
+```
 #### 重启nginx
 
  ```

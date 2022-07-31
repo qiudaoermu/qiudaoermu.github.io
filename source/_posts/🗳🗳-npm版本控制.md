@@ -1,12 +1,10 @@
 ---
-title: "-🗳🗳-npm发布，package-json,-版本自动控制"
+title: "🗳🗳-npm版本控制"
 date: 2021-08-15
 tags: 
 - 开发日常
 ---
-
-
-###痛点
+### 痛点
 npm 发包每次都手动改 version，好烦。。🤣
 
 
@@ -49,7 +47,7 @@ major => 2.0.0
 
 
 #### npm hook
-`npm publish`之后会调用 `prepare`命令，我们可以利用这个hook搞事情🤔
+`npm publish`之前会调用 `prepare`命令，我们可以利用这个hook，打包文件，一键发布🤔
 
 package.json:
 ```
@@ -58,4 +56,3 @@ package.json:
     "prepare": "npm run build && npm --no-git-tag-version version patch"
   },
 ```
-

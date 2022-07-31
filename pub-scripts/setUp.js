@@ -78,17 +78,17 @@ const decompress = new Decompress({
   //   console.error(err);
   // });
 (async () => {
-   await download(config.downloadUrl, __dirname + config.downloadPath, {
-     headers: {
-       Cookie: config.cookie,
-     },
-   })
-     .then((res) => {
-       console.log(res);
-     })
-     .catch((error) => {
-       console.log(error, "********************************");
-     });
+  //  await download(config.downloadUrl, __dirname + config.downloadPath, {
+  //    headers: {
+  //      Cookie: config.cookie,
+  //    },
+  //  })
+  //    .then((res) => {
+  //      console.log(res);
+  //    })
+  //    .catch((error) => {
+  //      console.log(error, "********************************");
+  //    });
 
   decompress.unCompress();
 })();

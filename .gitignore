@@ -14,3 +14,4 @@ _site
 scripts/dist
 public/
 npm-debug.log
+pub-scripts/dist

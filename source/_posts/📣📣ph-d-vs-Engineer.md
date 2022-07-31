@@ -241,9 +241,12 @@ phd基本上工作流程是做研究，找方向，做实验，发paper，不需
 
 当然读博士不是一件轻松的事，需要超越常人的耐力，韧性和心理素质，需要你真心的热爱你的专业，需要踏实的学习方式，不投机，不取巧，能扛住压力，不被周围环境影响，坚守自己的节奏孤独前行，板凳一坐十年冷，暗香始自苦寒来。
 
-> [我为什么鼓励你读计算机专业博士](https://zhuanlan.zhihu.com/p/60308234) 
- [4年计算机博士读下来的一些感触](https://blog.csdn.net/ytomc/article/details/76387456) 
- [计算机基础问题，最大流问题获突破性进展：新算法「快得离谱」](https://www.jiqizhixin.com/articles/2022-06-14-9)
-[US sanctions helped China supercharge its chipmaking industry](https://www.businesstimes.com.sg/global-enterprise/us-sanctions-helped-china-supercharge-its-chipmaking-industry) 
-[The Map of Computer Science](https://www.youtube.com/watch?v=SzJ46YA_RaA)  [中国计算机学会推荐国际学术会议和期刊目录](https://ccf.atom.im/)  
+> [我为什么鼓励你读计算机专业博士](https://zhuanlan.zhihu.com/p/60308234)
+[读博，你真的想好了吗？](https://zhuanlan.zhihu.com/p/372884253)
+[4年计算机博士读下来的一些感触](https://blog.csdn.net/ytomc/article/details/76387456)
+[一中国研究生被美国教授开除，教授坦言：我就不该录取你！](https://www.163.com/dy/article/HAN86PBN0517HIAS.html)
+[计算机基础问题，最大流问题获突破性进展：新算法「快得离谱」](https://www.jiqizhixin.com/articles/2022-06-14-9)
+[US sanctions helped China supercharge its chipmaking industry](https://www.businesstimes.com.sg/global-enterprise/us-sanctions-helped-china-supercharge-its-chipmaking-industry)
+[The Map of Computer Science](https://www.youtube.com/watch?v=SzJ46YA_RaA)  [中国计算机学会推荐国际学术会议和期刊目录](https://ccf.atom.im/) 
 [冯•诺依曼计算机将渐行渐远?](https://www.infoq.cn/article/2015/06/alan-turing-neumann)
+
