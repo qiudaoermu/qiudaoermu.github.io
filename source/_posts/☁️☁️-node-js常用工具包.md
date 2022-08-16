@@ -51,6 +51,10 @@ $ `nrm use npm`
 #### [pm2](https://www.npmjs.com/package/pm2)
 node.js 进程管理工具
 ![](https://upload-images.jianshu.io/upload_images/15312191-3b0c37857ad77a75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+#### [nodemon](https://www.npmjs.com/package/nodemon)
+监测文件变化，神器
+#### [yalc](https://www.npmjs.com/package/yalc)
+代替 npm link，调试lib包，保证HRM
 
 ### Lib工具包
 ---

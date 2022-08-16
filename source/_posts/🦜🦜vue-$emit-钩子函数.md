@@ -1,12 +1,12 @@
 ---
-title: "🦜🦜vue-$emit-同步调用"
+title: "🦜🦜vue-$emit-钩子函数"
 date: 2021-10-08
 tags: 
 - 开发日常
 ---
 标题换一种说法：vue $emit 调用父组件异步方法，执行完毕后再执行子组件的某方法
 使用回调的形式
-```
+```js
 // 组件的html中添加事件 @getData="getData"
 methods : {
 	getData(params, callback) {
@@ -21,7 +21,7 @@ methods : {
 
 ```
 子组件
-```
+```js
 // 通过 $emit 触发父组件的方法
 // 参数：触发的事件名称、事件参数，事件参数
 // 把方法当做事件参数传递到父组件，由父组件调用执行。

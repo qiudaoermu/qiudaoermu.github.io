@@ -12,7 +12,11 @@ tags:
 
 计算机方向总体上分三类：
 
-**Fundamental Theory Of Computer Science**，以我的了解和数学关系比较大 ，建立新的世界架构，比如图灵机。  **Computer Engineering**：在当前计算机体系前建立的软硬件系统，操作系统，计算机语言，编译器等。  **Applications**：如何利用计算机完成实现交叉工作，比如AI，各种领域软件开发。
+**Fundamental Theory Of Computer Science**，以我的了解和数学关系比较大 ，建立新的世界架构，比如图灵机。  
+
+**Computer Engineering**：在当前计算机体系前建立的软硬件系统，操作系统，计算机语言，编译器等。
+
+  **Applications**：如何利用计算机完成实现交叉工作，比如AI，各种领域软件开发。
 
 内容广泛，不仅仅包含数学，还会涉及材料，物理学，化学等等，而且和不同领域都存在交叉。
 
@@ -32,7 +36,7 @@ Systems的内容十分广泛，包括OS, Architecture, Network等等，比如特
 
 计算机系统结构是计算机的机器语言程序员或编译程序编写者所看到的外特性。所谓外特性，就是计算机的概念性结构和功能特性，主要研究计算机系统的基本工作原理，以及在硬件、软件界面划分的权衡策略，建立完整的、系统的计算机软硬件整体概念。
 
-🟩 **说人话就是研究计算机硬件体系的。**
+ **说人话就是研究计算机硬件体系的。**
 
 ##### 未来计算机模型
 
@@ -90,11 +94,11 @@ Networking甚至包括Telecommunication。这个范围可以说是非常的大�
 
 密码学是研究编制密码和破译密码的技术科学。研究密码变化的客观规律，应用于编制密码以保守通信秘密的，称为编码学；应用于破译密码以获取通信情报的，称为破译学，总称密码学。
 
-举个🌰：md5加密相信大家都听过，用过。发明者是[Ronald Rivest](https://en.wikipedia.org/wiki/Ronald_Rivest "Ronald Rivest")教授(耶鲁大学数学专业，斯坦福大学计算机科学ph.d)，他有多项发明，比如md6，[RSA](https://en.wikipedia.org/wiki/RSA_(algorithm)) ，此外还著有书籍《Introduction to Algorithms》，2002年因RSA加密方案，获得年度图灵奖。
+举个：md5加密相信大家都听过，用过。发明者是[Ronald Rivest](https://en.wikipedia.org/wiki/Ronald_Rivest "Ronald Rivest")教授(耶鲁大学数学专业，斯坦福大学计算机科学ph.d)，他有多项发明，比如md6，[RSA](https://en.wikipedia.org/wiki/RSA_(algorithm)) ，此外还著有书籍《Introduction to Algorithms》，2002年因RSA加密方案，获得年度图灵奖。
 ### 2\. Computer Engineering
 
 软件工程/系统软件/程序设计语言。  研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及程序 设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。
-典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、**操作系统**、**编译器**、**数据库**等。这个专业比较灵活，可以说是为程序员服务的程序员。
+典型的软件有电子邮件、嵌入式系统、人机界面、办公套件、**操作系统**、**编译器**、**数据库**等。这个专业比较灵活，可以说是为程序员服务的程序员，是个人比较感兴趣的方向。
 
 
 
@@ -249,4 +253,3 @@ phd基本上工作流程是做研究，找方向，做实验，发paper，不需
 [US sanctions helped China supercharge its chipmaking industry](https://www.businesstimes.com.sg/global-enterprise/us-sanctions-helped-china-supercharge-its-chipmaking-industry)
 [The Map of Computer Science](https://www.youtube.com/watch?v=SzJ46YA_RaA)  [中国计算机学会推荐国际学术会议和期刊目录](https://ccf.atom.im/) 
 [冯•诺依曼计算机将渐行渐远?](https://www.infoq.cn/article/2015/06/alan-turing-neumann)
-

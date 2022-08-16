@@ -1,5 +1,5 @@
 ---
-title: "🗳🗳-npm版本控制"
+title: "🗳🗳-npm版本自动控制"
 date: 2021-08-15
 tags: 
 - 开发日常
@@ -37,17 +37,24 @@ $ `npm version <update_type>`
 ##### update_type: `patch(补丁)`, `minor(小改)`, `major(大改)`
 
 例如：我原本的项目是1.0.0版本的话
-
+```
+npm --no-git-tag-version version patch
+```
 patch => 1.0.1
-
+```
+npm --no-git-tag-version version mino
+```
 mino => 1.1.0
-
-
+```
+npm --no-git-tag-version version major
+```
 major => 2.0.0
 
+ps: 记得加 **--no-git-tag-version**，因为version命令会影响git tag
 
-#### npm hook
+#### version + prepare
 `npm publish`之前会调用 `prepare`命令，我们可以利用这个hook，打包文件，一键发布🤔
+
 
 package.json:
 ```
