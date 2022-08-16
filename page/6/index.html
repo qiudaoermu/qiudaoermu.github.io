@@ -1738,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1659262182333),
+    lastupdate: new Date(1660636134178),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2520,6 +2520,125 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-ajax-post-%E5%9B%9B%E7%A7%8D%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-ajax-post-%E5%9B%9B%E7%A7%8D%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F/"  itemprop="url">
+        🌦🌦-ajax-post-四种提交方式
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        
+post提交数据的四种编码方式1.application&#x2F;x-www-form-urlencoded这应该是最常见的post编码方式，一般的表单提交默认以此方式提交。大部分服务器语言对这种方式都有很好的支持。在PHP中，可以用$_POST[“key”]的方式获取到key的值，在node中我们可以使用querystring中间件对参数进行分离。
+请求类似于下面这样:
+1234567...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-10-22T16:00:00+00:00">2021-10-22</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-ajax-post-%E5%9B%9B%E7%A7%8D%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/21/%F0%9F%8C%A6%F0%9F%8C%A6-import---as-%E6%80%8E%E4%B9%88%E7%94%A8/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/21/%F0%9F%8C%A6%F0%9F%8C%A6-import---as-%E6%80%8E%E4%B9%88%E7%94%A8/"  itemprop="url">
+        🌦🌦-import---as-怎么用
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        lib.js
+1234export var config = _config;export var db = _db;export var storage = _storage;
+main.js在 main.js中使用 lib.js
+1import &#123;storage,db,config&#125; from &quot;./lib&quot;
+
+也可以写成
+12import * a...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-10-21T16:00:00+00:00">2021-10-21</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/21/%F0%9F%8C%A6%F0%9F%8C%A6-import---as-%E6%80%8E%E4%B9%88%E7%94%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/21/%F0%9F%A6%9C%F0%9F%A6%9C-vue-router-%E5%90%8C%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2877,7 +2996,7 @@ An empty string searchValue produces ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/07/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/08/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2895,8 +3014,8 @@ An empty string searchValue produces ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/07/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8/"  itemprop="url">
-        🦜🦜vue-$emit-同步调用
+      <a href="/2021/undefined/08/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/"  itemprop="url">
+        🦜🦜vue-$emit-钩子函数
       </a>
     </h2>
   
@@ -2912,12 +3031,12 @@ An empty string searchValue produces ...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-10-07T16:00:00+00:00">2021-10-07</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-10-08T00:00:00+00:00">2021-10-08</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/07/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/08/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2976,127 +3095,6 @@ An empty string searchValue produces ...
       
         <div>
           <a class='readmore' href='/2021/undefined/29/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/21/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/21/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/"  itemprop="url">
-        🌦🌦-cookie-为什么作为token-放在header里
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        现象：后端配置了cores跨域，前端直接请求，没有通过代理，这样如果设置cookie，只能设置到， localhost里，request header 无法带过去
-手动设置header Access-Token 
-123header: &#123;  Access-Token: Cookies.get(&quot;Access-Token&quot;)&#125;
-
-通过代理，携带在在req...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-09-21T16:00:00+00:00">2021-09-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/21/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/18/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"  itemprop="url">
-        🍎🍎-Mac-OS-配置环境变量
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Mac端环境变量配置Mac使用bash做为默认的shell
-MAC OS X环境配置的加载顺序
-123456# 系统级别/etc/profile/etc/paths # 用户级别~/.zshrc
-前两个是系统级别的环境变量，针对所有用户，后面四个带有~&#x2F;用户级别的环境变量。-前两个环境配置在系统启动时候就会加载。
-
-~&#x2F;.zshrc 是zsh shell打开时候加载
-
-之...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-09-18T16:00:00+00:00">2021-09-18</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/18/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3230,7 +3228,7 @@ MAC OS X环境配置的加载顺序
 
 
     <div class='content'>
-      <a href="/tags/css/" style="font-size: 20px; color: #707070">css</a> <a href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" style="font-size: 16px; color: #8b8b8b">mac小天地</a> <a href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" style="font-size: 18px; color: #7e7e7e">实践堂</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">开发日常</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 16px; color: #8b8b8b">正则</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" style="font-size: 20px; color: #707070">编程范式</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" style="font-size: 14px; color: #999">美食记录</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E5%B0%8F%E7%AA%A5/" style="font-size: 22px; color: #636363">计算机基础小窥</a>
+      <a href="/tags/css/" style="font-size: 19px; color: #777">css</a> <a href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" style="font-size: 16.5px; color: #888">mac小天地</a> <a href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" style="font-size: 19px; color: #777">实践堂</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">开发日常</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 16.5px; color: #888">正则</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" style="font-size: 19px; color: #777">编程范式</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" style="font-size: 14px; color: #999">美食记录</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E5%B0%8F%E7%AA%A5/" style="font-size: 21.5px; color: #666">计算机基础小窥</a>
     </div>
   </section>
 
