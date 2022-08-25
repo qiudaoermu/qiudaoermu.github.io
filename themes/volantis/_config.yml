@@ -144,7 +144,7 @@ cover:
     - name: TreeDocs
       icon: #
       img: volantis-static/media/twemoji/assets/svg/1f4f0.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
-      url: https://qiudaoermu.github.io/gitDocs/
+      url: https://qiudaoermu.github.io/gitDocs/engineering/prettier.html
 ############################### Cover ############################### > end
 
 pages:
