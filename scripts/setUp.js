@@ -71,10 +71,10 @@ const decompress = new Decompress({
 });
 
 (async () => {
-  await download(config.downloadUrl, config.downloadPath, {
-    headers: {
-      Cookie: config.cookie,
-    },
-  });
+  // await download(config.downloadUrl, config.downloadPath, {
+  //   headers: {
+  //     Cookie: config.cookie,
+  //   },
+  // });
   decompress.unCompress();
 })();
