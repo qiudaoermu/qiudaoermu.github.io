@@ -75,6 +75,12 @@ const decompress = new Decompress({
   //   headers: {
   //     Cookie: config.cookie,
   //   },
-  // });
+  // })
+  //   .then((res) => {
+  //     console.log(res)
+  //   })
+  //   .catch((err) => {
+  //     console.error(err);
+  //   });
   decompress.unCompress();
 })();
