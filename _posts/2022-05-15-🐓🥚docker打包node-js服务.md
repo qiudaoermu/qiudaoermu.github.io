@@ -50,7 +50,32 @@ app.use(express.static('public'))
 ```
 
 #### 安装dokcer:
+##### mac 
 `$ brew install --cask --appdir=/Applications docker`
+##### linux
+Docker的自动化安装
+Docker官方和国内daocloud都提供了一键安装的脚本，使得Docker的安装更加便捷。
+官方的一键安装方式：
+```
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+国内 daocloud一键安装命令：
+```
+curl -sSL https://get.daocloud.io/docker | sh
+```
+#### 设置镜像
+阿里云有免费镜像，可以申请；
+```
+sudo mkdir -p /etc/docker // 创建文件夹
+// tee 创建文件并输入内容
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://dxrbo5kv.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 #### 创建 Dockerfile 文件:
 `touch Dockerfile`
 
@@ -109,3 +134,4 @@ dokcer exec -it [容器ID/容器name] bash
 docker run -it -v /root/code:/data/code -d -p 3000:3000  chenxiaobei/node-alpine
 ```
 
+> [Requires: container-selinux >= 2.9 报错](https://blog.csdn.net/qq_43058911/article/details/105839136)
