@@ -6,7 +6,8 @@ class WriteFile {
   constructor() {
     this.prex = "2021-01-11-";
     this.datePre = /\d{4}-\d{2}-\d{2}-/;
-    this.postDir = "../_posts";
+    // 博客输出目录
+    this.postDir = "./_posts";
   }
   deletePostDir(path) {
     exec(`rm -rf ${path}`);
@@ -45,7 +46,8 @@ class WriteFile {
         );
       }
     );
-    console.log("🎉🎉, completed 100% ");
+    console.log(`${this.postDir}/${datePrexFile}`);
+    // console.log("🎉🎉, completed 100% ");
   }
 
   addTagsOnHeader(file, content) {

@@ -4,6 +4,7 @@
  * unar it , replace it in the _post.
  * automatic prepend the lastest date before git add .
  */
+
 const download = require("download");
 const fs = require("fs");
 const config = require("./config");
@@ -26,6 +27,7 @@ class Decompress {
   unCompress() {
     this.deleteUnrarDir();
     const inputRarPath = this.newestRar();
+    console.log(inputRarPath, "inputRarPath");
     exec(
       `unar  ${inputRarPath}  -o ${this.unRarPath}`,
       (err, stdout, stderr) => {
