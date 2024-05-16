@@ -22,6 +22,7 @@ element-upload，涉及到跨域上传，需要使用http-request自定义上传
 </el-upload>
 ```
 上传函数
+
 ```js
 function hanldeUploadFile(param) {
   // 上传请求头为：uploadFile：binary
@@ -34,6 +35,7 @@ function hanldeUploadFile(param) {
   });
 }
 ```
+
 api 记得添加 header Content-Type
 ```
 export function getPathToExcel(data) {
