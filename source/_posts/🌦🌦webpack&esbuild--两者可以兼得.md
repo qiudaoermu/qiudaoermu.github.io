@@ -1,5 +1,5 @@
 ---
-title: "🌦🌦webpack&esbuild--两者可以兼得"
+title: "🌦🌦webpack&Esbuild--两者可以兼得"
 date: 2022-05-12
 tags: 
 - 开发日常

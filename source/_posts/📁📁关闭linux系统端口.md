@@ -18,7 +18,8 @@ tags:
 lsof(list open files)是一个列出当前系统打开文件的工具。
 
 1、查询8080端口是否被占用，并可以查看pid/程序名
-`netstat -apn | grep 8080`
+
+`lsof -i tcp:8080`
 
 2、查看详细信息
 `ps -ef | grep PID`
@@ -26,3 +27,4 @@ lsof(list open files)是一个列出当前系统打开文件的工具。
 3、终止该进程
 
 `kill -9 PID`
+

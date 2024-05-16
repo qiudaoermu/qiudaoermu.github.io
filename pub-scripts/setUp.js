@@ -67,7 +67,7 @@ class Decompress {
 let cwd = process.cwd();
 
 const decompress = new Decompress({
-  input: __dirname + config.downloadPath,
+  input:  config.downloadPath,
   output: cwd +  "/output",
 });
 

@@ -4,8 +4,7 @@ date: 2021-12-25
 tags: 
 - 开发日常
 ---
-
-![](https://upload-images.jianshu.io/upload_images/15312191-4bbf9c453c3717fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15312191-8db8fbf9c8ec1e7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ps: `git reset -HEAD^ ` mac平台 需要写成 `git reset -HEAD\^`

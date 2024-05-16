@@ -7,9 +7,8 @@ tags:
 
 ![](https://upload-images.jianshu.io/upload_images/15312191-a2fc698a18d33959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 ### 进程版本管理
----
+
 #### node 版本管理工具 --n
 ##### 安装:
 `npm install -g n`
@@ -48,15 +47,13 @@ $ `nrm use npm`
 ```            
    Registry has been set to: https://registry.npmjs.org/
 ```
-#### [pm2](https://www.npmjs.com/package/pm2)
-node.js 进程管理工具
-![](https://upload-images.jianshu.io/upload_images/15312191-3b0c37857ad77a75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-#### [nodemon](https://www.npmjs.com/package/nodemon)
-监测文件变化，神器
-#### [yalc](https://www.npmjs.com/package/yalc)
-代替 npm link，调试lib包，保证HRM
+- [pm2](https://www.npmjs.com/package/pm2)
 
-### Lib工具包
+![](https://upload-images.jianshu.io/upload_images/15312191-3b0c37857ad77a75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+- [nodemon](https://www.npmjs.com/package/nodemon) 监测文件变化，神器
+- [yalc](https://www.npmjs.com/package/yalc) 代替 npm link，调试lib包，保证HRM
+
+### 服务端工具包
 ---
 - [node-ssh](https://www.npmjs.com/package/node-ssh)
 node端登录ssh登录工具
@@ -80,8 +77,9 @@ http代理转发
 - [cross-env](https://www.npmjs.com/package/cross-env)
  With POSIX, you use: $ENV_VAR and on windows you use %ENV_VAR%.
 跨平台变量设置
-### CLI
----
+- [serve](https://www.npmjs.com/package/serve) 静态文件服务器
+### Cli
+
 - [figlet](https://www.npmjs.com/package/figlet)
 控制台艺术字
 ```
