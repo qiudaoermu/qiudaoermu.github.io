@@ -21,7 +21,8 @@ element-upload，涉及到跨域上传，需要使用http-request自定义上传
             >
 </el-upload>
 ```
-上传函数
+ 上传函数
+
 
 ```js
 function hanldeUploadFile(param) {
