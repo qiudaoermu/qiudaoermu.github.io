@@ -1738,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1661407514922),
+    lastupdate: new Date(1715845621549),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2520,7 +2520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/25/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2538,21 +2538,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/25/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/"  itemprop="url">
-        🌦🌦-++A-,-A++-区别
+      <a href="/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/"  itemprop="url">
+        🗳🗳-nginx-启动停止命令
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        相同点a++ 和 ++a的都是给a+1
-不同点a++是先参加程序的运行再+1，而++a则是先+1再参加程序的运行。
-以上纯属废话
-经过和C语汇编分析，在没有中间变量参与的情况下，汇编代码一摸一样
-如果有中间变量，比如 b &#x3D; a++，编译器会先保存一个值，再++
-++i
-1234567891011121314151617181920212223242526	.section	__T...
+        启动1$ ./nginx
+
+查看nginx 的状态ps -ef | grep nginx  出现master 则启动成功
+关闭nginx1kill -9 9658(进程号 上面的) 
+
+停止 nginx 命令1./nginx -s stop
+重启nginx 1$ ./nginx -s reload
+查找nginx 位置1$ whereis nginx
+
+检测 nginx.config正确性1...
       
     
   </div>
@@ -2560,12 +2563,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-25T00:00:00+00:00">2021-07-25</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-14T16:00:00+00:00">2021-09-14</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/25/%F0%9F%8C%A6%F0%9F%8C%A6-++a-,-a++-%E5%8C%BA%E5%88%AB/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-nginx-%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%91%BD%E4%BB%A4/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2581,7 +2584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/23/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/12/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2599,20 +2602,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/23/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/"  itemprop="url">
-        🌦🌦-charCodeAt-,-fromCharCode-用法
+      <a href="/2021/undefined/12/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/"  itemprop="url">
+        ☀️☀️-编程范式----shell-子文件异步模式-VS--JS-async-await
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        charCodeAt 获取 ascII编码
-12let  d = &quot;a&quot;console.log(d.charCodeAt()) // 97
-
-12let num = String.fromCharCode(97)console.log(num) // a
-
-
+        
+问题：在 shell 下有 A、B、C、D 四个命令,需要先执行 A再执行 B、C最后执行 D
+其中, B、C 耗时较多， 但是，互不干扰，可以同步执针对以上情形，bash提供了一个内置的命令来帮助管理异步执行。wait命令可以让父脚本暂停，直到指定的进程（比如子脚本）结束。
+shell子进程 和 wait123456./A./B &amp;  # 设为子进程./C &amp;pid=$1...
       
     
   </div>
@@ -2620,12 +2621,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-23T16:00:00+00:00">2021-07-23</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-12T16:00:00+00:00">2021-09-12</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/23/%F0%9F%8C%A6%F0%9F%8C%A6-charCodeAt-,-fromCharCode-%E7%94%A8%E6%B3%95/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/12/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F----shell-%E5%AD%90%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%BC%8F-VS--JS-async-await/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2641,7 +2642,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6--%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/10/%F0%9F%90%93%F0%9F%A5%9A-%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%B8%AA%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2659,19 +2660,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6--%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/"  itemprop="url">
-        🌦🌦-空值合并操作符--有哪些坑
+      <a href="/2021/undefined/10/%F0%9F%90%93%F0%9F%A5%9A-%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%B8%AA%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/"  itemprop="url">
+        🐓🥚-如何写一个脚手架工具
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        空值合并操作符（??）　只有当左侧为null和undefined和空时，才会返回右侧的数,否则返回左侧的    重点: 0 除外
-　
-123let a = &quot;&quot;let result = a ?? &quot;target&quot;console.log(result) // &#x27;&#x27;
-
-1234判断数组长度慎用let a = []let result =...
+        
+前言用过构建工具的亲们知道，通常通过全局安装一个 xxx-cli 的 npm 包，就能在命令行用命令进行构建。那么这个 npm 包如何变成一个可执行的命令呢？
+npm cli 运行原理1.当全局安装 npm 包的时候，npm 会把 package.json 中 bin 配置的 command-name 添加到系统 $PATH中去。
+拿 macOS 举例，npm 会在 &#x2F;usr&#...
       
     
   </div>
@@ -2679,12 +2679,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-18T16:00:00+00:00">2021-07-18</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-10T16:00:00+00:00">2021-09-10</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/18/%F0%9F%8C%A6%F0%9F%8C%A6-%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%AC%A6--%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9D%91/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/10/%F0%9F%90%93%F0%9F%A5%9A-%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%B8%AA%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2700,7 +2700,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/15/%F0%9F%8C%A6%F0%9F%8C%A6%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E4%B8%8B%E6%A0%87%E5%AF%B9%E8%B1%A1/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/07/%F0%9F%93%A3%F0%9F%93%A3%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E5%92%8C%E7%BC%96%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2718,19 +2718,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/15/%F0%9F%8C%A6%F0%9F%8C%A6%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E4%B8%8B%E6%A0%87%E5%AF%B9%E8%B1%A1/"  itemprop="url">
-        🌦🌦数组删除某个下标对象
+      <a href="/2021/undefined/07/%F0%9F%93%A3%F0%9F%93%A3%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E5%92%8C%E7%BC%96%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8/"  itemprop="url">
+        📣📣编程艺术和编程的本质
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        1.splice
-splice(index, num)index: 下标num: 删除的数量@return 删除的元素
-
-原来的数组会被修改
-删掉第三个元素1234let dataSource = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]let newDataSource = dataSource.splice(2, 1);console.l...
+        
+编程艺术最近看老外写的代码，感觉他们写代码就跟搞艺术一样，就像珍珠一样晶莹剔透，甚至注释比代码都多。
+国外在产品中注入艺术气息的不再少数
+法国大餐，秀色可餐。日本料理，精致温婉。苹果产品，兼顾艺术品味，简约大气又耐用。美国隐身战斗机，外观霸气，操作简约。欧洲、日本的汽车流线、颜色都很美，功能人性化。古罗马帝国作为横跨欧洲、非洲与亚洲的强大帝国，格外强调其建筑的威严，以给人不可侵犯的感觉。
+...
       
     
   </div>
@@ -2738,12 +2738,12 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-15T16:00:00+00:00">2021-07-15</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-07T16:00:00+00:00">2021-09-07</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/15/%F0%9F%8C%A6%F0%9F%8C%A6%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E4%B8%8B%E6%A0%87%E5%AF%B9%E8%B1%A1/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/07/%F0%9F%93%A3%F0%9F%93%A3%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E5%92%8C%E7%BC%96%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2759,7 +2759,7 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/12/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-%E6%95%B0%E7%BB%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/06/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9C%A8react%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%90%BD%E5%9C%B0/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2777,18 +2777,19 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/12/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-%E6%95%B0%E7%BB%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/"  itemprop="url">
-        🌦🌦-优雅的获取-数组第一个元素
+      <a href="/2021/undefined/06/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9C%A8react%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%90%BD%E5%9C%B0/"  itemprop="url">
+        ☀️☀️设计模式在react项目中的落地
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        项目开发中经常会用到这样的操作
-12345// 获取数组的第一个元素 const list = [&#x27;Luke&#x27;, &#x27;Eva&#x27;, &#x27;Phil&#x27;,&#x27;Tela&#x27;];   let data = list[0] let target = list[1]
-缺点：在代码中出现数字，感觉这样写不够美观
-一. shift()123...
+        
+1.订阅发布模式一句话总结：创造事件，等待一个事件的发生。
+比如小明（订阅者）去到报亭的大爷（发布者）那订了一份报纸，第二天报纸来了，大爷通知小明来取报纸。
+众所周知，react中没有bus这个概念，如果遇到react中使用bus的情况，怎么办呢首先 , 什么是bus, event Bus is only a Global Function Register;
+12345678910111...
       
     
   </div>
@@ -2796,12 +2797,12 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-07-12T00:00:00+00:00">2021-07-12</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-09-06T16:00:00+00:00">2021-09-06</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/12/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-%E6%95%B0%E7%BB%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/06/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9C%A8react%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%90%BD%E5%9C%B0/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2817,7 +2818,7 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/28/%F0%9F%9F%A8%F0%9F%9F%A8--%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/31/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2835,18 +2836,16 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/28/%F0%9F%9F%A8%F0%9F%9F%A8--%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"  itemprop="url">
-        🟨🟨--常用正则表达式
+      <a href="/2021/undefined/31/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/"  itemprop="url">
+        🌈--css-flex-多列等高
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        常用正则表达式1.数字，保留两位小数1^(([1-9]&#123;1&#125;\d*)|(0&#123;1&#125;))(\.\d&#123;0,2&#125;)?$
-
-12342.22, true2.0 true2 true2.222 false
-1.1.有效数字，不以0结尾1let reg = /^(([1-9]&#123;1&#125;\d*)|(0&#123;1&#125;))(...
+        1.父元素设置display:flex2.子元素设置 flex:1
+12345678910111213141516171819202122#container&#123;	width:400px;	margin:0 auto;	background-color: #ddd;	display:flex;&#125;// 不要设置 align-items 属性.left,.right&#123;...
       
     
   </div>
@@ -2854,12 +2853,12 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-06-28T16:00:00+00:00">2021-06-28</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-08-31T16:00:00+00:00">2021-08-31</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/28/%F0%9F%9F%A8%F0%9F%9F%A8--%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/31/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2875,7 +2874,7 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/17/%F0%9F%8C%88-space-between%E5%92%8Cspace-around%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/22/%F0%9F%92%BB--M1%E8%8A%AF%E7%89%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2893,15 +2892,17 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/17/%F0%9F%8C%88-space-between%E5%92%8Cspace-around%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/"  itemprop="url">
-        🌈-space-between和space-around的区别？
+      <a href="/2021/undefined/22/%F0%9F%92%BB--M1%E8%8A%AF%E7%89%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB/"  itemprop="url">
+        💻--M1芯片为什么这么快
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        
+        1.采用ARM架构，采用了新的指令集
+2.CPU，GPU，共用内存，减少总线带来的数据传输延迟
+3.采用5nm技术，更多的二极管，更强大的运算量
 
 
       
@@ -2911,12 +2912,12 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-06-17T16:00:00+00:00">2021-06-17</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-08-22T16:00:00+00:00">2021-08-22</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/17/%F0%9F%8C%88-space-between%E5%92%8Cspace-around%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/22/%F0%9F%92%BB--M1%E8%8A%AF%E7%89%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2932,7 +2933,7 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/27/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/15/%F0%9F%93%A3%F0%9F%9A%A6%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%9C%89%E6%84%9F/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2950,18 +2951,17 @@ splice(index, num)index: 下标num: 删除的数量@return 删除的元素
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/27/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"  itemprop="url">
-        🌦🌦-js-二进制转字符串
+      <a href="/2021/undefined/15/%F0%9F%93%A3%F0%9F%9A%A6%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%9C%89%E6%84%9F/"  itemprop="url">
+        📣🚦力扣刷题有感
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        十进制转二进制12let num = 5;num = num.toString(2) // &quot;101&quot;
-
-二进制转十进制
-parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 pa...
+        
+1.非智力因素作为一个专业人士，要保持编码能力的一个方法就是经常做题，千难万难，坚持最难，训练韧性和耐力，戒骄戒躁，脚踏实地，注重非智力因素的培养。
+放弃幻想准备斗争听过一句考研界数学大神的话：考研需要和你之前长达几十年的学习习惯做斗争。考研数学考得不只是你的数学，考研考的也不只是你的政治、英语、数学、专业课，甚至不只是学习能力，而是你这个人，你对这个世界的认知，时间管理能力，以及长期以来...
       
     
   </div>
@@ -2969,12 +2969,12 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-04-27T16:00:00+00:00">2021-04-27</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-08-15T16:00:00+00:00">2021-08-15</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/27/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/15/%F0%9F%93%A3%F0%9F%9A%A6%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%9C%89%E6%84%9F/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2990,7 +2990,7 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/18/%F0%9F%A7%AE%F0%9F%A7%AE%E6%9F%A5%E6%89%BE%E6%A0%91%E8%8A%82%E7%82%B9%E4%B8%AD%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%AD%90%E8%8A%82%E7%82%B9/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-npm%E7%89%88%E6%9C%AC%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -3008,16 +3008,20 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/18/%F0%9F%A7%AE%F0%9F%A7%AE%E6%9F%A5%E6%89%BE%E6%A0%91%E8%8A%82%E7%82%B9%E4%B8%AD%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%AD%90%E8%8A%82%E7%82%B9/"  itemprop="url">
-        🧮🧮查找树节点中符合条件的子节点
+      <a href="/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-npm%E7%89%88%E6%9C%AC%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/"  itemprop="url">
+        🗳🗳-npm版本自动控制
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        1.查找一个
-12345678910111213let filterTreeId = (list, id)  =&gt; &#123;      let targetObj = null;      for (const item of list) &#123;        if (item.id === id) &#123;          targetObj = item;     ...
+        痛点npm 发包每次都手动改 version，好烦。。🤣
+解决办法：Semantic versioningnpm version Patch在我们的package.json里面有一个version字段。
+那么，怎么在项目不断构建的过程中调整版本呢？
+npm有一套自己的版本控制标准——Semantic versioning（语义化版本）
+具体体现为：
+版本格式：主版本号 次版本号  修订号，...
       
     
   </div>
@@ -3025,12 +3029,12 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-04-18T16:00:00+00:00">2021-04-18</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-08-14T16:00:00+00:00">2021-08-14</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/18/%F0%9F%A7%AE%F0%9F%A7%AE%E6%9F%A5%E6%89%BE%E6%A0%91%E8%8A%82%E7%82%B9%E4%B8%AD%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%AD%90%E8%8A%82%E7%82%B9/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/14/%F0%9F%97%B3%F0%9F%97%B3-npm%E7%89%88%E6%9C%AC%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3046,7 +3050,7 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/09/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-Tips/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/11/%F0%9F%8C%A6%F0%9F%8C%A6-js%E5%B0%8F%E6%8A%80%E5%B7%A7/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -3064,22 +3068,19 @@ parseInt(string, radix)radix：该值介于 2 ~ 36 之间。如果省略该参�
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/09/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-Tips/"  itemprop="url">
-        🍎🍎-Mac-Tips
+      <a href="/2021/undefined/11/%F0%9F%8C%A6%F0%9F%8C%A6-js%E5%B0%8F%E6%8A%80%E5%B7%A7/"  itemprop="url">
+        🌦🌦-js小技巧
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Mac关闭指定端口先执行如下命令
-1lsof -i:端口号
-会有类似下面的结果：然后执行： 
-1kill -9 42624
-结束进程就搞定了
-Mac 终端开启和关闭代理的方法假如你的代理机是你的本机（127.0.0.1），代理的端口为 7070，
-开启代理很简单，就是用 export 命令设置全局变量 http_proxy 和 https_proxy：
-12export http_proxy...
+        1.Array().fill 产生 n个数的数组
+Array(length).fill(element) 
+
+参数length 填充长度element   用来填充数组元素的值。 1234 let codes = Array(26).fill(0).map((t,i) =&gt; i)console.log(codes) // [0,1,2,3,4,5,6......25]
+2.reduce...
       
     
   </div>
@@ -3087,12 +3088,12 @@ Mac 终端开启和关闭代理的方法假如你的代理机是你的本机（1
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2021-04-09T16:00:00+00:00">2021-04-09</time>
+        <time itemprop="dateCreated datePublished" datetime="2021-08-11T16:00:00+00:00">2021-08-11</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/undefined/09/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-Tips/' itemprop="url">
+          <a class='readmore' href='/2021/undefined/11/%F0%9F%8C%A6%F0%9F%8C%A6-js%E5%B0%8F%E6%8A%80%E5%B7%A7/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3119,7 +3120,7 @@ Mac 终端开启和关闭代理的方法假如你的代理机是你的本机（1
           </a>
         
         <p class="current">
-          9 / 12
+          9 / 14
         </p>
         
           <a class="next" rel="next" href="/page/10/">
