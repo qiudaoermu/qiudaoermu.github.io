@@ -22,9 +22,7 @@ element-upload，涉及到跨域上传，需要使用http-request自定义上传
 </el-upload>
 ```
 上传函数
-
 ```js
-console.log(""）
 function hanldeUploadFile(param) {
   // 上传请求头为：uploadFile：binary
   // 格式 a=123&c=456
@@ -45,7 +43,6 @@ export function getPathToExcel(data) {
     },
   });
 }
-
 ```
 axios 封装
 ```
