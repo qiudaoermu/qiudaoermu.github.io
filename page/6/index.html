@@ -1,4186 +1,762 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-  <meta name="generator" content="Hexo 6.2.0">
-  <meta name="Volantis" content="5.3.2">
-  <meta name="referrer" content="no-referrer" />
+<html>
+<head>
   <meta charset="utf-8">
- 
-  <!-- 渲染优化 -->
-
-  <meta name="force-rendering" content="webkit">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-  <meta content="telephone=no" name="format-detection">
-  <!-- import head_begin begin -->
-  <!-- import head_begin end -->
-  <!-- Custom Files headBegin begin-->
   
-  <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.95a177eb.css" as="style">
-  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-
-  <!-- feed -->
-  <!-- 页面元数据 -->
+  
   <title>Hexo</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="test description - John Doe - Hexo">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="test description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/6/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="test description">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-  <style>
-    /* 首屏样式 */
-    #safearea {
-  display: none;
-}
-/*
-  * Workaround for Chrome bug, part 1
-  * Chunk rendering for all but the first article.
-  * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
-*/
-:root {
-  --color-site-body: #f4f4f4;
-  --color-site-bg: #f4f4f4;
-  --color-site-inner: #fff;
-  --color-site-footer: #666;
-  --color-card: #fff;
-  --color-text: #444;
-  --color-block: #f6f6f6;
-  --color-inlinecode: #c74f00;
-  --color-codeblock: #fff7ea;
-  --color-h1: #3a3a3a;
-  --color-h2: #3a3a3a;
-  --color-h3: #333;
-  --color-h4: #444;
-  --color-h5: #555;
-  --color-h6: #666;
-  --color-p: #444;
-  --color-list: #666;
-  --color-list-hl: #30ad91;
-  --color-meta: #888;
-  --color-read-bkg: #e0d8c8;
-  --color-read-post: #f8f1e2;
-}
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  padding: 0;
-}
-*::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-}
-*::-webkit-scrollbar-track-piece {
-  background: transparent;
-}
-*::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
-  cursor: pointer;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
-}
-html {
-  color: var(--color-text);
-  width: 100%;
-  height: 100%;
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
-  font-size: 16px;
-}
-html >::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-}
-html >::-webkit-scrollbar-track-piece {
-  background: transparent;
-}
-html >::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
-  cursor: pointer;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-}
-html >::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
-}
-body {
-  background-color: var(--color-site-body);
-  text-rendering: optimizelegibility;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  line-height: 1.6;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-body.modal-active {
-  overflow: hidden;
-}
-@media screen and (max-width: 680px) {
-  body.modal-active {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-a {
-  color: #2092ec;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-a:hover {
-  color: #ff5722;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
-ul,
-ol {
-  padding-left: 0;
-}
-ul li,
-ol li {
-  list-style: none;
-}
-header {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-}
-img {
-  border: 0;
-  background: none;
-  max-width: 100%;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  height: 0;
-  border: 0;
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
-  border-bottom: 1px solid rgba(68,68,68,0.1);
-}
-button,
-input {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-button {
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-@supports (backdrop-filter: blur(20px)) {
-  .blur {
-    background: rgba(255,255,255,0.9) !important;
-    backdrop-filter: saturate(200%) blur(20px);
-  }
-}
-.shadow {
-  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
-}
-.shadow.floatable {
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-.shadow.floatable:hover {
-  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
-}
-#l_cover {
-  min-height: 64px;
-}
-.cover-wrapper {
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  height: 100vh;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  align-content: center;
-  color: var(--color-site-inner);
-  padding: 0 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: -100px;
-}
-.cover-wrapper .cover-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-}
-.cover-wrapper .cover-bg.lazyload:not(.loaded) {
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-}
-.cover-wrapper .cover-bg.lazyload.loaded {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-.cover-wrapper .cover-body {
-  z-index: 1;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.cover-wrapper#full {
-  height: calc(100vh + 100px);
-  padding-bottom: 100px;
-}
-.cover-wrapper#half {
-  max-height: 640px;
-  min-height: 400px;
-  height: calc(36vh - 64px + 200px);
-}
-.cover-wrapper #scroll-down {
-  width: 100%;
-  height: 64px;
-  position: absolute;
-  bottom: 100px;
-  text-align: center;
-  cursor: pointer;
-}
-.cover-wrapper #scroll-down .scroll-down-effects {
-  color: #fff;
-  font-size: 24px;
-  line-height: 64px;
-  position: absolute;
-  width: 24px;
-  left: calc(50% - 12px);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  animation: scroll-down-effect 1.5s infinite;
-  -webkit-animation: scroll-down-effect 1.5s infinite;
-  -khtml-animation: scroll-down-effect 1.5s infinite;
-  -moz-animation: scroll-down-effect 1.5s infinite;
-  -o-animation: scroll-down-effect 1.5s infinite;
-  -ms-animation: scroll-down-effect 1.5s infinite;
-}
-@-moz-keyframes scroll-down-effect {
-  0% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-  50% {
-    top: -16px;
-    opacity: 0.4;
-    -webkit-opacity: 0.4;
-    -moz-opacity: 0.4;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes scroll-down-effect {
-  0% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-  50% {
-    top: -16px;
-    opacity: 0.4;
-    -webkit-opacity: 0.4;
-    -moz-opacity: 0.4;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes scroll-down-effect {
-  0% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-  50% {
-    top: -16px;
-    opacity: 0.4;
-    -webkit-opacity: 0.4;
-    -moz-opacity: 0.4;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes scroll-down-effect {
-  0% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-  50% {
-    top: -16px;
-    opacity: 0.4;
-    -webkit-opacity: 0.4;
-    -moz-opacity: 0.4;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-.cover-wrapper .cover-body {
-  margin-top: 64px;
-  margin-bottom: 100px;
-}
-.cover-wrapper .cover-body,
-.cover-wrapper .cover-body .top,
-.cover-wrapper .cover-body .bottom {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -khtml-justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  -ms-justify-content: center;
-  max-width: 100%;
-}
-.cover-wrapper .cover-body .bottom {
-  margin-top: 32px;
-}
-.cover-wrapper .cover-body .title {
-  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
-  font-size: 3.125rem;
-  line-height: 1.2;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-.cover-wrapper .cover-body .subtitle {
-  font-size: 20px;
-}
-.cover-wrapper .cover-body .logo {
-  max-height: 120px;
-  max-width: calc(100% - 4 * 16px);
-}
-@media screen and (min-height: 1024px) {
-  .cover-wrapper .cover-body .title {
-    font-size: 3rem;
-  }
-  .cover-wrapper .cover-body .subtitle {
-    font-size: 1.05rem;
-  }
-  .cover-wrapper .cover-body .logo {
-    max-height: 150px;
-  }
-}
-.cover-wrapper .cover-body .m_search {
-  position: relative;
-  max-width: calc(100% - 16px);
-  width: 320px;
-  vertical-align: middle;
-}
-.cover-wrapper .cover-body .m_search .form {
-  position: relative;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  width: 100%;
-}
-.cover-wrapper .cover-body .m_search .icon,
-.cover-wrapper .cover-body .m_search .input {
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-.cover-wrapper .cover-body .m_search .icon {
-  position: absolute;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  line-height: 2.5rem;
-  width: 32px;
-  top: 0;
-  left: 5px;
-  color: rgba(68,68,68,0.75);
-}
-.cover-wrapper .cover-body .m_search .input {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  height: 2.5rem;
-  width: 100%;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  font-size: 0.875rem;
-  -webkit-appearance: none;
-  padding-left: 36px;
-  border-radius: 1.4rem;
-  -webkit-border-radius: 1.4rem;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
-  border: none;
-  color: var(--color-text);
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper .cover-body .m_search .input {
-    padding-left: 36px;
-  }
-}
-.cover-wrapper .cover-body .m_search .input:hover {
-  background: rgba(255,255,255,0.8);
-}
-.cover-wrapper .cover-body .m_search .input:focus {
-  background: #fff;
-}
-.cover-wrapper .list-h {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -khtml-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  align-items: stretch;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.cover-wrapper .list-h a {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  font-weight: 600;
-}
-.cover-wrapper .list-h a img {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  margin: 4px;
-  min-width: 40px;
-  max-width: 44px;
-}
-@media screen and (max-width: 768px) {
-  .cover-wrapper .list-h a img {
-    min-width: 36px;
-    max-width: 40px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper .list-h a img {
-    margin: 2px 4px;
-    min-width: 32px;
-    max-width: 36px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .cover-wrapper .list-h a img {
-    min-width: 28px;
-    max-width: 32px;
-  }
-}
-.cover-wrapper {
-  max-width: 100%;
-}
-.cover-wrapper.search .bottom .menu {
-  margin-top: 16px;
-}
-.cover-wrapper.search .bottom .menu .list-h a {
-  white-space: nowrap;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  align-items: baseline;
-  padding: 2px;
-  margin: 4px;
-  color: var(--color-site-inner);
-  opacity: 0.75;
-  -webkit-opacity: 0.75;
-  -moz-opacity: 0.75;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  border-bottom: 2px solid transparent;
-}
-.cover-wrapper.search .bottom .menu .list-h a i {
-  margin-right: 4px;
-}
-.cover-wrapper.search .bottom .menu .list-h a p {
-  font-size: 0.9375rem;
-}
-.cover-wrapper.search .bottom .menu .list-h a:hover,
-.cover-wrapper.search .bottom .menu .list-h a.active,
-.cover-wrapper.search .bottom .menu .list-h a:active {
-  opacity: 1;
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  border-bottom: 2px solid var(--color-site-inner);
-}
-.cover-wrapper.dock .menu,
-.cover-wrapper.featured .menu,
-.cover-wrapper.focus .menu {
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-.cover-wrapper.dock .menu .list-h a,
-.cover-wrapper.featured .menu .list-h a,
-.cover-wrapper.focus .menu .list-h a {
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  padding: 12px;
-  line-height: 24px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-bottom: none;
-  text-align: center;
-  align-content: flex-end;
-  color: rgba(68,68,68,0.7);
-  font-size: 1.5rem;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h a,
-  .cover-wrapper.featured .menu .list-h a,
-  .cover-wrapper.focus .menu .list-h a {
-    padding: 12px 8px;
-  }
-}
-.cover-wrapper.dock .menu .list-h a i,
-.cover-wrapper.featured .menu .list-h a i,
-.cover-wrapper.focus .menu .list-h a i {
-  margin: 8px;
-}
-.cover-wrapper.dock .menu .list-h a p,
-.cover-wrapper.featured .menu .list-h a p,
-.cover-wrapper.focus .menu .list-h a p {
-  font-size: 0.875rem;
-}
-.cover-wrapper.dock .menu .list-h a.active,
-.cover-wrapper.featured .menu .list-h a.active,
-.cover-wrapper.focus .menu .list-h a.active {
-  background: var(--color-card);
-  backdrop-filter: none;
-}
-.cover-wrapper.dock .menu .list-h a.active i,
-.cover-wrapper.featured .menu .list-h a.active i,
-.cover-wrapper.focus .menu .list-h a.active i,
-.cover-wrapper.dock .menu .list-h a.active i+p,
-.cover-wrapper.featured .menu .list-h a.active i+p,
-.cover-wrapper.focus .menu .list-h a.active i+p {
-  color: #3dd9b6;
-}
-.cover-wrapper.dock .menu .list-h a.active img+p,
-.cover-wrapper.featured .menu .list-h a.active img+p,
-.cover-wrapper.focus .menu .list-h a.active img+p {
-  color: var(--color-text);
-}
-.cover-wrapper.dock .menu .list-h a:hover,
-.cover-wrapper.featured .menu .list-h a:hover,
-.cover-wrapper.focus .menu .list-h a:hover {
-  background: var(--color-card);
-}
-.cover-wrapper.dock .top {
-  margin-bottom: 48px;
-}
-.cover-wrapper.dock .menu {
-  background: rgba(255,255,255,0.5);
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-}
-.cover-wrapper.dock .menu .list-h {
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  margin: 4px;
-}
-.cover-wrapper.dock .menu .list-h a+a {
-  margin-left: 4px;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h {
-    overflow-x: scroll;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
-    background: transparent;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #3dd9b6;
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
-  }
-}
-@supports (backdrop-filter: blur(20px)) {
-  .cover-wrapper.dock .menu {
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: saturate(200%) blur(20px);
-  }
-}
-@font-face {
-  font-family: 'UbuntuMono';
-  src: url("https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
-  font-weight: 'normal';
-  font-style: 'normal';
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Varela Round';
-  src: url("https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
-  font-weight: 'normal';
-  font-style: 'normal';
-  font-display: swap;
-}
-.l_header {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  width: 100%;
-  height: 64px;
-  background: var(--color-card);
-  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
-}
-.l_header.auto {
-  transition: opacity 0.4s ease;
-  -webkit-transition: opacity 0.4s ease;
-  -khtml-transition: opacity 0.4s ease;
-  -moz-transition: opacity 0.4s ease;
-  -o-transition: opacity 0.4s ease;
-  -ms-transition: opacity 0.4s ease;
-  visibility: hidden;
-}
-.l_header.auto.show {
-  opacity: 1 !important;
-  -webkit-opacity: 1 !important;
-  -moz-opacity: 1 !important;
-  visibility: visible;
-}
-.l_header .container {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-.l_header #wrapper {
-  height: 100%;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.l_header #wrapper .nav-main,
-.l_header #wrapper .nav-sub {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -khtml-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -o-justify-content: space-between;
-  -ms-justify-content: space-between;
-  align-items: center;
-}
-.l_header #wrapper .nav-main {
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-.l_header #wrapper.sub .nav-main {
-  transform: translateY(-64px);
-  -webkit-transform: translateY(-64px);
-  -khtml-transform: translateY(-64px);
-  -moz-transform: translateY(-64px);
-  -o-transform: translateY(-64px);
-  -ms-transform: translateY(-64px);
-}
-.l_header #wrapper .nav-sub {
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  height: 64px;
-  width: calc(100% - 2 * 16px);
-  position: absolute;
-}
-.l_header #wrapper .nav-sub ::-webkit-scrollbar {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-}
-@media screen and (min-width: 2048px) {
-  .l_header #wrapper .nav-sub {
-    max-width: 55vw;
-    margin: auto;
-  }
-}
-.l_header #wrapper.sub .nav-sub {
-  opacity: 1;
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-}
-.l_header #wrapper .title {
-  position: relative;
-  color: var(--color-text);
-  padding-left: 24px;
-  max-height: 64px;
-}
-.l_header #wrapper .nav-main .title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex-shrink: 0;
-  line-height: 64px;
-  padding: 0 24px;
-  font-size: 1.25rem;
-  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
-}
-.l_header #wrapper .nav-main .title img {
-  height: 64px;
-}
-.l_header .nav-sub {
-  max-width: 1080px;
-  margin: auto;
-}
-.l_header .nav-sub .title {
-  font-weight: bold;
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
-  line-height: 1.2;
-  max-height: 64px;
-  white-space: normal;
-  flex-shrink: 1;
-}
-.l_header .switcher {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-  line-height: 64px;
-  align-items: center;
-}
-.l_header .switcher .s-toc {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .l_header .switcher .s-toc {
-    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-    display: -ms-flexbox /* TWEENER - IE 10 */;
-    display: -webkit-flex /* NEW - Chrome */;
-    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-    display: flex;
-  }
-}
-.l_header .switcher >li {
-  height: 48px;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-  margin: 2px;
-}
-@media screen and (max-width: 500px) {
-  .l_header .switcher >li {
-    margin: 0 1px;
-    height: 48px;
-  }
-}
-.l_header .switcher >li >a {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -khtml-justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  -ms-justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  padding: 0.85em 1.1em;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border: none;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-  color: #3dd9b6;
-}
-.l_header .switcher >li >a:hover {
-  border: none;
-}
-.l_header .switcher >li >a.active,
-.l_header .switcher >li >a:active {
-  border: none;
-  background: var(--color-site-bg);
-}
-@media screen and (max-width: 500px) {
-  .l_header .switcher >li >a {
-    width: 36px;
-    height: 48px;
-  }
-}
-.l_header .nav-sub .switcher {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-}
-.l_header .m_search {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  height: 64px;
-  width: 240px;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-@media screen and (max-width: 1024px) {
-  .l_header .m_search {
-    width: 44px;
-    min-width: 44px;
-  }
-  .l_header .m_search input::placeholder {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-  }
-  .l_header .m_search:hover {
-    width: 240px;
-  }
-  .l_header .m_search:hover input::placeholder {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@media screen and (min-width: 500px) {
-  .l_header .m_search:hover .input {
-    width: 100%;
-  }
-  .l_header .m_search:hover .input::placeholder {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@media screen and (max-width: 500px) {
-  .l_header .m_search {
-    min-width: 0;
-  }
-  .l_header .m_search input::placeholder {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-.l_header .m_search .form {
-  position: relative;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-.l_header .m_search .icon {
-  position: absolute;
-  width: 36px;
-  left: 5px;
-  color: var(--color-meta);
-}
-@media screen and (max-width: 500px) {
-  .l_header .m_search .icon {
-    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-    display: none;
-  }
-}
-.l_header .m_search .input {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  line-height: 1.3;
-  width: 100%;
-  color: var(--color-text);
-  background: #fafafa;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding-left: 40px;
-  font-size: 0.875rem;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border: none;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-@media screen and (min-width: 500px) {
-  .l_header .m_search .input:focus {
-    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
-  }
-}
-@media screen and (max-width: 500px) {
-  .l_header .m_search .input {
-    background: var(--color-block);
-    padding-left: 8px;
-    border: none;
-  }
-  .l_header .m_search .input:hover,
-  .l_header .m_search .input:focus {
-    border: none;
-  }
-}
-@media (max-width: 500px) {
-  .l_header .m_search {
-    left: 0;
-    width: 0;
-    overflow: hidden;
-    position: absolute;
-    background: #fff;
-    transition: all 0.28s ease;
-    -webkit-transition: all 0.28s ease;
-    -khtml-transition: all 0.28s ease;
-    -moz-transition: all 0.28s ease;
-    -o-transition: all 0.28s ease;
-    -ms-transition: all 0.28s ease;
-  }
-  .l_header .m_search .input {
-    border-radius: 32px;
-    -webkit-border-radius: 32px;
-    margin-left: 16px;
-    padding-left: 16px;
-  }
-  .l_header.z_search-open .m_search {
-    width: 100%;
-  }
-  .l_header.z_search-open .m_search .input {
-    width: calc(100% - 120px);
-  }
-}
-ul.m-pc >li>a {
-  color: inherit;
-  border-bottom: 2px solid transparent;
-}
-ul.m-pc >li>a:active,
-ul.m-pc >li>a.active {
-  border-bottom: 2px solid #3dd9b6;
-}
-ul.m-pc li:hover >ul.list-v,
-ul.list-v li:hover >ul.list-v {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-}
-ul.nav-list-h {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-  display: flex;
-  align-items: stretch;
-}
-ul.nav-list-h>li {
-  position: relative;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -khtml-justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  -ms-justify-content: center;
-  height: 100%;
-  line-height: 2.4;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-ul.nav-list-h>li >a {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 600;
-}
-ul.list-v {
-  z-index: 1;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-  position: absolute;
-  background: var(--color-card);
-  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
-  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
-  margin-top: -6px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  padding: 8px 0;
-}
-ul.list-v.show {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-}
-ul.list-v hr {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-ul.list-v >li {
-  white-space: nowrap;
-  word-break: keep-all;
-}
-ul.list-v >li.header {
-  font-size: 0.78125rem;
-  font-weight: bold;
-  line-height: 2em;
-  color: var(--color-meta);
-  margin: 8px 16px 4px;
-}
-ul.list-v >li.header i {
-  margin-right: 8px;
-}
-ul.list-v >li ul {
-  margin-left: 0;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-  margin-top: -40px;
-}
-ul.list-v .aplayer-container {
-  min-height: 64px;
-  padding: 6px 16px;
-}
-ul.list-v >li>a {
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  color: var(--color-list);
-  font-size: 0.875rem;
-  font-weight: bold;
-  line-height: 36px;
-  padding: 0 20px 0 16px;
-  text-overflow: ellipsis;
-  margin: 0 4px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-@media screen and (max-width: 1024px) {
-  ul.list-v >li>a {
-    line-height: 40px;
-  }
-}
-ul.list-v >li>a >i {
-  margin-right: 8px;
-}
-ul.list-v >li>a:active,
-ul.list-v >li>a.active {
-  color: var(--color-list-hl);
-}
-ul.list-v >li>a:hover {
-  color: var(--color-list-hl);
-  background: var(--color-site-bg);
-}
-.l_header .menu >ul>li>a {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: block;
-  padding: 0 8px;
-}
-.l_header .menu >ul>li>a >i {
-  margin-right: 4px;
-}
-.l_header ul.nav-list-h>li {
-  color: var(--color-list);
-  line-height: 64px;
-}
-.l_header ul.nav-list-h>li >a {
-  max-height: 64px;
-  overflow: hidden;
-  color: inherit;
-}
-.l_header ul.nav-list-h>li >a:active,
-.l_header ul.nav-list-h>li >a.active {
-  color: #3dd9b6;
-}
-.l_header ul.nav-list-h>li:hover>a {
-  color: var(--color-list-hl);
-}
-.l_header ul.nav-list-h>li i.music {
-  animation: rotate-effect 1.5s linear infinite;
-  -webkit-animation: rotate-effect 1.5s linear infinite;
-  -khtml-animation: rotate-effect 1.5s linear infinite;
-  -moz-animation: rotate-effect 1.5s linear infinite;
-  -o-animation: rotate-effect 1.5s linear infinite;
-  -ms-animation: rotate-effect 1.5s linear infinite;
-}
-@-moz-keyframes rotate-effect {
-  0% {
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -khtml-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    -ms-transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -khtml-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -khtml-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -khtml-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes rotate-effect {
-  0% {
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -khtml-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    -ms-transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -khtml-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -khtml-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -khtml-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-  }
-}
-@-o-keyframes rotate-effect {
-  0% {
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -khtml-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    -ms-transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -khtml-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -khtml-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -khtml-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-  }
-}
-@keyframes rotate-effect {
-  0% {
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -khtml-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    -ms-transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -khtml-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -khtml-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -khtml-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-  }
-}
-.menu-phone li ul.list-v {
-  right: calc(100% - 0.5 * 16px);
-}
-.menu-phone li ul.list-v ul {
-  right: calc(100% - 0.5 * 16px);
-}
-#wrapper {
-  max-width: 1080px;
-  margin: auto;
-}
-@media screen and (min-width: 2048px) {
-  #wrapper {
-    max-width: 55vw;
-  }
-}
-#wrapper .menu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  margin: 0 16px 0 0;
-}
-#wrapper .menu .list-v ul {
-  left: calc(100% - 0.5 * 16px);
-}
-.menu-phone {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-  margin-top: 16px;
-  right: 8px;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
-}
-.menu-phone ul {
-  right: calc(100% - 0.5 * 16px);
-}
-@media screen and (max-width: 500px) {
-  .menu-phone {
-    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-    display: block;
-  }
-}
-.l_header {
-  max-width: 65vw;
-  left: calc((100% - 65vw) * 0.5);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-@media screen and (max-width: 2048px) {
-  .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
-  }
-}
-@media screen and (max-width: 1112px) {
-  .l_header {
-    left: 0;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .l_header .container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .l_header #wrapper .nav-main .title {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .l_header #wrapper .nav-sub {
-    width: 100%;
-  }
-  .l_header #wrapper .nav-sub .title {
-    overflow-y: scroll;
-    margin-top: 2px;
-    padding: 8px 16px;
-  }
-  .l_header #wrapper .switcher {
-    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-    display: -ms-flexbox /* TWEENER - IE 10 */;
-    display: -webkit-flex /* NEW - Chrome */;
-    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
-    display: flex;
-    margin-right: 8px;
-  }
-  .l_header .menu {
-    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-    display: none;
-  }
-}
-@media screen and (max-width: 500px) {
-  .list-v li {
-    max-width: 270px;
-  }
-}
-#u-search {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 60px 20px;
-  z-index: 1001;
-}
-@media screen and (max-width: 680px) {
-  #u-search {
-    padding: 0px;
-  }
-}
-
-  </style>
-  <link rel="stylesheet" href="/css/style.95a177eb.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.95a177eb.css"></noscript>
   
-<script>
-if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
-    document.write(
-	'<style>'+
-		'html{'+
-			'overflow-x: hidden !important;'+
-			'overflow-y: hidden !important;'+
-		'}'+
-		'.kill-ie{'+
-			'text-align:center;'+
-			'height: 100%;'+
-			'margin-top: 15%;'+
-			'margin-bottom: 5500%;'+
-		'}'+
-    '.kill-t{'+
-      'font-size: 2rem;'+
-    '}'+
-    '.kill-c{'+
-      'font-size: 1.2rem;'+
-    '}'+
-		'#l_header,#l_body{'+
-			'display: none;'+
-		'}'+
-	'</style>'+
-    '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>Learn more ></strong></a>`+
-    '</div>');
-</script>
-
-
-<noscript>
-	<style>
-		html{
-			overflow-x: hidden !important;
-			overflow-y: hidden !important;
-		}
-		.kill-noscript{
-			text-align:center;
-			height: 100%;
-			margin-top: 15%;
-			margin-bottom: 5500%;
-		}
-    .kill-t{
-      font-size: 2rem;
-    }
-    .kill-c{
-      font-size: 1.2rem;
-    }
-		#l_header,#l_body{
-			display: none;
-		}
-	</style>
-    <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
-    </div>
-</noscript>
-
-
-  <script>
-  /************这个文件存放不需要重载的全局变量和全局函数*********/
-  window.volantis = {}; // volantis 全局变量
-  volantis.debug = false; // 开启调试模式
-  volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
-
-  volantis.GLOBAL_CONFIG ={
-    debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
-    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716196113957),
-    sidebar: {
-      for_page: ["blogger","category","tagcloud","donate"],
-      for_post: ["toc"],
-      webinfo: {
-        lastupd: {
-          enable: true,
-          friendlyShow: true
-        },
-        runtime: {
-          data: "2020/01/01",
-          unit: "天"
-        }
-      }
-    },
-    plugins: {
-      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
-      fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/@fancyapps/ui/dist/fancybox.umd.js"},
-      aplayer: {
-        id: 3175833810,
-        enable:null
-      },
-      rightmenu: {
-        faicon: "fa",
-        layout: ["home","hr","help","examples","contributors","hr","source_docs","source_theme","hr","print","darkmode","reading","music"],
-        music_alwaysShow: true,
-        customPicUrl: {"enable":false,"old":null,"new":null}
-      },
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":false,"musicAlwaysShow":false},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
-    }
-  }
-
-  /******************** volantis.EventListener ********************************/
-  // 事件监听器 see: /source/js/app.js
-  volantis.EventListener = {}
-  // 这里存放pjax切换页面时将被移除的事件监听器
-  volantis.EventListener.list = []
-  //构造方法
-  function volantisEventListener(type, f, ele) {
-    this.type = type
-    this.f = f
-    this.ele = ele
-  }
-  // 移除事件监听器
-  volantis.EventListener.remove = () => {
-    volantis.EventListener.list.forEach(function (i) {
-      i.ele.removeEventListener(i.type, i.f, false)
-    })
-    volantis.EventListener.list = []
-  }
-  /******************** volantis.dom.$ ********************************/
-  // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
-  function volantisDom(ele) {
-    if (!ele) ele = document.createElement("div")
-    this.ele = ele;
-    // ==============================================================
-    this.ele.find = (c) => {
-      let q = this.ele.querySelector(c)
-      if (q)
-        return new volantisDom(q)
-    }
-    // ==============================================================
-    this.ele.hasClass = (c) => {
-      return this.ele.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
-    }
-    this.ele.addClass = (c) => {
-      this.ele.classList.add(c);
-      return this.ele
-    }
-    this.ele.removeClass = (c) => {
-      this.ele.classList.remove(c);
-      return this.ele
-    }
-    this.ele.toggleClass = (c) => {
-      if (this.ele.hasClass(c)) {
-        this.ele.removeClass(c)
-      } else {
-        this.ele.addClass(c)
-      }
-      return this.ele
-    }
-    // ==============================================================
-    // 参数 r 为 true 表示pjax切换页面时事件监听器将被移除，false不移除
-    this.ele.on = (c, f, r = 1) => {
-      this.ele.addEventListener(c, f, false)
-      if (r) {
-        volantis.EventListener.list.push(new volantisEventListener(c, f, this.ele))
-      }
-      return this.ele
-    }
-    this.ele.click = (f, r) => {
-      this.ele.on("click", f, r)
-      return this.ele
-    }
-    this.ele.scroll = (f, r) => {
-      this.ele.on("scroll", f, r)
-      return this.ele
-    }
-    // ==============================================================
-    this.ele.html = (c) => {
-      // if(c=== undefined){
-      //   return this.ele.innerHTML
-      // }else{
-      this.ele.innerHTML = c
-      return this.ele
-      // }
-    }
-    // ==============================================================
-    this.ele.hide = (c) => {
-      this.ele.style.display = "none"
-      return this.ele
-    }
-    this.ele.show = (c) => {
-      this.ele.style.display = "block"
-      return this.ele
-    }
-    // ==============================================================
-    return this.ele
-  }
-  volantis.dom.$ = (ele) => {
-    return !!ele ? new volantisDom(ele) : null;
-  }
-  /******************** RunItem ********************************/
-  function RunItem() {
-    this.list = []; // 存放回调函数
-    this.start = () => {
-      for (var i = 0; i < this.list.length; i++) {
-        this.list[i].run();
-      }
-    };
-    this.push = (fn, name, setRequestAnimationFrame = true) => {
-      let myfn = fn
-      if (setRequestAnimationFrame) {
-        myfn = ()=>{
-          volantis.requestAnimationFrame(fn)
-        }
-      }
-      var f = new Item(myfn, name);
-      this.list.push(f);
-    };
-    this.remove = (name) =>{
-      for (let index = 0; index < this.list.length; index++) {
-        const e = this.list[index];
-        if (e.name == name) {
-          this.list.splice(index,1);
-        }
-      }
-    }
-    // 构造一个可以run的对象
-    function Item(fn, name) {
-      // 函数名称
-      this.name = name || fn.name;
-      // run方法
-      this.run = () => {
-        try {
-          fn()
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    }
-  }
-  /******************** Pjax ********************************/
-  // /layout/_plugins/pjax/index.ejs
-  // volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
-  // volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
-  // volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
-  volantis.pjax = {};
-  volantis.pjax.method = {
-    complete: new RunItem(),
-    error: new RunItem(),
-    send: new RunItem(),
-  };
-  volantis.pjax = Object.assign(volantis.pjax, {
-    push: volantis.pjax.method.complete.push,
-    error: volantis.pjax.method.error.push,
-    send: volantis.pjax.method.send.push,
-  });
-  /******************** RightMenu ********************************/
-  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
-  // 可在 volantis.mouseEvent 处获取右键事件
-  volantis.rightmenu = {};
-  volantis.rightmenu.method = {
-    handle: new RunItem(),
-  }
-  volantis.rightmenu = Object.assign(volantis.rightmenu, {
-    handle: volantis.rightmenu.method.handle.push,
-  });
-  /********************  Dark Mode  ********************************/
-  // /layout/_partial/scripts/darkmode.ejs
-  // volantis.dark.mode 当前模式 dark or light
-  // volantis.dark.toggle() 暗黑模式触发器
-  // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
-  volantis.dark = {};
-  volantis.dark.method = {
-    toggle: new RunItem(),
-  };
-  volantis.dark = Object.assign(volantis.dark, {
-    push: volantis.dark.method.toggle.push,
-  });
-  /********************  Message  ********************************/
-  // VolantisApp.message
-  /********************  isMobile  ********************************/
-  // /source/js/app.js
-  // volantis.isMobile
-  // volantis.isMobileOld
-  /********************脚本动态加载函数********************************/
-  // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
-  // volantis.css(src)
-
-  // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
-  // (async () => {
-  //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
-  //     await volantis.js("...theme.plugins.aplayer.js.meting...")
-  // })();
-
-  // 已经加入了setTimeout
-  volantis.js = (src, cb) => {
-    return new Promise(resolve => {
-      setTimeout(function () {
-        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
-        var script = document.createElement("script");
-        script.setAttribute("type", "text/javascript");
-        if (cb) {
-          if (JSON.stringify(cb)) {
-            for (let p in cb) {
-              if (p == "onload") {
-                script[p] = () => {
-                  cb[p]()
-                  resolve()
-                }
-              } else {
-                script[p] = cb[p]
-                script.onload = resolve
-              }
-            }
-          } else {
-            script.onload = () => {
-              cb()
-              resolve()
-            };
-          }
-        } else {
-          script.onload = resolve
-        }
-        script.setAttribute("src", src);
-        HEAD.appendChild(script);
-      });
-    });
-  }
-  volantis.css = (src) => {
-    return new Promise(resolve => {
-      setTimeout(function () {
-        var link = document.createElement('link');
-        link.rel = "stylesheet";
-        link.href = src;
-        link.onload = resolve;
-        document.getElementsByTagName("head")[0].appendChild(link);
-      });
-    });
-  }
-  /********************按需加载的插件********************************/
-  // volantis.import.jQuery().then(()=>{})
-  volantis.import = {
-    jQuery: () => {
-      if (typeof jQuery == "undefined") {
-        return volantis.js("https://unpkg.com/volantis-static@0.0.1649552113628/libs/jquery/dist/jquery.min.js")
-      } else {
-        return new Promise(resolve => {
-          resolve()
-        });
-      }
-    }
-  }
-  /********************** requestAnimationFrame ********************************/
-  // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
-  volantis.requestAnimationFrame = (fn)=>{
-    if (!window.requestAnimationFrame) {
-      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
-    }
-    window.requestAnimationFrame(fn)
-  }
-  /************************ layoutHelper *****************************************/
-  volantis.layoutHelper = (helper, html, opt)=>{
-    opt = Object.assign({clean:false, pjax:true}, opt)
-    function myhelper(helper, html, clean) {
-      volantis.tempDiv = document.createElement("div");
-      volantis.tempDiv.innerHTML = html;
-      let layoutHelper = document.querySelector("#layoutHelper-"+helper)
-      if (layoutHelper) {
-        if (clean) {
-          layoutHelper.innerHTML = ""
-        }
-        layoutHelper.append(volantis.tempDiv);
-      }
-    }
-    myhelper(helper, html, opt.clean)
-    if (opt.pjax) {
-      volantis.pjax.push(()=>{
-        myhelper(helper, html, opt.clean)
-      },"layoutHelper-"+helper)
-    }
-  }
-  /****************************** 滚动事件处理 ****************************************/
-  volantis.scroll = {
-    engine: new RunItem(),
-    unengine: new RunItem(),
-  };
-  volantis.scroll = Object.assign(volantis.scroll, {
-    push: volantis.scroll.engine.push,
-  });
-  // 滚动条距离顶部的距离
-  volantis.scroll.getScrollTop = () =>{
-    let scrollPos;
-    if (window.pageYOffset) {
-      scrollPos = window.pageYOffset;
-    } else if (document.compatMode && document.compatMode != 'BackCompat') {
-      scrollPos = document.documentElement.scrollTop;
-    } else if (document.body) {
-      scrollPos = document.body.scrollTop;
-    }
-    return scrollPos;
-  }
-  // 使用 requestAnimationFrame 处理滚动事件
-  // `volantis.scroll.del` 中存储了一个数值, 该数值检测一定时间间隔内滚动条滚动的位移, 数值的检测频率是浏览器的刷新频率. 数值为正数时, 表示向下滚动. 数值为负数时, 表示向上滚动.
-  volantis.scroll.handleScrollEvents = () => {
-    volantis.scroll.lastScrollTop = volantis.scroll.getScrollTop()
-    function loop() {
-      const scrollTop = volantis.scroll.getScrollTop();
-      if (volantis.scroll.lastScrollTop !== scrollTop) {
-        volantis.scroll.del = scrollTop - volantis.scroll.lastScrollTop;
-        volantis.scroll.lastScrollTop = scrollTop;
-        // if (volantis.scroll.del > 0) {
-        //   console.log("向下滚动");
-        // } else {
-        //   console.log("向上滚动");
-        // }
-        // 注销过期的unengine未滚动事件
-        volantis.scroll.unengine.list=[]
-        volantis.scroll.engine.start();
-      }else{
-        volantis.scroll.unengine.start();
-      }
-      volantis.requestAnimationFrame(loop)
-    }
-    volantis.requestAnimationFrame(loop)
-  }
-  volantis.scroll.handleScrollEvents()
-  // 触发页面滚动至目标元素位置
-  volantis.scroll.to = (ele, option = {}) =>{
-    // 默认配置
-    opt = {
-      top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
-      behavior: "instant"
-    }
-    // 定义配置
-    if ("top" in option) {
-      opt.top = option.top
-    }
-    if ("behavior" in option) {
-      opt.behavior = option.behavior
-    }
-    if ("addTop" in option) {
-      opt.top += option.addTop
-    }
-    if (!("observerDic" in option)) {
-      option.observerDic = 100
-    }
-    // 滚动
-    window.scrollTo(opt);
-    // 监视器
-    // 监视并矫正元素滚动到指定位置
-    // 用于处理 lazyload 引起的 cls 导致的定位失败问题
-    // option.observer = false
-    if (option.observer) {
-      setTimeout(()=>{
-        volantis.scroll.unengine.push(()=>{
-          let me = ele.getBoundingClientRect().top
-          if(!(me >= -option.observerDic && me <= option.observerDic)){
-            volantis.scroll.to(ele, option)
-          }
-          volantis.scroll.unengine.remove("unengineObserver")
-        },"unengineObserver")
-      },1000)
-    }
-  }
-  /********************** Content Visibility ********************************/
-  // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
-  // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
-  // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
-  // volantis.cleanContentVisibility = ()=>{
-  //   if (document.querySelector(".post-story")) {
-  //     console.log("cleanContentVisibility");
-  //     document.querySelectorAll(".post-story").forEach(e=>{
-  //       e.classList.remove("post-story")
-  //     })
-  //   }
-  // }
-  /******************************************************************************/
-  /******************************************************************************/
-  /******************************************************************************/
-  //图像加载出错时的处理
-  function errorImgAvatar(img) {
-    img.src = "https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg";
-    img.onerror = null;
-  }
-  function errorImgCover(img) {
-    img.src = "https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg";
-    img.onerror = null;
-  }
-  /******************************************************************************/
-</script>
-
-  <!-- import head_end begin -->
-  <!-- import head_end end -->
-  <!-- Custom Files headEnd begin-->
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
-  <!-- Custom Files headEnd end-->
-</head>
-  <body itemscope itemtype="http://schema.org/WebPage">
-    <!-- import body_begin begin-->
-    <!-- import body_begin end-->
-    <!-- Custom Files bodyBegin begin-->
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
     
-    <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
-        
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
-        
-      </ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
-		<div class="nav-main">
-      
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-        <a class="title flat-box" target="_self" href='/'>
-          
-          
-          
-        </a>
-      
-
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
-      
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
-      
-
-			<ul class='switcher nav-list-h m-phone'>
-				
-					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
-				
-				<li>
-          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-            
-          </ul>
-        </li>
-			</ul>
-
-      <!-- Custom Files header begin -->
-      
-      <!-- Custom Files header end -->
-		</div>
-	</div>
+    </div>
   </div>
 </header>
 
-    <div id="l_body">
-      <div id="l_cover">
+      <div class="outer">
+        <section id="main">
   
-    
-      <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
-        
-  <div class='cover-bg' style='background-image:url(https://raw.githubusercontent.com/qiudaoermu/qiudaoermu.github.io/main/img/new-bg.png)'></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-  
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Keep To Gold" />
-          <i class="icon fa-solid fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    
+    <article id="post-⛵︎验证码-(12)-CPU都干了什么事" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(12)-CPU%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B/" class="article-date">
+  <time class="dt-published" datetime="2021-12-16T16:00:00.000Z" itemprop="datePublished">2021-12-16</time>
+</a>
     
   </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-          
-            <a href="/v4/getting-started/"
-              
-              
-              active-action="action-v4getting-started">
-              <img src='https://unpkg.com/volantis-static@0.0.1649552113628/media/twemoji/assets/svg/1f5c3.svg'><p>文档</p>
-            </a>
-          
-            <a href="/faqs/"
-              
-              
-              active-action="action-faqs">
-              <img src='https://unpkg.com/volantis-static@0.0.1649552113628/media/twemoji/assets/svg/1f516.svg'><p>帮助</p>
-            </a>
-          
-            <a href="/examples/"
-              
-              
-              active-action="action-examples">
-              <img src='https://unpkg.com/volantis-static@0.0.1649552113628/media/twemoji/assets/svg/1f396.svg'><p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              active-action="action-contributors">
-              <img src='https://unpkg.com/volantis-static@0.0.1649552113628/media/twemoji/assets/svg/1f389.svg'><p>社区</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
-              active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-              <img src='https://unpkg.com/volantis-static@0.0.1649552113628/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://qiudaoermu.github.io/gitDocs/engineering/prettier.html"
-              
-              
-              active-action="action-https:qiudaoermugithubiogitDocsengineeringprettierhtml">
-              <img src='https://unpkg.com/volantis-static@0.0.1649552113628/media/twemoji/assets/svg/1f4f0.svg'><p>TreeDocs</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(12)-CPU%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B/">⛵︎验证码-(12)-CPU都干了什么事</a>
+    </h1>
+  
 
-        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-      </div>
+      </header>
     
-  
-</div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/15312191-baf3683dfa4ac18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="1-运算"><a href="#1-运算" class="headerlink" title="1.运算"></a>1.运算</h4><p>数学运算指令，加减乘除</p>
+<h4 id="2-从内存读取数据"><a href="#2-从内存读取数据" class="headerlink" title="2.从内存读取数据"></a>2.从内存读取数据</h4><p>LOAD指令</p>
+<h4 id="3-存贮数据到内存"><a href="#3-存贮数据到内存" class="headerlink" title="3.存贮数据到内存"></a>3.存贮数据到内存</h4><p>STORE指令</p>
+<p>cpu指令能做的事并不多，主要是以上几项，这是一种抽象，电脑应用五花八门，但是cpu指令就像乐高一样，各种功能组合就会出现不同的应用体验。<br>当前的计算机发展主要是计算速度，其组成原理仍然是各种逻辑门，而衡量运算速度的一个重要指标是晶体管数量。</p>
+<p>下图为1971年以来，晶体管数量增长趋势。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-1d18c1d27a2209f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p> 举个例子：<br>苹果，自2007年发布以来，屏幕越来越大，速度越来约快，内存和硬盘容量一直在增加。但是手机能做的事没有变，拍照，看视频，听声音，浏览网页，发展了它仍然只是一台微型电脑计算机。</p>
+<p>苹果系列处理器性能分析：<br><img src="https://upload-images.jianshu.io/upload_images/15312191-9907fb88a4895d1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/15312191-b8348448c3b02535.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.mallocfree.com/basic/asm/asm-2-instruction.htm">汇编指令</a><br><a target="_blank" rel="noopener" href="https://www.eet-china.com/mp/a84799.html">苹果M1 Pro&#x2F;Max处理器性能“震撼”的秘密是什么？</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yilang/p/10997380.html">CPU指令、机器码、程序和汇编语言</a></p>
+</blockquote>
 
-      <div id="safearea">
-        <div class="body-wrapper">
-          
-<div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(12)-CPU%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(12)-CPU%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B/"  itemprop="url">
-        ⛵︎验证码-(12)-CPU都干了什么事
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-1.运算数学运算指令，加减乘除
-2.从内存读取数据LOAD指令
-3.存贮数据到内存STORE指令
-cpu指令能做的事并不多，主要是以上几项，这是一种抽象，电脑应用五花八门，但是cpu指令就像乐高一样，各种功能组合就会出现不同的应用体验。当前的计算机发展主要是计算速度，其组成原理仍然是各种逻辑门，而衡量运算速度的一个重要指标是晶体管数量。
-下图为1971年以来，晶体管数量增长趋势。
 
- 举个...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-12-16T16:00:00+00:00">2021-12-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(12)-CPU%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
       
     </div>
-  
-
-</div>
-
-          </div>
-        
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(12)-CPU%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B/" data-id="clw9094mf001h2omvhedrcvdi" data-title="⛵︎验证码-(12)-CPU都干了什么事" class="article-share-link">Share</a>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/02/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(11)-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%95%E5%B1%82%E5%BA%93%E5%92%8C%E6%8E%A5%E5%8F%A3/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/02/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(11)-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%95%E5%B1%82%E5%BA%93%E5%92%8C%E6%8E%A5%E5%8F%A3/"  itemprop="url">
-        ⛵︎验证码-(11)-操作系统底层库和接口
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
       
-        最近在思考一个问题，电脑没有操作系统可以吗答案是可以。为什么要搞一个操作系统呢，答案之一，操作系统为计算机和开发者提供了各种库和接口。我们也可以自己写这些硬件接口驱动，底层库，抽象接口，这就是操作系统的雏形了。今天就探究一下linux的那些库(windows,mac没开源，也探究不了啊😳)
-
-Linux核心库Linux内的各种层，还显示了在用户空间和内核空间之间的分离。
-
-###内核内AP...
       
-    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
+
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎验证码-(11)-操作系统底层库和接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/02/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(11)-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%95%E5%B1%82%E5%BA%93%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="article-date">
+  <time class="dt-published" datetime="2021-12-02T16:00:00.000Z" itemprop="datePublished">2021-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-12-02T16:00:00+00:00">2021-12-02</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/02/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(11)-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%95%E5%B1%82%E5%BA%93%E5%92%8C%E6%8E%A5%E5%8F%A3/">⛵︎验证码-(11)-操作系统底层库和接口</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/02/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(11)-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%95%E5%B1%82%E5%BA%93%E5%92%8C%E6%8E%A5%E5%8F%A3/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <p>最近在思考一个问题，电脑没有操作系统可以吗<br>答案是可以。<br>为什么要搞一个操作系统呢，<br>答案之一，操作系统为计算机和开发者提供了各种库和接口。<br>我们也可以自己写这些硬件接口驱动，底层库，抽象接口，这就是操作系统的雏形了。<br>今天就探究一下linux的那些库(windows,mac没开源，也探究不了啊😳)</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-04f6a1e2a625a59b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="Linux核心库"><a href="#Linux核心库" class="headerlink" title="Linux核心库"></a>Linux核心库</h3><p>Linux内的各种层，还显示了在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4" title="用户空间">用户空间</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4" title="内核空间">内核空间</a>之间的分离。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-b534920dc341391a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>###内核内API<br>在不同子系统间使用了数个内核内部API。其中一些是跨越多个发行版保持稳定的，另一些则不然。对于内核内API不作担保。维护者和贡献者可以在任何时候增加或变更它们<sup><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8#cite_note-43">[43]</a></sup>。</p>
+<p>内核内API的例子包括针对下列类别设备驱动程序的软件框架&#x2F;API：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Video4Linux" title="Video4Linux">Video4Linux</a> – 用于视频捕捉硬件。</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/ALSA" title="ALSA">高级Linux声音体系</a>（ALSA） – 用于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%A3%B0%E5%8D%A1" title="声卡">声卡</a>。</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=New_API&action=edit&redlink=1">New API</a> – 用于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%BD%91%E5%8D%A1" title="网卡">网络接口控制器</a>。</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E7%9B%B4%E6%8E%A5%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%90%86%E5%99%A8&action=edit&redlink=1">直接渲染管理器</a> – 用于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9C%96%E5%BD%A2%E8%99%95%E7%90%86%E5%99%A8" title="图形处理器">图形加速器</a>。</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=KMS%E9%A9%B1%E5%8A%A8%E5%99%A8&action=edit&redlink=1">KMS驱动器</a> – 用于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E8%A7%86%E9%A2%91%E6%98%BE%E7%A4%BA%E6%8E%A7%E5%88%B6%E5%99%A8&action=edit&redlink=1">视频显示控制器</a>。</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=Mac80211&action=edit&redlink=1" title="Mac80211（页面不存在）">mac80211</a> – 用于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1" title="无线网卡">无线网络接口控制器</a><sup><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8#cite_note-44">[44]</a></sup>。</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-c1af4f1dfc40f609.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>The <strong>Linux API</strong> is composed out of the System Call Interface of the Linux kernel, the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library">GNU C Library</a> (by <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/GNU" title="GNU">GNU</a>), <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cgroups" title="Cgroups">libcgroup</a>,<sup><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_kernel_interfaces#cite_note-libcgroup-1">[1]</a></sup> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">libdrm</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">libalsa</a> and <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Evdev" title="Evdev">libevdev</a><sup><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_kernel_interfaces#cite_note-libevdev-2">[2]</a></sup> (by <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Freedesktop.org" title="Freedesktop.org">freedesktop.org</a>).</p>
+<h3 id="C标准库：-GNU-C"><a href="#C标准库：-GNU-C" class="headerlink" title="C标准库： GNU C"></a>C标准库： GNU C</h3><p>GNU C库即glibc，是GNU项目对C标准库的实现。并不是所有的标准C函数都能在glibc中找到：大部分数学函数其实由libm实现，它是另外的一个库。</p>
+<p>目前glibc是Linux上使用最广泛的C库。</p>
+<p>glibc 的主体，分布 &#x2F;lib 与 &#x2F;usr&#x2F;lib 中，包括 libc 标准 C 函式库、libm 数学函式库、libcrypt 加密与编码函式库、libdb 资料库函式库、libpthread 行程<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%9A%E6%89%A7%E8%A1%8C%E7%BB%AA">多执行绪</a>函式库、libnss 网路服务函式库 ….<br><img src="https://upload-images.jianshu.io/upload_images/15312191-4e6021d20f46e7d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>The <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library">GNU C Library</a> is a wrapper around the Linux kernel System Call Interface.<br>GNU C 库是 Linux 内核系统调用接口的包装器</p>
+<h3 id="Abstraction-APIs-抽象接口"><a href="#Abstraction-APIs-抽象接口" class="headerlink" title="Abstraction APIs 抽象接口"></a>Abstraction APIs 抽象接口</h3><p>在某些情况下，内核过于底层，开发者需要更高一层的抽象。当然，这些仍然需要在底层 Linux API 之上工作。<br><img src="https://upload-images.jianshu.io/upload_images/15312191-c4fbb9465194b054.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>OpenGL is indeed an abstraction API to make use of diverse GPUs of multiple vendors without the need to program for each one specifically.<br>OpenGL 确实是一种抽象 API，可以利用多个供应商的不同 GPU，而无需专门为每个 GPU 进行编程。</p>
+<blockquote>
+<p>[1] <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8">https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8</a><br>[2] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_kernel_interfaces#Linux_API">https://en.wikipedia.org/wiki/Linux_kernel_interfaces#Linux_API</a><br>[3] <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1357674">Linux中形形色色的接口API和ABI</a><br>[4] <a target="_blank" rel="noopener" href="http://justme0.com/archive/c-cpp-standard-library.html">什么是 C&#x2F;C++ 标准库</a><br>[5] 《linux&#x2F;unix 系统编程手册》chapter 3</p>
+</blockquote>
+
+
       
     </div>
-  
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/02/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(11)-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%95%E5%B1%82%E5%BA%93%E5%92%8C%E6%8E%A5%E5%8F%A3/" data-id="clw9094md001f2omvbu2850xv" data-title="⛵︎验证码-(11)-操作系统底层库和接口" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/01/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(10)--%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/01/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(10)--%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/"  itemprop="url">
-        ⛵︎验证码---(10)--操作系统之进程通信
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        linux进程状态简单版  运行状态（Running）  就绪状态（Ready）  等待状态，又称阻塞状态（Blocked）  创建状态（New）  结束状态（Exit)
-详细版
-进程的创建Linux最早产生的进程是启动过程中创建的idle进程，pid号为0，该进程会创建一个内核线程，该线程进行一系列初始化动作后最终会执行&#x2F;sbin&#x2F;init文件，执行该文件的结果是运行模...
-      
-    
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎验证码---(10)--操作系统之进程通信" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/01/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(10)--%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/" class="article-date">
+  <time class="dt-published" datetime="2021-12-01T16:00:00.000Z" itemprop="datePublished">2021-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-12-01T16:00:00+00:00">2021-12-01</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/01/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(10)--%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/">⛵︎验证码---(10)--操作系统之进程通信</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/01/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(10)--%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <h4 id="linux进程状态"><a href="#linux进程状态" class="headerlink" title="linux进程状态"></a>linux进程状态</h4><h5 id="简单版"><a href="#简单版" class="headerlink" title="简单版"></a>简单版</h5><p>  运行状态（Running）<br>  就绪状态（Ready）<br>  等待状态，又称阻塞状态（Blocked）<br>  创建状态（New）<br>  结束状态（Exit)</p>
+<h5 id="详细版"><a href="#详细版" class="headerlink" title="详细版"></a>详细版</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-2a155c4059b5e0ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h4><p>Linux最早产生的进程是启动过程中创建的idle进程，pid号为0，该进程会创建一个内核线程，该线程进行一系列初始化动作后最终会执行&#x2F;sbin&#x2F;init文件，执行该文件的结果是运行模式从核心态切换到了用户态，该线程演变成了用户进程init，pid号为1。init进程是一个非常重要的进程，一切用户态进程都是它的后代进程。</p>
+<p>在UNIX中，操作系统初始化时所创建的1号进程是所有用户进程的祖先，1号进程为每个从终端登录入系统的用户创建一个终端进程，这些终端进程又会利用“进程创建”系统调用创建子进程，从而形成进程间的层次体系，称为进程树或进程族系。</p>
+<p>Linux系统执行新任务的典型方法是通过fork()&#x2F;exec()函数。通常fork()创建一个新进程，然后新进程通过调用exec系列函数执行真正的任务</p>
+<h4 id="进程由以下4方面组成"><a href="#进程由以下4方面组成" class="headerlink" title="进程由以下4方面组成"></a>进程由以下4方面组成</h4><p>① 进程包括至少一个可执行程序，含有代码和初始数据，一般在进程创建时说明。注意，可执行程序可以被多个进程共享，换句话说，多个进程可能运行同一个可执行程序。<br>② 进程包括一个独立的进程用户空间，在进程创建时由操作系统分配。<br>③ 进程包括系统资源。这是指在进程创建及执行过程中，由操作系统分配给进程的系统资源，包括I&#x2F;O设备、文件等。<br>④ 进程包括一个执行栈区，包含运行现场信息，如子程序调用时所压栈帧，系统调用时所压的栈帧等，这是进程运行及进程调度进行处理机切换时所要涉及的数据结构。</p>
+<h4 id="pid有什么用"><a href="#pid有什么用" class="headerlink" title="pid有什么用"></a>pid有什么用</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-10d6225c57395bd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>在操作系统中，每个进程都有一个唯一的内部数字标识符，它可以是图3.2中进程控制块的地址值，或者是可以映射出进程控制块位置的某种索引值。标识符是非常有用的，操作系统控制的其他表格中可以用进程标识符来定位进程控制块。例如，文件访问的有关表格中可以存入进程标识符，说明该文件已被哪几个进程打开；当进程相互通信时，通过进程标识符说明要交换信息的对方进程；当进程创建子进程时，用进程标识符来指明父进程或子进程。这里的进程标识符是一个数字式的系统内码，通过它可以建立其他表格与进程控制块之间的联系。</p>
+<h4 id="操作系统进程通信实例"><a href="#操作系统进程通信实例" class="headerlink" title="操作系统进程通信实例"></a>操作系统进程通信实例</h4><h5 id="1-手机微信分享，比如网易云音乐分享到微信朋友圈"><a href="#1-手机微信分享，比如网易云音乐分享到微信朋友圈" class="headerlink" title="1.手机微信分享，比如网易云音乐分享到微信朋友圈"></a>1.手机微信分享，比如网易云音乐分享到微信朋友圈</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-1cd58b5e0f54e973.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>网易云音乐 &#x3D;&gt; 微信朋友圈</p>
+<h5 id="2-apple-store-通过浏览器打开"><a href="#2-apple-store-通过浏览器打开" class="headerlink" title="2.apple store 通过浏览器打开"></a>2.apple store 通过浏览器打开</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-203d82f85607ff1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>谷歌浏览器 &#x3D;&gt; apple Store</p>
+<h5 id="3-uni-app-打开小程序"><a href="#3-uni-app-打开小程序" class="headerlink" title="3.uni-app 打开小程序"></a>3.uni-app 打开小程序</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-35ca6a0a14ab2156.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>HBuilderX &#x3D;&gt; 微信开发者工具</p>
+<h5 id="4-selenium-调用Google浏览器"><a href="#4-selenium-调用Google浏览器" class="headerlink" title="4. selenium 调用Google浏览器"></a>4. selenium 调用Google浏览器</h5><p>使用selenium，driver做网页测试</p>
+<h4 id="5-AndPods调用蓝牙"><a href="#5-AndPods调用蓝牙" class="headerlink" title="5.AndPods调用蓝牙"></a>5.AndPods调用蓝牙</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-2bee6d7ba9645430.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="6-h5调用微信支付"><a href="#6-h5调用微信支付" class="headerlink" title="6.h5调用微信支付"></a>6.h5调用微信支付</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-ad121e6bae57f788.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>js &#x3D;&gt; 微信app</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/iamshuaidi/algo-basic/blob/master/%E5%AD%A6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%BF%9B%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%A9%B6%E7%AB%9F%E6%9C%89%E5%93%AA%E4%BA%9B%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9F%E5%A6%82%E4%BD%95%E9%80%9A%E4%BF%A1%EF%BC%9F.md">进程之间究竟有哪些通信方式</a><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/7033751175551942692">浏览器为什么能唤起App的页面</a><br><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html">微信网页开发 &#x2F;JS-SDK说明文档</a></p>
+</blockquote>
+
+
       
     </div>
-  
-
-</div>
-
-          </div>
-        
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/01/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(10)--%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/" data-id="clw9094mh001l2omvep009rgv" data-title="⛵︎验证码---(10)--操作系统之进程通信" class="article-share-link">Share</a>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/"  itemprop="url">
-        ⛵︎验证码---(9)--CPU多任务原理
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
       
-        CPU三项基本工作就是这样去执行读出数据、处理数据和往内存写数据
-并发和并行
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
 
-进程和线程进程
-进程是程序的一次执行过程，是一个动态概念，是程序在执行过程中分配和管理资源的基本单位，一个进程就是一个程序的运行实例。
-线程
-线程是CPU调度和分派的基本单位，它可与同属一个进程的其他的线程共享进程所拥有的全部资源。
-联系线程是进程的一部分，一个线程只能属于一个进程，而一个进程可以有多个线程，但至...
-      
-    
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎验证码---(9)--CPU多任务原理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/" class="article-date">
+  <time class="dt-published" datetime="2021-11-29T16:00:00.000Z" itemprop="datePublished">2021-11-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-29T16:00:00+00:00">2021-11-29</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/">⛵︎验证码---(9)--CPU多任务原理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <h3 id="CPU三项基本工作"><a href="#CPU三项基本工作" class="headerlink" title="CPU三项基本工作"></a>CPU三项基本工作</h3><p>就是这样去执行读出数据、处理数据和往内存写数据</p>
+<h3 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h3><p><img src="https://upload-images.jianshu.io/upload_images/15312191-836bbb0c9a25165c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/15312191-44810c215abacbeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-3c2965f978dce7a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>进程</p>
+<p>进程是程序的一次执行过程，是一个动态概念，是程序在执行过程中分配和管理资源的基本单位，一个进程就是一个程序的运行实例。</p>
+<p>线程</p>
+<p>线程是CPU调度和分派的基本单位，它可与同属一个进程的其他的线程共享进程所拥有的全部资源。</p>
+<p>联系<br>线程是进程的一部分，一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程。</p>
+<p>区别：理解它们的差别，从资源使用的角度出发。（所谓的资源就是计算机里的中央处理器，内存，文件，网络等等）</p>
+<p>根本区别：进程是操作系统资源分配的基本单位，而线程是任务调度和执行的基本单位</p>
+<h3 id="单核cpu实现多任务原理"><a href="#单核cpu实现多任务原理" class="headerlink" title="单核cpu实现多任务原理"></a>单核cpu实现多任务原理</h3><p><img src="https://upload-images.jianshu.io/upload_images/15312191-86faa3679995eeee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>对于单cpu，多个进程在这个单cpu中是并发运行，根据时间片读取上下文+执行程序+保存上下文</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/valjeanshaw/p/11469514.html">进程，线程与多核，多cpu之间的关系 </a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/33515481/answer/1559913485">并发与并行的区别是什么</a><br><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/article/113513">Chrome架构：仅仅打开了1个页面，为什么有4个进程？</a><br><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/8ab7d51902768e9950e73821.html?re=view">CPU工作原理揭秘</a></p>
+</blockquote>
+<blockquote>
+<p>备注：1毫秒(ms) &#x3D; 1000(微秒)us</p>
+</blockquote>
+
+
       
     </div>
-  
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/29/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81---(9)--CPU%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86/" data-id="clw9094mj001n2omvcs37dhyt" data-title="⛵︎验证码---(9)--CPU多任务原理" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/"  itemprop="url">
-        -🎨🎨-git-push-为什么必须要先-git-pull
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        (e.g., ‘git pull …’) before pushing againUse git pull to pull the latest changes from the remote repository to your local repository. In this case, pulling changes will require a merge because you ...
-      
-    
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post--🎨🎨-git-push-为什么必须要先-git-pull" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/" class="article-date">
+  <time class="dt-published" datetime="2021-11-17T16:00:00.000Z" itemprop="datePublished">2021-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-17T16:00:00+00:00">2021-11-17</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/">-🎨🎨-git-push-为什么必须要先-git-pull</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <div class=""><h2 id="e-g-‘git-pull-…’-before-pushing-again"><a href="#e-g-‘git-pull-…’-before-pushing-again" class="headerlink" title="(e.g., ‘git pull …’) before pushing again"></a>(e.g., ‘git pull …’) before pushing again</h2><p>Use git pull to pull the latest changes from the remote repository to your local repository. In this case, pulling changes will require a merge because you have made changes to your local repository.</p>
+<p>I’ll provide an example and a picture to explain. Let’s assume your last pull from origin&#x2F;branch was at Commit B. You have completed and committed some work (Commit C). At the same time, someone else has completed their work and pushed it to origin&#x2F;branch (Commit D). There will need to be a merge between these two branches.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local branch:                         --- Commit C </span><br><span class="line">                                    /</span><br><span class="line">                                   /</span><br><span class="line">                                  /</span><br><span class="line">origin/branch: Commit A ------ Commit B ---- Commit D</span><br></pre></td></tr></table></figure>
+<p>Because you are the one that wants to push, <strong><code>Git forces</code></strong> you to perform the merge. To do so, you must first pull the changes from origin&#x2F;branch.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local branch:                         --- Commit C -- Commit E</span><br><span class="line">                                    /               /           </span><br><span class="line">                                   /               /             </span><br><span class="line">                                  /               /               </span><br><span class="line">origin/branch: Commit A ------ Commit B ---- Commit D </span><br></pre></td></tr></table></figure>
+<p>After completing the merge, you will now be allowed to fast-forward origin&#x2F;branch to Commit E by pushing your changes.</p>
+<p>Git requires that you handle merges yourself, because a merge may lead to <strong><code>conflicts</code></strong>.</p>
+
+</div>
       
     </div>
-  
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/17/-%F0%9F%8E%A8%F0%9F%8E%A8-git-push-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E8%A6%81%E5%85%88-git-pull/" data-id="clw9094li00052omva90e5ihq" data-title="-🎨🎨-git-push-为什么必须要先-git-pull" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/"  itemprop="url">
-        ⛵︎数图番外篇-液晶显示器原理
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-显示器接口
-VGAVGA接头：针数为15的视频接口，主要用于老式的电脑输出。VGA输出和传递的是模拟信号。大家都知道计算机显卡产生的是数字信号，显示器使用的也是数字信号。所以使用VGA的视频接口相当于是经历了一个数模转换和一次模数转换。信号损失，显示较为模糊。
-HDMIHDMI是一种高清视频接口，在目前主流笔记本、液晶电视、显卡、主板中都比较常见。HDMI是一种数字化视频&#x2F;音频接...
-      
-    
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎数图番外篇-液晶显示器原理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/" class="article-date">
+  <time class="dt-published" datetime="2021-11-17T16:00:00.000Z" itemprop="datePublished">2021-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-17T16:00:00+00:00">2021-11-17</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/">⛵︎数图番外篇-液晶显示器原理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <p><img src="https://upload-images.jianshu.io/upload_images/15312191-0b2e1954e506137d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="显示器基本构成"></p>
+<div class=""><h2 id="显示器接口"><a href="#显示器接口" class="headerlink" title="显示器接口"></a>显示器接口</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-abb49b2a33c73d0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="VGA"><a href="#VGA" class="headerlink" title="VGA"></a>VGA</h4><p>VGA接头：针数为15的视频接口，主要用于老式的电脑输出。VGA输出和传递的是模拟信号。大家都知道计算机显卡产生的是数字信号，显示器使用的也是数字信号。所以使用VGA的视频接口相当于是经历了一个数模转换和一次模数转换。信号损失，显示较为模糊。</p>
+<h4 id="HDMI"><a href="#HDMI" class="headerlink" title="HDMI"></a>HDMI</h4><p>HDMI是一种高清视频接口，在目前主流笔记本、液晶电视、显卡、主板中都比较常见。HDMI是一种数字化视频&#x2F;音频接口技术，是适合影像传输的专用型数字化接口，其可同时传送音频和影音信号，最高数据传输速度为5Gbps，可支持1080P，720P的全高清格式视频输出，是目前最为流行的高清接口，这是普通的VGA显示接口所无法比拟的，犹如宽带中电话线宽带与光纤一样，传输数据能力区别很大。</p>
+<h4 id="DVI"><a href="#DVI" class="headerlink" title="DVI"></a>DVI</h4><p>DVI接口：DVI接口有两个标准，25针和29针，如下图所示。直观来说，这两种接口没有区别。DVI接口传输的是数字信号，可以传输大分辨率的视频信号。DVI连接计算机显卡和显示器时不用发生转换，所以信号没有损失。</p>
+<p>准确说，DVI分为DVI-I和DVI-D 前者依然是模拟信号输出 后者则是完全的高清数字输出 使用DVI-I的显卡接口可以使用转接头转成VGA输出 后者则不能 DVI-I的实际画面输出和VGA没有本质的区别 DVI-D和HDMI才是真正的数字无损输出</p>
+<h4 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h4><p>DP接口DP（Display Port）接口是HDMI接口的竞争对手。在一些显卡与显示器上，除了有HDMI接口，也带有DP接口。目前DP接口发展到1.4版本，能传输10bit的4K 120Hz视频，也可以支持8K 60Hz视频。DP1.4兼容USB Type-C接口，这就意味着，我们可以使用DP1.4协议，在USB 3.1传输数据的同时，同步传输高清视频。从趋势来看，这对于推动周边影音及影像设备的升级，是非常有好处的。而且，DP接口也可以单根线同步传输声音，达到使用显示器声音的使用方式。</p>
+<h4 id="USB-Type-C"><a href="#USB-Type-C" class="headerlink" title="USB Type-C"></a>USB Type-C</h4><p>USB Type-C接口USB接口早已被大家所熟知，以往USB接口被设计用来传输数据，所以它在移动硬盘等存储设备的使用上非常常见。现在USB 3.1 Gen2的速度已经达到10Gbps，设计标准也可以满足视频、数据兼顾传输，所以在一些显示器上，也能够发现USB 3.1接口。现在的USB3.1接口，已经能够满足4K 30P的分辨率显示，大致与HDMI1.4在同一水平。但它以后再进行升级，必将能成为最通用的显示传输方式。需要注意的是，USB 3.1 Gen1就是USB 3.0，而USB 3.1 Gen2才是真正的USB3.1。</p>
+<h4 id="雷电接口"><a href="#雷电接口" class="headerlink" title="雷电接口"></a>雷电接口</h4><p>雷电接口雷电（thunderbolt）接口在苹果电脑上用的非常多，苹果的中文官网将其译为雷雳。它以速度快，传输稳定而著称。雷电接口的技术融合了PCI Express和DisplayPort（就是上面说的DP口）两种通信协议。其中PCI Express用于数据传输，可以非常方便地进行任何类型设备扩展；DisplayPort用于显示，能同步传输1080p乃至4K视频和最多八声道音频。并且两条通道在传输时都有自己单独的通道，不会产生任何干扰。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-471bdd4d10217d14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</div><div class=""><h2 id="驱动版"><a href="#驱动版" class="headerlink" title="驱动版"></a>驱动版</h2><p>接受数字信号和模拟信号，经过解码器，解码加载到 scaler芯片中<br>####（1）A／D转换电路</p>
+<p>A／D转换电路即模／数转换器，用以将VGA接口输出的模拟R、G、B信号转换为数字信号，然后送到Sealer电路进行处理。</p>
+<p>早期的液晶显示器，一般单独设立一块A／D转换芯片（如AD9883、AD9884等），现在生产的液晶显示器，大多已将A／D转换电路集成在Scaler芯片中。<br>####（2） Sealer电路<br>Sealer电路的名称较多，如图像缩放电路、主控电路、图像控制器等。Sealer电路的核心是一块大规模集成电路，称为Sealer芯片，其作用是对A&#x2F;D转换得到的数字信号或TMDS接收器输出的数据和时钟信号，进行缩放、画质增强等处理，再经输出接口电路送至液晶面板，最后，由液面板时控制1C（TCON）将信号传输至面板上的行列驱动IC. Sealer芯片的性能基本上决定了信号处理的极限能力。另外，在Sealer电路中，一般还集成有屏显电路（OSD电路）。</p>
+<p>液晶显示器为什么要对信号进行缩放处理呢？这是由于一个面板的画素位置与分辨率在制造完成后就已经固定，但是影音装置输出的分辨率却是多元的，当液晶面板必须接收不同分辨率的影音信号时，就要经过缩放处理才能适合一个屏幕的大小，所以信号需要经过Sealer芯片进行缩放处理。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/23941934">读懂电视进化史：CRT、背投、PDP、LCD、OLED</a><br><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/6aaa0fa9b0717fd5360cdc59.html">显示器基本构成</a><br><a target="_blank" rel="noopener" href="https://new.qq.com/omn/20191015/20191015A0Q0VZ00.html">薄薄的液晶显示器是如何显示各种图案</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19571221/answer/569037388">显示器接口类型</a></p>
+</blockquote>
+
+</div>
       
     </div>
-  
-
-</div>
-
-          </div>
-        
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/17/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%99%A8%E5%8E%9F%E7%90%86/" data-id="clw9094ma00192omv950yepzg" data-title="⛵︎数图番外篇-液晶显示器原理" class="article-share-link">Share</a>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/17/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/17/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/"  itemprop="url">
-        🌈-让div填充剩余的屏幕空间的高度
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
       
-        flex父元素设置 flex-flow: column; 垂直排列再使用 flex 自适应布局
-calc height: calc(100% - 50px);剩余高度 &#x3D; 父元素高度 - 已有高度
-demo
-https://codepen.io/qiudaoermu/pen/mdwPWVx
-
-
-
       
-    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
+
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-🌈-让div填充剩余的屏幕空间的高度" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/17/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/" class="article-date">
+  <time class="dt-published" datetime="2021-11-17T16:00:00.000Z" itemprop="datePublished">2021-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-17T16:00:00+00:00">2021-11-17</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/17/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/">🌈-让div填充剩余的屏幕空间的高度</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/17/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <div class=""><h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><p>父元素设置 flex-flow: column; 垂直排列<br>再使用 flex 自适应布局</p>
+</div><div class=""><h2 id="calc"><a href="#calc" class="headerlink" title="calc"></a>calc</h2><p> height: calc(100% - 50px);<br>剩余高度 &#x3D; 父元素高度 - 已有高度</p>
+</div><div class=""><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codepen.io/qiudaoermu/pen/mdwPWVx">https://codepen.io/qiudaoermu/pen/mdwPWVx</a></p>
+</blockquote>
+
+</div>
       
     </div>
-  
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/17/%F0%9F%8C%88-%E8%AE%A9div%E5%A1%AB%E5%85%85%E5%89%A9%E4%BD%99%E7%9A%84%E5%B1%8F%E5%B9%95%E7%A9%BA%E9%97%B4%E7%9A%84%E9%AB%98%E5%BA%A6/" data-id="clw9094n1002e2omvg9o75g5l" data-title="🌈-让div填充剩余的屏幕空间的高度" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/"  itemprop="url">
-        ⛵︎数图番外篇-显卡构成
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        显卡构成1.GPU(核心部件)
-CPU vs GPUgpu 线程多，计算能力强cpu 线程少，但逻辑处理能力强
-一般说来，衡量GPU工作能力的参数有三项：流处理器数量和核心、显存工作频率。
-核心频率显卡的核心频率是指显示核心的工作频率，其工作频率在一定程度上可以反映出显示核心的性能，但显卡的性能是由核心频率、流处理器单元、显存频率、显存位宽等等多方面的情况所决定的。
-2.显存显存的参数有：显...
-      
-    
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎数图番外篇-显卡构成" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/" class="article-date">
+  <time class="dt-published" datetime="2021-11-16T16:00:00.000Z" itemprop="datePublished">2021-11-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:00:00+00:00">2021-11-16</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/">⛵︎数图番外篇-显卡构成</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <div class=""><h2 id="显卡构成"><a href="#显卡构成" class="headerlink" title="显卡构成"></a>显卡构成</h2><h4 id="1-GPU-核心部件"><a href="#1-GPU-核心部件" class="headerlink" title="1.GPU(核心部件)"></a>1.GPU(核心部件)</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-780412aa98ae6182.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-27046c36fc0bb75f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><img src="https://upload-images.jianshu.io/upload_images/15312191-adee513a67f783f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br><strong>CPU vs GPU</strong><br>gpu 线程多，计算能力强<br>cpu 线程少，但逻辑处理能力强</p>
+<p>一般说来，衡量GPU工作能力的参数有三项：流处理器数量和核心、显存工作频率。</p>
+<h5 id="核心频率"><a href="#核心频率" class="headerlink" title="核心频率"></a>核心频率</h5><p>显卡的核心频率是指显示核心的工作频率，其工作频率在一定程度上可以反映出显示核心的性能，但显卡的性能是由核心频率、流处理器单元、显存频率、显存位宽等等多方面的情况所决定的。</p>
+<h4 id="2-显存"><a href="#2-显存" class="headerlink" title="2.显存"></a>2.显存</h4><p>显存的参数有：显存类型，容量，位宽，频率。按常理说三者是越高越好。</p>
+<h5 id="显存与分辨率"><a href="#显存与分辨率" class="headerlink" title="显存与分辨率"></a>显存与分辨率</h5><p>1680 * 1050分辨率，1G显存<br>1440 * 900及其一下，512M就可以<br>1920 * 1080，至少1.5G显存。</p>
+<h5 id="显存类型"><a href="#显存类型" class="headerlink" title="显存类型"></a>显存类型</h5><p>由于现在显存都基于DDR系列内存改造，DDR因为能在时钟的上升沿和下降沿都能传送数据，所以比SDR同频效率高了一倍，因而就有了等效频率这一说法。GDDR3和DDR3都是等效两倍，而GDDR5是2倍于GDDR3的数据预取量和DQ并行总线，使得GDDR5显存的实际速度又快了一倍，等效4倍。</p>
+<p>显存容量（显存提供临时存储功能，大显存有用，但不是那么重要，架构不行显存再大也是耍流氓。比如显存是停车场，如果停车场马路不够宽（位宽bit），汽车速度不够快（显存频率MHz），那么这个停车场的吞吐量就很小，修个超大停车场纯属浪费资源。）</p>
+<h4 id="3-PCB板"><a href="#3-PCB板" class="headerlink" title="3.PCB板"></a>3.PCB板</h4><h4 id="4-风扇"><a href="#4-风扇" class="headerlink" title="4.风扇"></a>4.风扇</h4><h4 id="5-显示输出接口"><a href="#5-显示输出接口" class="headerlink" title="5.显示输出接口"></a>5.显示输出接口</h4><p>显卡作为显示信息处理部件，处理了图像信息要有输出的地方，不然处理完也然并卵。<br>目前显卡常见采用三种输出接口：VGA、HDMI(包含mini HDMI)、DVI、DP（包含miniDP）。<br>VGA就是显卡上输出模拟信号的接口，VGA接口，也称作D-Sub接口。<br>VGA接口是显卡上应用非常广泛的接口类型，常见于中低端显卡。<br>而高端和旗舰显卡都取消了这款接口，使用VGA接口的要使用转接头进行转换。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-92315ec93ff88f02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</div><div class=""><h2 id="显卡用途分类"><a href="#显卡用途分类" class="headerlink" title="显卡用途分类"></a>显卡用途分类</h2><h4 id="GeForce-显示器用的，比如电脑的显卡，消费级显卡，打游戏用的"><a href="#GeForce-显示器用的，比如电脑的显卡，消费级显卡，打游戏用的" class="headerlink" title="GeForce:显示器用的，比如电脑的显卡，消费级显卡，打游戏用的"></a>GeForce:显示器用的，比如电脑的显卡，消费级显卡，打游戏用的</h4><p>采用 NVIDIA Ampere架构</p>
+<h4 id="Quadro-图形卡，超贵的专业卡，专业驱动-大显存版GeForce"><a href="#Quadro-图形卡，超贵的专业卡，专业驱动-大显存版GeForce" class="headerlink" title="Quadro: 图形卡，超贵的专业卡，专业驱动+大显存版GeForce"></a>Quadro: 图形卡，超贵的专业卡，专业驱动+大显存版GeForce</h4><p>采用<code>Turing(图灵)架构</code>和RTX平台<br>是用来做一些C4D、3D MAX等专业领域的显卡</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-9df908949c51f78a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="Titan-图形卡，消费级卡皇，GeForce和Quadro的合体"><a href="#Titan-图形卡，消费级卡皇，GeForce和Quadro的合体" class="headerlink" title="Titan:  图形卡，消费级卡皇，GeForce和Quadro的合体"></a>Titan:  图形卡，消费级卡皇，GeForce和Quadro的合体</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-6303a5addf8cd1cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>配置了特殊的图形处理集群</p>
+<h4 id="Tesla-计算卡，人工智能和深度学习用"><a href="#Tesla-计算卡，人工智能和深度学习用" class="headerlink" title="Tesla:  计算卡，人工智能和深度学习用"></a>Tesla:  计算卡，人工智能和深度学习用</h4><p>采用 NVIDIA Ampere架构</p>
+<p>这类的显卡不只是性能强劲，更可以通过接口连接，并联串联来达到增强性能，达到更高性能的计算目的，所以在这种场所中这种类型的显卡也被称为计算卡。<br><img src="https://upload-images.jianshu.io/upload_images/15312191-f4cf138d780b7edd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+</div><div class=""><h2 id="消费级显卡-参数对比"><a href="#消费级显卡-参数对比" class="headerlink" title="消费级显卡 参数对比"></a>消费级显卡 参数对比</h2><h4 id="高端显卡"><a href="#高端显卡" class="headerlink" title="高端显卡"></a>高端显卡</h4><p><strong>七彩虹（Colorful）九段iGame GeForce RTX 3090 Kudan 24G</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-922ec00a4bfaa040.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>影驰（Galaxy）GeForce RTX 3080 Ti 星曜 OC N卡&#x2F;赛博朋克 电脑电竞游戏专业显卡参数</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-6dc4dde7a4b7dbb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="中端显卡"><a href="#中端显卡" class="headerlink" title="中端显卡"></a>中端显卡</h4><p><strong>七彩虹（Colorful）RTX3060Ti系列RTX3060Ti电竞游戏电脑显卡</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-d51b2476d912f9ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>七彩虹 Colorful RTX 2060&#x2F;2060</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-9fe7124eb4c59aaf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15312191-826ac10704d1f1ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="低端显卡"><a href="#低端显卡" class="headerlink" title="低端显卡"></a>低端显卡</h4><p><strong>七彩虹（Colorful） GTX&#x2F;1650&#x2F;710&#x2F;1030&#x2F;1050ti 游戏办公独立显卡</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-5ebc877070b044d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="入门级显卡"><a href="#入门级显卡" class="headerlink" title="入门级显卡"></a>入门级显卡</h4><p><strong>七彩虹（Colorful）GT1030黄金版2G&#x2F;710</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-0ae9e83e5fe6558c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>七彩虹（Colorful） GT710 黄金版</strong><br><img src="https://upload-images.jianshu.io/upload_images/15312191-b51c5c4f646d0390.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="NVIDIA-架构进化史"><a href="#NVIDIA-架构进化史" class="headerlink" title="NVIDIA 架构进化史"></a>NVIDIA 架构进化史</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-82483bfa1bedbe60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://in.ali213.net/news/201603/988_2.html">教你深入浅出做个硬件知识小达人</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69102013">电脑基础知识—显卡</a><br><a target="_blank" rel="noopener" href="https://www.expreview.com/68156.html">从GTX到RTX，NVIDIA GPU架构的变迁史</a><br><a target="_blank" rel="noopener" href="https://www.mydrivers.com/zhuanti/tianti/gpu/index.html">桌面显卡天梯图</a><br><a target="_blank" rel="noopener" href="https://new.qq.com/omn/20210929/20210929A08P5S00.html">科普向——全面认识显卡构成和各类参数</a></p>
+</blockquote>
+
+</div>
       
     </div>
-  
-
-</div>
-
-          </div>
-        
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/16/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%98%BE%E5%8D%A1%E6%9E%84%E6%88%90/" data-id="clw9094m900172omvayap6lws" data-title="⛵︎数图番外篇-显卡构成" class="article-share-link">Share</a>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/"  itemprop="url">
-        ⛵︎数据到图像-（2）浏览器渲染
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
       
-        chrome渲染图像过程过程：
-
-普通HTML  ➡ dom ➡ skia-webGl ➡ OpenGL
-
-问题：chrome怎么跨平台chrome 在安卓，iOS，Mac,windows,linux都有安装包，chrome作为浏览器怎么做到兼容问题的呢。
-解决方案：skia Skia Graphics Library（SGL）是一个由C++编写的开放源代码图形库Skia主要的类别是SkCa...
       
-    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
+
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎数据到图像-（2）浏览器渲染" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/" class="article-date">
+  <time class="dt-published" datetime="2021-11-08T16:00:00.000Z" itemprop="datePublished">2021-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-08T16:00:00+00:00">2021-11-08</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/">⛵︎数据到图像-（2）浏览器渲染</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <h3 id="chrome渲染图像过程"><a href="#chrome渲染图像过程" class="headerlink" title="chrome渲染图像过程"></a>chrome渲染图像过程</h3><p><img src="https://upload-images.jianshu.io/upload_images/15312191-7e4f1719e8dc88b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>过程：</p>
+<ul>
+<li><strong>普通HTML</strong>  ➡ <strong>dom</strong> ➡ <strong>skia</strong><br>-<strong>webGl</strong> ➡ <strong>OpenGL</strong></li>
+</ul>
+<h3 id="问题：chrome怎么跨平台"><a href="#问题：chrome怎么跨平台" class="headerlink" title="问题：chrome怎么跨平台"></a>问题：chrome怎么跨平台</h3><p>chrome 在安卓，iOS，Mac,windows,linux都有安装包，chrome作为浏览器怎么做到兼容问题的呢。</p>
+<h3 id="解决方案：skia"><a href="#解决方案：skia" class="headerlink" title="解决方案：skia"></a>解决方案：skia</h3><p> <strong>Skia Graphics Library</strong>（SGL）是一个由C++编写的开放源代码图形库<br>Skia主要的类别是SkCanvas，所有的绘图功能都是实现于此类别。以下是SGL简单的代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SkCanvas* can = GraphicsJNI::getNativeCanvas(...);      </span><br><span class="line">SkPaint paint;    </span><br><span class="line">paint.setARGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>);</span><br><span class="line">can-&gt;drawText(<span class="string">&quot;Hello, world&quot;</span>, <span class="number">12</span>, <span class="number">10</span>, <span class="number">10</span>, paint);</span><br></pre></td></tr></table></figure>
+
+
+<div class=""><h2 id="计算机如何处理浏览器数据"><a href="#计算机如何处理浏览器数据" class="headerlink" title="计算机如何处理浏览器数据"></a>计算机如何处理浏览器数据</h2><p><img src="https://upload-images.jianshu.io/upload_images/15312191-a5635d677ddbcf13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>从理论上，我可以用上图的这种键盘按照一定的编码敲出一长串0、1数字序列，再加一个jpg&#x2F;png的后缀名保存。</p>
+<p>打开文件时，是将这些数据送入内存，图片查看程序控制CPU，根据后缀名对数据进行解码、解压后得到图像本身的数据——每个像素的RGB等。</p>
+<p>再历经前面所述的一大串过程，CPU的数据再经过显卡和显示器，最终我就能看到一张滑稽的照片<br><img src="https://upload-images.jianshu.io/upload_images/15312191-06f06c6fd953fd7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h4 id="计算机怎么绘制系统UI的"><a href="#计算机怎么绘制系统UI的" class="headerlink" title="计算机怎么绘制系统UI的"></a>计算机怎么绘制系统UI的</h4><h5 id="windows图像绘制"><a href="#windows图像绘制" class="headerlink" title="windows图像绘制"></a>windows图像绘制</h5><p>操作系统有一套 GUI API ,提供给开发者调用<br>电脑不同应用，使用不同绘制模型，比如windows10 系统，同时运行 画布，有道云笔记，魔兽世界3D游戏<br><img src="https://upload-images.jianshu.io/upload_images/15312191-a9ba87d41f00f53a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>渲染过程：<br>application ➡ OpenGl(Direct) ➡ display driver ➡ screen</p>
+<h5 id="安卓系统图像绘制"><a href="#安卓系统图像绘制" class="headerlink" title="安卓系统图像绘制"></a>安卓系统图像绘制</h5><p><img src="https://upload-images.jianshu.io/upload_images/15312191-4d83c4a6aa27e6e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://vivaxyblog.github.io/2019/12/07/decode-a-png-image-with-javascript-cn.html">一步一步解码 PNG 图片</a><br>《编码，隐藏在计算机软硬件背后的语言》<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137780634">猴子也能看懂的渲染管线（Render Pipeline)</a><br><a target="_blank" rel="noopener" href="https://www.gpuinsight.com/">GPU 观察</a><br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/QoFrdmxdRJG5ETQp5Ua3-A">一颗像素的诞生</a><br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=m-J-tbAlFic">Life of a pixe</a><br><a target="_blank" rel="noopener" href="https://www.daimajiaoliu.com/daima/47da647f6900408">skia简介</a><br><a target="_blank" rel="noopener" href="https://mp.processon.com/view/link/5ec33e0ff346fb690701ff6c">https://mp.processon.com/view/link/5ec33e0ff346fb690701ff6c</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1265245746099941376">GPU渲染管线之旅</a></p>
+</blockquote>
+
+</div>
       
     </div>
-  
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/08/%E2%9B%B5%EF%B8%8E%E6%95%B0%E6%8D%AE%E5%88%B0%E5%9B%BE%E5%83%8F-%EF%BC%882%EF%BC%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/" data-id="clw9094mc001d2omvaek87c7q" data-title="⛵︎数据到图像-（2）浏览器渲染" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/"  itemprop="url">
-        ⛵︎数图番外篇-文本和二进制互转
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        JS字符串与二进制的相互转化的方法，具体代码如下所示：
-&#x2F;&#x2F; 字符串转ascii码，用charCodeAt();&#x2F;&#x2F; ascii码转字符串，用fromCharCode();
-123var str = &quot;A&quot;;var code = str.charCodeAt();var str2 = String.fromCharCode(code...
-      
-    
+    </footer>
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</article>
+
+
+
+  
+    <article id="post-⛵︎数图番外篇-文本和二进制互转" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/" class="article-date">
+  <time class="dt-published" datetime="2021-11-07T16:00:00.000Z" itemprop="datePublished">2021-11-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <time itemprop="dateCreated datePublished" datetime="2021-11-07T16:00:00+00:00">2021-11-07</time>
-        
-      </div>
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/">⛵︎数图番外篇-文本和二进制互转</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <div>
-          <a class='readmore' href='/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        <p>JS字符串与二进制的相互转化的方法，具体代码如下所示：</p>
+<p>&#x2F;&#x2F; 字符串转ascii码，用charCodeAt();<br>&#x2F;&#x2F; ascii码转字符串，用fromCharCode();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;A&quot;;</span><br><span class="line">var code = str.charCodeAt();</span><br><span class="line">var str2 = String.fromCharCode(code);</span><br></pre></td></tr></table></figure>
+
+<h4 id="文本转二机制，基本示例"><a href="#文本转二机制，基本示例" class="headerlink" title="文本转二机制，基本示例"></a>文本转二机制，基本示例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = &quot;i&quot;;</span><br><span class="line">console.log(a.charCodeAt()); //105</span><br><span class="line">console.log(a.charCodeAt().toString(2)); //1101001</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = &quot;我&quot;;</span><br><span class="line">console.log(a.charCodeAt()); //25105</span><br><span class="line">console.log(a.charCodeAt().toString(2)); //110001000010001 </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = &quot;我们&quot;;</span><br><span class="line">console.log(a.length); //2</span><br><span class="line">var list = a.split(&quot;&quot;);</span><br><span class="line">console.log(list.length); //2&lt;br&gt;console.log(a.charCodeAt().toString(2)); //110001000010001 100111011101100 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="二进制转文本"><a href="#二进制转文本" class="headerlink" title="二进制转文本"></a>二进制转文本</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let byte = &quot;110001000010001&quot;</span><br><span class="line">const asciiCode = parseInt(byte,2);</span><br><span class="line">const charValue = String.fromCharCode(asciiCode)</span><br><span class="line">// 我</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="多个字符互转"><a href="#多个字符互转" class="headerlink" title="多个字符互转"></a>多个字符互转</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// 将字符串转换成二进制形式，中间用空格隔开</span><br><span class="line">function strToBinary(str)&#123;</span><br><span class="line">  var result = [];</span><br><span class="line">  var list = str.split(&quot;&quot;);</span><br><span class="line">  for(var i=0;i&lt;list.length;i++)&#123;</span><br><span class="line">    if(i != 0)&#123;</span><br><span class="line">      result.push(&quot; &quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    var item = list[i];</span><br><span class="line">    var binaryStr = item.charCodeAt().toString(2);</span><br><span class="line">    result.push(binartStr);</span><br><span class="line">  &#125;  </span><br><span class="line">  return result.join(&quot;&quot;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(strToBinary(&quot;我们&quot;)); // 110001000010001 100111011101100</span><br><span class="line">console.log(strToBinary(&quot;@%$+&quot;)); // 1000000 100101 100100 101011</span><br><span class="line"></span><br><span class="line">// 将二进制字符串转换成Unicode字符串</span><br><span class="line">function binaryToStr(str)&#123;</span><br><span class="line">  var result = [];</span><br><span class="line">  var list = str.split(&quot; &quot;);</span><br><span class="line">  for(var i=0;i&lt;list.length;i++)&#123;</span><br><span class="line">     var item = list[i];</span><br><span class="line">     var asciiCode = parseInt(item,2);</span><br><span class="line">     var charValue = String.fromCharCode(asciiCode);</span><br><span class="line">     result.push(charValue);</span><br><span class="line">  &#125;</span><br><span class="line">  return result.join(&quot;&quot;);</span><br><span class="line">&#125; </span><br><span class="line">console.log(binaryToStr(&quot;110001000010001 100111011101100&quot;)); // 我们</span><br><span class="line">console.log(binaryToStr(&quot;1000000 100101 100100 101011&quot;)); // @%$+  </span><br></pre></td></tr></table></figure>
+
+
       
     </div>
-  
-
-</div>
-
-          </div>
-        
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/07/%E2%9B%B5%EF%B8%8E%E6%95%B0%E5%9B%BE%E7%95%AA%E5%A4%96%E7%AF%87-%E6%96%87%E6%9C%AC%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BA%92%E8%BD%AC/" data-id="clw9094m800152omvcd2i4tu0" data-title="⛵︎数图番外篇-文本和二进制互转" class="article-share-link">Share</a>
       
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/page/5/">
-            <section class="post prev white-box shadow floatable blur" >
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          6 / 14
-        </p>
-        
-          <a class="next" rel="next" href="/page/7/">
-            <section class="post next white-box shadow floatable blur">
-              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
-
-
-</div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
-  
-  
-    
-    
-
-<section class="widget blogger shadow floatable blur desktop mobile pjax">
-  <div class='content'>
-    
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS44AXVmnnCNwYQOFaeQSJ2ejQLWW-Llios4w&usqp=CAU'/>
-        </a>
       
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hexo</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
+
+    </footer>
   </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+  </nav>
+
 </section>
-
+        
+          <aside id="sidebar">
   
-
-  
-    
     
 
   
-
-  
     
-    
-  
-
-  <section class="widget tagcloud shadow floatable blur desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/css/" style="font-size: 19px; color: #777">css</a> <a href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" style="font-size: 16.5px; color: #888">mac小天地</a> <a href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" style="font-size: 19px; color: #777">实践堂</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">开发日常</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 16.5px; color: #888">正则</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" style="font-size: 19px; color: #777">编程范式</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" style="font-size: 14px; color: #999">美食记录</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E5%B0%8F%E7%AA%A5/" style="font-size: 21.5px; color: #666">计算机基础小窥</a>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" rel="tag">mac小天地</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" rel="tag">实践堂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" rel="tag">编程范式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" rel="tag">美食记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E5%B0%8F%E7%AA%A5/" rel="tag">计算机基础小窥</a></li></ul>
     </div>
-  </section>
+  </div>
 
 
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/mac%E5%B0%8F%E5%A4%A9%E5%9C%B0/" style="font-size: 12.5px;">mac小天地</a> <a href="/tags/%E5%AE%9E%E8%B7%B5%E5%A0%82/" style="font-size: 15px;">实践堂</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" style="font-size: 20px;">开发日常</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 12.5px;">正则</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" style="font-size: 15px;">编程范式</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">美食记录</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E5%B0%8F%E7%AA%A5/" style="font-size: 17.5px;">计算机基础小窥</a>
+    </div>
+  </div>
 
   
-
-
-<!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
   </div>
 
 
-  <!-- Custom Files side begin -->
   
-  <!-- Custom Files side end -->
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/undefined/21/--%F0%9F%8C%A6%F0%9F%8C%A6-element-upload-%E4%BD%BF%E7%94%A8axios-%E4%BB%A3%E7%90%86%E4%B8%8A%E4%BC%A0/">--🌦🌦-element-upload-使用axios-代理上传</a>
+          </li>
+        
+          <li>
+            <a href="/2023/undefined/11/-%F0%9F%8C%A6%F0%9F%8C%A6nodejs%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E6%9C%8D%E5%8A%A1%E4%BB%A3%E7%90%86/">-🌦🌦nodejs做服务器和服务代理</a>
+          </li>
+        
+          <li>
+            <a href="/2023/undefined/28/%F0%9F%8C%A6%F0%9F%8C%A6-vite+vue3%E4%BD%BF%E7%94%A8tailwindcss/">🌦🌦-vite+vue3使用tailwindcss</a>
+          </li>
+        
+          <li>
+            <a href="/2023/undefined/19/%E4%BD%BF%E7%94%A8-TS-%E9%80%82%E9%85%8D-ES-Module-%E5%92%8C-CommonJS-%E4%B8%A4%E7%A7%8D%E6%A0%BC%E5%BC%8F/">使用-TS-适配-ES-Module-和-CommonJS-两种格式</a>
+          </li>
+        
+          <li>
+            <a href="/2023/undefined/24/-%F0%9F%93%A3%F0%9F%93%A3--%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%8D%81%E5%A4%A7%E5%B1%82%E6%AC%A1/">-📣📣--软件工程师的十大层次</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
 </aside>
-
-
-
-          <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<pjax>
-<script>
-  window.pdata={}
-  pdata.ispage=false;
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  pdata.commentConfig={};
-  //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
-  
-    // header
-    var l_header=document.getElementById("l_header");
-    
-    l_header.classList.add("show");
-    
-    
-      // cover
-      var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
-      var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
-      scroll_down.style.display="none";
-    
-  
-</script>
-</pjax>
-        </div>
         
-  
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
-    <br><br>
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
-      
-    
-      
-        <br>
-        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
-</div>
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
-      
-    
-      
-        Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
-        as theme
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="/">Copyright © since 2017 XXX</a></p>
-
-        </div>
-      
-    
-    <!-- Custom Files footer begin-->
-    
-    <!-- Custom Files footer end-->
-  </footer>
-
-
-        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
       </div>
-    </div>
-    <div>
-      <script>
-  /******************** volantis.dom ********************************/
-  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
-  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
-  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
-  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
-  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
-  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
-  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
-  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
-  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
-</script>
-
-<script>
+      <footer id="footer">
   
-  volantis.css("https://unpkg.com/volantis-static@0.0.1649552113628/libs/@fortawesome/fontawesome-free/css/all.min.css");
-  
-  
-  
-</script>
-
-<!-- required -->
-
-
-<!-- internal -->
-
-<script src="/js/app.af2d54c8.js"></script>
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="rightmenu-wrapper">
-  <ul class="list-v rightmenu" id="rightmenu-content">
-    
-  <li class='navigation menuNavigation-Content'>
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
-
-
-  </li>
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
-      <i class="fa-solid fa-paste fa-fw"></i>
-      粘贴文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
-      <i class="fa-solid fa-object-ungroup fa-fw"></i>
-      全选文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
-      <i class="fa-solid fa-cut fa-fw"></i>
-      剪切文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
-      <i class="fa-solid fa-copy fa-fw"></i>
-      复制文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      站内搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      必应搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
-      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
-      新标签页打开
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
-      <i class="fa-solid fa-link fa-fw"></i>
-      复制链接地址
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
-      <i class="fa-solid fa-image fa-fw"></i>
-      复制图片
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
-      <i class="fa-solid fa-images fa-fw"></i>
-      谷歌识图
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://volantis.js.org/faqs/" data-group="link">
-      <i class="fa-solid fa-question fa-fw"></i>
-      常见问题
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://volantis.js.org/examples/" data-group="link">
-      <i class="fa-solid fa-rss fa-fw"></i>
-      示例博客
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://volantis.js.org/contributors/" data-group="link">
-      <i class="fa-solid fa-fan fa-fw"></i>
-      加入社区
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
-      本站源码
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
-      主题源码
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
-      <i class="fa-solid fa-moon fa-fw"></i>
-      暗黑模式
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
-      <i class="fa-solid fa-print fa-fw"></i>
-      打印页面
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
-      <i class="fa-solid fa-book-open fa-fw"></i>
-      阅读模式
-    </span>
-  </li>
-
-
-<div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
-  </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
-    </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
-    </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
-    </a>
-  </li>
-  <li class='music volume'>
-    <div class='nav volume'>
-      <div class="aplayer-volume-bar-wrap">
-        <div class="aplayer-volume-bar fix-cursor-pointer">
-          <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
-        </div>
-      </div>
-    </div>
-  </li>
-</div>
-
-  </ul>
-</div>
-<script src="/js/plugins/rightMenus.cd02aa19.js"></script>
-<script>
-  const RightMenusFunction = {};
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- RightMenusFunction['copyPaste'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyAll'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyCut'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyText'] = (fun) => {fun()} -->
-
-
-
-
-
-  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
-
-
-
-
-
-  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
-
-
-
-
-
-  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
-
-
-
-
-
-  <!-- RightMenusFunction['copyLink'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyImg'] = (fun) => {fun()} -->
-
-
-
-
-
-  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
-
-
-
-
-
-  <!-- RightMenusFunction['printMode'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['readMode'] = (fun) => {fun()} -->
-
-
-
-
-
-</script>
-
-
-
-<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
-
-
-
-<script>
-  function loadIssuesJS() {
-    
-      const sites_api = document.getElementById('sites-api');
-      if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/tags/sites.76bf19b8.js")
-      }
-    
-    
-      const friends_api = document.getElementById('friends-api');
-      if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/friends.f372da57.js")
-      }
-    
-    
-      const contributors_api = document.getElementById('contributors-api');
-      if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/contributors.aec80453.js")
-      }
-    
-  };
-  loadIssuesJS()
-  volantis.pjax.push(()=>{
-    loadIssuesJS();
-  })
-
-</script>
-
-
-
-
-
-
-  
-
-<script>
-  window.FPConfig = {
-	delay: 0,
-	ignoreKeywords: ["#"],
-	maxRPS: 6,
-	hoverDelay: 0
-  };
-</script>
-<script defer src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/flying-pages/flying-pages.min.js"></script>
-
-
-
-
-<!--  -->
-
-
-
-
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
-    }
-
-    return document.getElementById("giscus_container");
-  }
-
-  function pjax_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
-  }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  pjax_giscus();
-  volantis.pjax.push(pjax_giscus);
-  volantis.dark.push(dark_giscus);
-</script>
-
-    
-
-
-
-
-
-<!-- optional -->
-
-  <script>
-  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
-    "/" || "/" :
-    "//" || "/";
-  const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
-
-  function loadSearchScript() {
-    // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.0e52f222.js");
-  }
-
-  function loadSearchService() {
-    loadSearchScript();
-    document.querySelectorAll(".input.u-search-input").forEach((e) => {
-      e.removeEventListener("focus", loadSearchService, false);
-    });
-
-    document.querySelectorAll(".u-search-form").forEach((e) => {
-      e.addEventListener("submit", (event) => {
-        event.preventDefault();
-      }, false);
-    });
-  }
-
-  // 打开并搜索 字符串 s
-  function OpenSearch(s) {
-    if (typeof SearchService === 'undefined')
-      loadSearchScript().then(() => {
-        SearchService.setQueryText(s);
-        SearchService.search();
-      });
-    else {
-      SearchService.setQueryText(s);
-      SearchService.search();
-    }
-  }
-
-  // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
-  if (window.location.search && /^\?s=/g.test(window.location.search)) {
-    let queryText = decodeURI(window.location.search)
-      .replace(/\ /g, "-")
-      .replace(/^\?s=/g, "");
-    OpenSearch(queryText);
-  }
-
-  // 搜索输入框获取焦点时加载搜索
-  document.querySelectorAll(".input.u-search-input").forEach((e) => {
-    e.addEventListener("focus", loadSearchService, false);
-  });
-</script>
-
-
-
-
-
-
-
-  <script>
-
-
-
-  function pjax_highlightjs_copyCode(){
-    if (!(document.querySelector(".highlight .code pre") ||
-      document.querySelector(".article pre code"))) {
-      return;
-    }
-    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-  }
-  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
-  volantis.pjax.push(pjax_highlightjs_copyCode)
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-  function load_swiper() {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://unpkg.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
-    volantis.js("https://unpkg.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
-      pjax_swiper();
-    });
-  }
-
-  load_swiper();
-
-  function pjax_swiper() {
-    volantis.swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 8,
-      centeredSlides: true,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  }
-
-  volantis.pjax.push(() => {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    if (typeof volantis.swiper === "undefined") {
-      load_swiper();
-    } else {
-      pjax_swiper();
-    }
-  });
-</script>
-
-
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
-
-</pjax>
-
-<script>
-  function listennSidebarTOC() {
-    const navItems = document.querySelectorAll(".toc li");
-    if (!navItems.length) return;
-    let targets = []
-    const sections = [...navItems].map((element) => {
-      const link = element.querySelector(".toc-link");
-      const target = document.getElementById(
-        decodeURI(link.getAttribute("href")).replace("#", "")
-      );
-      targets.push(target)
-      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
-      link.setAttribute("onclick","return false;")
-      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
-      link.setAttribute("href","/")
-      // 配置 点击 触发新的锚点定位
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        // 这里的 addTop 是通过错位使得 toc 自动展开.
-        volantis.scroll.to(target,{addTop: 5, observer:true})
-        // Anchor id
-        history.pushState(null, document.title, "#" + target.id);
-      });
-      return target;
-    });
-
-    function activateNavByIndex(target) {
-      if (target.classList.contains("active-current")) return;
-
-      document.querySelectorAll(".toc .active").forEach((element) => {
-        element.classList.remove("active", "active-current");
-      });
-      target.classList.add("active", "active-current");
-      let parent = target.parentNode;
-      while (!parent.matches(".toc")) {
-        if (parent.matches("li")) parent.classList.add("active");
-        parent = parent.parentNode;
-      }
-    }
-
-    // 方案一：
-    volantis.activateNavIndex=0
-    activateNavByIndex(navItems[volantis.activateNavIndex])
-    volantis.scroll.push(()=>{
-      if (targets[0].getBoundingClientRect().top >= 0) {
-        volantis.activateNavIndex = 0
-      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
-        volantis.activateNavIndex = targets.length-1
-      } else {
-        for (let index = 0; index < targets.length; index++) {
-          const target0 = targets[index];
-          const target1 = targets[(index+1)%targets.length];
-          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
-            volantis.activateNavIndex=index
-            break;
-          }
-        }
-      }
-      activateNavByIndex(navItems[volantis.activateNavIndex])
-    })
-
-    // 方案二：
-    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
-    // function findIndex(entries) {
-    //   let index = 0;
-    //   let entry = entries[index];
-    //   if (entry.boundingClientRect.top > 0) {
-    //     index = sections.indexOf(entry.target);
-    //     return index === 0 ? 0 : index - 1;
-    //   }
-    //   for (; index < entries.length; index++) {
-    //     if (entries[index].boundingClientRect.top <= 0) {
-    //       entry = entries[index];
-    //     } else {
-    //       return sections.indexOf(entry.target);
-    //     }
-    //   }
-    //   return sections.indexOf(entry.target);
-    // }
-    // function createIntersectionObserver(marginTop) {
-    //   marginTop = Math.floor(marginTop + 10000);
-    //   let intersectionObserver = new IntersectionObserver(
-    //     (entries, observe) => {
-    //       let scrollHeight = document.documentElement.scrollHeight;
-    //       if (scrollHeight > marginTop) {
-    //         observe.disconnect();
-    //         createIntersectionObserver(scrollHeight);
-    //         return;
-    //       }
-    //       let index = findIndex(entries);
-    //       activateNavByIndex(navItems[index]);
-    //     }, {
-    //       rootMargin: marginTop + "px 0px -100% 0px",
-    //       threshold: 0,
-    //     }
-    //   );
-    //   sections.forEach((element) => {
-    //     element && intersectionObserver.observe(element);
-    //   });
-    // }
-    // createIntersectionObserver(document.documentElement.scrollHeight);
-  }
-
-  document.addEventListener("DOMContentLoaded", ()=>{
-    volantis.requestAnimationFrame(listennSidebarTOC)
-  });
-  document.addEventListener("pjax:success", ()=>{
-    volantis.requestAnimationFrame(listennSidebarTOC)
-  });
-</script>
-
-
-
-
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
-
-
-
+  <div class="outer">
+    <div id="footer-info" class="inner">
       
-        <!--
-  pjax重载区域接口：
-  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
-  2.  script[data-pjax]
-  3.  .pjax-reload script
-  4.  .pjax
--->
-
-
-
-<script src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/pjax/pjax.min.js"></script>
-
-
-<script>
-    var pjax;
-    document.addEventListener('DOMContentLoaded', function () {
-      pjax = new Pjax({
-        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([onclick="return!1"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
-        selectors: [
-          "head title",
-          "head meta[name=keywords]",
-          "head meta[name=description]",
-          
-          "#l_main",
-          "#pjax-header-nav-list",
-          ".pjax",
-          "pjax", // <pjax></pjax> 标签
-          "script[data-pjax], .pjax-reload script" // script标签添加data-pjax 或 script标签外层添加.pjax-reload 的script代码段重载
-        ],
-        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-        timeout: 5000,
-        
-      });
-    });
-
-    document.addEventListener('pjax:send', function (e) {
-      //window.stop(); // 相当于点击了浏览器的停止按钮
-
-      try {
-        var currentUrl = window.location.pathname;
-        var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
-        if (banUrl[0] != "") {
-          banUrl.forEach(item => {
-            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
-              window.location.href = targetUrl;
-            }
-          });
-        }
-      } catch (error) {}
-
-      // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
-      volantis.pjax.method.send.start();
-    });
-
-    document.addEventListener('pjax:complete', function () {
-      // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
-      volantis.pjax.method.complete.start();
-    });
-
-    document.addEventListener('pjax:error', function (e) {
-      if(volantis.debug) {
-        console.error(e);
-        console.log('pjax error: \n' + JSON.stringify(e));
-      }else{
-        // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
-        volantis.pjax.method.error.start();
-        window.location.href = e.triggerElement.href;
-      }
-    });
-</script>
-
-      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
-    <!-- import body_end begin-->
-    <!-- import body_end end-->
-    <!-- Custom Files bodyEnd begin-->
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
-    <!-- Custom Files bodyEnd end-->
-  </body>
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
 </html>
