@@ -14,7 +14,7 @@
 <meta property="og:description" content="1.查找一个 12345678910111213let filterTreeId &#x3D; (list, id)  &#x3D;&gt; &amp;#123;      let targetObj &#x3D; null;      for (const item of list) &amp;#123;        if (item.id &#x3D;&#x3D;&#x3D; id) &amp;#123;          targetObj &#x3D; item;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-16T07:39:11.043Z">
+<meta property="article:modified_time" content="2024-05-20T09:13:14.826Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -101,11 +101,10 @@
 <p>2.查找多个</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let  filterTreeIdList = (List, id)  =&gt; &#123;</span><br><span class="line">      let setList = [];</span><br><span class="line">      for (const item of List) &#123;</span><br><span class="line">        if (item.id === id) &#123;</span><br><span class="line">          setList.push(item);</span><br><span class="line">        &#125;</span><br><span class="line">        if (item.childList &amp;&amp; item.childList.length &gt;= 1) &#123;</span><br><span class="line">          setList = [</span><br><span class="line">            ...setList,</span><br><span class="line">            ...filterTreeIdList(item.childList, id)</span><br><span class="line">          ];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return setList;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/18/%F0%9F%A7%AE%F0%9F%A7%AE%E6%9F%A5%E6%89%BE%E6%A0%91%E8%8A%82%E7%82%B9%E4%B8%AD%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%AD%90%E8%8A%82%E7%82%B9/" data-id="clw9094py007o2omveuwcfgq6" data-title="🧮🧮查找树节点中符合条件的子节点" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/18/%F0%9F%A7%AE%F0%9F%A7%AE%E6%9F%A5%E6%89%BE%E6%A0%91%E8%8A%82%E7%82%B9%E4%B8%AD%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%AD%90%E8%8A%82%E7%82%B9/" data-id="clwer0tp8001lkrmvcuw601ig" data-title="🧮🧮查找树节点中符合条件的子节点" class="article-share-link">Share</a>
       
       
       

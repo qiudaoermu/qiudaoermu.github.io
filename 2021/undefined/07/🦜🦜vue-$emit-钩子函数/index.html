@@ -14,7 +14,7 @@
 <meta property="og:description" content="标题换一种说法：vue $emit 调用父组件异步方法，执行完毕后再执行子组件的某方法使用回调的形式 123456789101112&#x2F;&#x2F; 组件的html中添加事件 @getData&#x3D;&quot;getData&quot;methods : &amp;#123;	getData(params, callback) &amp;#123;		console.log(&quot;子组件的传递到父组件的参数&quot;,">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-16T07:39:11.046Z">
+<meta property="article:modified_time" content="2024-05-20T09:13:14.829Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -101,11 +101,10 @@
 <p>子组件</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过 $emit 触发父组件的方法</span></span><br><span class="line"><span class="comment">// 参数：触发的事件名称、事件参数，事件参数</span></span><br><span class="line"><span class="comment">// 把方法当做事件参数传递到父组件，由父组件调用执行。</span></span><br><span class="line"><span class="variable language_">this</span>.$emit(<span class="string">&#x27;getData&#x27;</span>, <span class="number">10</span>, <span class="function">(<span class="params">res</span>)=&gt;</span> &#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;父组件的返回结果：&quot;</span>, res); <span class="comment">//由父组件调用</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/07/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/" data-id="clw9094pu007e2omv01bn2fiy" data-title="🦜🦜vue-$emit-钩子函数" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/07/%F0%9F%A6%9C%F0%9F%A6%9Cvue-$emit-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/" data-id="clwer0tq4002nkrmvhshg0v7e" data-title="🦜🦜vue-$emit-钩子函数" class="article-share-link">Share</a>
       
       
       

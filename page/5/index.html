@@ -96,22 +96,21 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p><img src="https://upload-images.jianshu.io/upload_images/15312191-60837754b15b426c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<div class=""><h2 id="现象："><a href="#现象：" class="headerlink" title="现象："></a>现象：</h2><p>这是一段很简单的flex弹性布局代码：</p>
+<h2 id="现象："><a href="#现象：" class="headerlink" title="现象："></a>现象：</h2><p>这是一段很简单的flex弹性布局代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">HTML:</span><br><span class="line"> &lt;div&gt;</span><br><span class="line">    &lt;div class=&quot;flex-test&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;1&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;2&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;3&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;4&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;5&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;6&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;7&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;8&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">CSS这边是这样：</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.flex-test &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">  flex-wrap: wrap;</span><br><span class="line">  justify-content: start;</span><br><span class="line">  background: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box-test &#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background: red;</span><br><span class="line">  margin: 10px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>justify-content: start 的时候，结果是这样的：<br><img src="https://upload-images.jianshu.io/upload_images/15312191-6958017de3d562a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <p>现在，我们需要将所有红色格子整体居中，很简单：<br>将 justify-content: start 改成：justify-content: center 就行了，结果如下：<br><img src="https://upload-images.jianshu.io/upload_images/15312191-a618c42e4c444355.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>嗯，OK ! 是我们想要的效果！<br>接下来，将可视宽度收窄（比如在手机上显示），变成了这样：<br><img src="https://upload-images.jianshu.io/upload_images/15312191-ffae5ded5fa01849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <p>纳尼？怎么变成这个鬼样子了？flex 布局下，warp之后自动换行，换行后的内容又被居中了。这不太符合一般的排版规则，看起来怪怪的不是吗？</p>
-</div><div class=""><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>搜了很多资料，发现这个问题还不怎么好解决，算是 flex 弹性布局的一个缺陷吧，如果要最后一行与第一行对齐，我们只能将 justify-content 设为 start, 但这样一来就失去了居中的效果。屏幕右边会空出一截来。但是，为了居中，我们将 justify-content 设为 center后，最后一行又非常别扭地立在屏幕正中，也很突兀。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>搜了很多资料，发现这个问题还不怎么好解决，算是 flex 弹性布局的一个缺陷吧，如果要最后一行与第一行对齐，我们只能将 justify-content 设为 start, 但这样一来就失去了居中的效果。屏幕右边会空出一截来。但是，为了居中，我们将 justify-content 设为 center后，最后一行又非常别扭地立在屏幕正中，也很突兀。</p>
 <p>解决方案是换用grid布局：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">HTML:</span><br><span class="line">    &lt;div class=&quot;grid-test&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;1&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;2&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;3&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;4&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;5&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;6&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;7&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;box-test&quot;&gt;8&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">CSS:</span><br><span class="line">.grid-test &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: repeat(auto-fill, 100px);</span><br><span class="line">  grid-gap: 10px;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  background: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box-test &#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background: red;</span><br><span class="line">  margin: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>换用以上代码后，显示如下：<br><img src="https://upload-images.jianshu.io/upload_images/15312191-5ba8363f0d435946.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <p><a target="_blank" rel="noopener" href="https://jsrun.net/G9sKp/edit">预览地址</a></p>
 
-</div>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/09/%F0%9F%8C%88%E8%A7%A3%E5%86%B3flex%E5%B8%83%E5%B1%80warp%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C%E4%B8%8B%E6%9C%80%E5%90%8E%E4%B8%80%E8%A1%8C%E5%B1%85%E4%B8%AD%E9%97%AE%E9%A2%98/" data-id="clw9094n3002j2omvc2lxc4hn" data-title="🌈解决flex布局warp自动换行下最后一行居中问题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/09/%F0%9F%8C%88%E8%A7%A3%E5%86%B3flex%E5%B8%83%E5%B1%80warp%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C%E4%B8%8B%E6%9C%80%E5%90%8E%E4%B8%80%E8%A1%8C%E5%B1%85%E4%B8%AD%E9%97%AE%E9%A2%98/" data-id="clwer0tsh004hkrmv618a5hz5" data-title="🌈解决flex布局warp自动换行下最后一行居中问题" class="article-share-link">Share</a>
       
       
       
@@ -157,63 +156,10 @@
 <h3 id="5-内存数据紧凑"><a href="#5-内存数据紧凑" class="headerlink" title="5.内存数据紧凑"></a>5.内存数据紧凑</h3><p>可以在内存里紧凑的存储数据，这一点可以使用更少的内存，更适合CPU缓存。所有的对象字段都有类型，而且字段被紧凑的打包在一起。例如，几个布尔标志每个只占用一个字节。Go也有值语义，可以将一个对象直接嵌入到另一个对象中，这样它就“免费”而无需另一个分配。js没有这些特性，而且还有其他特点，比如JIT开销(比如，隐藏类槽)，低效的声明(比如非整数用指针分配在堆上）。</p>
 <p>这些因素中的每一个都只是略微显着的加速，但是放在一起就比今天常用的打包器快几个数量级。</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/25/%F0%9F%8E%85%F0%9F%8E%81%E4%B8%BA%E4%BB%80%E4%B9%88esbuild%E6%9B%B4%E5%BF%AB/" data-id="clw9094o400472omvdwnh6wyn" data-title="🎅🎁为什么esbuild更快" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-🌦🌦-下载文件两种方式总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/" class="article-date">
-  <time class="dt-published" datetime="2021-12-24T16:00:00.000Z" itemprop="datePublished">2021-12-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/">🌦🌦-下载文件两种方式总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h4 id="1-后台服务器有静态资源且是固定的文件名（GET方式下载文件）"><a href="#1-后台服务器有静态资源且是固定的文件名（GET方式下载文件）" class="headerlink" title="1.后台服务器有静态资源且是固定的文件名（GET方式下载文件）"></a>1.后台服务器有静态资源且是固定的文件名（GET方式下载文件）</h4><p>场景：已经生成的静态文件</p>
-<h5 id="第一种使用js"><a href="#第一种使用js" class="headerlink" title="第一种使用js"></a>第一种使用js</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;http://www.域名/template.xlsx(文件名)&quot;</span></span><br></pre></td></tr></table></figure>
-<h5 id="第二种-href"><a href="#第二种-href" class="headerlink" title="第二种 href"></a>第二种 href</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;http://www.域名/template.xlsx(文件名)&quot;</span>&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p><code>ps</code>: 有跨域问题</p>
-<h4 id="2-后台返回文件流"><a href="#2-后台返回文件流" class="headerlink" title="2.后台返回文件流"></a>2.后台返回文件流</h4><p>场景：动态数据生成</p>
-<h5 id="第一种-Data-协议"><a href="#第一种-Data-协议" class="headerlink" title="第一种 Data 协议"></a>第一种 Data 协议</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">axios.<span class="title function_">post</span>(请求路径<span class="variable constant_">URL</span>, &#123;参数<span class="title class_">Params</span>&#125;, &#123;</span><br><span class="line">            <span class="attr">responseType</span>: <span class="string">&#x27;blob&#x27;</span></span><br><span class="line">          &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> blob = res.<span class="property">data</span>;</span><br><span class="line">           <span class="comment">// FileReader主要用于将文件内容读入内存</span></span><br><span class="line">            <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="title class_">FileReader</span>();</span><br><span class="line">            reader.<span class="title function_">readAsDataURL</span>(blob);</span><br><span class="line">            <span class="comment">// onload当读取操作成功完成时调用</span></span><br><span class="line">            reader.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">              <span class="keyword">var</span> a = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">              <span class="comment">// 获取文件名fileName</span></span><br><span class="line">              <span class="keyword">var</span> fileName = res.<span class="property">headers</span>[<span class="string">&quot;content-disposition&quot;</span>].<span class="title function_">split</span>(<span class="string">&quot;=&quot;</span>);</span><br><span class="line">              fileName = fileName[fileName.<span class="property">length</span> - <span class="number">1</span>];</span><br><span class="line">              fileName = fileName.<span class="title function_">replace</span>(<span class="regexp">/&quot;/g</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">              a.<span class="property">download</span> = fileName;</span><br><span class="line">              a.<span class="property">href</span> = e.<span class="property">target</span>.<span class="property">result</span>;</span><br><span class="line">              <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(a);</span><br><span class="line">              a.<span class="title function_">click</span>();</span><br><span class="line">              <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(a);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;);</span><br></pre></td></tr></table></figure>
-<h5 id="第二种使用-blob-window-URL-createObjectURL"><a href="#第二种使用-blob-window-URL-createObjectURL" class="headerlink" title="第二种使用 blob + window.URL.createObjectURL"></a>第二种使用 blob + window.URL.createObjectURL</h5><p>动态数据下载，原理都是创建 blob协议的链接</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  `responseType` 表示服务器响应的数据类型，</span></span><br><span class="line"><span class="comment">//  可以是 &#x27;arraybuffer&#x27;, &#x27;blob&#x27;, &#x27;document&#x27;, &#x27;json&#x27;, &#x27;text&#x27;, &#x27;stream&#x27;，</span></span><br><span class="line"><span class="comment">//  不是header内的属性</span></span><br><span class="line"></span><br><span class="line">axios.<span class="title function_">post</span>(请求路径<span class="variable constant_">URL</span>, &#123;参数<span class="title class_">Params</span>&#125;, &#123;</span><br><span class="line">            <span class="attr">responseType</span>: <span class="string">&#x27;blob&#x27;</span></span><br><span class="line">          &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">response</span>)&#123;</span><br><span class="line">            <span class="keyword">const</span> name = <span class="string">&quot;XXX.xls&quot;</span></span><br><span class="line">             <span class="keyword">const</span> url = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([response]));</span><br><span class="line">             <span class="keyword">const</span> link = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">             link.<span class="property">href</span> = url;</span><br><span class="line">             link.<span class="property">download</span> = name</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(link);</span><br><span class="line">             link.<span class="title function_">click</span>();</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(link);</span><br><span class="line">          &#125;);</span><br></pre></td></tr></table></figure>
-
-<h5 id="第三种-href-data协议"><a href="#第三种-href-data协议" class="headerlink" title="第三种 href + data协议"></a>第三种 href + data协议</h5><p>适用于json，document 纯文档下载</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function download(filename, text) &#123;</span><br><span class="line">  console.log(filename, text);</span><br><span class="line">  var element = document.createElement(&quot;a&quot;);</span><br><span class="line">  element.setAttribute(</span><br><span class="line">    &quot;href&quot;,</span><br><span class="line">    &quot;data:text/plain;charset=utf-8,&quot; + encodeURIComponent(text)</span><br><span class="line">  );</span><br><span class="line">  element.setAttribute(&quot;download&quot;, filename);</span><br><span class="line"></span><br><span class="line">  element.style.display = &quot;none&quot;;</span><br><span class="line">  document.body.appendChild(element);</span><br><span class="line"></span><br><span class="line">  element.click();</span><br><span class="line"></span><br><span class="line">  document.body.removeChild(element);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">download(&#x27;download.json&#x27;, &#x27;&#123;a: 1&#125;&#x27;)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/" data-id="clw9094nm003c2omvamo23cln" data-title="🌦🌦-下载文件两种方式总结" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/25/%F0%9F%8E%85%F0%9F%8E%81%E4%B8%BA%E4%BB%80%E4%B9%88esbuild%E6%9B%B4%E5%BF%AB/" data-id="clwer0tsi004jkrmvhy1x8fiv" data-title="🎅🎁为什么esbuild更快" class="article-share-link">Share</a>
       
       
       
@@ -251,7 +197,7 @@
       
         <p><img src="https://upload-images.jianshu.io/upload_images/15312191-d0a43679b51fdc5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 <p>我已经做了30多年的程序员了，程序员是一个终身学习，练习和提高的职业，在我的职业生涯中，我发现了很多方法来提高编码水平</p>
-<div class=""><h2 id="提升程序员水平的50种方法"><a href="#提升程序员水平的50种方法" class="headerlink" title="提升程序员水平的50种方法"></a>提升程序员水平的50种方法</h2><p> 1.<strong>写大量程序</strong>，你写的每个程序不论大小，都会给你一些经验。练习可以提高你对编程概念的理解。</p>
+<h2 id="提升程序员水平的50种方法"><a href="#提升程序员水平的50种方法" class="headerlink" title="提升程序员水平的50种方法"></a>提升程序员水平的50种方法</h2><p> 1.<strong>写大量程序</strong>，你写的每个程序不论大小，都会给你一些经验。练习可以提高你对编程概念的理解。</p>
 <p>2.<strong>让编程变成你的爱好</strong>。开发个人项目可以创造热情和激情。如果你喜欢这样做，学习就很容易了。</p>
 <p>3.<strong>在Stack Overflow上找答案</strong>。如果你有一个编程问题，很有可能会在<a target="_blank" rel="noopener" href="https://stackoverflow.com/">Stack Overflow</a>上找到答案。对答案保持批评态度，并把这个当作学习的机会。当你准备好的时候，也回答一下别人的问题。</p>
 <p>4.<strong>读好书，完成里面的例子</strong>。好的编程书有体系化的内容可以学习，  <a target="_blank" rel="noopener" href="https://deitel.com/">Deitel books</a>里面有很多例子和解释，如果你是个新手，可以看看我的书: <a target="_blank" rel="noopener" href="https://www.amazon.com/dp/1718198450">The Super Simple Programming Book</a>。</p>
@@ -306,11 +252,61 @@
 <p>翻译自 ：<a target="_blank" rel="noopener" href="https://dev.to/realedwintorres/50-ways-you-can-improve-as-a-programmer-7g2">https://dev.to/realedwintorres/50-ways-you-can-improve-as-a-programmer-7g2</a></p>
 </blockquote>
 
-</div>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/24/%F0%9F%8E%85%F0%9F%8F%BB%F0%9F%8E%85%F0%9F%8F%BF-50%E4%B8%AA%E6%8F%90%E9%AB%98%E7%BC%96%E7%A0%81%E6%B0%B4%E5%B9%B3%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="clw9094o600492omv9446913w" data-title="🎅🏻🎅🏿-50个提高编码水平的方法" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/24/%F0%9F%8E%85%F0%9F%8F%BB%F0%9F%8E%85%F0%9F%8F%BF-50%E4%B8%AA%E6%8F%90%E9%AB%98%E7%BC%96%E7%A0%81%E6%B0%B4%E5%B9%B3%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="clwer0trh0045krmve3gmclef" data-title="🎅🏻🎅🏿-50个提高编码水平的方法" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-🌦🌦-下载文件两种方式总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/" class="article-date">
+  <time class="dt-published" datetime="2021-12-24T16:00:00.000Z" itemprop="datePublished">2021-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/">🌦🌦-下载文件两种方式总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1-后台服务器有静态资源且是固定的文件名（GET方式下载文件）"><a href="#1-后台服务器有静态资源且是固定的文件名（GET方式下载文件）" class="headerlink" title="1.后台服务器有静态资源且是固定的文件名（GET方式下载文件）"></a>1.后台服务器有静态资源且是固定的文件名（GET方式下载文件）</h4><p>场景：已经生成的静态文件</p>
+<h5 id="第一种使用js"><a href="#第一种使用js" class="headerlink" title="第一种使用js"></a>第一种使用js</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;http://www.域名/template.xlsx(文件名)&quot;</span></span><br></pre></td></tr></table></figure>
+<h5 id="第二种-href"><a href="#第二种-href" class="headerlink" title="第二种 href"></a>第二种 href</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;http://www.域名/template.xlsx(文件名)&quot;</span>&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><code>ps</code>: 有跨域问题</p>
+<h4 id="2-后台返回文件流"><a href="#2-后台返回文件流" class="headerlink" title="2.后台返回文件流"></a>2.后台返回文件流</h4><p>场景：动态数据生成</p>
+<h5 id="第一种-Data-协议"><a href="#第一种-Data-协议" class="headerlink" title="第一种 Data 协议"></a>第一种 Data 协议</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">axios.<span class="title function_">post</span>(请求路径<span class="variable constant_">URL</span>, &#123;参数<span class="title class_">Params</span>&#125;, &#123;</span><br><span class="line">            <span class="attr">responseType</span>: <span class="string">&#x27;blob&#x27;</span></span><br><span class="line">          &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> blob = res.<span class="property">data</span>;</span><br><span class="line">           <span class="comment">// FileReader主要用于将文件内容读入内存</span></span><br><span class="line">            <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="title class_">FileReader</span>();</span><br><span class="line">            reader.<span class="title function_">readAsDataURL</span>(blob);</span><br><span class="line">            <span class="comment">// onload当读取操作成功完成时调用</span></span><br><span class="line">            reader.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">              <span class="keyword">var</span> a = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">              <span class="comment">// 获取文件名fileName</span></span><br><span class="line">              <span class="keyword">var</span> fileName = res.<span class="property">headers</span>[<span class="string">&quot;content-disposition&quot;</span>].<span class="title function_">split</span>(<span class="string">&quot;=&quot;</span>);</span><br><span class="line">              fileName = fileName[fileName.<span class="property">length</span> - <span class="number">1</span>];</span><br><span class="line">              fileName = fileName.<span class="title function_">replace</span>(<span class="regexp">/&quot;/g</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">              a.<span class="property">download</span> = fileName;</span><br><span class="line">              a.<span class="property">href</span> = e.<span class="property">target</span>.<span class="property">result</span>;</span><br><span class="line">              <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(a);</span><br><span class="line">              a.<span class="title function_">click</span>();</span><br><span class="line">              <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(a);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="第二种使用-blob-window-URL-createObjectURL"><a href="#第二种使用-blob-window-URL-createObjectURL" class="headerlink" title="第二种使用 blob + window.URL.createObjectURL"></a>第二种使用 blob + window.URL.createObjectURL</h5><p>动态数据下载，原理都是创建 blob协议的链接</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  `responseType` 表示服务器响应的数据类型，</span></span><br><span class="line"><span class="comment">//  可以是 &#x27;arraybuffer&#x27;, &#x27;blob&#x27;, &#x27;document&#x27;, &#x27;json&#x27;, &#x27;text&#x27;, &#x27;stream&#x27;，</span></span><br><span class="line"><span class="comment">//  不是header内的属性</span></span><br><span class="line"></span><br><span class="line">axios.<span class="title function_">post</span>(请求路径<span class="variable constant_">URL</span>, &#123;参数<span class="title class_">Params</span>&#125;, &#123;</span><br><span class="line">            <span class="attr">responseType</span>: <span class="string">&#x27;blob&#x27;</span></span><br><span class="line">          &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">response</span>)&#123;</span><br><span class="line">            <span class="keyword">const</span> name = <span class="string">&quot;XXX.xls&quot;</span></span><br><span class="line">             <span class="keyword">const</span> url = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([response]));</span><br><span class="line">             <span class="keyword">const</span> link = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">             link.<span class="property">href</span> = url;</span><br><span class="line">             link.<span class="property">download</span> = name</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(link);</span><br><span class="line">             link.<span class="title function_">click</span>();</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(link);</span><br><span class="line">          &#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="第三种-href-data协议"><a href="#第三种-href-data协议" class="headerlink" title="第三种 href + data协议"></a>第三种 href + data协议</h5><p>适用于json，document 纯文档下载</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function download(filename, text) &#123;</span><br><span class="line">  console.log(filename, text);</span><br><span class="line">  var element = document.createElement(&quot;a&quot;);</span><br><span class="line">  element.setAttribute(</span><br><span class="line">    &quot;href&quot;,</span><br><span class="line">    &quot;data:text/plain;charset=utf-8,&quot; + encodeURIComponent(text)</span><br><span class="line">  );</span><br><span class="line">  element.setAttribute(&quot;download&quot;, filename);</span><br><span class="line"></span><br><span class="line">  element.style.display = &quot;none&quot;;</span><br><span class="line">  document.body.appendChild(element);</span><br><span class="line"></span><br><span class="line">  element.click();</span><br><span class="line"></span><br><span class="line">  document.body.removeChild(element);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">download(&#x27;download.json&#x27;, &#x27;&#123;a: 1&#125;&#x27;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/24/%F0%9F%8C%A6%F0%9F%8C%A6-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/" data-id="clwer0tri0047krmv5inq30rp" data-title="🌦🌦-下载文件两种方式总结" class="article-share-link">Share</a>
       
       
       
@@ -352,66 +348,14 @@
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c2ec5f06cf1a">https://www.jianshu.com/p/c2ec5f06cf1a</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/24/%F0%9F%8E%A8%F0%9F%8E%A8-git-reset-%E6%8F%90%E4%BA%A4/" data-id="clw9094of004k2omv3uif6ypm" data-title="🎨🎨-git-reset-提交" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/24/%F0%9F%8E%A8%F0%9F%8E%A8-git-reset-%E6%8F%90%E4%BA%A4/" data-id="clwer0ts5004bkrmv3k9zbmll" data-title="🎨🎨-git-reset-提交" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-👨🍳🐓-如何炖好一碗鸡汤" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/undefined/24/%F0%9F%91%A8%F0%9F%8D%B3%F0%9F%90%93-%E5%A6%82%E4%BD%95%E7%82%96%E5%A5%BD%E4%B8%80%E7%A2%97%E9%B8%A1%E6%B1%A4/" class="article-date">
-  <time class="dt-published" datetime="2021-12-24T16:00:00.000Z" itemprop="datePublished">2021-12-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/undefined/24/%F0%9F%91%A8%F0%9F%8D%B3%F0%9F%90%93-%E5%A6%82%E4%BD%95%E7%82%96%E5%A5%BD%E4%B8%80%E7%A2%97%E9%B8%A1%E6%B1%A4/">👨🍳🐓-如何炖好一碗鸡汤</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="https://upload-images.jianshu.io/upload_images/15312191-55832858d14bfa2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<p><strong>鸡汤具有补气，鸡肉本身也是优秀蛋白质。</strong></p>
-<p>1.不要整只炖，一定要切块，洗干净</p>
-<p>2.用水焯一下，去除浮沫</p>
-<p>3.热锅滑油，让鸡肉表面紧实</p>
-<p>4.一定要用砂锅</p>
-<p>5.老母鸡最佳</p>
-<p>6.小茴香和白豆蔻记得放</p>
-<p>7.先大火后小火，放盐后再中火</p>
-<p>8.表明有黄油，汤汁清澈最佳</p>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/24/%F0%9F%91%A8%F0%9F%8D%B3%F0%9F%90%93-%E5%A6%82%E4%BD%95%E7%82%96%E5%A5%BD%E4%B8%80%E7%A2%97%E9%B8%A1%E6%B1%A4/" data-id="clw9094os00582omv2zph2ry4" data-title="👨🍳🐓-如何炖好一碗鸡汤" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" rel="tag">美食记录</a></li></ul>
 
     </footer>
   </div>
@@ -453,11 +397,10 @@
 <p>一个长期通过碎片化来构建自己知识体系和世界观的人和一个长期通过书籍获取知识的人，踏实程度，看问题的角度和深度有很大不同。举个例子，很多人本科毕业后，也在不断学习，可是和读博士读研究生的人比较还是有很大不同，这些人接受的教育是系统化，体系化的，有了知识闭环。</p>
 <p>再比如，计算机专业的程序员和非计算机专业的程序员，在一定的阶段所表现出的素质也有很大不同，很多野路子出身的程序员没有高工指导，今天学点这个，明天学点哪个，始终停留在门外，无法将知识融会贯通。</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/24/%F0%9F%93%A3%F0%9F%93%92%F0%9F%94%96-%E7%9C%8B%E7%BD%91%E6%96%87%E5%92%8C%E8%AF%BB%E4%B9%A6%E7%9A%84%E5%8C%BA%E5%88%AB/" data-id="clw9094pa00682omvcw0sd9pg" data-title="📣📒🔖-看网文和读书的区别" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/24/%F0%9F%93%A3%F0%9F%93%92%F0%9F%94%96-%E7%9C%8B%E7%BD%91%E6%96%87%E5%92%8C%E8%AF%BB%E4%B9%A6%E7%9A%84%E5%8C%BA%E5%88%AB/" data-id="clwer0tsd004dkrmvaznxa8yi" data-title="📣📒🔖-看网文和读书的区别" class="article-share-link">Share</a>
       
       
       
@@ -510,15 +453,64 @@
 <p>对于一个有灵魂的人，贫穷和落后是难以忍受的。<br>—–<a href="">《教父》</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/24/%F0%9F%93%A3%F0%9F%93%9D-%E5%8A%9F%E5%A4%AB%E5%9C%A8%E8%AF%97%E5%A4%96%EF%BC%8C%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E7%B2%BE%E9%80%89/" data-id="clw9094pb006a2omv9kn8e2zg" data-title="📣📝-功夫在诗外，优秀文章精选" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/24/%F0%9F%93%A3%F0%9F%93%9D-%E5%8A%9F%E5%A4%AB%E5%9C%A8%E8%AF%97%E5%A4%96%EF%BC%8C%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E7%B2%BE%E9%80%89/" data-id="clwer0tsg004fkrmvg3ddgikg" data-title="📣📝-功夫在诗外，优秀文章精选" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-👨🍳🐓-如何炖好一碗鸡汤" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/undefined/24/%F0%9F%91%A8%F0%9F%8D%B3%F0%9F%90%93-%E5%A6%82%E4%BD%95%E7%82%96%E5%A5%BD%E4%B8%80%E7%A2%97%E9%B8%A1%E6%B1%A4/" class="article-date">
+  <time class="dt-published" datetime="2021-12-24T16:00:00.000Z" itemprop="datePublished">2021-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/undefined/24/%F0%9F%91%A8%F0%9F%8D%B3%F0%9F%90%93-%E5%A6%82%E4%BD%95%E7%82%96%E5%A5%BD%E4%B8%80%E7%A2%97%E9%B8%A1%E6%B1%A4/">👨🍳🐓-如何炖好一碗鸡汤</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/15312191-55832858d14bfa2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><strong>鸡汤具有补气，鸡肉本身也是优秀蛋白质。</strong></p>
+<p>1.不要整只炖，一定要切块，洗干净</p>
+<p>2.用水焯一下，去除浮沫</p>
+<p>3.热锅滑油，让鸡肉表面紧实</p>
+<p>4.一定要用砂锅</p>
+<p>5.老母鸡最佳</p>
+<p>6.小茴香和白豆蔻记得放</p>
+<p>7.先大火后小火，放盐后再中火</p>
+<p>8.表明有黄油，汤汁清澈最佳</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/undefined/24/%F0%9F%91%A8%F0%9F%8D%B3%F0%9F%90%93-%E5%A6%82%E4%BD%95%E7%82%96%E5%A5%BD%E4%B8%80%E7%A2%97%E9%B8%A1%E6%B1%A4/" data-id="clwer0ttu006zkrmvgur2blj3" data-title="👨🍳🐓-如何炖好一碗鸡汤" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E8%AE%B0%E5%BD%95/" rel="tag">美食记录</a></li></ul>
 
     </footer>
   </div>
@@ -556,11 +548,10 @@
 <p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22364502">按下开机键后，电脑都干了些什么？</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/22/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81%EF%BC%8814%EF%BC%89%E6%8C%89%E4%B8%8B%E5%BC%80%E6%9C%BA%E9%94%AE%E5%90%8E%EF%BC%8C%E7%94%B5%E8%84%91%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BA%9B%E4%BB%80%E4%B9%88%EF%BC%9F/" data-id="clw9094mj001p2omvc94ehddq" data-title="⛵︎验证码（14）按下开机键后，电脑都干了些什么？" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/22/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81%EF%BC%8814%EF%BC%89%E6%8C%89%E4%B8%8B%E5%BC%80%E6%9C%BA%E9%94%AE%E5%90%8E%EF%BC%8C%E7%94%B5%E8%84%91%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BA%9B%E4%BB%80%E4%B9%88%EF%BC%9F/" data-id="clwer0ts4004akrmvefbddzy8" data-title="⛵︎验证码（14）按下开机键后，电脑都干了些什么？" class="article-share-link">Share</a>
       
       
       
@@ -608,11 +599,10 @@
 <p>《编码：隐匿在计算机软硬件背后的语言 》十一、十二章</p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/21/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(13)--CPU%E5%AE%9E%E7%8E%B0%E5%8A%A0%E6%B3%95/" data-id="clw9094mg001j2omvg8ma8t6j" data-title="⛵︎验证码-(13)--CPU实现加法" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/21/%E2%9B%B5%EF%B8%8E%E9%AA%8C%E8%AF%81%E7%A0%81-(13)--CPU%E5%AE%9E%E7%8E%B0%E5%8A%A0%E6%B3%95/" data-id="clwer0tr30043krmv8imo01xp" data-title="⛵︎验证码-(13)--CPU实现加法" class="article-share-link">Share</a>
       
       
       

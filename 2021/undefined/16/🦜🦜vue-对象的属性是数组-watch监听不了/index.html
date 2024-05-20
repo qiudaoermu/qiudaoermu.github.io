@@ -14,7 +14,7 @@
 <meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849data() &amp;#123; formData: &amp;#123;        areaId: 14,        isNew: true,        isDraft: false,        cName: &amp;#x2">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-16T07:39:11.042Z">
+<meta property="article:modified_time" content="2024-05-20T09:13:14.825Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="开发日常">
 <meta name="twitter:card" content="summary">
@@ -100,11 +100,10 @@
 <p>问题， this.formData.materialListOrigin.push，watch 不会触发。<br>原因：对象下的属性是数组，watch不了<br>解决方法：直接监听对象</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">    formData: &#123;</span><br><span class="line">      handler(w) &#123;</span><br><span class="line">       let v = w.materialListOrigin;</span><br><span class="line">        let r = v.reduce((sum, item) =&gt; &#123;</span><br><span class="line">          sum += item.needWeight * item.unitPrice;</span><br><span class="line">          return sum;</span><br><span class="line">        &#125;, 0);</span><br><span class="line">        this.formData.price = fixedPoint(r, 2);</span><br><span class="line">        let s  = v.reduce((sum, item) =&gt; &#123;</span><br><span class="line">          if (item.isWeight) &#123;</span><br><span class="line">            sum += item.productWeight;</span><br><span class="line">          &#125;</span><br><span class="line">          return sum</span><br><span class="line">        &#125;, 0);</span><br><span class="line">        if (this.dishesName === &#x27;小吃类&#x27;) &#123;</span><br><span class="line">          this.formData.grammage = 0;</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br><span class="line">        // 成品克数</span><br><span class="line">        this.formData.grammage = fixedPoint(s, 0);</span><br><span class="line">      &#125;,</span><br><span class="line">      deep: true</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/undefined/16/%F0%9F%A6%9C%F0%9F%A6%9Cvue-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AF%E6%95%B0%E7%BB%84-watch%E7%9B%91%E5%90%AC%E4%B8%8D%E4%BA%86/" data-id="clw9094pv007i2omve2zb7e06" data-title="🦜🦜vue-对象的属性是数组-watch监听不了" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/undefined/16/%F0%9F%A6%9C%F0%9F%A6%9Cvue-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AF%E6%95%B0%E7%BB%84-watch%E7%9B%91%E5%90%AC%E4%B8%8D%E4%BA%86/" data-id="clwer0tnc0015krmva139cdpa" data-title="🦜🦜vue-对象的属性是数组-watch监听不了" class="article-share-link">Share</a>
       
       
       

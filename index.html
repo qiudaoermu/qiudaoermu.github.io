@@ -98,20 +98,19 @@
         <p>element-upload，涉及到跨域上传，需要使用http-request自定义上传</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> &lt;el-upload</span><br><span class="line">            action=&quot;#&quot; // 修改为#</span><br><span class="line">            :http-request=&quot;hanldeUploadFile&quot;</span><br><span class="line">            class=&quot;mr-10&quot;</span><br><span class="line">            :show-file-list=&quot;false&quot;</span><br><span class="line">            :on-exceed=&quot;handleExceed&quot;</span><br><span class="line">          &gt;</span><br><span class="line">            &lt;el-button</span><br><span class="line">              type=&quot;primary&quot;</span><br><span class="line">              :icon=&quot;UploadFilled&quot;</span><br><span class="line">              @click=&quot;handleRefresh&quot;</span><br><span class="line">              &gt;上传&lt;/el-button</span><br><span class="line">            &gt;</span><br><span class="line">&lt;/el-upload&gt;</span><br></pre></td></tr></table></figure>
 <p>上传函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;&quot;</span>）</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">hanldeUploadFile</span>(<span class="params">param</span>) &#123;</span><br><span class="line">  <span class="comment">// 上传请求头为：uploadFile：binary</span></span><br><span class="line">  <span class="comment">// 格式 a=123&amp;c=456</span></span><br><span class="line">  <span class="comment">// 只有 FormData 可以传输二进制文件流</span></span><br><span class="line">  <span class="keyword">const</span> formData = <span class="keyword">new</span> <span class="title class_">FormData</span>(); </span><br><span class="line">  formData.<span class="title function_">append</span>(<span class="string">&#x27;uploadFile&#x27;</span>, param.<span class="property">file</span>);</span><br><span class="line">  <span class="title function_">getPathToExcel</span>(formData).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">hanldeUploadFile</span>(<span class="params">param</span>) &#123;</span><br><span class="line">  <span class="comment">// 上传请求头为：uploadFile：binary</span></span><br><span class="line">  <span class="comment">// 格式 a=123&amp;c=456</span></span><br><span class="line">  <span class="comment">// 只有 FormData 可以传输二进制文件流</span></span><br><span class="line">  <span class="keyword">const</span> formData = <span class="keyword">new</span> <span class="title class_">FormData</span>(); </span><br><span class="line">  formData.<span class="title function_">append</span>(<span class="string">&#x27;uploadFile&#x27;</span>, param.<span class="property">file</span>);</span><br><span class="line">  <span class="title function_">getPathToExcel</span>(formData).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>api 记得添加 header Content-Type</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">export function getPathToExcel(data) &#123;</span><br><span class="line">  return http.post(`/GLuserCode/logins/getPathToExcel`, data, &#123;</span><br><span class="line">    headers: &#123;</span><br><span class="line">      &#x27;Content-Type&#x27;: &#x27;multipart/form-data&#x27;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export function getPathToExcel(data) &#123;</span><br><span class="line">  return http.post(`/GLuserCode/logins/getPathToExcel`, data, &#123;</span><br><span class="line">    headers: &#123;</span><br><span class="line">      &#x27;Content-Type&#x27;: &#x27;multipart/form-data&#x27;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>axios 封装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">import axios, &#123; type AxiosInstance, type AxiosRequestConfig &#125; from &#x27;axios&#x27;;</span><br><span class="line">import &#123; ElMessage &#125; from &#x27;element-plus&#x27;;</span><br><span class="line"></span><br><span class="line">const service: AxiosInstance = axios.create(&#123;</span><br><span class="line">  withCredentials: false,</span><br><span class="line">  timeout: 50000,</span><br><span class="line">  // baseURL: import.meta.env.VITE_APP_BASE_API,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">service.interceptors.request.use(</span><br><span class="line">  (config: InternalAxiosRequestConfig) =&gt; &#123;</span><br><span class="line">    console.log(config, &#x27;interceptors&#x27;);</span><br><span class="line">    return config;</span><br><span class="line">  &#125;,</span><br><span class="line">  (error: AxiosError) =&gt; &#123;</span><br><span class="line">    return Promise.reject(error);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">service.interceptors.response.use(</span><br><span class="line">  (response: AxiosResponse) =&gt; &#123;</span><br><span class="line">    const res = response.data;</span><br><span class="line">    if (res.res !== 1) &#123;</span><br><span class="line">      ElMessage.error(res.resMsg || &#x27;Error&#x27;);</span><br><span class="line">      return Promise.reject(res.resMsg || &#x27;Error&#x27;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      return res;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  (error: AxiosError) =&gt; &#123;</span><br><span class="line">    console.log(`err$&#123;error&#125;`);</span><br><span class="line">    ElMessage.error(error.message || &#x27;Error&#x27;);</span><br><span class="line">    return Promise.reject(error.message);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">export const http = &#123;</span><br><span class="line">  get&lt;T = any&gt;(url: string, config?: AxiosRequestConfig): Promise&lt;T&gt; &#123;</span><br><span class="line">    return service.get(url);</span><br><span class="line">  &#125;,</span><br><span class="line">  post&lt;T = any&gt;(</span><br><span class="line">    url: string,</span><br><span class="line">    data?: object,</span><br><span class="line">    config?: AxiosRequestConfig</span><br><span class="line">  ): Promise&lt;T&gt; &#123;</span><br><span class="line">    return service.post(url, data, config);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default service;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>vite.config.ts配置跨域请求配置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server: &#123;</span><br><span class="line">   /** 是否开启 HTTPS */</span><br><span class="line">   https: false,</span><br><span class="line">   /** 设置 host: true 才可以使用 Network 的形式，以 IP 访问项目 */</span><br><span class="line">   host: true, // host: &quot;0.0.0.0&quot;</span><br><span class="line">   /** 端口号 */</span><br><span class="line">   port: 3333,</span><br><span class="line">   /** 是否自动打开浏览器 */</span><br><span class="line">   open: false,</span><br><span class="line">   /** 跨域设置允许 */</span><br><span class="line">   cors: true,</span><br><span class="line">   /** 端口被占用时，是否直接退出 */</span><br><span class="line">   strictPort: false,</span><br><span class="line">   /** 接口代理 */</span><br><span class="line">   proxy: &#123;</span><br><span class="line">     &#x27;/GLuserCode&#x27;: &#123;</span><br><span class="line">       target: &#x27;http://10.1.81.45:9080/pf3/GLuserCode/&#x27;,</span><br><span class="line">       changeOrigin: true,</span><br><span class="line">       rewrite: path =&gt; path.replace(/^\/GLuserCode/, &#x27;&#x27;),</span><br><span class="line">     &#125;,</span><br><span class="line">   &#125;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/21/--%F0%9F%8C%A6%F0%9F%8C%A6-element-upload-%E4%BD%BF%E7%94%A8axios-%E4%BB%A3%E7%90%86%E4%B8%8A%E4%BC%A0/" data-id="clw9094l100002omv166pbo0l" data-title="--🌦🌦-element-upload-使用axios-代理上传" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/21/--%F0%9F%8C%A6%F0%9F%8C%A6-element-upload-%E4%BD%BF%E7%94%A8axios-%E4%BB%A3%E7%90%86%E4%B8%8A%E4%BC%A0/" data-id="clwer0tti006dkrmv01vpckca" data-title="--🌦🌦-element-upload-使用axios-代理上传" class="article-share-link">Share</a>
       
       
       
@@ -152,11 +151,10 @@
 <p>搞好服务器，后端小伙伴 cors 跨域也不会弄，只能自己代理了</p>
 <h3 id="代理工具-http-proxy-middleware"><a href="#代理工具-http-proxy-middleware" class="headerlink" title="代理工具 http-proxy-middleware"></a>代理工具 http-proxy-middleware</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&#x27;path&#x27;);</span><br><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const &#123; createProxyMiddleware &#125; = require(&#x27;http-proxy-middleware&#x27;);</span><br><span class="line">const PORT = 3001;</span><br><span class="line"></span><br><span class="line">const STATIC = path.resolve(__dirname, &#x27;dist&#x27;);</span><br><span class="line">const INDEX = path.resolve(STATIC, &#x27;index.html&#x27;);</span><br><span class="line"></span><br><span class="line">const app = express();</span><br><span class="line">// Static content</span><br><span class="line">app.use(express.static(STATIC));</span><br><span class="line">+ app.use(</span><br><span class="line">+ &#x27;/userCode&#x27;, // 请求 localhost:3001/userCode/login -&gt;  </span><br><span class="line">+ createProxyMiddleware(&#123;</span><br><span class="line">+    target: &#x27;http://10.1.81.45:9080/pf2/&#x27;, //&#x27;http://10.1.81.45:9080/pf2//userCode/login</span><br><span class="line">+   changeOrigin: true,</span><br><span class="line">+  &#125;),</span><br><span class="line">+);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// All GET request handled by INDEX file</span><br><span class="line">app.get(&#x27;*&#x27;, function (req, res) &#123;</span><br><span class="line">  res.sendFile(INDEX);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// Start server</span><br><span class="line">app.listen(PORT, function () &#123;</span><br><span class="line">  console.log(&#x27;Server up and running on &#x27;, `http://localhost:$&#123;PORT&#125;/`);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/11/-%F0%9F%8C%A6%F0%9F%8C%A6nodejs%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E6%9C%8D%E5%8A%A1%E4%BB%A3%E7%90%86/" data-id="clw9094lh00042omv6otl0lbf" data-title="-🌦🌦nodejs做服务器和服务代理" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/11/-%F0%9F%8C%A6%F0%9F%8C%A6nodejs%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E6%9C%8D%E5%8A%A1%E4%BB%A3%E7%90%86/" data-id="clwer0tth006bkrmv1zgcg9b2" data-title="-🌦🌦nodejs做服务器和服务代理" class="article-share-link">Share</a>
       
       
       
@@ -206,11 +204,10 @@
 
 <p>使用postcss的tailwindcss和autoprefixer插件对，css进行处理</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/28/%F0%9F%8C%A6%F0%9F%8C%A6-vite+vue3%E4%BD%BF%E7%94%A8tailwindcss/" data-id="clw9094nk003a2omv2a8a5cgd" data-title="🌦🌦-vite+vue3使用tailwindcss" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/28/%F0%9F%8C%A6%F0%9F%8C%A6-vite+vue3%E4%BD%BF%E7%94%A8tailwindcss/" data-id="clwer0ttg0069krmv1old926h" data-title="🌦🌦-vite+vue3使用tailwindcss" class="article-share-link">Share</a>
       
       
       
@@ -247,11 +244,10 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/19/%E4%BD%BF%E7%94%A8-TS-%E9%80%82%E9%85%8D-ES-Module-%E5%92%8C-CommonJS-%E4%B8%A4%E7%A7%8D%E6%A0%BC%E5%BC%8F/" data-id="clw9094mm001t2omv6msxb4k7" data-title="使用-TS-适配-ES-Module-和-CommonJS-两种格式" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/19/%E4%BD%BF%E7%94%A8-TS-%E9%80%82%E9%85%8D-ES-Module-%E5%92%8C-CommonJS-%E4%B8%A4%E7%A7%8D%E6%A0%BC%E5%BC%8F/" data-id="clwer0ttf0065krmvcq5d11yv" data-title="使用-TS-适配-ES-Module-和-CommonJS-两种格式" class="article-share-link">Share</a>
       
       
       
@@ -411,11 +407,10 @@
 <p>转载自<br><strong>Copyright © 1900-2016, NORYES, All Rights Reserved.</strong><br><strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/noryes/">http://www.cnblogs.com/noryes/</a></strong></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/24/-%F0%9F%93%A3%F0%9F%93%A3--%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%8D%81%E5%A4%A7%E5%B1%82%E6%AC%A1/" data-id="clw9094ln000a2omvh93ud84u" data-title="-📣📣--软件工程师的十大层次" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/24/-%F0%9F%93%A3%F0%9F%93%A3--%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%8D%81%E5%A4%A7%E5%B1%82%E6%AC%A1/" data-id="clwer0ttf0067krmv7tr3a0n8" data-title="-📣📣--软件工程师的十大层次" class="article-share-link">Share</a>
       
       
       
@@ -468,11 +463,10 @@
 <p>总之，<strong>算法</strong>和<strong>数学</strong>和普通程序员关系不大，大家都知道编程的门槛有多低，现在小学生都学的懂。读了这本书我才发现，一等程序员更多的是用数学去解决计算机的普遍性问题，比如非对称加密质数解密，计算复杂性问题、怎么让编译器性能更快，为什么用关系型数据库代替网状数据库，我之后会结合图灵奖写几篇数学在计算机中的应用的博客。</p>
 <p>最后缅怀下左耳朵耗子，他对中国技术圈的贡献和积极的影响力绝对是值得肯定的。</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/26/-%F0%9F%93%A3%F0%9F%93%A3-%E6%88%91%E7%9C%8B%E3%80%8A%E5%9B%BE%E7%81%B5%E5%92%8CACM%E5%9B%BE%E7%81%B5%E5%A5%96%E3%80%8B/" data-id="clw9094ll00082omv7cgk8uzg" data-title="-📣📣-我看《图灵和ACM图灵奖》" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/26/-%F0%9F%93%A3%F0%9F%93%A3-%E6%88%91%E7%9C%8B%E3%80%8A%E5%9B%BE%E7%81%B5%E5%92%8CACM%E5%9B%BE%E7%81%B5%E5%A5%96%E3%80%8B/" data-id="clwer0tte0063krmvex0mc6h6" data-title="-📣📣-我看《图灵和ACM图灵奖》" class="article-share-link">Share</a>
       
       
       
@@ -515,11 +509,10 @@
 <p>2.<code>sass-node</code>作为<code>C++</code>模块，需要适配不同平台，这就需要编译。<br>    这就是<code>node-gyp</code>，在执行<code>npm install</code>安装包含native模块时，<code>node-gyp</code>会自动编译这些模块。<br>在sass-node下载过程中，<code>node-gyp</code>会把<code>sass-node</code>编程成对应平台的二进制文件。</p>
 <p>3.不同的<code>sass-loader</code>需要不同的<code>node-gyp</code>和对应的node.api，所以才有版本问题了。</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/20/%F0%9F%8C%A6%F0%9F%8C%A6%E7%A5%9E%E7%A7%98%E7%9A%84sass-node/" data-id="clw9094nz003y2omv8ddoc5tr" data-title="🌦🌦神秘的sass-node" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/20/%F0%9F%8C%A6%F0%9F%8C%A6%E7%A5%9E%E7%A7%98%E7%9A%84sass-node/" data-id="clwer0ttb005zkrmvbmr3b0bs" data-title="🌦🌦神秘的sass-node" class="article-share-link">Share</a>
       
       
       
@@ -555,25 +548,24 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><div class=""><h2 id="跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro"><a href="#跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro" class="headerlink" title="跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro"></a>跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro</h2><h2 id="1-学习门槛"><a href="#1-学习门槛" class="headerlink" title="1.学习门槛"></a>1.学习门槛</h2><h3 id="DSL语法支持度"><a href="#DSL语法支持度" class="headerlink" title="DSL语法支持度"></a>DSL语法支持度</h3><p>微信原生小程序有自己的语法糖，wepy类似，有一定的学习成本。<br>当前前端开发组员有vue2开发经验，上手vue3难度不大。<br>和vue语法相似度<br>Taro，uniapp 	⭐️⭐️⭐️⭐️<br> mpvue           	⭐️⭐️<br> 微信原生小程序，wepy  ⭐️</p>
-</div><div class=""><h2 id="2-跨端支持度"><a href="#2-跨端支持度" class="headerlink" title="2.跨端支持度"></a>2.跨端支持度</h2><p>本次需求只有小程序端，没有对比性</p>
-</div><div class=""><h2 id="3-开发效率体验"><a href="#3-开发效率体验" class="headerlink" title="3.开发效率体验"></a>3.开发效率体验</h2><p>Uni-app有自己的IDE，HBuilder 但是UI比较粗糙，用户体检不佳，配置比较麻烦。<br>微信小程序有小程序开发者工具。<br>都支持CLI，初始化比较简单。<br>都可以用vscode开发，差别不大。</p>
-</div><div class=""><h2 id="4-生态社区"><a href="#4-生态社区" class="headerlink" title="4.生态社区"></a>4.生态社区</h2><h3 id="微信小程序-⭐️⭐️⭐️⭐️⭐️"><a href="#微信小程序-⭐️⭐️⭐️⭐️⭐️" class="headerlink" title="微信小程序 ⭐️⭐️⭐️⭐️⭐️"></a>微信小程序 ⭐️⭐️⭐️⭐️⭐️</h3><p>有内置的UI框架和基础原生API， 开发者工具1.02.1808300 或以上开始已支持npm </p>
+        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro"><a href="#跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro" class="headerlink" title="跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro"></a>跨端框架深度评测：微信原生小程序、wepy、mpvue、uni-app、taro</h2><h2 id="1-学习门槛"><a href="#1-学习门槛" class="headerlink" title="1.学习门槛"></a>1.学习门槛</h2><h3 id="DSL语法支持度"><a href="#DSL语法支持度" class="headerlink" title="DSL语法支持度"></a>DSL语法支持度</h3><p>微信原生小程序有自己的语法糖，wepy类似，有一定的学习成本。<br>当前前端开发组员有vue2开发经验，上手vue3难度不大。<br>和vue语法相似度<br>Taro，uniapp 	⭐️⭐️⭐️⭐️<br> mpvue           	⭐️⭐️<br> 微信原生小程序，wepy  ⭐️</p>
+<h2 id="2-跨端支持度"><a href="#2-跨端支持度" class="headerlink" title="2.跨端支持度"></a>2.跨端支持度</h2><p>本次需求只有小程序端，没有对比性</p>
+<h2 id="3-开发效率体验"><a href="#3-开发效率体验" class="headerlink" title="3.开发效率体验"></a>3.开发效率体验</h2><p>Uni-app有自己的IDE，HBuilder 但是UI比较粗糙，用户体检不佳，配置比较麻烦。<br>微信小程序有小程序开发者工具。<br>都支持CLI，初始化比较简单。<br>都可以用vscode开发，差别不大。</p>
+<h2 id="4-生态社区"><a href="#4-生态社区" class="headerlink" title="4.生态社区"></a>4.生态社区</h2><h3 id="微信小程序-⭐️⭐️⭐️⭐️⭐️"><a href="#微信小程序-⭐️⭐️⭐️⭐️⭐️" class="headerlink" title="微信小程序 ⭐️⭐️⭐️⭐️⭐️"></a>微信小程序 ⭐️⭐️⭐️⭐️⭐️</h3><p>有内置的UI框架和基础原生API， 开发者工具1.02.1808300 或以上开始已支持npm </p>
 <h3 id="Uni-app-⭐️⭐️⭐️⭐️"><a href="#Uni-app-⭐️⭐️⭐️⭐️" class="headerlink" title="Uni-app ⭐️⭐️⭐️⭐️"></a>Uni-app ⭐️⭐️⭐️⭐️</h3><p>Vue为主，案例比较多，很成熟。<br>社区比较强大，插件丰富，但是文档比较混乱，近期工程质量降低，新功能有风险。 </p>
 <h3 id="Taro-⭐️⭐️⭐️⭐️"><a href="#Taro-⭐️⭐️⭐️⭐️" class="headerlink" title="Taro ⭐️⭐️⭐️⭐️"></a>Taro ⭐️⭐️⭐️⭐️</h3><p>社区丰富，但react插件居多，UI可以使用，taro-ui-vue3, NutUI,<br>Taro + vue3 组合案例少<br>支持使用  Pinia进行状态管理 </p>
 <h3 id="Mpvue-⭐️⭐️"><a href="#Mpvue-⭐️⭐️" class="headerlink" title="Mpvue  ⭐️⭐️"></a>Mpvue  ⭐️⭐️</h3><p>美团kpi项目，已经停止维护</p>
 <h3 id="wepy-⭐️"><a href="#wepy-⭐️" class="headerlink" title="wepy ⭐️"></a>wepy ⭐️</h3><p>个人项目，就职腾讯前端，issue回复慢，社区不繁荣。<br>为解决微信小程序工程问题和组件数据问题，由于小程序原生的升级，性价比很低。 </p>
-</div><div class=""><h2 id="5-深度开发"><a href="#5-深度开发" class="headerlink" title="5.深度开发"></a>5.深度开发</h2><h3 id="wepy-⭐️-1"><a href="#wepy-⭐️-1" class="headerlink" title="wepy ⭐️"></a>wepy ⭐️</h3><p>开源，通过 wepy-cli 编译，由于社区不繁荣，后期如果开发相关插件，或者定制开发，参考比较少</p>
+<h2 id="5-深度开发"><a href="#5-深度开发" class="headerlink" title="5.深度开发"></a>5.深度开发</h2><h3 id="wepy-⭐️-1"><a href="#wepy-⭐️-1" class="headerlink" title="wepy ⭐️"></a>wepy ⭐️</h3><p>开源，通过 wepy-cli 编译，由于社区不繁荣，后期如果开发相关插件，或者定制开发，参考比较少</p>
 <h3 id="微信小程序-⭐️"><a href="#微信小程序-⭐️" class="headerlink" title="微信小程序 ⭐️"></a>微信小程序 ⭐️</h3><p>闭源，独立优化空间小 ⭐️</p>
 <h3 id="Uni-app-⭐️⭐️⭐️"><a href="#Uni-app-⭐️⭐️⭐️" class="headerlink" title="Uni-app ⭐️⭐️⭐️"></a>Uni-app ⭐️⭐️⭐️</h3><p>开源，支持分包，编译器Vite ，配置灵活</p>
 <h3 id="Taro-⭐️⭐️⭐️"><a href="#Taro-⭐️⭐️⭐️" class="headerlink" title="Taro ⭐️⭐️⭐️"></a>Taro ⭐️⭐️⭐️</h3><p>部分开源，支持分包，配置灵活，部分文件编译可选择使用Webpack5 &#x2F; Vite<br>Ps:  总体来说uni-app和Taro差距不大，在工程化方面互相借鉴，趋于同化。</p>
-</div><div class=""><h2 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h2><p>上述框架都是优秀的小程序框架<br>Wepy: 已经被原生超越。<br>Mpvue: 已经停止维护。<br>微信原生： 需要一定学习成本。<br>Uni-ap：案例多，开发比较成熟。<br>Taro + vue3：开发案例少，有一定风险，但是有前端同事相关项目检测，可以使用。</p>
+<h2 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h2><p>上述框架都是优秀的小程序框架<br>Wepy: 已经被原生超越。<br>Mpvue: 已经停止维护。<br>微信原生： 需要一定学习成本。<br>Uni-ap：案例多，开发比较成熟。<br>Taro + vue3：开发案例少，有一定风险，但是有前端同事相关项目检测，可以使用。</p>
 
-</div>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/undefined/13/%F0%9F%8C%A6%F0%9F%8C%A6%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/" data-id="clw9094nx003u2omv1clt2eky" data-title="🌦🌦小程序框架对比" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/undefined/13/%F0%9F%8C%A6%F0%9F%8C%A6%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/" data-id="clwer0tta005vkrmv25sdbgcw" data-title="🌦🌦小程序框架对比" class="article-share-link">Share</a>
       
       
       
@@ -619,11 +611,10 @@
 <h4 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h4><p>非系统化、理论化的东西，主要应对日常生活问题，比如历史知识，日常常识，太阳从东方升起，候鸟冬季南迁，南极有企鹅等。</p>
 <p>技术和常识的区别:<br>常识具有唯一的答案，技术是人选择的结果<br>以上的几个概念罗列的是主要特点，并没有泾渭分明，所以遇到某事不要钻牛角尖。</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/16/-%F0%9F%93%A3%F0%9F%93%A3-%E7%A7%91%E5%AD%A6---%E6%8A%80%E6%9C%AF---%E5%B7%A5%E7%A8%8B%E5%AD%A6---%E6%89%8B%E8%89%BA---%E8%89%BA%E6%9C%AF/" data-id="clw9094lp000d2omvcxm8btby" data-title="-📣📣-科学---技术---工程学---手艺---艺术" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/16/-%F0%9F%93%A3%F0%9F%93%A3-%E7%A7%91%E5%AD%A6---%E6%8A%80%E6%9C%AF---%E5%B7%A5%E7%A8%8B%E5%AD%A6---%E6%89%8B%E8%89%BA---%E8%89%BA%E6%9C%AF/" data-id="clwer0tta005xkrmvh5m9bsgh" data-title="-📣📣-科学---技术---工程学---手艺---艺术" class="article-share-link">Share</a>
       
       
       
@@ -660,9 +651,9 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p><img src="https://upload-images.jianshu.io/upload_images/15312191-b2b80226864e04c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
-<div class=""><h2 id="1-渊源"><a href="#1-渊源" class="headerlink" title="1.渊源"></a>1.渊源</h2><p>东方是<strong>农业文明</strong>，注重用伦理连接个体，建立各种联系，比如分封制，封建中央集权。<br>西方古希腊是<strong>海洋文明</strong>，交易发达形成了契约精神。</p>
+<h2 id="1-渊源"><a href="#1-渊源" class="headerlink" title="1.渊源"></a>1.渊源</h2><p>东方是<strong>农业文明</strong>，注重用伦理连接个体，建立各种联系，比如分封制，封建中央集权。<br>西方古希腊是<strong>海洋文明</strong>，交易发达形成了契约精神。</p>
 <p>以上观点存疑，海洋文明农业文明，没有明确定位，文明具有偶然性和民族自我的宿命。</p>
-</div><div class=""><h2 id="2-表现"><a href="#2-表现" class="headerlink" title="2.表现"></a>2.表现</h2><h3 id="2-1-研究对象不同"><a href="#2-1-研究对象不同" class="headerlink" title="2.1 研究对象不同"></a>2.1 研究对象不同</h3><p><img src="https://upload-images.jianshu.io/upload_images/15312191-b8aab1ade2b3fd23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="孔子布道图"><br>东方哲学注重内在<strong>精神修为和觉醒</strong>，处理人和人、人和社会的关系，比如帝王之术，是以道德为根本点，强调修身齐家治国平天下。注重人与自然的和谐，比如风水学，坐北向南，封建江山龙脉探测，反对土木对地气的破坏。</p>
+<h2 id="2-表现"><a href="#2-表现" class="headerlink" title="2.表现"></a>2.表现</h2><h3 id="2-1-研究对象不同"><a href="#2-1-研究对象不同" class="headerlink" title="2.1 研究对象不同"></a>2.1 研究对象不同</h3><p><img src="https://upload-images.jianshu.io/upload_images/15312191-b8aab1ade2b3fd23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="孔子布道图"><br>东方哲学注重内在<strong>精神修为和觉醒</strong>，处理人和人、人和社会的关系，比如帝王之术，是以道德为根本点，强调修身齐家治国平天下。注重人与自然的和谐，比如风水学，坐北向南，封建江山龙脉探测，反对土木对地气的破坏。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/15312191-d5f947d5f04e65b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="雅典学院"><br>西方哲学是对外在不断求知探索的，注重人和自然的关系，探索自然，控制自然，改造自然，注重<strong>理性</strong>。比如，把各种科学体系建立在数学模型上，伽利略制造望远镜观察宇宙，完善日心说。古希腊数学家阿基米德曾说，给我一根杠杆，我可以撬动整个地球。<br>列举几个点来说明</p>
 <h4 id="绘画"><a href="#绘画" class="headerlink" title="绘画"></a>绘画</h4><p><img src="https://upload-images.jianshu.io/upload_images/15312191-c297754a06816955.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="蒙娜丽莎中的黄金分割"></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/15312191-ba22263d96d0cb8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="书画合一"><br><img src="https://upload-images.jianshu.io/upload_images/15312191-da95e83623606306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="柴门闻犬吠，风雪夜归人"><br>西方绘画注重写实，利用<strong>数学公式</strong>最大化表现形体美，东方绘画注重<strong>意境</strong>。</p>
@@ -684,15 +675,14 @@
 <p>东方人联系比较强，重情亲，你是儿子、父亲、女儿、母亲等等，办事找关系现象比较多，喜欢攀比，在没有外力的作用的情况下，组织性差，没有团结力。</p>
 <p>西方亲情关系淡漠，不喜攀比，体现在衣食住行，不用必须买房，不注重衣服车子品牌，办事找警察靠法律，非常注重个人隐私。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/15312191-6e87e05bdc3f354d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w" alt="东西方个体的差异"></p>
-</div><div class=""><h2 id="3-未来"><a href="#3-未来" class="headerlink" title="3.未来"></a>3.未来</h2><p>市场经济带来的贫富差距和东方文化的功利性以及科技与资本的结合造成的进步强制，让东方人感觉越来越焦虑，躺平也是一种对抗的办法。</p>
+<h2 id="3-未来"><a href="#3-未来" class="headerlink" title="3.未来"></a>3.未来</h2><p>市场经济带来的贫富差距和东方文化的功利性以及科技与资本的结合造成的进步强制，让东方人感觉越来越焦虑，躺平也是一种对抗的办法。</p>
 <p>东方哲学在面临社会大变动时，具有强烈的组织性，比如面对地震等自然灾害、对新冠疫情的对抗。</p>
 <p>西方哲学帮助他们在科技方面遥遥领先，在遥远的几百年之内东方都难以望其项背，其社会也将更加撕裂。</p>
 
-</div>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/07/--%F0%9F%93%A3%F0%9F%93%A3-%E4%B8%9C%E8%A5%BF%E6%96%B9%E5%93%B2%E5%AD%A6%E7%9A%84%E4%B8%8D%E5%90%8C/" data-id="clw9094l900012omv283dhtcs" data-title="--📣📣-东西方哲学的不同" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/07/--%F0%9F%93%A3%F0%9F%93%A3-%E4%B8%9C%E8%A5%BF%E6%96%B9%E5%93%B2%E5%AD%A6%E7%9A%84%E4%B8%8D%E5%90%8C/" data-id="clwer0tt9005tkrmv8uv9bhy5" data-title="--📣📣-东西方哲学的不同" class="article-share-link">Share</a>
       
       
       

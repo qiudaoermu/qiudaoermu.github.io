@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/15312191-05a389b031eeae91.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="article:published_time" content="2022-08-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-16T07:39:11.040Z">
+<meta property="article:modified_time" content="2024-05-20T09:13:14.824Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="实践堂">
 <meta name="twitter:card" content="summary">
@@ -128,11 +128,10 @@
 <p>这样当你修改package文件后，就会自动执行，<strong>yalc push</strong>, project的依赖link也会自动更新。<br>除了上面的方案，<br>也可以利用 <strong>nodemon</strong> 文件监控功能，监听 package 的改动，在 package目录下执行 <strong>npm run watch</strong>；不过相对于webpack tap钩子性能相对差。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;watch&quot;: &quot;nodemon --ignore dist/ --ignore node_modules/ --watch src/ -C -e ts,tsx,less --debug -x &#x27;npx rollup -c rollup.config.js --silent &amp;&amp; yalc push&#x27;&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/01/%F0%9F%90%93%F0%9F%A5%9Anpm-link-Hot-Module-Replacement-%E6%96%B9%E6%A1%88/" data-id="clw9094ol004z2omv3q9katx3" data-title="🐓🥚npm-link-Hot-Module-Replacement-方案" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/01/%F0%9F%90%93%F0%9F%A5%9Anpm-link-Hot-Module-Replacement-%E6%96%B9%E6%A1%88/" data-id="clwer0tkd000nkrmvbageg7nl" data-title="🐓🥚npm-link-Hot-Module-Replacement-方案" class="article-share-link">Share</a>
       
       
       

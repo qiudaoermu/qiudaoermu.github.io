@@ -102,11 +102,10 @@
 <p>4.MVC 与 MVVM 时代 - 如何维护日益复杂的 UI 交互逻辑？许多框架引入了软件工程中的 MVC 和 MVVM 等设计模式。这个时代的代表产物有苹果的 Cocoa 和微软的 WPF，以及 Web 上的 Angular 1 框架。</p>
 <p>5.声明式组件化时代 - 为什么我们必须编写连接 UI 布局语言和业务逻辑的面条代码呢？Facebook 的 React 提出了新的 UI 开发思路。通过 JSX，很容易用 JS 来编写嵌套的、声明式的、更易维护的 UI 组件，并借助 JavaScript 的动态性来实时调试 UI。当前风口上的 Vue，Flutter 和 SwiftUI，都明显地借鉴了这种思想。</p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/10/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8FUI%E5%BC%80%E5%8F%91%E7%9A%84%E5%87%A0%E4%B8%AA%E5%8E%86%E5%8F%B2%E9%98%B6%E6%AE%B5/" data-id="clw9094m2000u2omvd45ibmjl" data-title="☀️☀️UI开发的几个历史阶段" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/10/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8FUI%E5%BC%80%E5%8F%91%E7%9A%84%E5%87%A0%E4%B8%AA%E5%8E%86%E5%8F%B2%E9%98%B6%E6%AE%B5/" data-id="clwer0tss0051krmv43l5363b" data-title="☀️☀️UI开发的几个历史阶段" class="article-share-link">Share</a>
       
       
       
@@ -148,11 +147,10 @@
 <p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2011/06/10_design_defects_in_javascript.html">Javascript的10个设计缺陷</a><br><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_6ebd49350101gdgo.html">C语言中关于float、double、long double精度及数值范围理解 </a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER">Number.MAX_SAFE_INTEGER</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/31/%F0%9F%8C%A6%F0%9F%8C%A6js-%E6%95%B0%E5%AD%97%E6%BA%A2%E5%87%BA%E9%97%AE%E9%A2%98/" data-id="clw9094nt003m2omv56roczwa" data-title="🌦🌦js-数字溢出问题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/31/%F0%9F%8C%A6%F0%9F%8C%A6js-%E6%95%B0%E5%AD%97%E6%BA%A2%E5%87%BA%E9%97%AE%E9%A2%98/" data-id="clwer0tsq004zkrmv7emlafxf" data-title="🌦🌦js-数字溢出问题" class="article-share-link">Share</a>
       
       
       
@@ -193,11 +191,10 @@
 <p>相交于一般 muitition具有异步执行的功能😺,<br>具体是包了一层Promise.resolve,其实完全可以用muitition,commit实现，只要<code>return new Promise</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  login (state) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">axios</span>(<span class="string">&#x27;login&#x27;</span>).<span class="title function_">then</span>(res =&#123;</span><br><span class="line">        <span class="title function_">resolve</span>(res)</span><br><span class="line">        state.<span class="property">login</span> = <span class="literal">true</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">// 执行</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">commit</span>(<span class="string">&quot;login&quot;</span>).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;&#125;)</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/21/%F0%9F%A6%9C%F0%9F%A6%9CVuex-Action%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" data-id="clw9094pt007c2omvdl4a67z2" data-title="🦜🦜Vuex-Action异步执行使用场景" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/21/%F0%9F%A6%9C%F0%9F%A6%9CVuex-Action%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" data-id="clwer0tso004xkrmv0fk85r5q" data-title="🦜🦜Vuex-Action异步执行使用场景" class="article-share-link">Share</a>
       
       
       
@@ -273,11 +270,10 @@ div创建后为什么没有被销毁？</li>
 <p>《JavaScript设计模式与开发实践》</p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/19/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" data-id="clw9094m3000w2omv3b4s4leq" data-title="☀️☀️单例模式" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/19/%E2%98%80%EF%B8%8F%E2%98%80%EF%B8%8F%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" data-id="clwer0tto006nkrmva2zef9ji" data-title="☀️☀️单例模式" class="article-share-link">Share</a>
       
       
       
@@ -342,11 +338,10 @@ div创建后为什么没有被销毁？</li>
 <p>参考： 《深入理解计算机系统》</p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/16/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E6%8C%87%E4%B8%9C/" data-id="clw9094p900662omvgib96k4y" data-title="📣🐘🐘🐘🐘程序员面试指东" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/16/%F0%9F%93%A3%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%F0%9F%90%98%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E6%8C%87%E4%B8%9C/" data-id="clwer0tsn004tkrmv9i5wddp5" data-title="📣🐘🐘🐘🐘程序员面试指东" class="article-share-link">Share</a>
       
       
       
@@ -392,11 +387,10 @@ div创建后为什么没有被销毁？</li>
 <p>·<a target="_blank" rel="noopener" href="https://mobile.yangkeduo.com/fyxmkief.html?_wv=41729&_wvx=10&_x_share_id=fa55f20ffcb64dc5a2d321253d398ec1&feed_id=4243473058961293673&share_uid=3445142862496&page_from=602100&needs_login=1&shared_time=1647526925316&shared_sign=d8c77ca1973f7af2c9a0a56410d8756a&refer_share_id=46nol742lxomx0mc4qv4gmta5434aqhq&refer_share_uid=3575751412&refer_share_uin=O6GIHBG5LXZU6VHBA3NHIDBU5A_GEXDA&refer_share_channel=message">秀恩爱，死的快</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/16/%F0%9F%93%A3%F0%9F%9A%B6%F0%9F%9A%B6%F0%9F%9A%B6%F0%9F%8F%BB%E5%81%9A%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B-%E4%B8%8D%E8%A6%81%E8%A2%AB%E5%88%AB%E4%BA%BA%E6%89%93%E4%B9%B1%E8%87%AA%E5%B7%B1%E7%9A%84%E8%8A%82%E5%A5%8F/" data-id="clw9094ph006m2omv1qacebrl" data-title="📣🚶🚶🚶🏻做好自己的事-不要被别人打乱自己的节奏" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/16/%F0%9F%93%A3%F0%9F%9A%B6%F0%9F%9A%B6%F0%9F%9A%B6%F0%9F%8F%BB%E5%81%9A%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%8B-%E4%B8%8D%E8%A6%81%E8%A2%AB%E5%88%AB%E4%BA%BA%E6%89%93%E4%B9%B1%E8%87%AA%E5%B7%B1%E7%9A%84%E8%8A%82%E5%A5%8F/" data-id="clwer0tsn004vkrmv9zto0pcn" data-title="📣🚶🚶🚶🏻做好自己的事-不要被别人打乱自己的节奏" class="article-share-link">Share</a>
       
       
       
@@ -466,11 +460,10 @@ div创建后为什么没有被销毁？</li>
 <p><a target="_blank" rel="noopener" href="https://miss-me.github.io/2018/09/01/%E7%94%A8setTimeout%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E8%AE%A1%E6%97%B6%E5%99%A8/">用setTimeout实现for循环中的计时器</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6for-%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E6%96%B9%E6%A1%88/" data-id="clw9094nr003i2omv7qm65lca" data-title="🌦🌦for-异步执行方案" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/10/%F0%9F%8C%A6%F0%9F%8C%A6for-%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E6%96%B9%E6%A1%88/" data-id="clwer0tsm004rkrmv7c3x8j8m" data-title="🌦🌦for-异步执行方案" class="article-share-link">Share</a>
       
       
       
@@ -519,11 +512,10 @@ div创建后为什么没有被销毁？</li>
 <p>改变世界的是人和点子，让你被更多人被需要，而不是技术。通过阿里搞死的虾米，天天动听，总结人还是应该做自己感兴趣和熟悉的事，起码你要认可你在做的事情，热爱着它。<br>总拿着功利主义去做事，你做不好的。</p>
 <h5 id="关于人生目标"><a href="#关于人生目标" class="headerlink" title="关于人生目标"></a>关于人生目标</h5><p>成为高级程序员，大牛工程师是人生的一个方向，但绝不是最高目标。<br>技术不能应用到产品中，就是一页废纸，把产品和技术结合起来，运用到商业层面。<br>正如雷军所言：<code>无论多么高级的程序员，关键是你能否出想法出产品，你的劳动能否被社会承认，为社会创造财富，成为高级程序员绝对不是追求的目标。</code></p>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/27/%F0%9F%93%A3%F0%9F%A4%94%F0%9F%A4%94%E5%85%B3%E4%BA%8E%E6%8A%80%E6%9C%AF%E5%92%8C%E5%88%9B%E4%B8%9A%E7%9A%84%E6%80%9D%E8%80%83/" data-id="clw9094pi006o2omv6cjj7rhf" data-title="📣🤔🤔关于技术和创业的思考" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/27/%F0%9F%93%A3%F0%9F%A4%94%F0%9F%A4%94%E5%85%B3%E4%BA%8E%E6%8A%80%E6%9C%AF%E5%92%8C%E5%88%9B%E4%B8%9A%E7%9A%84%E6%80%9D%E8%80%83/" data-id="clwer0tsl004pkrmvh0d12o7x" data-title="📣🤔🤔关于技术和创业的思考" class="article-share-link">Share</a>
       
       
       
@@ -559,21 +551,20 @@ div创建后为什么没有被销毁？</li>
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <div class=""><h2 id="通过进程名"><a href="#通过进程名" class="headerlink" title="通过进程名"></a>通过进程名</h2><p>1、先查看进程pid<br><code>ps -ef | grep 进程名</code></p>
+        <h2 id="通过进程名"><a href="#通过进程名" class="headerlink" title="通过进程名"></a>通过进程名</h2><p>1、先查看进程pid<br><code>ps -ef | grep 进程名</code></p>
 <p>2、通过pid查看占用端口<br><code>netstat -nap | grep 进程pid</code></p>
 <p>3.杀掉进程<br><code>kill -9 PID</code></p>
-</div><div class=""><h2 id="lsof-通过端口号"><a href="#lsof-通过端口号" class="headerlink" title="lsof : 通过端口号"></a>lsof : 通过端口号</h2><p>lsof(list open files)是一个列出当前系统打开文件的工具。</p>
+<h2 id="lsof-通过端口号"><a href="#lsof-通过端口号" class="headerlink" title="lsof : 通过端口号"></a>lsof : 通过端口号</h2><p>lsof(list open files)是一个列出当前系统打开文件的工具。</p>
 <p>1、查询8080端口是否被占用，并可以查看pid&#x2F;程序名</p>
 <p><code>lsof -i tcp:8080</code></p>
 <p>2、查看详细信息<br><code>ps -ef | grep PID</code></p>
 <p>3、终止该进程</p>
 <p><code>kill -9 PID</code></p>
 
-</div>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/10/%F0%9F%93%81%F0%9F%93%81%E5%85%B3%E9%97%ADlinux%E7%B3%BB%E7%BB%9F%E7%AB%AF%E5%8F%A3/" data-id="clw9094p5005y2omv0gq24bt2" data-title="📁📁关闭linux系统端口" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/10/%F0%9F%93%81%F0%9F%93%81%E5%85%B3%E9%97%ADlinux%E7%B3%BB%E7%BB%9F%E7%AB%AF%E5%8F%A3/" data-id="clwer0tsj004lkrmv6u2b6wfs" data-title="📁📁关闭linux系统端口" class="article-share-link">Share</a>
       
       
       
@@ -625,11 +616,10 @@ div创建后为什么没有被销毁？</li>
 <p>[1] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/linyufeng/p/13361640.html">https://www.cnblogs.com/linyufeng/p/13361640.html</a><br>[2] <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b010c9302cd0">https://www.jianshu.com/p/b010c9302cd0</a><br>[3] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/freeweb/p/5446632.html">nginx做本地目录映射</a></p>
 </blockquote>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/undefined/10/%F0%9F%97%B3%F0%9F%97%B3nginx%E8%BD%AC%E5%8F%91%E5%B0%8F%E8%83%BD%E6%89%8B/" data-id="clw9094pm006w2omv2g002h4g" data-title="🗳🗳nginx转发小能手" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/undefined/10/%F0%9F%97%B3%F0%9F%97%B3nginx%E8%BD%AC%E5%8F%91%E5%B0%8F%E8%83%BD%E6%89%8B/" data-id="clwer0tsk004nkrmvb6tm2gca" data-title="🗳🗳nginx转发小能手" class="article-share-link">Share</a>
       
       
       
