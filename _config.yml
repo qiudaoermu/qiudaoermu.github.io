@@ -97,17 +97,17 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# theme: volantis
+theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 
-# deploy:
-#   type: git
-#   repo: https://github.com/qiudaoermu/qiudaoermu.github.io.git # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-#   branch: gh-pages
-# search:
-#   path: search.xml
-#   field: post
-#   content: true
-#   template: ./search.xml
+deploy:
+  type: git
+  repo: https://github.com/qiudaoermu/qiudaoermu.github.io.git # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: gh-pages
+search:
+  path: search.xml
+  field: post
+  content: true
+  template: ./search.xml
