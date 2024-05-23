@@ -13,7 +13,7 @@ class WriteFile {
   }
 
   deletePostDir(path) {
-    exec(`rm -rf ${path}`);
+    exec(`rm -rf ${path}/*`);
   }
 
   makePostdir(postDir) {

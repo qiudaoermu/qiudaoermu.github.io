@@ -4,7 +4,7 @@ date: 2023-12-22
 tags: 
 - 开发日常
 ---
-element-upload，涉及到跨域上传，需要使用http-request自定义上传，不再在action中写链接
+element-upload，涉及到跨域上传，需要使用http-request自定义上传
 ```
  <el-upload
             action="#" // 修改为#
