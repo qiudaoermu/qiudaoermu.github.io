@@ -121,30 +121,14 @@ cover:
   subtitle: ''
   search: Keep To Gold # search bar placeholder
   features:
-    - name: 文档
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f5c3.svg # https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
-      url: /v4/getting-started/
-    - name: 帮助
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f516.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
-      url: faqs/
-    - name: 示例
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f396.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg
-      url: /examples/
-    - name: 社区
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f389.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg
-      url: /contributors/
     - name: 源码
       icon: #
       img: volantis-static/media/twemoji/assets/svg/1f9ec.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
-      url: https://github.com/volantis-x/hexo-theme-volantis/
+      url: https://github.com/qiudaoermu/qiudaoermu.github.io
     - name: TreeDocs
       icon: #
       img: volantis-static/media/twemoji/assets/svg/1f4f0.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
-      url: https://qiudaoermu.github.io/gitDocs/engineering/prettier.html
+      url: https://qiudaoermu.github.io/TreeDocs/
 ############################### Cover ############################### > end
 
 pages:
