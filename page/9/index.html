@@ -1747,7 +1747,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.95a177eb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716790397350),
+    lastupdate: new Date(1748506718740),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2501,6 +2501,185 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/30/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="xxx">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="xxx">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/30/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/"  itemprop="url">
+        🌦🌦-js-修改对象key
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        原始数据:
+123456let Obj=&#123;  parentid:&quot;43323wsd2e2d2e33r3redad&quot;,  head_img:&quot;i am a url&quot;,&#125;
+想要的数据：
+123456let newObj=&#123;  ParentID:&quot;43323wsd2e2d2e33r3redad&quot;,  avat...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-09-30T00:00:00+00:00">2021-09-30</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/30/%F0%9F%8C%A6%F0%9F%8C%A6-js-%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%B1%A1key/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="xxx">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="xxx">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/"  itemprop="url">
+        🌦🌦-cookie-为什么作为token-放在header里
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        现象：后端配置了cores跨域，前端直接请求，没有通过代理，这样如果设置cookie，只能设置到， localhost里，request header 无法带过去
+手动设置header Access-Token 
+123header: &#123;  Access-Token: Cookies.get(&quot;Access-Token&quot;)&#125;
+
+通过代理，携带在在req...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+00:00">2021-09-22</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/22/%F0%9F%8C%A6%F0%9F%8C%A6-cookie-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%9C%E4%B8%BAtoken-%E6%94%BE%E5%9C%A8header%E9%87%8C/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/19/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="xxx">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="xxx">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2021/undefined/19/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"  itemprop="url">
+        🍎🍎-Mac-OS-配置环境变量
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        Mac端环境变量配置Mac使用bash做为默认的shell
+MAC OS X环境配置的加载顺序
+123456# 系统级别/etc/profile/etc/paths # 用户级别~/.zshrc
+前两个是系统级别的环境变量，针对所有用户，后面四个带有~&#x2F;用户级别的环境变量。-前两个环境配置在系统启动时候就会加载。
+
+~&#x2F;.zshrc 是zsh shell打开时候加载
+
+p...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2021-09-19T00:00:00+00:00">2021-09-19</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/undefined/19/%F0%9F%8D%8E%F0%9F%8D%8E-Mac-OS-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/19/%F0%9F%8E%A8%F0%9F%8E%A8-git-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="xxx">
@@ -2901,182 +3080,6 @@ npm cli 运行原理1.当全局安装 npm 包的时候，npm 会把 package.json
       
         <div>
           <a class='readmore' href='/2021/undefined/01/%F0%9F%8C%88--css-flex-%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/23/%F0%9F%92%BB--M1%E8%8A%AF%E7%89%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="xxx">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="xxx">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/23/%F0%9F%92%BB--M1%E8%8A%AF%E7%89%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB/"  itemprop="url">
-        💻--M1芯片为什么这么快
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1.采用ARM架构，采用了新的指令集
-2.CPU，GPU，共用内存，减少总线带来的数据传输延迟
-3.采用5nm技术，更多的二极管，更强大的运算量
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-08-23T00:00:00+00:00">2021-08-23</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/23/%F0%9F%92%BB--M1%E8%8A%AF%E7%89%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/16/%F0%9F%93%A3%F0%9F%9A%A6%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%9C%89%E6%84%9F/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="xxx">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="xxx">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/16/%F0%9F%93%A3%F0%9F%9A%A6%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%9C%89%E6%84%9F/"  itemprop="url">
-        📣🚦力扣刷题有感
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-1.非智力因素作为一个专业人士，要保持编码能力的一个方法就是经常做题，千难万难，坚持最难，训练韧性和耐力，戒骄戒躁，脚踏实地，注重非智力因素的培养。
-放弃幻想准备斗争听过一句考研界数学大神的话：考研需要和你之前长达几十年的学习习惯做斗争。考研数学考得不只是你的数学，考研考的也不只是你的政治、英语、数学、专业课，甚至不只是学习能力，而是你这个人，你对这个世界的认知，时间管理能力，以及长期以来...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-08-16T00:00:00+00:00">2021-08-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/16/%F0%9F%93%A3%F0%9F%9A%A6%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%9C%89%E6%84%9F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/undefined/15/%F0%9F%97%B3%F0%9F%97%B3-npm%E7%89%88%E6%9C%AC%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="xxx">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="xxx">
-    <meta itemprop="description" content="test description">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2021/undefined/15/%F0%9F%97%B3%F0%9F%97%B3-npm%E7%89%88%E6%9C%AC%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/"  itemprop="url">
-        🗳🗳-npm版本自动控制
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        痛点npm 发包每次都手动改 version，好烦。。🤣
-解决办法：Semantic versioningnpm version Patch在我们的package.json里面有一个version字段。
-那么，怎么在项目不断构建的过程中调整版本呢？
-npm有一套自己的版本控制标准——Semantic versioning（语义化版本）
-具体体现为：
-版本格式：主版本号 次版本号  修订号，...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2021-08-15T00:00:00+00:00">2021-08-15</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/undefined/15/%F0%9F%97%B3%F0%9F%97%B3-npm%E7%89%88%E6%9C%AC%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/' itemprop="url">
             Read More
           </a>
         </div>
